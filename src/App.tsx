@@ -21,14 +21,12 @@ import { ContactPage } from './pages/ContactPage';
 import { ClientPortalPage } from './pages/ClientPortalPage';
 import { ManagedITPage } from './pages/services/ManagedITPage';
 import { WebDevelopmentPage } from './pages/services/WebDevelopmentPage';
-
 import { ITOutsourcingPage } from './pages/services/ITOutsourcingPage';
 import { AIBusinessSolutionsPage } from './pages/services/AIBusinessSolutionsPage';
 import { NetworkInfrastructurePage } from './pages/services/NetworkInfrastructurePage';
 import { NetworkMonitoringPage } from './pages/services/NetworkMonitoringPage';
 import { IndustriesPage } from './pages/IndustriesPage';
 import { IndustryPage } from './pages/IndustryPage';
-
 import { PrivacyPolicyPage } from './pages/PrivacyPolicyPage';
 import { TermsOfServicePage } from './pages/TermsOfServicePage';
 
@@ -36,13 +34,19 @@ export default function App() {
   return (
     <Router>
       <ScrollToTop />
-      <div className="min-h-screen relative overflow-hidden bg-white text-gray-900 flex flex-col">
-        <div className="fixed inset-0 bg-white pointer-events-none z-0" />
-        <div className="fixed top-1/4 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-sky-300/10 rounded-full blur-[100px] pointer-events-none z-0"></div>
-        <div className="fixed bottom-1/4 right-1/4 translate-x-1/2 translate-y-1/2 w-[600px] h-[600px] bg-[#b87333]/10 rounded-full blur-[100px] pointer-events-none z-0"></div>
+      {/* Skip to content — accessibility */}
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[9999] focus:px-4 focus:py-2 focus:bg-white focus:text-black focus:rounded-full focus:text-sm focus:font-medium focus:shadow-lg"
+      >
+        Skip to content
+      </a>
+      {/* Grain noise overlay — fixed, non-interactive */}
+      <div className="grain-overlay" aria-hidden="true" />
+      <div className="min-h-screen relative overflow-hidden bg-[#090e17] text-white flex flex-col">
         <div className="relative z-10 flex flex-col flex-grow">
           <Header />
-          <main className="flex-grow">
+          <main id="main-content" className="flex-grow">
             <Routes>
               <Route path="/" element={<HomePage />} />
               <Route path="/services" element={<ServicesPage />} />

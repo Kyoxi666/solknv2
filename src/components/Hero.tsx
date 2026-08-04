@@ -1,29 +1,33 @@
 import { motion, useScroll, useTransform } from 'motion/react';
 import { useRef } from 'react';
 import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
 
 const faceBase = {
-  position: 'absolute',
+  position: 'absolute' as const,
   left: '50%',
   top: '50%',
-  border: '1px solid rgba(255,255,255,0.1)',
-  backfaceVisibility: 'hidden',
+  border: '1px solid rgba(255,255,255,0.08)',
+  backfaceVisibility: 'hidden' as const,
 };
 
-// Gradients pulled from the reference graphic's palette
 const gradDark = 'linear-gradient(135deg, #0A0A0A 0%, #1E408A 55%, #2563EB 100%)';
-const gradMid = 'linear-gradient(135deg, #1E408A 0%, #2563EB 55%, #EFF4FF 100%)';
+const gradMid  = 'linear-gradient(135deg, #1E408A 0%, #2563EB 55%, #EFF4FF 100%)';
 const gradLight = 'linear-gradient(135deg, #6090FA 0%, #FFFFFF 100%)';
 
-const Cube = ({ size, rotateY, scale, className }) => {
+const Cube = ({
+  size,
+  rotateY,
+  scale,
+  className,
+}: {
+  size: number;
+  rotateY: any;
+  scale: any;
+  className?: string;
+}) => {
   const half = size / 2;
-  const faceStyle = {
-    ...faceBase,
-    width: size,
-    height: size,
-    marginLeft: -half,
-    marginTop: -half,
-  };
+  const faceStyle = { ...faceBase, width: size, height: size, marginLeft: -half, marginTop: -half };
 
   return (
     <motion.div
@@ -31,7 +35,7 @@ const Cube = ({ size, rotateY, scale, className }) => {
       style={{ perspective: 1200 }}
       initial={{ opacity: 0, scale: 1.15, filter: 'blur(12px)' }}
       animate={{ opacity: 1, scale: 1, filter: 'blur(0px)' }}
-      transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
+      transition={{ duration: 1.4, ease: [0.22, 1, 0.36, 1] }}
     >
       <motion.div
         style={{
@@ -55,131 +59,138 @@ const Cube = ({ size, rotateY, scale, className }) => {
   );
 };
 
+const stats = [
+  { value: '200+', label: 'Businesses served' },
+  { value: '99.7%', label: 'Uptime SLA' },
+  { value: '<4hr', label: 'Response time' },
+  { value: '10yr+', label: 'Industry experience' },
+];
+
 export function Hero() {
-  const sectionRef = useRef(null);
+  const sectionRef = useRef<HTMLElement>(null);
 
   const { scrollYProgress } = useScroll({
     target: sectionRef,
     offset: ['start start', 'end start'],
   });
 
-  // Foreground text: scales down, blurs, and fades on scroll
-  const fgScale = useTransform(scrollYProgress, [0, 1], [1, 0.88]);
+  const fgScale   = useTransform(scrollYProgress, [0, 1], [1, 0.88]);
   const fgOpacity = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
-  const fgBlur = useTransform(scrollYProgress, [0, 1], [0, 12]);
-  const fgFilter = useTransform(fgBlur, (v) => `blur(${v}px)`);
+  const fgBlur    = useTransform(scrollYProgress, [0, 1], [0, 12]);
+  const fgFilter  = useTransform(fgBlur, (v) => `blur(${v}px)`);
 
-  // The box itself: continuously rotates and grows slightly as you scroll
-  const cubeRotateY = useTransform(scrollYProgress, [0, 1], [0, 540]);
-  const cubeScale = useTransform(scrollYProgress, [0, 1], [1, 1.3]);
-  // Reverse rotation for the secondary top cube
+  const cubeRotateY        = useTransform(scrollYProgress, [0, 1], [0, 540]);
+  const cubeScale          = useTransform(scrollYProgress, [0, 1], [1, 1.25]);
   const cubeRotateYReverse = useTransform(scrollYProgress, [0, 1], [0, -360]);
 
   return (
     <section
       ref={sectionRef}
       id="home"
-      className="relative min-h-screen bg-[#090e17] overflow-hidden flex items-center justify-center pt-20"
+      className="relative min-h-[100dvh] bg-[#090e17] overflow-hidden flex items-center justify-center pt-20"
     >
-      {/* Background gradient wash */}
+      {/* Background radial gradients */}
       <div className="absolute inset-0 w-full h-full z-0 overflow-hidden bg-[#090e17]">
         <div
           className="absolute inset-0"
           style={{
             background:
-              'radial-gradient(circle at 65% 35%, rgba(37,99,235,0.35) 0%, rgba(9,14,23,0) 55%), radial-gradient(circle at 20% 80%, rgba(30,64,138,0.25) 0%, rgba(9,14,23,0) 60%)',
+              'radial-gradient(circle at 65% 35%, rgba(37,99,235,0.30) 0%, rgba(9,14,23,0) 55%), radial-gradient(circle at 20% 80%, rgba(30,64,138,0.20) 0%, rgba(9,14,23,0) 60%)',
           }}
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#090e17] via-[#090e17]/50 to-transparent z-[1]" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#090e17] via-[#090e17]/40 to-transparent z-[1]" />
       </div>
 
-      {/* Top Right Cube (Smaller) */}
-      <Cube
-        size={180}
-        rotateY={cubeRotateYReverse}
-        scale={cubeScale}
-        className="top-[10%] right-[10%] opacity-60"
-      />
+      {/* Architectural cubes */}
+      <Cube size={180} rotateY={cubeRotateYReverse} scale={cubeScale} className="top-[10%] right-[10%] opacity-50" />
+      <Cube size={320} rotateY={cubeRotateY}        scale={cubeScale} className="bottom-[-5%] right-[-5%] opacity-80" />
+      <Cube size={140} rotateY={cubeRotateY}        scale={cubeScale} className="top-[25%] left-[5%] opacity-60" />
+      <Cube size={640} rotateY={cubeRotateYReverse} scale={cubeScale} className="bottom-[-15%] left-[-15%] opacity-40" />
 
-      {/* Bottom Right Cube (Enlarged) */}
-      <Cube
-        size={320}
-        rotateY={cubeRotateY}
-        scale={cubeScale}
-        className="bottom-[-5%] right-[-5%]"
-      />
-
-      {/* Center Left Cube (Small, Top) */}
-      <Cube
-        size={140}
-        rotateY={cubeRotateY}
-        scale={cubeScale}
-        className="top-[25%] left-[5%] opacity-70"
-      />
-
-      {/* Bottom Left Cube (2x Size) */}
-      <Cube
-        size={640}
-        rotateY={cubeRotateYReverse}
-        scale={cubeScale}
-        className="bottom-[-15%] left-[-15%] opacity-50"
-      />
-
-      {/* Foreground text content */}
+      {/* Foreground content */}
       <motion.div
         style={{ scale: fgScale, opacity: fgOpacity, filter: fgFilter }}
-        className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-8 md:pt-0 -mt-[80px]"
+        className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-8 md:pt-0 -mt-[60px]"
       >
+        {/* Eyebrow */}
         <motion.span
-          initial={{ opacity: 0, y: 10 }}
+          initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.1 }}
-          className="block uppercase tracking-[0.12em] text-white/60 mb-4 md:mb-6"
-          style={{ fontSize: 'clamp(0.55rem, 0.5rem + 0.2vw, 0.725rem)' }}
+          className="inline-flex items-center gap-2 mb-6 md:mb-8 px-4 py-1.5 rounded-full border border-white/10 bg-white/5 text-white/60 uppercase tracking-[0.18em]"
+          style={{ fontSize: 'clamp(0.5rem, 0.45rem + 0.2vw, 0.65rem)' }}
         >
+          <span className="w-1.5 h-1.5 rounded-full bg-[#2563EB] inline-block" />
           SOLKN IT Solutions
         </motion.span>
 
+        {/* H1 — wider container, larger clamp, max 3 lines */}
         <motion.h1
-          initial={{ opacity: 0, scale: 1.08 }}
+          initial={{ opacity: 0, scale: 1.06 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1], delay: 0.15 }}
-          className="font-bold text-white tracking-tighter leading-[1.15] md:leading-[1.1] max-w-4xl mx-auto drop-shadow-lg"
-          style={{ fontSize: 'clamp(2.05rem, 1.3rem + 3vw, 3.8rem)' }}
+          transition={{ duration: 1, ease: [0.22, 1, 0.36, 1], delay: 0.15 }}
+          className="font-bold text-white tracking-tighter leading-[1.1] max-w-6xl mx-auto drop-shadow-lg"
+          style={{ fontSize: 'clamp(2.6rem, 2rem + 3.5vw, 5.5rem)' }}
         >
-          Reliable networks and <br className="hidden sm:block" />
-          <span>IT support for small businesses.</span>
+          Reliable networks and IT support{' '}
+          <span className="text-white/50">for small businesses.</span>
         </motion.h1>
 
+        {/* Subtitle */}
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.3 }}
-          className="mt-5 md:mt-6 text-white/80 max-w-2xl mx-auto font-light leading-relaxed drop-shadow-md px-2 sm:px-0"
-          style={{ fontSize: 'clamp(0.75rem, 0.7rem + 0.3vw, 1.05rem)' }}
+          transition={{ duration: 0.7, delay: 0.35 }}
+          className="mt-6 md:mt-8 text-white/65 max-w-xl mx-auto font-light leading-relaxed px-2 sm:px-0"
+          style={{ fontSize: 'clamp(0.85rem, 0.75rem + 0.4vw, 1.1rem)' }}
         >
-          From network installation to ongoing IT management, we keep small businesses
-          connected, secure, and running smoothly — with AI and web tools when you need them too.
+          From network installation to ongoing IT management, we keep small
+          businesses connected, secure, and running — with AI and web tools when
+          you need them too.
         </motion.p>
 
+        {/* CTAs */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.4 }}
-          className="mt-8 md:mt-10 flex flex-col sm:flex-row items-center justify-center gap-3 md:gap-4 w-full max-w-sm mx-auto sm:max-w-none"
+          transition={{ duration: 0.7, delay: 0.5 }}
+          className="mt-10 md:mt-12 flex flex-col sm:flex-row items-center justify-center gap-3 w-full max-w-sm mx-auto sm:max-w-none"
         >
+          {/* Primary CTA — button-in-button pattern */}
           <Link
             to="/contact"
-            className="w-full sm:w-auto bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white/20 text-white px-8 py-3.5 rounded-full font-medium transition-all flex items-center justify-center shadow-lg"
+            className="group w-full sm:w-auto flex items-center justify-center gap-3 bg-white text-[#090e17] pl-7 pr-2.5 py-2.5 rounded-full font-semibold text-sm hover:bg-gray-100 transition-all duration-300 shadow-lg shadow-white/10 active:scale-[0.98]"
           >
             Book a Call
+            <span className="w-8 h-8 rounded-full bg-[#090e17]/8 flex items-center justify-center group-hover:translate-x-0.5 group-hover:-translate-y-px transition-transform duration-300">
+              <ArrowRight className="w-4 h-4" />
+            </span>
           </Link>
+
+          {/* Secondary CTA */}
           <Link
             to="/tools/it-support-calculator"
-            className="w-full sm:w-auto bg-white hover:bg-gray-200 text-black px-8 py-3.5 rounded-full font-medium transition-all flex items-center justify-center shadow-lg"
+            className="w-full sm:w-auto bg-white/8 backdrop-blur-md border border-white/15 hover:bg-white/15 text-white px-8 py-3.5 rounded-full font-medium text-sm transition-all duration-300 flex items-center justify-center active:scale-[0.98]"
           >
             IT Cost Calculator
           </Link>
+        </motion.div>
+
+        {/* Trust stat bar */}
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.7 }}
+          className="mt-16 md:mt-20 flex flex-wrap items-center justify-center gap-x-8 gap-y-4 sm:gap-x-12"
+        >
+          {stats.map((s, i) => (
+            <div key={i} className="flex flex-col items-center gap-1">
+              <span className="text-white font-semibold tracking-tight" style={{ fontSize: 'clamp(1.1rem, 1rem + 0.6vw, 1.5rem)' }}>
+                {s.value}
+              </span>
+              <span className="text-white/40 text-xs uppercase tracking-widest">{s.label}</span>
+            </div>
+          ))}
         </motion.div>
       </motion.div>
     </section>

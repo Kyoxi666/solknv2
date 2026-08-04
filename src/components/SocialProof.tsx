@@ -1,104 +1,165 @@
 import { useState } from 'react';
-import { ChevronDown, Quote } from 'lucide-react';
+import { ChevronDown } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Portfolio } from './Portfolio';
+import { motion } from 'motion/react';
+
+const testimonials = [
+  {
+    quote:
+      'SOLKN completely overhauled our restaurant\'s network. The new POS system integration and guest Wi-Fi are flawless — we haven\'t had a single connectivity drop since.',
+    author: 'Sarah Jenkins',
+    role: 'Restaurant Owner',
+    highlight: 'Zero downtime since handover.',
+  },
+  {
+    quote:
+      "We don't have an in-house IT person, but with SOLKN we don't need one. Their helpdesk is always available and they proactively fix issues before we even notice them.",
+    author: 'Mark Davies',
+    role: 'Operations Manager',
+    highlight: 'A true IT partner.',
+  },
+  {
+    quote:
+      'When we moved to our new office, they handled all the cabling, Wi-Fi, and server setup in a single weekend. It was the most straightforward office transition we\'ve ever had.',
+    author: 'David Chen',
+    role: 'Managing Director',
+    highlight: 'Smooth from day one.',
+  },
+];
+
+const faqs = [
+  {
+    q: 'What is included in your Managed IT Support?',
+    a: 'Our managed IT support covers 24/7 network monitoring, proactive maintenance, helpdesk support for your team, cybersecurity management, and regular strategic IT reviews.',
+  },
+  {
+    q: 'Do you support businesses without an in-house IT person?',
+    a: "Yes — that's our specialty. We act as your complete outsourced IT department. You get the expertise of a full IT team without the cost of hiring internally.",
+  },
+  {
+    q: 'How does the AI Virtual Receptionist work?',
+    a: 'Our AI receptionist uses advanced natural language processing to answer calls, understand customer inquiries, book appointments directly into your calendar, and send follow-up messages automatically.',
+  },
+  {
+    q: 'Can you integrate with our existing software?',
+    a: 'Yes. Our automation solutions and IT tools are designed to integrate with most major CRMs, POS systems, ERPs, and calendar platforms (Google Workspace, Microsoft 365, and more).',
+  },
+  {
+    q: 'What is your pricing structure?',
+    a: 'We offer transparent, fixed-fee monthly subscriptions for Managed IT services — no surprise bills. Network installations are quoted individually based on your specific site requirements.',
+  },
+];
 
 export function SocialProof() {
   const [openFaq, setOpenFaq] = useState<number | null>(0);
+  const [activeTestimonial, setActiveTestimonial] = useState(0);
 
-  const faqs = [
-    {
-      q: "What is included in your Managed IT Support?",
-      a: "Our managed IT support covers 24/7 network monitoring, proactive maintenance, helpdesk support for your team, cybersecurity management, and regular strategic IT reviews."
-    },
-    {
-      q: "Do you support businesses without an in-house IT person?",
-      a: "Yes! In fact, that's our specialty. We act as your complete outsourced IT department. You get the expertise of a full IT team without the cost of hiring one internally."
-    },
-    {
-      q: "How does the AI Virtual Receptionist work?",
-      a: "Our AI receptionist uses advanced natural language processing to answer calls, understand customer inquiries, book appointments directly into your calendar, and send follow-up messages automatically."
-    },
-    {
-      q: "Can you integrate with our existing software?",
-      a: "Yes, our automation solutions and IT tools are designed to integrate seamlessly with most major CRMs, POS systems, ERPs, and calendar systems (like Google Workspace, Microsoft 365, etc.)."
-    },
-    {
-      q: "What is your pricing structure?",
-      a: "We offer transparent, fixed-fee monthly subscriptions for our Managed IT services, so you know exactly what you'll pay with no surprise bills. Network installations are quoted individually based on site requirements."
-    }
-  ];
+  const t = testimonials[activeTestimonial];
 
   return (
     <>
-      {/* Testimonials */}
-      <section className="py-24 bg-white text-gray-900 rounded-[3rem] mt-[-2rem] relative z-20">
+      {/* Testimonials — single featured quote with switcher */}
+      <section className="py-24 md:py-32 bg-white text-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="flex flex-col items-center">
-              <span className="text-gray-400 font-light text-2xl md:text-3xl mb-1 tracking-tight">Trusted</span>
-              <span className="font-serif text-gray-500 text-5xl md:text-7xl mb-1 tracking-tight">by 200 +</span>
-              <span className="font-serif text-gray-900 text-6xl md:text-8xl tracking-tight">Businesses</span>
+
+          {/* Trust headline */}
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7, ease: [0.32, 0.72, 0, 1] }}
+            className="text-center mb-16 md:mb-20"
+          >
+            <p className="text-[10px] font-semibold tracking-[0.2em] uppercase text-gray-400 mb-4">
+              Trusted by businesses across London
+            </p>
+            <h2 className="text-5xl md:text-7xl lg:text-8xl font-medium tracking-tighter leading-none">
+              <span className="text-gray-300">200+</span>{' '}
+              <span className="text-gray-900">businesses.</span>
             </h2>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {[
-              {
-                title: '"Zero Downtime"',
-                quote: "SOLKN completely overhauled our restaurant's network. The new POS system integration and guest Wi-Fi are flawless, and we haven't had a single drop in connectivity since.", 
-                author: "Sarah Jenkins", 
-                role: "Restaurant Owner"
-              },
-              { 
-                title: '"True IT Partner"',
-                quote: "We don't have an in-house IT guy, but with SOLKN, we don't need one. Their helpdesk is always available, and they proactively fix issues before we even notice them.", 
-                author: "Mark Davies", 
-                role: "Operations Manager"
-              },
-              { 
-                title: '"Seamless Setup"',
-                quote: "When we moved to our new office, they handled all the cabling, Wi-Fi installation, and server setup in a single weekend. It was the smoothest transition we've ever had.", 
-                author: "David Chen", 
-                role: "Managing Director"
-              }
-            ].map((item, idx) => (
-              <div key={idx} className="bg-white p-10 rounded-[2rem] shadow-[0_4px_20px_rgba(0,0,0,0.03)] border border-gray-100 flex flex-col justify-between transition-transform hover:-translate-y-1 duration-300">
-                <div>
-                  <h3 className="text-2xl font-medium text-gray-800 mb-4">{item.title}</h3>
-                  <p className="text-gray-500 text-sm leading-relaxed mb-8">{item.quote}</p>
-                </div>
-                <div>
-                  <div className="text-sm font-medium text-gray-900">{item.author}</div>
-                  <div className="text-xs text-gray-400">{item.role}</div>
-                </div>
-              </div>
+          </motion.div>
+
+          {/* Featured testimonial */}
+          <motion.div
+            key={activeTestimonial}
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, ease: [0.32, 0.72, 0, 1] }}
+            className="max-w-4xl mx-auto"
+          >
+            <p className="text-gray-400 text-xs font-semibold uppercase tracking-widest mb-6 text-center">
+              {t.highlight}
+            </p>
+            <blockquote className="text-2xl md:text-3xl lg:text-4xl font-light text-gray-800 leading-relaxed text-center mb-10">
+              &ldquo;{t.quote}&rdquo;
+            </blockquote>
+            <div className="text-center">
+              <p className="text-sm font-semibold text-gray-900">{t.author}</p>
+              <p className="text-xs text-gray-400 mt-1">{t.role}</p>
+            </div>
+          </motion.div>
+
+          {/* Switcher dots */}
+          <div className="flex items-center justify-center gap-3 mt-10">
+            {testimonials.map((_, idx) => (
+              <button
+                key={idx}
+                onClick={() => setActiveTestimonial(idx)}
+                aria-label={`View testimonial from ${testimonials[idx].author}`}
+                className={`rounded-full transition-all duration-300 ${
+                  idx === activeTestimonial
+                    ? 'w-8 h-2 bg-gray-900'
+                    : 'w-2 h-2 bg-gray-300 hover:bg-gray-400'
+                }`}
+              />
             ))}
           </div>
+
         </div>
       </section>
 
+      {/* Portfolio */}
       <Portfolio />
+
+      {/* FAQ */}
       <section className="py-24 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-medium tracking-tight text-gray-900">Your questions, answered</h2>
-          </div>
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7, ease: [0.32, 0.72, 0, 1] }}
+            className="mb-14"
+          >
+            <h2 className="text-4xl md:text-5xl font-medium tracking-tight text-gray-900">
+              Your questions, answered.
+            </h2>
+          </motion.div>
 
-          <div className="space-y-2">
+          <div className="space-y-0">
             {faqs.map((faq, idx) => (
-              <div key={idx} className="border-b border-gray-200 pb-2">
-                <button 
-                  className="w-full flex items-center justify-between py-4 text-left focus:outline-none group"
+              <div key={idx} className="border-b border-gray-100">
+                <button
+                  className="w-full flex items-center justify-between py-5 text-left focus:outline-none group"
                   onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
+                  aria-expanded={openFaq === idx}
                 >
-                  <span className="text-lg font-medium text-gray-900 group-hover:text-[#1e293b] transition-colors">{faq.q}</span>
-                  <ChevronDown className={`w-5 h-5 text-[#2b3d5b] transition-transform duration-300 ${openFaq === idx ? 'rotate-180' : ''}`} />
+                  <span className="text-base md:text-lg font-medium text-gray-900 group-hover:text-gray-600 transition-colors pr-8">
+                    {faq.q}
+                  </span>
+                  <ChevronDown
+                    className={`w-5 h-5 text-gray-400 shrink-0 transition-transform duration-300 ${
+                      openFaq === idx ? 'rotate-180' : ''
+                    }`}
+                  />
                 </button>
-                <div 
-                  className={`overflow-hidden transition-all duration-300 ease-in-out ${openFaq === idx ? 'max-h-40 opacity-100 mb-4' : 'max-h-0 opacity-0'}`}
+                <div
+                  className={`overflow-hidden transition-all duration-300 ease-[cubic-bezier(0.32,0.72,0,1)] ${
+                    openFaq === idx ? 'max-h-48 opacity-100 pb-5' : 'max-h-0 opacity-0'
+                  }`}
                 >
-                  <p className="text-gray-600 text-sm leading-relaxed pr-8">{faq.a}</p>
+                  <p className="text-gray-500 text-sm leading-relaxed pr-8">{faq.a}</p>
                 </div>
               </div>
             ))}
@@ -106,28 +167,50 @@ export function SocialProof() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section id="contact" className="py-24 relative overflow-hidden rounded-[3rem] border border-gray-800 mx-4 sm:mx-6 lg:mx-8 mb-8 bg-[#0a0a0a] text-white">
-        {/* Background Image Setup */}
-        <div 
-          className="absolute inset-0 z-0 opacity-80 mix-blend-screen"
-          style={{ 
-            backgroundImage: 'url("public/lastback.png")', 
-            backgroundSize: 'cover', 
+      {/* Final CTA */}
+      <section
+        id="contact"
+        className="py-24 md:py-32 relative overflow-hidden rounded-[2.5rem] border border-gray-800 mx-4 sm:mx-6 lg:mx-8 mb-8 bg-[#090e17] text-white"
+      >
+        {/* Background image — corrected path (Vite serves public/ from root) */}
+        <div
+          className="absolute inset-0 z-0 opacity-60 mix-blend-screen"
+          style={{
+            backgroundImage: 'url("/lastback.png")',
+            backgroundSize: 'cover',
             backgroundPosition: 'center',
-            backgroundRepeat: 'no-repeat'
+            backgroundRepeat: 'no-repeat',
           }}
-        ></div>
-        {/* Optional overlay for better text readability */}
-        <div className="absolute inset-0 z-0 bg-black/40"></div>
+        />
+        <div className="absolute inset-0 z-0 bg-gradient-to-t from-[#090e17]/80 to-transparent" />
 
-        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl md:text-6xl font-semibold mb-6 tracking-tight text-white">Ready to transform your IT?</h2>
-          <p className="text-xl text-gray-300 mb-10 max-w-2xl mx-auto font-light leading-relaxed">Book a free consultation today and discover how our managed IT and AI automation solutions can scale your business.</p>
-          <Link to="/contact" className="bg-white text-black hover:bg-gray-100 px-10 py-4 rounded-full font-bold text-lg transition-colors inline-flex items-center shadow-lg hover:shadow-xl hover:-translate-y-1 duration-300">
-            Book a Call Now
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7, ease: [0.32, 0.72, 0, 1] }}
+          className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center"
+        >
+          <p className="text-[10px] font-semibold tracking-[0.2em] uppercase text-white/40 mb-6">
+            Get started today
+          </p>
+          <h2 className="text-4xl md:text-6xl font-semibold mb-6 tracking-tight text-white">
+            Ready to transform your IT?
+          </h2>
+          <p className="text-lg text-white/60 mb-10 max-w-xl mx-auto font-light leading-relaxed">
+            Book a free consultation and discover how managed IT and AI automation
+            can help your business run better.
+          </p>
+          <Link
+            to="/contact"
+            className="group inline-flex items-center gap-3 bg-white text-black pl-8 pr-3 py-3 rounded-full font-semibold text-sm hover:bg-gray-100 transition-colors shadow-lg shadow-white/10 active:scale-[0.98]"
+          >
+            Book a call now
+            <span className="w-9 h-9 rounded-full bg-black/8 flex items-center justify-center group-hover:translate-x-0.5 group-hover:-translate-y-px transition-transform duration-300">
+              <ChevronDown className="w-4 h-4 -rotate-90" />
+            </span>
           </Link>
-        </div>
+        </motion.div>
       </section>
     </>
   );

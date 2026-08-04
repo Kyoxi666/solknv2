@@ -3,11 +3,78 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SOLKN IT Services</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+    <!-- Primary Meta -->
+    <title>SOLKN IT Solutions — Managed IT, Networks & AI Automation for Small Businesses</title>
+    <meta name="description" content="SOLKN delivers managed IT support, network infrastructure, AI automation, and web development for small businesses across London and the UK. 200+ businesses trust us." />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph -->
+    <meta property="og:type"        content="website" />
+    <meta property="og:url"         content="https://solkn.com/" />
+    <meta property="og:title"       content="SOLKN IT Solutions — Managed IT, Networks & AI Automation" />
+    <meta property="og:description" content="Professional IT managed services, network installation, AI business automation, and web development for growing UK businesses. Based in London, serving nationally." />
+    <meta property="og:image"       content="https://solkn.com/og-image.png" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card"        content="summary_large_image" />
+    <meta name="twitter:title"       content="SOLKN IT Solutions" />
+    <meta name="twitter:description" content="Managed IT, network infrastructure & AI automation for small businesses." />
+    <meta name="twitter:image"       content="https://solkn.com/og-image.png" />
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://solkn.com/" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/solknlogo.png" />
+
+    <!-- Fonts — Outfit (primary) + Playfair Display (serif accent) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- JSON-LD Structured Data — LocalBusiness -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "SOLKN IT Solutions",
+      "description": "Managed IT support, network infrastructure, AI business automation, and web development for small businesses.",
+      "url": "https://solkn.com",
+      "email": "hello@solkn.com",
+      "address": [
+        {
+          "@type": "PostalAddress",
+          "addressLocality": "Harrow",
+          "addressRegion": "London",
+          "addressCountry": "GB"
+        }
+      ],
+      "sameAs": [],
+      "serviceArea": {
+        "@type": "GeoCircle",
+        "geoMidpoint": {
+          "@type": "GeoCoordinates",
+          "latitude": 51.5785,
+          "longitude": -0.3337
+        },
+        "geoRadius": "100000"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "IT Services",
+        "itemListElement": [
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Managed IT Support" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Network Infrastructure" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "AI Business Solutions" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Web Development & Hosting" } }
+        ]
+      }
+    }
+    </script>
   </head>
   <body>
     <div id="root"></div>
@@ -16,4 +83,3 @@
     <script src="https://unpkg.com/@elevenlabs/convai-widget-embed" async type="text/javascript"></script>
   </body>
 </html>
-
