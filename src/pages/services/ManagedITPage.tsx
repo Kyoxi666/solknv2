@@ -33,7 +33,7 @@ export function ManagedITPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-[#FAF9F6] font-sans selection:bg-slate-600/30">
+    <div className="min-h-screen bg-white font-sans selection:bg-[#E87722]/20">
       <style>{`
         @keyframes marquee {
           0% { transform: translateX(0%); }
@@ -45,12 +45,12 @@ export function ManagedITPage() {
       `}</style>
       
       {/* 1. Dark Hero Section */}
-      <section className="relative bg-[#090e17] text-white pt-32 pb-20 overflow-hidden">
+      <section className="relative bg-[#F7F7F7] text-[#000000] pt-32 pb-20 overflow-hidden">
                 {/* Background gradients for the blurred wave effect */}
-        <div className="absolute inset-0 z-0 overflow-hidden bg-[#090e17]">
+        <div className="absolute inset-0 z-0 overflow-hidden bg-[#F7F7F7]">
           {/* Main wave streak - slate blue */}
           <div 
-            className="absolute w-[150vw] md:w-[120vw] h-[100px] md:h-[150px] bg-[#2b3d5b] rounded-[100%]"
+            className="absolute w-[150vw] md:w-[120vw] h-[100px] md:h-[150px] bg-[#E87722] rounded-[100%]"
             style={{
               top: '54%',
               left: '52%',
@@ -61,7 +61,7 @@ export function ManagedITPage() {
           ></div>
           {/* Brighter core of the wave */}
           <div 
-            className="absolute w-[120vw] md:w-[90vw] h-[50px] md:h-[80px] bg-[#47638c] rounded-[100%]"
+            className="absolute w-[120vw] md:w-[90vw] h-[50px] md:h-[80px] bg-[#D4A574] rounded-[100%]"
             style={{
               top: '59%',
               left: '47%',
@@ -100,19 +100,19 @@ export function ManagedITPage() {
         </div>
         
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Link to="/" className="inline-flex items-center text-white/60 hover:text-white font-medium mb-16 transition-colors text-sm tracking-widest uppercase">
+          <Link to="/" className="inline-flex items-center text-[#6B6B6B] hover:text-white font-medium mb-16 transition-colors text-sm tracking-widest uppercase">
             <ArrowLeft className="w-4 h-4 mr-2" /> Back to Home
           </Link>
 
           <div className="flex flex-col md:flex-row justify-between items-start gap-12 mb-24">
-            <div className="text-xs md:text-sm tracking-widest uppercase text-white/60">
+            <div className="text-xs md:text-sm tracking-widest uppercase text-[#6B6B6B]">
               FROM INFRASTRUCTURE TO SCALE 
             </div>
             <div className="max-w-md">
-              <p className="text-white/80 leading-relaxed text-xs md:text-sm tracking-wide uppercase mb-8">
+              <p className="text-[#6B6B6B] leading-relaxed text-xs md:text-sm tracking-wide uppercase mb-8">
                 24/7 monitoring, cybersecurity, and cloud management for small businesses — we keep your systems running so you don't have to worry about them.
               </p>
-              <Link to="/contact" className="inline-flex items-center text-white hover:text-sky-300 transition-colors text-xs md:text-sm tracking-widest uppercase font-medium">
+              <Link to="/contact" className="inline-flex items-center text-[#000000] hover:text-sky-300 transition-colors text-xs md:text-sm tracking-widest uppercase font-medium">
                 Get a Free Consultation <ArrowUpRight className="w-4 h-4 ml-2" />
               </Link>
             </div>
@@ -134,7 +134,7 @@ export function ManagedITPage() {
       </section>
 
       {/* 2. Solutions Section (White) */}
-      <section className="py-24 md:py-32 bg-[#FAF9F6] text-[#1a1a1a]">
+      <section className="py-24 md:py-32 bg-white text-[#1a1a1a]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl md:text-6xl lg:text-7xl font-light tracking-tighter uppercase mb-16 md:mb-24">
             Our <br/>
@@ -155,10 +155,10 @@ export function ManagedITPage() {
               </div>
               <div className="md:col-span-4">
                 <ul className="space-y-3 text-sm text-black/70">
-                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#2b3d5b] mt-1.5"></div> System Health Tracking</li>
-                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#2b3d5b] mt-1.5"></div> Proactive Alert Management</li>
-                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#2b3d5b] mt-1.5"></div> Performance Optimization</li>
-                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#2b3d5b] mt-1.5"></div> Hardware Lifecycle Management</li>
+                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#E87722] mt-1.5"></div> System Health Tracking</li>
+                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#E87722] mt-1.5"></div> Proactive Alert Management</li>
+                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#E87722] mt-1.5"></div> Performance Optimization</li>
+                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#E87722] mt-1.5"></div> Hardware Lifecycle Management</li>
                 </ul>
               </div>
             </div>
@@ -174,10 +174,10 @@ export function ManagedITPage() {
               </div>
               <div className="md:col-span-4">
                 <ul className="space-y-3 text-sm text-black/70">
-                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#2b3d5b] mt-1.5"></div> Threat Detection</li>
-                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#2b3d5b] mt-1.5"></div> Firewall Management</li>
-                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#2b3d5b] mt-1.5"></div> Data Encryption</li>
-                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#2b3d5b] mt-1.5"></div> Security Audits</li>
+                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#E87722] mt-1.5"></div> Threat Detection</li>
+                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#E87722] mt-1.5"></div> Firewall Management</li>
+                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#E87722] mt-1.5"></div> Data Encryption</li>
+                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#E87722] mt-1.5"></div> Security Audits</li>
                 </ul>
               </div>
             </div>
@@ -193,10 +193,10 @@ export function ManagedITPage() {
               </div>
               <div className="md:col-span-4">
                 <ul className="space-y-3 text-sm text-black/70">
-                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#2b3d5b] mt-1.5"></div> Cloud Migration</li>
-                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#2b3d5b] mt-1.5"></div> Microsoft 365 & Google Workspace</li>
-                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#2b3d5b] mt-1.5"></div> Scalability Planning</li>
-                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#2b3d5b] mt-1.5"></div> Cloud Cost Optimization</li>
+                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#E87722] mt-1.5"></div> Cloud Migration</li>
+                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#E87722] mt-1.5"></div> Microsoft 365 & Google Workspace</li>
+                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#E87722] mt-1.5"></div> Scalability Planning</li>
+                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#E87722] mt-1.5"></div> Cloud Cost Optimization</li>
                 </ul>
               </div>
             </div>
@@ -205,11 +205,11 @@ export function ManagedITPage() {
       </section>
       
       {/* 3. New Section 1: Colored Mission Statement */}
-      <section className="py-24 md:py-32 bg-[#090e17] text-white relative overflow-hidden rounded-t-[3rem] md:rounded-[3rem] md:mx-6">
+      <section className="py-24 md:py-32 bg-[#F7F7F7] text-[#000000] relative overflow-hidden rounded-t-[3rem] md:rounded-[3rem] md:mx-6">
         {/* Background gradients for the blurred wave effect */}
         <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
           <div 
-            className="absolute w-[150vw] md:w-[120vw] h-[100px] md:h-[150px] bg-[#2b3d5b] rounded-[100%]"
+            className="absolute w-[150vw] md:w-[120vw] h-[100px] md:h-[150px] bg-[#E87722] rounded-[100%]"
             style={{
               top: '56%',
               left: '54%',
@@ -219,7 +219,7 @@ export function ManagedITPage() {
             }}
           ></div>
           <div 
-            className="absolute w-[120vw] md:w-[90vw] h-[50px] md:h-[80px] bg-[#47638c] rounded-[100%]"
+            className="absolute w-[120vw] md:w-[90vw] h-[50px] md:h-[80px] bg-[#D4A574] rounded-[100%]"
             style={{
               top: '61%',
               left: '49%',
@@ -258,7 +258,7 @@ export function ManagedITPage() {
 
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-16 relative z-10">
-           <span className="inline-block px-4 py-1.5 rounded-full border border-white/20 text-xs font-medium tracking-widest uppercase bg-white/5 backdrop-blur-sm">
+           <span className="inline-block px-4 py-1.5 rounded-full border border-[#E0E0E0] text-xs font-medium tracking-widest uppercase bg-[#EFEFEF] backdrop-blur-sm">
              Resilient Systems
            </span>
         </div>
@@ -268,10 +268,10 @@ export function ManagedITPage() {
       <section className="py-24 md:py-32 bg-white text-[#1a1a1a]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-4xl mx-auto mb-20">
-            <h2 className="text-4xl md:text-6xl font-medium tracking-tight mb-6 text-[#1e293b] leading-tight">
+            <h2 className="text-4xl md:text-6xl font-medium tracking-tight mb-6 text-[#000000] leading-tight">
               Secure <span className="italic font-light">your</span> <span className="italic font-light">infrastructure</span> comprehensively
             </h2>
-            <p className="text-lg md:text-xl text-slate-600 font-light max-w-2xl mx-auto">
+            <p className="text-lg md:text-xl text-[#6B6B6B] font-light max-w-2xl mx-auto">
               From daily monitoring to cybersecurity and cloud management, we keep your business running without interruption.
             </p>
           </div>
@@ -280,7 +280,7 @@ export function ManagedITPage() {
             {/* Top Row (3 items) */}
             
             <div className="w-full md:w-[calc(33.333%-1rem)] bg-[#F5F8FF] rounded-3xl p-10 flex flex-col items-center text-center hover:scale-[1.02] transition-transform duration-300">
-              <div className="text-[#2b3d5b]">
+              <div className="text-[#E87722]">
                 <svg viewBox="0 0 100 100" className="w-20 h-20 mx-auto mb-6">
     <defs>
       <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -293,13 +293,13 @@ export function ManagedITPage() {
     <path d="M50,10 Q90,50 50,90 Q10,50 50,10" fill="none" stroke="#fff" strokeWidth="2" opacity="0.5"/>
   </svg>
               </div>
-              <p className="text-base font-medium text-slate-800">
+              <p className="text-base font-medium text-[#000000]">
                 Reduce downtime across servers, networks, and endpoints
               </p>
             </div>
             
             <div className="w-full md:w-[calc(33.333%-1rem)] bg-[#F5F8FF] rounded-3xl p-10 flex flex-col items-center text-center hover:scale-[1.02] transition-transform duration-300">
-              <div className="text-[#2b3d5b]">
+              <div className="text-[#E87722]">
                 <svg viewBox="0 0 100 100" className="w-20 h-20 mx-auto mb-6">
     <defs>
       <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -313,13 +313,13 @@ export function ManagedITPage() {
     <circle cx="65" cy="50" r="34" fill="url(#grad2)" />
   </svg>
               </div>
-              <p className="text-base font-medium text-slate-800">
+              <p className="text-base font-medium text-[#000000]">
                 Keep customer and business data protected with proper security, not quick fixes
               </p>
             </div>
             
             <div className="w-full md:w-[calc(33.333%-1rem)] bg-[#F5F8FF] rounded-3xl p-10 flex flex-col items-center text-center hover:scale-[1.02] transition-transform duration-300">
-              <div className="text-[#2b3d5b]">
+              <div className="text-[#E87722]">
                 <svg viewBox="0 0 100 100" className="w-20 h-20 mx-auto mb-6">
     <defs>
       <linearGradient id="grad3" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -331,7 +331,7 @@ export function ManagedITPage() {
     <circle cx="50" cy="50" r="10" fill="#fff" opacity="0.3" />
   </svg>
               </div>
-              <p className="text-base font-medium text-slate-800">
+              <p className="text-base font-medium text-[#000000]">
                 Peace of mind knowing your systems are being watched
               </p>
             </div>
@@ -341,7 +341,7 @@ export function ManagedITPage() {
             <div className="w-full flex flex-col md:flex-row justify-center gap-6 mt-2">
               
               <div className="w-full md:w-[calc(33.333%-1rem)] bg-[#F5F8FF] rounded-3xl p-10 flex flex-col items-center text-center hover:scale-[1.02] transition-transform duration-300">
-                <div className="text-[#2b3d5b]">
+                <div className="text-[#E87722]">
                   <svg viewBox="0 0 100 100" className="w-20 h-20 mx-auto mb-6">
     <defs>
       <linearGradient id="grad4" x1="0%" y1="100%" x2="100%" y2="0%">
@@ -354,13 +354,13 @@ export function ManagedITPage() {
     <polygon points="50,40 59,46 59,54 50,60 41,54 41,46" fill="url(#grad4)" />
   </svg>
                 </div>
-                <p className="text-base font-medium text-slate-800">
+                <p className="text-base font-medium text-[#000000]">
                   Less time firefighting IT issues, more time running your business
                 </p>
               </div>
               
               <div className="w-full md:w-[calc(33.333%-1rem)] bg-[#F5F8FF] rounded-3xl p-10 flex flex-col items-center text-center hover:scale-[1.02] transition-transform duration-300">
-                <div className="text-[#2b3d5b]">
+                <div className="text-[#E87722]">
                   <svg viewBox="0 0 100 100" className="w-20 h-20 mx-auto mb-6">
     <defs>
       <linearGradient id="grad5" x1="100%" y1="0%" x2="0%" y2="100%">
@@ -373,7 +373,7 @@ export function ManagedITPage() {
     <circle cx="50" cy="50" r="10" fill="currentColor" opacity="0.8" />
   </svg>
                 </div>
-                <p className="text-base font-medium text-slate-800">
+                <p className="text-base font-medium text-[#000000]">
                   One team looking after your systems, month after month
                 </p>
               </div>
@@ -384,11 +384,11 @@ export function ManagedITPage() {
       </section>
       
       {/* 5. New Section 3: Text & Stats on Colored Full-Width */}
-      <section className="py-24 md:py-32 bg-[#090e17] text-white relative overflow-hidden rounded-t-[3rem] md:rounded-[3rem] md:mx-6">
+      <section className="py-24 md:py-32 bg-[#F7F7F7] text-[#000000] relative overflow-hidden rounded-t-[3rem] md:rounded-[3rem] md:mx-6">
         {/* Background gradients for the blurred wave effect */}
         <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
           <div 
-            className="absolute w-[150vw] md:w-[120vw] h-[100px] md:h-[150px] bg-[#2b3d5b] rounded-[100%]"
+            className="absolute w-[150vw] md:w-[120vw] h-[100px] md:h-[150px] bg-[#E87722] rounded-[100%]"
             style={{
               top: '76%',
               left: '84%',
@@ -398,7 +398,7 @@ export function ManagedITPage() {
             }}
           ></div>
           <div 
-            className="absolute w-[120vw] md:w-[90vw] h-[50px] md:h-[80px] bg-[#47638c] rounded-[100%]"
+            className="absolute w-[120vw] md:w-[90vw] h-[50px] md:h-[80px] bg-[#D4A574] rounded-[100%]"
             style={{
               top: '81%',
               left: '79%',
@@ -432,7 +432,7 @@ export function ManagedITPage() {
         </div>
         <div className="absolute inset-0 bg-gradient-to-tr from-black/40 via-transparent to-white/10 pointer-events-none"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-20 relative z-10">
-          <h2 className="text-2xl md:text-4xl font-light text-white/80 max-w-4xl leading-tight">
+          <h2 className="text-2xl md:text-4xl font-light text-[#6B6B6B] max-w-4xl leading-tight">
             We work alongside small businesses to proactively manage their IT. Through consistent monitoring and security, we craft infrastructure that protects your data and keeps you online.
           </h2>
         </div>
@@ -443,26 +443,26 @@ export function ManagedITPage() {
               Every deployment is a fusion of security, scalability and performance.
             </h3>
             
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-20 pt-12 border-t border-white/20">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-20 pt-12 border-t border-[#E0E0E0]">
               
               <div>
                 <div className="text-4xl md:text-5xl font-light mb-2">99.9%</div>
-                <div className="text-xs uppercase tracking-widest text-white/60">Uptime</div>
+                <div className="text-xs uppercase tracking-widest text-[#6B6B6B]">Uptime</div>
               </div>
               
               <div>
                 <div className="text-4xl md:text-5xl font-light mb-2">24/7</div>
-                <div className="text-xs uppercase tracking-widest text-white/60">Monitoring</div>
+                <div className="text-xs uppercase tracking-widest text-[#6B6B6B]">Monitoring</div>
               </div>
               
               <div>
                 <div className="text-4xl md:text-5xl font-light mb-2">Proactive</div>
-                <div className="text-xs uppercase tracking-widest text-white/60">Threat Detection</div>
+                <div className="text-xs uppercase tracking-widest text-[#6B6B6B]">Threat Detection</div>
               </div>
               
               <div>
                 <div className="text-4xl md:text-5xl font-light mb-2">5x</div>
-                <div className="text-xs uppercase tracking-widest text-white/60">Faster Recovery</div>
+                <div className="text-xs uppercase tracking-widest text-[#6B6B6B]">Faster Recovery</div>
               </div>
               
             </div>
@@ -475,7 +475,7 @@ export function ManagedITPage() {
       <section className="py-24 bg-white text-[#1a1a1a] border-t border-black/5">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-light tracking-tight mb-4 text-[#1e293b] text-slate-500">Managed IT Capabilities</h2>
+            <h2 className="text-3xl md:text-5xl font-light tracking-tight mb-4 text-[#000000] text-[#A3A3A3]">Managed IT Capabilities</h2>
           </div>
           
           <div className="space-y-4">
@@ -489,7 +489,7 @@ export function ManagedITPage() {
                   className="w-full px-8 py-6 flex items-center justify-between text-left"
                 >
                   <h3 className="text-2xl font-light text-[#4a4a4a]">{item.title}</h3>
-                  <div className={`w-8 h-8 rounded-full flex items-center justify-center transition-colors duration-300 ${expandedId === item.id ? 'bg-[#2b3d5b] text-white' : 'bg-[#e5e7eb] text-[#6b7280]'}`}>
+                  <div className={`w-8 h-8 rounded-full flex items-center justify-center transition-colors duration-300 ${expandedId === item.id ? 'bg-[#E87722] text-white' : 'bg-[#e5e7eb] text-[#6b7280]'}`}>
                     {expandedId === item.id ? <X size={16} /> : <Plus size={16} strokeWidth={2} />}
                   </div>
                 </button>
@@ -502,11 +502,11 @@ export function ManagedITPage() {
                       {item.description}
                     </div>
                     
-                    <h4 className="text-xs text-slate-400 mb-4 tracking-wider">What's included</h4>
+                    <h4 className="text-xs text-[#A3A3A3] mb-4 tracking-wider">What's included</h4>
                     
                     <div className="flex flex-wrap gap-2">
                       {item.tags.map((tag, idx) => (
-                        <span key={idx} className="bg-white border text-slate-600 text-xs px-4 py-2 rounded-full shadow-sm font-medium">
+                        <span key={idx} className="bg-white border text-[#6B6B6B] text-xs px-4 py-2 rounded-full shadow-sm font-medium">
                           {tag}
                         </span>
                       ))}
@@ -517,10 +517,10 @@ export function ManagedITPage() {
             ))}
           </div>
 
-          <div className="mt-16 text-center bg-[#f0f4f8] rounded-2xl p-8 border border-slate-200">
-            <h3 className="text-xl font-medium text-[#1e293b] mb-3">Looking for day-to-day helpdesk support?</h3>
-            <p className="text-slate-600 mb-6">If you need immediate technical help for your team alongside proactive monitoring, we offer that too.</p>
-            <Link to="/services/it-outsourcing" className="inline-flex items-center font-medium text-[#2b3d5b] hover:text-[#47638c] transition-colors">
+          <div className="mt-16 text-center bg-[#f0f4f8] rounded-2xl p-8 border border-[#E0E0E0]">
+            <h3 className="text-xl font-medium text-[#000000] mb-3">Looking for day-to-day helpdesk support?</h3>
+            <p className="text-[#6B6B6B] mb-6">If you need immediate technical help for your team alongside proactive monitoring, we offer that too.</p>
+            <Link to="/services/it-outsourcing" className="inline-flex items-center font-medium text-[#E87722] hover:text-[#47638c] transition-colors">
               Explore our IT Support services <ArrowUpRight className="ml-2 w-4 h-4" />
             </Link>
           </div>
@@ -528,13 +528,13 @@ export function ManagedITPage() {
       </section>
 
       {/* 5.5 New Section: How We Work Timeline */}
-      <section className="py-24 md:py-32 bg-[#FAF9F6] text-[#1a1a1a]">
+      <section className="py-24 md:py-32 bg-white text-[#1a1a1a]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20 max-w-3xl mx-auto">
-            <h2 className={`text-4xl md:text-6xl font-medium tracking-tight mb-6 ${"text-[#1e293b]"}`}>
+            <h2 className={`text-4xl md:text-6xl font-medium tracking-tight mb-6 ${"text-[#000000]"}`}>
               How <span className="italic font-light">we</span> work
             </h2>
-            <p className={`text-xl md:text-2xl font-light ${"text-[#1e293b]"}`}>
+            <p className={`text-xl md:text-2xl font-light ${"text-[#000000]"}`}>
               From first assessment to full-scale stability, here's how we secure your operations.
             </p>
           </div>
@@ -542,7 +542,7 @@ export function ManagedITPage() {
           <div className="flex flex-col md:flex-row gap-16 relative max-w-5xl mx-auto">
             
             {/* Left Graphics Area (Hidden on mobile) */}
-            <div className={`hidden md:flex flex-col w-1/3 justify-around items-center ${"text-[#1e293b]"}`}>
+            <div className={`hidden md:flex flex-col w-1/3 justify-around items-center ${"text-[#000000]"}`}>
                <div className="w-64 h-64 rounded-full bg-black/5 flex items-center justify-center relative overflow-hidden">
                  <svg viewBox="0 0 100 100" className="w-full h-full opacity-30">
                    <circle cx="50" cy="50" r="40" fill="none" stroke="currentColor" strokeWidth="0.5" strokeDasharray="2 2" />
@@ -567,41 +567,41 @@ export function ManagedITPage() {
             {/* Right Timeline Area */}
             <div className="w-full md:w-2/3 relative py-8">
                {/* Vertical Line */}
-               <div className={`absolute left-[11px] top-10 bottom-10 w-[2px] ${"bg-[#1e293b]"} opacity-30`}></div>
+               <div className={`absolute left-[11px] top-10 bottom-10 w-[2px] ${"bg-[#E87722]"} opacity-30`}></div>
                
                <div className="space-y-16">
                  
                  <div className="relative pl-12">
-                   <div className={`absolute left-0 top-1.5 w-6 h-6 rounded-full ${"bg-[#1e293b]"} flex items-center justify-center border-4 border-[#FAF9F6] shadow-sm`}>
+                   <div className={`absolute left-0 top-1.5 w-6 h-6 rounded-full ${"bg-[#E87722]"} flex items-center justify-center border-4 border-[#F7F7F7] shadow-sm`}>
                    </div>
-                   <h3 className={`${"text-[#1e293b]"} text-2xl font-medium mb-3`}>Audit & Strategy Call</h3>
+                   <h3 className={`${"text-[#000000]"} text-2xl font-medium mb-3`}>Audit & Strategy Call</h3>
                    <p className="text-[#1a1a1a]/70 text-base leading-relaxed max-w-md">
                      We start with a deep dive into your current IT infrastructure and security posture to identify immediate risks and long-term opportunities.
                    </p>
                  </div>
                  
                  <div className="relative pl-12">
-                   <div className={`absolute left-0 top-1.5 w-6 h-6 rounded-full ${"bg-[#1e293b]"} flex items-center justify-center border-4 border-[#FAF9F6] shadow-sm`}>
+                   <div className={`absolute left-0 top-1.5 w-6 h-6 rounded-full ${"bg-[#E87722]"} flex items-center justify-center border-4 border-[#F7F7F7] shadow-sm`}>
                    </div>
-                   <h3 className={`${"text-[#1e293b]"} text-2xl font-medium mb-3`}>Custom Roadmap</h3>
+                   <h3 className={`${"text-[#000000]"} text-2xl font-medium mb-3`}>Custom Roadmap</h3>
                    <p className="text-[#1a1a1a]/70 text-base leading-relaxed max-w-md">
                      Based on your operational needs, we craft a tailored IT management and security plan to drive measurable stability.
                    </p>
                  </div>
                  
                  <div className="relative pl-12">
-                   <div className={`absolute left-0 top-1.5 w-6 h-6 rounded-full ${"bg-[#1e293b]"} flex items-center justify-center border-4 border-[#FAF9F6] shadow-sm`}>
+                   <div className={`absolute left-0 top-1.5 w-6 h-6 rounded-full ${"bg-[#E87722]"} flex items-center justify-center border-4 border-[#F7F7F7] shadow-sm`}>
                    </div>
-                   <h3 className={`${"text-[#1e293b]"} text-2xl font-medium mb-3`}>Implementation</h3>
+                   <h3 className={`${"text-[#000000]"} text-2xl font-medium mb-3`}>Implementation</h3>
                    <p className="text-[#1a1a1a]/70 text-base leading-relaxed max-w-md">
                      We set up monitoring, backups, and security tools in the background, with minimal disruption to your day-to-day.
                    </p>
                  </div>
                  
                  <div className="relative pl-12">
-                   <div className={`absolute left-0 top-1.5 w-6 h-6 rounded-full ${"bg-[#1e293b]"} flex items-center justify-center border-4 border-[#FAF9F6] shadow-sm`}>
+                   <div className={`absolute left-0 top-1.5 w-6 h-6 rounded-full ${"bg-[#E87722]"} flex items-center justify-center border-4 border-[#F7F7F7] shadow-sm`}>
                    </div>
-                   <h3 className={`${"text-[#1e293b]"} text-2xl font-medium mb-3`}>Scale & Optimize</h3>
+                   <h3 className={`${"text-[#000000]"} text-2xl font-medium mb-3`}>Scale & Optimize</h3>
                    <p className="text-[#1a1a1a]/70 text-base leading-relaxed max-w-md">
                      We continuously analyze network performance and security events to maximize uptime and support your growth.
                    </p>
@@ -613,7 +613,7 @@ export function ManagedITPage() {
           </div>
           
           <div className="mt-24 text-center">
-            <Link to="/contact" className={`inline-flex items-center px-8 py-4 rounded-full ${"bg-[#1e293b]"} text-white font-medium hover:opacity-90 transition-opacity`}>
+            <Link to="/contact" className={`inline-flex items-center px-8 py-4 rounded-full ${"bg-[#E87722]"} text-[#000000] font-medium hover:opacity-90 transition-opacity`}>
               Book a free audit
               <div className="ml-4 bg-white text-black rounded-full p-1">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -624,11 +624,11 @@ export function ManagedITPage() {
         </div>
       </section>
       
-            <section id="contact" className="py-24 bg-white text-gray-900 relative overflow-hidden rounded-[3rem] border border-gray-100 mx-4 sm:mx-6 lg:mx-8 mb-8">
+            <section id="contact" className="py-24 bg-white text-[#000000] relative overflow-hidden rounded-[3rem] border border-[#E0E0E0] mx-4 sm:mx-6 lg:mx-8 mb-8">
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl md:text-6xl font-semibold mb-6 tracking-tight">Want IT that just works?</h2>
-          <p className="text-xl text-gray-500 mb-10 max-w-2xl mx-auto font-light leading-relaxed">Let us handle the monitoring and security so you can focus on your business.</p>
-          <Link to="/contact" className="bg-black text-white hover:bg-gray-800 px-10 py-4 rounded-full font-bold text-lg transition-colors inline-flex items-center shadow-md hover:shadow-lg hover:-translate-y-1 duration-300">
+          <p className="text-xl text-[#6B6B6B] mb-10 max-w-2xl mx-auto font-light leading-relaxed">Let us handle the monitoring and security so you can focus on your business.</p>
+          <Link to="/contact" className="bg-black text-[#000000] hover:bg-[#000000] px-10 py-4 rounded-full font-bold text-lg transition-colors inline-flex items-center shadow-md hover:shadow-lg hover:-translate-y-1 duration-300">
             Get a free consultation
           </Link>
         </div>

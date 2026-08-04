@@ -7,13 +7,14 @@ const faceBase = {
   position: 'absolute' as const,
   left: '50%',
   top: '50%',
-  border: '1px solid rgba(255,255,255,0.08)',
+  border: '1px solid rgba(0,0,0,0.06)',
   backfaceVisibility: 'hidden' as const,
 };
 
-const gradDark = 'linear-gradient(135deg, #0A0A0A 0%, #1E408A 55%, #2563EB 100%)';
-const gradMid  = 'linear-gradient(135deg, #1E408A 0%, #2563EB 55%, #EFF4FF 100%)';
-const gradLight = 'linear-gradient(135deg, #6090FA 0%, #FFFFFF 100%)';
+/* Orange-based cube gradients matching the design system */
+const gradDark  = 'linear-gradient(135deg, #F7F7F7 0%, #D4A574 55%, #E87722 100%)';
+const gradMid   = 'linear-gradient(135deg, #D4A574 0%, #E87722 55%, #FFFFFF 100%)';
+const gradLight = 'linear-gradient(135deg, #E87722 0%, #FFFFFF 100%)';
 
 const Cube = ({
   size,
@@ -87,25 +88,24 @@ export function Hero() {
     <section
       ref={sectionRef}
       id="home"
-      className="relative min-h-[100dvh] bg-[#090e17] overflow-hidden flex items-center justify-center pt-20"
+      className="relative min-h-[100dvh] bg-white overflow-hidden flex items-center justify-center pt-20"
     >
-      {/* Background radial gradients */}
-      <div className="absolute inset-0 w-full h-full z-0 overflow-hidden bg-[#090e17]">
+      {/* Background radial gradients — subtle orange glow */}
+      <div className="absolute inset-0 w-full h-full z-0 overflow-hidden bg-white">
         <div
           className="absolute inset-0"
           style={{
             background:
-              'radial-gradient(circle at 65% 35%, rgba(37,99,235,0.30) 0%, rgba(9,14,23,0) 55%), radial-gradient(circle at 20% 80%, rgba(30,64,138,0.20) 0%, rgba(9,14,23,0) 60%)',
+              'radial-gradient(circle at 65% 35%, rgba(232,119,34,0.08) 0%, transparent 55%), radial-gradient(circle at 20% 80%, rgba(212,165,116,0.06) 0%, transparent 60%)',
           }}
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#090e17] via-[#090e17]/40 to-transparent z-[1]" />
       </div>
 
       {/* Architectural cubes */}
-      <Cube size={180} rotateY={cubeRotateYReverse} scale={cubeScale} className="top-[10%] right-[10%] opacity-50" />
-      <Cube size={320} rotateY={cubeRotateY}        scale={cubeScale} className="bottom-[-5%] right-[-5%] opacity-80" />
-      <Cube size={140} rotateY={cubeRotateY}        scale={cubeScale} className="top-[25%] left-[5%] opacity-60" />
-      <Cube size={640} rotateY={cubeRotateYReverse} scale={cubeScale} className="bottom-[-15%] left-[-15%] opacity-40" />
+      <Cube size={180} rotateY={cubeRotateYReverse} scale={cubeScale} className="top-[10%] right-[10%] opacity-30" />
+      <Cube size={320} rotateY={cubeRotateY}        scale={cubeScale} className="bottom-[-5%] right-[-5%] opacity-40" />
+      <Cube size={140} rotateY={cubeRotateY}        scale={cubeScale} className="top-[25%] left-[5%] opacity-30" />
+      <Cube size={640} rotateY={cubeRotateYReverse} scale={cubeScale} className="bottom-[-15%] left-[-15%] opacity-20" />
 
       {/* Foreground content */}
       <motion.div
@@ -117,23 +117,23 @@ export function Hero() {
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.1 }}
-          className="inline-flex items-center gap-2 mb-6 md:mb-8 px-4 py-1.5 rounded-full border border-white/10 bg-white/5 text-white/60 uppercase tracking-[0.18em]"
+          className="inline-flex items-center gap-2 mb-6 md:mb-8 px-4 py-1.5 rounded-full border border-[#E0E0E0] bg-[#F7F7F7] text-[#6B6B6B] uppercase tracking-[0.18em]"
           style={{ fontSize: 'clamp(0.5rem, 0.45rem + 0.2vw, 0.65rem)' }}
         >
-          <span className="w-1.5 h-1.5 rounded-full bg-[#2563EB] inline-block" />
+          <span className="w-1.5 h-1.5 rounded-full bg-[#E87722] inline-block" />
           SOLKN IT Solutions
         </motion.span>
 
-        {/* H1 — wider container, larger clamp, max 3 lines */}
+        {/* H1 */}
         <motion.h1
           initial={{ opacity: 0, scale: 1.06 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, ease: [0.22, 1, 0.36, 1], delay: 0.15 }}
-          className="font-bold text-white tracking-tighter leading-[1.1] max-w-6xl mx-auto drop-shadow-lg"
+          className="font-bold text-[#000000] tracking-tighter leading-[1.1] max-w-6xl mx-auto"
           style={{ fontSize: 'clamp(2.6rem, 2rem + 3.5vw, 5.5rem)' }}
         >
           Reliable networks and IT support{' '}
-          <span className="text-white/50">for small businesses.</span>
+          <span className="text-[#A3A3A3]">for small businesses.</span>
         </motion.h1>
 
         {/* Subtitle */}
@@ -141,7 +141,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.35 }}
-          className="mt-6 md:mt-8 text-white/65 max-w-xl mx-auto font-light leading-relaxed px-2 sm:px-0"
+          className="mt-6 md:mt-8 text-[#6B6B6B] max-w-xl mx-auto font-normal leading-relaxed px-2 sm:px-0"
           style={{ fontSize: 'clamp(0.85rem, 0.75rem + 0.4vw, 1.1rem)' }}
         >
           From network installation to ongoing IT management, we keep small
@@ -156,13 +156,13 @@ export function Hero() {
           transition={{ duration: 0.7, delay: 0.5 }}
           className="mt-10 md:mt-12 flex flex-col sm:flex-row items-center justify-center gap-3 w-full max-w-sm mx-auto sm:max-w-none"
         >
-          {/* Primary CTA — button-in-button pattern */}
+          {/* Primary CTA — orange */}
           <Link
             to="/contact"
-            className="group w-full sm:w-auto flex items-center justify-center gap-3 bg-white text-[#090e17] pl-7 pr-2.5 py-2.5 rounded-full font-semibold text-sm hover:bg-gray-100 transition-all duration-300 shadow-lg shadow-white/10 active:scale-[0.98]"
+            className="group w-full sm:w-auto flex items-center justify-center gap-3 bg-[#E87722] text-white pl-7 pr-2.5 py-2.5 rounded-full font-semibold text-sm hover:bg-[#C4621A] transition-all duration-300 shadow-lg shadow-[#E87722]/10 active:scale-[0.98]"
           >
             Book a Call
-            <span className="w-8 h-8 rounded-full bg-[#090e17]/8 flex items-center justify-center group-hover:translate-x-0.5 group-hover:-translate-y-px transition-transform duration-300">
+            <span className="w-8 h-8 rounded-full bg-white/15 flex items-center justify-center group-hover:translate-x-0.5 group-hover:-translate-y-px transition-transform duration-300">
               <ArrowRight className="w-4 h-4" />
             </span>
           </Link>
@@ -170,7 +170,7 @@ export function Hero() {
           {/* Secondary CTA */}
           <Link
             to="/tools/it-support-calculator"
-            className="w-full sm:w-auto bg-white/8 backdrop-blur-md border border-white/15 hover:bg-white/15 text-white px-8 py-3.5 rounded-full font-medium text-sm transition-all duration-300 flex items-center justify-center active:scale-[0.98]"
+            className="w-full sm:w-auto bg-transparent border border-[#E0E0E0] hover:bg-[#F7F7F7] text-[#000000] px-8 py-3.5 rounded-full font-medium text-sm transition-all duration-300 flex items-center justify-center active:scale-[0.98]"
           >
             IT Cost Calculator
           </Link>
@@ -185,10 +185,10 @@ export function Hero() {
         >
           {stats.map((s, i) => (
             <div key={i} className="flex flex-col items-center gap-1">
-              <span className="text-white font-semibold tracking-tight" style={{ fontSize: 'clamp(1.1rem, 1rem + 0.6vw, 1.5rem)' }}>
+              <span className="text-[#000000] font-semibold tracking-tight" style={{ fontSize: 'clamp(1.1rem, 1rem + 0.6vw, 1.5rem)' }}>
                 {s.value}
               </span>
-              <span className="text-white/40 text-xs uppercase tracking-widest">{s.label}</span>
+              <span className="text-[#A3A3A3] text-xs uppercase tracking-widest">{s.label}</span>
             </div>
           ))}
         </motion.div>

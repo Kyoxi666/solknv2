@@ -19,7 +19,7 @@ export function ToolsPage() {
       <ToolsBanner />
       
       <div className="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl md:text-4xl font-normal tracking-tight text-gray-900 mb-12">Tools</h2>
+        <h2 className="text-3xl md:text-4xl font-normal tracking-tight text-[#000000] mb-12">Tools</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {tools.map((tool, idx) => (
             <Link key={idx} to={tool.link} className="group block w-full outline-none">
@@ -36,7 +36,7 @@ export function ToolsPage() {
                 </div>
                 
                 <div className="bg-[#f2f6f7] rounded-[24px] p-6 sm:p-8 flex flex-col h-full transition-colors duration-300 group-hover:bg-[#e8ecef]">
-                  <h3 className="text-xl sm:text-2xl font-medium tracking-tight text-gray-900 mb-3">{tool.title}</h3>
+                  <h3 className="text-xl sm:text-2xl font-medium tracking-tight text-[#000000] mb-3">{tool.title}</h3>
                   <p className="text-[#425357] text-sm leading-relaxed mb-8 flex-grow">
                     {tool.description}
                   </p>
@@ -44,7 +44,7 @@ export function ToolsPage() {
                     <div className="flex items-center">
                       Use tool <ArrowRight className="w-4 h-4 ml-1.5 transition-transform group-hover:translate-x-1" />
                     </div>
-                    <span className="text-xs text-gray-400 font-light normal-case">{tool.date}</span>
+                    <span className="text-xs text-[#A3A3A3] font-light normal-case">{tool.date}</span>
                   </div>
                 </div>
               </div>

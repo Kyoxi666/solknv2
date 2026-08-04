@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 export function NetworkInfrastructurePage() {
   return (
-    <div className="min-h-screen bg-[#FAF9F6] font-sans selection:bg-slate-6Same-Week0/30">
+    <div className="min-h-screen bg-white font-sans selection:bg-[#E87722]/20">
       <style>{`
         @keyframes marquee {
           0% { transform: translateX(0%); }
@@ -15,12 +15,12 @@ export function NetworkInfrastructurePage() {
       `}</style>
       
       {/* 1. Dark Hero Section */}
-      <section className="relative bg-[#090e17] text-white pt-32 pb-20 overflow-hidden">
+      <section className="relative bg-[#F7F7F7] text-[#000000] pt-32 pb-20 overflow-hidden">
                 {/* Background gradients for the blurred wave effect */}
-        <div className="absolute inset-0 z-0 overflow-hidden bg-[#090e17]">
+        <div className="absolute inset-0 z-0 overflow-hidden bg-[#F7F7F7]">
           {/* Main wave streak - slate blue */}
           <div 
-            className="absolute w-[150vw] md:w-[120vw] h-[100px] md:h-[150px] bg-[#2b3d5b] rounded-[100%]"
+            className="absolute w-[150vw] md:w-[120vw] h-[100px] md:h-[150px] bg-[#E87722] rounded-[100%]"
             style={{
               top: '45%',
               left: '40%',
@@ -31,7 +31,7 @@ export function NetworkInfrastructurePage() {
           ></div>
           {/* Brighter core of the wave */}
           <div 
-            className="absolute w-[120vw] md:w-[90vw] h-[50px] md:h-[80px] bg-[#47638c] rounded-[100%]"
+            className="absolute w-[120vw] md:w-[90vw] h-[50px] md:h-[80px] bg-[#D4A574] rounded-[100%]"
             style={{
               top: '50%',
               left: '35%',
@@ -70,19 +70,19 @@ export function NetworkInfrastructurePage() {
         </div>
         
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Link to="/" className="inline-flex items-center text-white/60 hover:text-white font-medium mb-16 transition-colors text-sm tracking-widest uppercase">
+          <Link to="/" className="inline-flex items-center text-[#6B6B6B] hover:text-white font-medium mb-16 transition-colors text-sm tracking-widest uppercase">
             <ArrowLeft className="w-4 h-4 mr-2" /> Back to Home
           </Link>
 
           <div className="flex flex-col md:flex-row justify-between items-start gap-12 mb-24">
-            <div className="text-xs md:text-sm tracking-widest uppercase text-white/60">
+            <div className="text-xs md:text-sm tracking-widest uppercase text-[#6B6B6B]">
               FROM DESIGN TO DEPLOYMENT 
             </div>
             <div className="max-w-md">
-              <p className="text-white/80 leading-relaxed text-xs md:text-sm tracking-wide uppercase mb-8">
+              <p className="text-[#6B6B6B] leading-relaxed text-xs md:text-sm tracking-wide uppercase mb-8">
                 Reliable networks for restaurants, shops, and small offices — Wi-Fi, routers, firewalls, and cabling installed and set up properly, the first time.
               </p>
-              <Link to="/contact" className="inline-flex items-center text-white hover:text-sky-300 transition-colors text-xs md:text-sm tracking-widest uppercase font-medium">
+              <Link to="/contact" className="inline-flex items-center text-[#000000] hover:text-sky-300 transition-colors text-xs md:text-sm tracking-widest uppercase font-medium">
                 Get a Free Consultation <ArrowUpRight className="w-4 h-4 ml-2" />
               </Link>
             </div>
@@ -103,7 +103,7 @@ export function NetworkInfrastructurePage() {
       </section>
 
       {/* 2. Solutions Section (White) */}
-      <section className="py-24 md:py-32 bg-[#FAF9F6] text-[#1a1a1a]">
+      <section className="py-24 md:py-32 bg-white text-[#1a1a1a]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl md:text-6xl lg:text-7xl font-light tracking-tighter uppercase mb-16 md:mb-24">
             Our <br/>
@@ -125,10 +125,10 @@ export function NetworkInfrastructurePage() {
               </div>
               <div className="md:col-span-4">
                 <ul className="space-y-3 text-sm text-black/70">
-                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#2b3d5b] mt-1.5"></div> Business Wi-Fi</li>
-                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#2b3d5b] mt-1.5"></div> Guest Wi-Fi</li>
-                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#2b3d5b] mt-1.5"></div> Site Survey & Design</li>
-                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#2b3d5b] mt-1.5"></div> Coverage Planning</li>
+                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#E87722] mt-1.5"></div> Business Wi-Fi</li>
+                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#E87722] mt-1.5"></div> Guest Wi-Fi</li>
+                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#E87722] mt-1.5"></div> Site Survey & Design</li>
+                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#E87722] mt-1.5"></div> Coverage Planning</li>
                 </ul>
               </div>
             </div>
@@ -145,10 +145,10 @@ export function NetworkInfrastructurePage() {
               </div>
               <div className="md:col-span-4">
                 <ul className="space-y-3 text-sm text-black/70">
-                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#2b3d5b] mt-1.5"></div> Router & Firewall Installation</li>
-                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#2b3d5b] mt-1.5"></div> Managed Switches</li>
-                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#2b3d5b] mt-1.5"></div> Secure Setup</li>
-                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#2b3d5b] mt-1.5"></div> Ongoing Support</li>
+                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#E87722] mt-1.5"></div> Router & Firewall Installation</li>
+                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#E87722] mt-1.5"></div> Managed Switches</li>
+                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#E87722] mt-1.5"></div> Secure Setup</li>
+                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#E87722] mt-1.5"></div> Ongoing Support</li>
                 </ul>
               </div>
             </div>
@@ -165,10 +165,10 @@ export function NetworkInfrastructurePage() {
               </div>
               <div className="md:col-span-4">
                 <ul className="space-y-3 text-sm text-black/70">
-                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#2b3d5b] mt-1.5"></div> Structured Cabling</li>
-                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#2b3d5b] mt-1.5"></div> Cabinet & Rack Setup</li>
-                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#2b3d5b] mt-1.5"></div> Cable Management</li>
-                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#2b3d5b] mt-1.5"></div> Future-Proof Layout</li>
+                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#E87722] mt-1.5"></div> Structured Cabling</li>
+                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#E87722] mt-1.5"></div> Cabinet & Rack Setup</li>
+                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#E87722] mt-1.5"></div> Cable Management</li>
+                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#E87722] mt-1.5"></div> Future-Proof Layout</li>
                 </ul>
               </div>
             </div>
@@ -176,11 +176,11 @@ export function NetworkInfrastructurePage() {
         </div>
       </section>
       
-<section className="py-24 md:py-32 bg-[#090e17] text-white relative overflow-hidden rounded-t-[3rem] md:rounded-[3rem] md:mx-6">
+<section className="py-24 md:py-32 bg-[#F7F7F7] text-[#000000] relative overflow-hidden rounded-t-[3rem] md:rounded-[3rem] md:mx-6">
         {/* Background gradients for the blurred wave effect */}
         <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
           <div 
-            className="absolute w-[150vw] md:w-[120vw] h-[100px] md:h-[150px] bg-[#2b3d5b] rounded-[100%]"
+            className="absolute w-[150vw] md:w-[120vw] h-[100px] md:h-[150px] bg-[#E87722] rounded-[100%]"
             style={{
               top: '50%',
               left: '45%',
@@ -190,7 +190,7 @@ export function NetworkInfrastructurePage() {
             }}
           ></div>
           <div 
-            className="absolute w-[120vw] md:w-[90vw] h-[50px] md:h-[80px] bg-[#47638c] rounded-[100%]"
+            className="absolute w-[120vw] md:w-[90vw] h-[50px] md:h-[80px] bg-[#D4A574] rounded-[100%]"
             style={{
               top: '55%',
               left: '40%',
@@ -229,7 +229,7 @@ export function NetworkInfrastructurePage() {
 
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-16 relative z-10">
-           <span className="inline-block px-4 py-1.5 rounded-full border border-white/20 text-xs font-medium tracking-widest uppercase bg-white/5 backdrop-blur-sm">
+           <span className="inline-block px-4 py-1.5 rounded-full border border-[#E0E0E0] text-xs font-medium tracking-widest uppercase bg-[#EFEFEF] backdrop-blur-sm">
              Built for Small Business
            </span>
         </div>
@@ -239,10 +239,10 @@ export function NetworkInfrastructurePage() {
       <section className="py-24 md:py-32 bg-white text-[#1a1a1a]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-4xl mx-auto mb-20">
-            <h2 className="text-4xl md:text-6xl font-medium tracking-tight mb-6 text-[#1e293b] leading-tight">
+            <h2 className="text-4xl md:text-6xl font-medium tracking-tight mb-6 text-[#000000] leading-tight">
               Build <span className="italic font-light">your</span> <span className="italic font-light">network</span> robustly
             </h2>
-            <p className="text-lg md:text-xl text-slate-600 font-light max-w-2xl mx-auto">
+            <p className="text-lg md:text-xl text-[#6B6B6B] font-light max-w-2xl mx-auto">
               Deploy scalable network infrastructure that grows with your business, ensuring uptime and eliminating bottlenecks before they form.
             </p>
           </div>
@@ -251,7 +251,7 @@ export function NetworkInfrastructurePage() {
             {/* Top Row (3 items) */}
             
             <div className="w-full md:w-[calc(33.333%-1rem)] bg-[#FFFBEB] rounded-3xl p-10 flex flex-col items-center text-center hover:scale-[1.02] transition-transform duration-300">
-              <div className="text-[#2b3d5b]">
+              <div className="text-[#E87722]">
                 <svg viewBox="0 0 100 100" className="w-20 h-20 mx-auto mb-6">
     <defs>
       <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -264,13 +264,13 @@ export function NetworkInfrastructurePage() {
     <path d="M50,10 Q90,50 50,90 Q10,50 50,10" fill="none" stroke="#fff" strokeWidth="2" opacity="0.5"/>
   </svg>
               </div>
-              <p className="text-base font-medium text-slate-800">
+              <p className="text-base font-medium text-[#000000]">
                 Keep your Wi-Fi and card payments online during business hours
               </p>
             </div>
             
             <div className="w-full md:w-[calc(33.333%-1rem)] bg-[#FFFBEB] rounded-3xl p-10 flex flex-col items-center text-center hover:scale-[1.02] transition-transform duration-300">
-              <div className="text-[#2b3d5b]">
+              <div className="text-[#E87722]">
                 <svg viewBox="0 0 100 100" className="w-20 h-20 mx-auto mb-6">
     <defs>
       <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -284,13 +284,13 @@ export function NetworkInfrastructurePage() {
     <circle cx="65" cy="50" r="34" fill="url(#grad2)" />
   </svg>
               </div>
-              <p className="text-base font-medium text-slate-800">
+              <p className="text-base font-medium text-[#000000]">
                 Fast, reliable Wi-Fi even when it's busy
               </p>
             </div>
             
             <div className="w-full md:w-[calc(33.333%-1rem)] bg-[#FFFBEB] rounded-3xl p-10 flex flex-col items-center text-center hover:scale-[1.02] transition-transform duration-300">
-              <div className="text-[#2b3d5b]">
+              <div className="text-[#E87722]">
                 <svg viewBox="0 0 100 100" className="w-20 h-20 mx-auto mb-6">
     <defs>
       <linearGradient id="grad3" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -302,7 +302,7 @@ export function NetworkInfrastructurePage() {
     <circle cx="50" cy="50" r="10" fill="#fff" opacity="0.3" />
   </svg>
               </div>
-              <p className="text-base font-medium text-slate-800">
+              <p className="text-base font-medium text-[#000000]">
                 Protect customer and business data with a properly configured firewall
               </p>
             </div>
@@ -312,7 +312,7 @@ export function NetworkInfrastructurePage() {
             <div className="w-full flex flex-col md:flex-row justify-center gap-6 mt-2">
               
               <div className="w-full md:w-[calc(33.333%-1rem)] bg-[#FFFBEB] rounded-3xl p-10 flex flex-col items-center text-center hover:scale-[1.02] transition-transform duration-300">
-                <div className="text-[#2b3d5b]">
+                <div className="text-[#E87722]">
                   <svg viewBox="0 0 100 100" className="w-20 h-20 mx-auto mb-6">
     <defs>
       <linearGradient id="grad4" x1="0%" y1="100%" x2="100%" y2="0%">
@@ -325,13 +325,13 @@ export function NetworkInfrastructurePage() {
     <polygon points="50,40 59,46 59,54 50,60 41,54 41,46" fill="url(#grad4)" />
   </svg>
                 </div>
-                <p className="text-base font-medium text-slate-800">
+                <p className="text-base font-medium text-[#000000]">
                   Add new devices, staff, or a second location without starting over
                 </p>
               </div>
               
               <div className="w-full md:w-[calc(33.333%-1rem)] bg-[#FFFBEB] rounded-3xl p-10 flex flex-col items-center text-center hover:scale-[1.02] transition-transform duration-300">
-                <div className="text-[#2b3d5b]">
+                <div className="text-[#E87722]">
                   <svg viewBox="0 0 100 100" className="w-20 h-20 mx-auto mb-6">
     <defs>
       <linearGradient id="grad5" x1="100%" y1="0%" x2="0%" y2="100%">
@@ -344,7 +344,7 @@ export function NetworkInfrastructurePage() {
     <circle cx="50" cy="50" r="10" fill="currentColor" opacity="0.8" />
   </svg>
                 </div>
-                <p className="text-base font-medium text-slate-800">
+                <p className="text-base font-medium text-[#000000]">
                   No unnecessary hardware — just what your business actually needs
                 </p>
               </div>
@@ -355,11 +355,11 @@ export function NetworkInfrastructurePage() {
       </section>
       
       {/* 5. New Section 3: Text & Stats on Colored Full-Width */}
-      <section className="py-24 md:py-32 bg-[#090e17] text-white relative overflow-hidden rounded-t-[3rem] md:rounded-[3rem] md:mx-6">
+      <section className="py-24 md:py-32 bg-[#F7F7F7] text-[#000000] relative overflow-hidden rounded-t-[3rem] md:rounded-[3rem] md:mx-6">
         {/* Background gradients for the blurred wave effect */}
         <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
           <div 
-            className="absolute w-[150vw] md:w-[120vw] h-[100px] md:h-[150px] bg-[#2b3d5b] rounded-[100%]"
+            className="absolute w-[150vw] md:w-[120vw] h-[100px] md:h-[150px] bg-[#E87722] rounded-[100%]"
             style={{
               top: '70%',
               left: '75%',
@@ -369,7 +369,7 @@ export function NetworkInfrastructurePage() {
             }}
           ></div>
           <div 
-            className="absolute w-[120vw] md:w-[90vw] h-[50px] md:h-[80px] bg-[#47638c] rounded-[100%]"
+            className="absolute w-[120vw] md:w-[90vw] h-[50px] md:h-[80px] bg-[#D4A574] rounded-[100%]"
             style={{
               top: '75%',
               left: '70%',
@@ -403,7 +403,7 @@ export function NetworkInfrastructurePage() {
         </div>
         <div className="absolute inset-0 bg-gradient-to-tr from-black/40 via-transparent to-white/10 pointer-events-none"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-20 relative z-10">
-          <h2 className="text-2xl md:text-4xl font-light text-white/80 max-w-4xl leading-tight">
+          <h2 className="text-2xl md:text-4xl font-light text-[#6B6B6B] max-w-4xl leading-tight">
             We deploy industry-leading hardware and software-defined networking solutions to create resilient architectures that serve as the foundation of your digital transformation.
           </h2>
         </div>
@@ -414,26 +414,26 @@ export function NetworkInfrastructurePage() {
               Simple, reliable networks — installed once, working every day.
             </h3>
             
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-20 pt-12 border-t border-white/20">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-20 pt-12 border-t border-[#E0E0E0]">
               
               <div>
                 <div className="text-4xl md:text-5xl font-light mb-2">0</div>
-                <div className="text-xs uppercase tracking-widest text-white/60">Install Turnaround</div>
+                <div className="text-xs uppercase tracking-widest text-[#6B6B6B]">Install Turnaround</div>
               </div>
               
               <div>
                 <div className="text-4xl md:text-5xl font-light mb-2">100x</div>
-                <div className="text-xs uppercase tracking-widest text-white/60">On-Site Quote</div>
+                <div className="text-xs uppercase tracking-widest text-[#6B6B6B]">On-Site Quote</div>
               </div>
               
               <div>
                 <div className="text-4xl md:text-5xl font-light mb-2">Local</div>
-                <div className="text-xs uppercase tracking-widest text-white/60">Engineers</div>
+                <div className="text-xs uppercase tracking-widest text-[#6B6B6B]">Engineers</div>
               </div>
               
               <div>
                 <div className="text-4xl md:text-5xl font-light mb-2">&lt;1ms</div>
-                <div className="text-xs uppercase tracking-widest text-white/60">Businesses Installed</div>
+                <div className="text-xs uppercase tracking-widest text-[#6B6B6B]">Businesses Installed</div>
               </div>
               
             </div>
@@ -443,16 +443,16 @@ export function NetworkInfrastructurePage() {
 
       
       {/* Technology We Install Section */}
-      <section className="py-24 md:py-32 bg-[#FAF9F6] text-[#1a1a1a]">
+      <section className="py-24 md:py-32 bg-white text-[#1a1a1a]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl md:text-5xl font-medium tracking-tight mb-4 text-[#1e293b]">Technology We Install</h2>
-            <p className="text-slate-600 text-lg md:text-xl font-light">We partner with industry-leading brands to provide reliable equipment.</p>
+            <h2 className="text-3xl md:text-5xl font-medium tracking-tight mb-4 text-[#000000]">Technology We Install</h2>
+            <p className="text-[#6B6B6B] text-lg md:text-xl font-light">We partner with industry-leading brands to provide reliable equipment.</p>
           </div>
           <div className="flex flex-wrap justify-center gap-6 max-w-6xl mx-auto">
             
             <div className="w-full md:w-[calc(33.333%-1rem)] bg-white rounded-[2rem] p-10 flex flex-col items-center text-center hover:scale-[1.02] transition-transform duration-300">
-              <div className="text-slate-500">
+              <div className="text-[#A3A3A3]">
                 <svg viewBox="0 0 100 100" className="w-16 h-16 mx-auto mb-6">
                   <defs>
                     <linearGradient id="techGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -465,13 +465,13 @@ export function NetworkInfrastructurePage() {
                   <path d="M50,10 Q90,50 50,90 Q10,50 50,10" fill="none" stroke="#fff" strokeWidth="2" opacity="0.5"/>
                 </svg>
               </div>
-              <h3 className="text-lg font-medium mb-3 text-slate-800">Core Networking</h3>
-              <p className="text-slate-600 font-medium mb-4 text-sm">Ubiquiti UniFi, TP-Link Omada, Cisco Business</p>
-              <p className="text-sm text-slate-500 font-light">Great value networking for shops and small offices</p>
+              <h3 className="text-lg font-medium mb-3 text-[#000000]">Core Networking</h3>
+              <p className="text-[#6B6B6B] font-medium mb-4 text-sm">Ubiquiti UniFi, TP-Link Omada, Cisco Business</p>
+              <p className="text-sm text-[#A3A3A3] font-light">Great value networking for shops and small offices</p>
             </div>
 
             <div className="w-full md:w-[calc(33.333%-1rem)] bg-white rounded-[2rem] p-10 flex flex-col items-center text-center hover:scale-[1.02] transition-transform duration-300">
-              <div className="text-slate-500">
+              <div className="text-[#A3A3A3]">
                 <svg viewBox="0 0 100 100" className="w-16 h-16 mx-auto mb-6">
                   <defs>
                     <linearGradient id="techGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -485,13 +485,13 @@ export function NetworkInfrastructurePage() {
                   <circle cx="65" cy="50" r="34" fill="url(#techGrad2)" />
                 </svg>
               </div>
-              <h3 className="text-lg font-medium mb-3 text-slate-800">Business Firewalls</h3>
-              <p className="text-slate-600 font-medium mb-4 text-sm">Fortinet, DrayTek, Zyxel</p>
-              <p className="text-sm text-slate-500 font-light">Reliable security suited to your business size</p>
+              <h3 className="text-lg font-medium mb-3 text-[#000000]">Business Firewalls</h3>
+              <p className="text-[#6B6B6B] font-medium mb-4 text-sm">Fortinet, DrayTek, Zyxel</p>
+              <p className="text-sm text-[#A3A3A3] font-light">Reliable security suited to your business size</p>
             </div>
 
             <div className="w-full md:w-[calc(33.333%-1rem)] bg-white rounded-[2rem] p-10 flex flex-col items-center text-center hover:scale-[1.02] transition-transform duration-300">
-              <div className="text-slate-500">
+              <div className="text-[#A3A3A3]">
                 <svg viewBox="0 0 100 100" className="w-16 h-16 mx-auto mb-6">
                   <defs>
                     <linearGradient id="techGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -503,9 +503,9 @@ export function NetworkInfrastructurePage() {
                   <circle cx="50" cy="50" r="10" fill="#fff" opacity="0.3" />
                 </svg>
               </div>
-              <h3 className="text-lg font-medium mb-3 text-slate-800">Enterprise Networking</h3>
-              <p className="text-slate-600 font-medium mb-4 text-sm">Cisco Meraki, HPE Aruba</p>
-              <p className="text-sm text-slate-500 font-light">For businesses ready to scale or manage multiple sites</p>
+              <h3 className="text-lg font-medium mb-3 text-[#000000]">Enterprise Networking</h3>
+              <p className="text-[#6B6B6B] font-medium mb-4 text-sm">Cisco Meraki, HPE Aruba</p>
+              <p className="text-sm text-[#A3A3A3] font-light">For businesses ready to scale or manage multiple sites</p>
             </div>
 
           </div>
@@ -513,54 +513,54 @@ export function NetworkInfrastructurePage() {
       </section>
       
       {/* Industries / Who We Work With Section */}
-      <section className="py-24 bg-[#FAF9F6]">
+      <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="relative rounded-[3rem] overflow-hidden p-12 md:p-20 text-white shadow-2xl">
+          <div className="relative rounded-[3rem] overflow-hidden p-12 md:p-20 text-[#000000] shadow-2xl">
             {/* Background imitating the attached dark, blurry blue/grey image */}
             <div className="absolute inset-0 bg-[#0a0f1a] overflow-hidden">
-              <div className="absolute top-[-20%] left-[-10%] w-[70%] h-[70%] rounded-full bg-slate-600/30 blur-[120px]"></div>
+              <div className="absolute top-[-20%] left-[-10%] w-[70%] h-[70%] rounded-full bg-[#E87722]/10 blur-[120px]"></div>
               <div className="absolute bottom-[-10%] right-[-10%] w-[60%] h-[60%] rounded-full bg-blue-900/40 blur-[100px]"></div>
-              <div className="absolute top-[20%] right-[10%] w-[50%] h-[50%] rounded-full bg-slate-400/10 blur-[80px]"></div>
+              <div className="absolute top-[20%] right-[10%] w-[50%] h-[50%] rounded-full bg-[#D4A574]/10 blur-[80px]"></div>
             </div>
             
             <div className="relative z-10">
               <div className="text-center mb-16">
                 <h2 className="text-3xl md:text-5xl font-medium tracking-tight mb-4">Who We Work With</h2>
-                <p className="text-white/70 text-lg md:text-xl font-light">We provide tailored network solutions for businesses of all types.</p>
+                <p className="text-[#6B6B6B] text-lg md:text-xl font-light">We provide tailored network solutions for businesses of all types.</p>
               </div>
               
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 {/* Restaurants */}
-                <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-[2rem] p-8 flex flex-col items-center text-center">
-                  <div className="w-16 h-16 rounded-full bg-white/10 flex items-center justify-center mb-6">
+                <div className="bg-[#EFEFEF] backdrop-blur-md border border-[#E0E0E0] rounded-[2rem] p-8 flex flex-col items-center text-center">
+                  <div className="w-16 h-16 rounded-full bg-[#F7F7F7] flex items-center justify-center mb-6">
                     <svg className="w-8 h-8 text-white/90" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2v10z" />
                     </svg>
                   </div>
                   <h3 className="text-xl font-medium mb-3">Restaurants & Cafés</h3>
-                  <p className="text-white/60 text-sm font-light">Reliable POS connectivity and seamless guest Wi-Fi for your diners.</p>
+                  <p className="text-[#6B6B6B] text-sm font-light">Reliable POS connectivity and seamless guest Wi-Fi for your diners.</p>
                 </div>
                 
                 {/* Retail Shops */}
-                <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-[2rem] p-8 flex flex-col items-center text-center">
-                  <div className="w-16 h-16 rounded-full bg-white/10 flex items-center justify-center mb-6">
+                <div className="bg-[#EFEFEF] backdrop-blur-md border border-[#E0E0E0] rounded-[2rem] p-8 flex flex-col items-center text-center">
+                  <div className="w-16 h-16 rounded-full bg-[#F7F7F7] flex items-center justify-center mb-6">
                     <svg className="w-8 h-8 text-white/90" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
                     </svg>
                   </div>
                   <h3 className="text-xl font-medium mb-3">Retail Shops</h3>
-                  <p className="text-white/60 text-sm font-light">Secure transactions, inventory management, and smooth floor operations.</p>
+                  <p className="text-[#6B6B6B] text-sm font-light">Secure transactions, inventory management, and smooth floor operations.</p>
                 </div>
 
                 {/* Small Offices */}
-                <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-[2rem] p-8 flex flex-col items-center text-center">
-                  <div className="w-16 h-16 rounded-full bg-white/10 flex items-center justify-center mb-6">
+                <div className="bg-[#EFEFEF] backdrop-blur-md border border-[#E0E0E0] rounded-[2rem] p-8 flex flex-col items-center text-center">
+                  <div className="w-16 h-16 rounded-full bg-[#F7F7F7] flex items-center justify-center mb-6">
                     <svg className="w-8 h-8 text-white/90" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
                     </svg>
                   </div>
                   <h3 className="text-xl font-medium mb-3">Small Offices</h3>
-                  <p className="text-white/60 text-sm font-light">Fast, secure networks for staff productivity and seamless video calls.</p>
+                  <p className="text-[#6B6B6B] text-sm font-light">Fast, secure networks for staff productivity and seamless video calls.</p>
                 </div>
               </div>
             </div>
@@ -569,13 +569,13 @@ export function NetworkInfrastructurePage() {
       </section>
 
       {/* 5.5 New Section: How We Work Timeline */}{/* 5.5 New Section: How We Work Timeline */}
-      <section className="py-24 md:py-32 bg-[#FAF9F6] text-[#1a1a1a]">
+      <section className="py-24 md:py-32 bg-white text-[#1a1a1a]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20 max-w-3xl mx-auto">
-            <h2 className={`text-4xl md:text-6xl font-medium tracking-tight mb-6 ${"text-[#1e293b]"}`}>
+            <h2 className={`text-4xl md:text-6xl font-medium tracking-tight mb-6 ${"text-[#000000]"}`}>
               How <span className="italic font-light">we</span> work
             </h2>
-            <p className={`text-xl md:text-2xl font-light ${"text-[#1e293b]"}`}>
+            <p className={`text-xl md:text-2xl font-light ${"text-[#000000]"}`}>
               From first call to finished install, here's how we get your business connected.
             </p>
           </div>
@@ -583,7 +583,7 @@ export function NetworkInfrastructurePage() {
           <div className="flex flex-col md:flex-row gap-16 relative max-w-5xl mx-auto">
             
             {/* Left Graphics Area (Hidden on mobile) */}
-            <div className={`hidden md:flex flex-col w-1/3 justify-around items-center ${"text-[#1e293b]"}`}>
+            <div className={`hidden md:flex flex-col w-1/3 justify-around items-center ${"text-[#000000]"}`}>
                <div className="w-64 h-64 rounded-full bg-black/5 flex items-center justify-center relative overflow-hidden">
                  <svg viewBox="0 0 100 100" className="w-full h-full opacity-30">
                    <circle cx="50" cy="50" r="40" fill="none" stroke="currentColor" strokeWidth="0.5" strokeDasharray="2 2" />
@@ -608,41 +608,41 @@ export function NetworkInfrastructurePage() {
             {/* Right Timeline Area */}
             <div className="w-full md:w-2/3 relative py-8">
                {/* Vertical Line */}
-               <div className={`absolute left-[11px] top-10 bottom-10 w-[2px] ${"bg-[#1e293b]"} opacity-30`}></div>
+               <div className={`absolute left-[11px] top-10 bottom-10 w-[2px] ${"bg-[#E87722]"} opacity-30`}></div>
                
                <div className="space-y-16">
                  
                  <div className="relative pl-12">
-                   <div className={`absolute left-0 top-1.5 w-6 h-6 rounded-full ${"bg-[#1e293b]"} flex items-center justify-center border-4 border-[#FAF9F6] shadow-sm`}>
+                   <div className={`absolute left-0 top-1.5 w-6 h-6 rounded-full ${"bg-[#E87722]"} flex items-center justify-center border-4 border-[#F7F7F7] shadow-sm`}>
                    </div>
-                   <h3 className={`${"text-[#1e293b]"} text-2xl font-medium mb-3`}>Site Visit</h3>
+                   <h3 className={`${"text-[#000000]"} text-2xl font-medium mb-3`}>Site Visit</h3>
                    <p className="text-[#1a1a1a]/70 text-base leading-relaxed max-w-md">
                      We visit your business to see the space, check existing setup, and understand what you need.
                    </p>
                  </div>
                  
                  <div className="relative pl-12">
-                   <div className={`absolute left-0 top-1.5 w-6 h-6 rounded-full ${"bg-[#1e293b]"} flex items-center justify-center border-4 border-[#FAF9F6] shadow-sm`}>
+                   <div className={`absolute left-0 top-1.5 w-6 h-6 rounded-full ${"bg-[#E87722]"} flex items-center justify-center border-4 border-[#F7F7F7] shadow-sm`}>
                    </div>
-                   <h3 className={`${"text-[#1e293b]"} text-2xl font-medium mb-3`}>Design & Quote</h3>
+                   <h3 className={`${"text-[#000000]"} text-2xl font-medium mb-3`}>Design & Quote</h3>
                    <p className="text-[#1a1a1a]/70 text-base leading-relaxed max-w-md">
                      We put together a clear plan and a straightforward quote — no jargon, no surprises.
                    </p>
                  </div>
                  
                  <div className="relative pl-12">
-                   <div className={`absolute left-0 top-1.5 w-6 h-6 rounded-full ${"bg-[#1e293b]"} flex items-center justify-center border-4 border-[#FAF9F6] shadow-sm`}>
+                   <div className={`absolute left-0 top-1.5 w-6 h-6 rounded-full ${"bg-[#E87722]"} flex items-center justify-center border-4 border-[#F7F7F7] shadow-sm`}>
                    </div>
-                   <h3 className={`${"text-[#1e293b]"} text-2xl font-medium mb-3`}>Installation</h3>
+                   <h3 className={`${"text-[#000000]"} text-2xl font-medium mb-3`}>Installation</h3>
                    <p className="text-[#1a1a1a]/70 text-base leading-relaxed max-w-md">
                      We install and configure everything — routers, switches, Wi-Fi, and cabling — with minimal disruption to your business.
                    </p>
                  </div>
                  
                  <div className="relative pl-12">
-                   <div className={`absolute left-0 top-1.5 w-6 h-6 rounded-full ${"bg-[#1e293b]"} flex items-center justify-center border-4 border-[#FAF9F6] shadow-sm`}>
+                   <div className={`absolute left-0 top-1.5 w-6 h-6 rounded-full ${"bg-[#E87722]"} flex items-center justify-center border-4 border-[#F7F7F7] shadow-sm`}>
                    </div>
-                   <h3 className={`${"text-[#1e293b]"} text-2xl font-medium mb-3`}>Support & Aftercare</h3>
+                   <h3 className={`${"text-[#000000]"} text-2xl font-medium mb-3`}>Support & Aftercare</h3>
                    <p className="text-[#1a1a1a]/70 text-base leading-relaxed max-w-md">
                      We're on hand after the install for support, updates, or any changes as your business grows.
                    </p>
@@ -654,7 +654,7 @@ export function NetworkInfrastructurePage() {
           </div>
           
           <div className="mt-24 text-center">
-            <Link to="/contact" className={`inline-flex items-center px-8 py-4 rounded-full ${"bg-[#1e293b]"} text-white font-medium hover:opacity-90 transition-opacity`}>
+            <Link to="/contact" className={`inline-flex items-center px-8 py-4 rounded-full ${"bg-[#E87722]"} text-[#000000] font-medium hover:opacity-90 transition-opacity`}>
               Get a free quote
               <div className="ml-4 bg-white text-black rounded-full p-1">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -665,11 +665,11 @@ export function NetworkInfrastructurePage() {
         </div>
       </section>
       
-            <section id="contact" className="py-24 bg-white text-gray-900 relative overflow-hidden rounded-[3rem] border border-gray-100 mx-4 sm:mx-6 lg:mx-8 mb-8">
+            <section id="contact" className="py-24 bg-white text-[#000000] relative overflow-hidden rounded-[3rem] border border-[#E0E0E0] mx-4 sm:mx-6 lg:mx-8 mb-8">
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl md:text-6xl font-semibold mb-6 tracking-tight">Ready to upgrade your network?</h2>
-          <p className="text-xl text-gray-500 mb-10 max-w-2xl mx-auto font-light leading-relaxed">Get a free on-site quote — no obligation. We install packages to suit any budget.</p>
-          <Link to="/contact" className="bg-black text-white hover:bg-gray-800 px-10 py-4 rounded-full font-bold text-lg transition-colors inline-flex items-center shadow-md hover:shadow-lg hover:-translate-y-1 duration-300">
+          <p className="text-xl text-[#6B6B6B] mb-10 max-w-2xl mx-auto font-light leading-relaxed">Get a free on-site quote — no obligation. We install packages to suit any budget.</p>
+          <Link to="/contact" className="bg-black text-[#000000] hover:bg-[#000000] px-10 py-4 rounded-full font-bold text-lg transition-colors inline-flex items-center shadow-md hover:shadow-lg hover:-translate-y-1 duration-300">
             Book your free quote
           </Link>
         </div>

@@ -24,10 +24,10 @@ export function ClientPortalPage() {
         <div className="w-full md:w-[60%] relative flex flex-col justify-center">
           
           <div className="mb-6 relative z-20">
-            <h1 className="text-3xl md:text-[40px] font-light text-white mb-2 tracking-wide">
+            <h1 className="text-3xl md:text-[40px] font-light text-[#000000] mb-2 tracking-wide">
               CLIENT PORTAL
             </h1>
-            <p className="text-gray-400 text-sm tracking-widest uppercase mt-4">Secure Access</p>
+            <p className="text-[#A3A3A3] text-sm tracking-widest uppercase mt-4">Secure Access</p>
           </div>
 
           <div className="flex items-center w-full relative mb-12 hidden md:flex h-4 mt-8">
@@ -42,18 +42,18 @@ export function ClientPortalPage() {
             </div>
           </div>
           
-          <form onSubmit={handleSubmit} className="w-full max-w-sm space-y-5 bg-white/5 backdrop-blur-md p-8 rounded-3xl border border-white/10 relative z-20 mt-8">
+          <form onSubmit={handleSubmit} className="w-full max-w-sm space-y-5 bg-[#EFEFEF] backdrop-blur-md p-8 rounded-3xl border border-[#E0E0E0] relative z-20 mt-8">
             <div>
-              <label className="block text-[11px] font-medium text-gray-400 mb-2 uppercase tracking-widest">Email Address</label>
+              <label className="block text-[11px] font-medium text-[#A3A3A3] mb-2 uppercase tracking-widest">Email Address</label>
               <div className="relative">
                 <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
-                  <Mail className="h-4 w-4 text-gray-500" />
+                  <Mail className="h-4 w-4 text-[#6B6B6B]" />
                 </div>
                 <input
                   type="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="block w-full pl-11 pr-3 py-3 border border-white/10 rounded-2xl leading-5 bg-black/40 text-white placeholder-gray-600 focus:outline-none focus:ring-1 focus:ring-[#2b3d5b] focus:border-[#2b3d5b] sm:text-sm transition-colors"
+                  className="block w-full pl-11 pr-3 py-3 border border-[#E0E0E0] rounded-2xl leading-5 bg-black/40 text-[#000000] placeholder-gray-600 focus:outline-none focus:ring-1 focus:ring-[#2b3d5b] focus:border-[#2b3d5b] sm:text-sm transition-colors"
                   placeholder="name@company.com"
                   required
                 />
@@ -61,16 +61,16 @@ export function ClientPortalPage() {
             </div>
 
             <div>
-              <label className="block text-[11px] font-medium text-gray-400 mb-2 uppercase tracking-widest">Password</label>
+              <label className="block text-[11px] font-medium text-[#A3A3A3] mb-2 uppercase tracking-widest">Password</label>
               <div className="relative">
                 <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
-                  <Lock className="h-4 w-4 text-gray-500" />
+                  <Lock className="h-4 w-4 text-[#6B6B6B]" />
                 </div>
                 <input
                   type="password"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                  className="block w-full pl-11 pr-3 py-3 border border-white/10 rounded-2xl leading-5 bg-black/40 text-white placeholder-gray-600 focus:outline-none focus:ring-1 focus:ring-[#2b3d5b] focus:border-[#2b3d5b] sm:text-sm transition-colors"
+                  className="block w-full pl-11 pr-3 py-3 border border-[#E0E0E0] rounded-2xl leading-5 bg-black/40 text-[#000000] placeholder-gray-600 focus:outline-none focus:ring-1 focus:ring-[#2b3d5b] focus:border-[#2b3d5b] sm:text-sm transition-colors"
                   placeholder="••••••••"
                   required
                 />
@@ -83,15 +83,15 @@ export function ClientPortalPage() {
                   id="remember-me"
                   name="remember-me"
                   type="checkbox"
-                  className="h-4 w-4 text-[#2b3d5b] focus:ring-[#2b3d5b] border-gray-700 bg-black/40 rounded border-white/10"
+                  className="h-4 w-4 text-[#E87722] focus:ring-[#2b3d5b] border-gray-700 bg-black/40 rounded border-[#E0E0E0]"
                 />
-                <label htmlFor="remember-me" className="ml-2 block text-sm text-gray-400">
+                <label htmlFor="remember-me" className="ml-2 block text-sm text-[#A3A3A3]">
                   Remember me
                 </label>
               </div>
 
               <div className="text-sm">
-                <Link to="#" className="font-medium text-white/70 hover:text-white transition-colors">
+                <Link to="#" className="font-medium text-[#6B6B6B] hover:text-white transition-colors">
                   Forgot password?
                 </Link>
               </div>
@@ -99,7 +99,7 @@ export function ClientPortalPage() {
 
             <button
               type="submit"
-              className="w-full flex justify-center py-3.5 px-4 border border-transparent rounded-2xl shadow-sm text-sm font-medium text-black bg-white hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#2b3d5b] focus:ring-offset-black transition-colors mt-6"
+              className="w-full flex justify-center py-3.5 px-4 border border-transparent rounded-2xl shadow-sm text-sm font-medium text-black bg-white hover:bg-[#F7F7F7] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#2b3d5b] focus:ring-offset-black transition-colors mt-6"
             >
               Sign In
             </button>

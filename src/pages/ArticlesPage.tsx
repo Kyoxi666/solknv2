@@ -47,7 +47,7 @@ export function ArticlesPage() {
       <ArticlesBanner />
       
       <div className="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl md:text-4xl font-normal tracking-tight text-gray-900 mb-12 hidden">Latest Articles</h2>
+        <h2 className="text-3xl md:text-4xl font-normal tracking-tight text-[#000000] mb-12 hidden">Latest Articles</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {articles.map((article, idx) => (
             <Link key={idx} to={article.link} className="group block w-full outline-none">
@@ -64,7 +64,7 @@ export function ArticlesPage() {
                 </div>
                 
                 <div className="bg-[#f2f6f7] rounded-[24px] p-6 sm:p-8 flex flex-col h-full transition-colors duration-300 group-hover:bg-[#e8ecef]">
-                  <h3 className="text-xl sm:text-2xl font-medium tracking-tight text-gray-900 mb-3">{article.title}</h3>
+                  <h3 className="text-xl sm:text-2xl font-medium tracking-tight text-[#000000] mb-3">{article.title}</h3>
                   <p className="text-[#425357] text-sm leading-relaxed mb-8 flex-grow">
                     {article.description}
                   </p>
@@ -72,7 +72,7 @@ export function ArticlesPage() {
                     <div className="flex items-center">
                       Read article <ArrowRight className="w-4 h-4 ml-1.5 transition-transform group-hover:translate-x-1" />
                     </div>
-                    <span className="text-xs text-gray-400 font-light normal-case">{article.date}</span>
+                    <span className="text-xs text-[#A3A3A3] font-light normal-case">{article.date}</span>
                   </div>
                 </div>
               </div>

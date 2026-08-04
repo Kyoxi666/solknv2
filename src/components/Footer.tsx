@@ -6,17 +6,17 @@ export function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-black pt-20 pb-10 border-t border-white/8 relative z-20">
+    <footer className="bg-black pt-20 pb-10 border-t border-[#E0E0E0] relative z-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Top CTA headline */}
-        <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-8 mb-16 pb-16 border-b border-white/8">
+        <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-8 mb-16 pb-16 border-b border-white/10">
           <p className="text-3xl md:text-4xl font-medium text-white tracking-tight max-w-md">
             Ready to simplify your IT?
           </p>
           <Link
             to="/contact"
-            className="shrink-0 inline-flex items-center gap-2 px-7 py-3.5 bg-white text-black rounded-full font-semibold text-sm hover:bg-gray-100 transition-colors duration-300 active:scale-[0.98]"
+            className="shrink-0 inline-flex items-center gap-2 px-7 py-3.5 bg-[#E87722] text-white rounded-full font-semibold text-sm hover:bg-[#C4621A] transition-colors duration-300 active:scale-[0.98]"
           >
             Get a free consultation
           </Link>
@@ -33,7 +33,6 @@ export function Footer() {
               Intelligent IT services and AI automation empowering growing businesses to scale with confidence.
             </p>
             <div className="flex gap-3">
-              {/* Social links — removed dead # hrefs, retained as mailto/placeholder */}
               <a
                 href="https://linkedin.com"
                 target="_blank"
@@ -84,7 +83,6 @@ export function Footer() {
               <li><Link to="/case-studies" className="text-white/50 hover:text-white text-sm transition-colors duration-200">Case Studies</Link></li>
               <li><Link to="/articles"     className="text-white/50 hover:text-white text-sm transition-colors duration-200">Articles</Link></li>
               <li><Link to="/guides"       className="text-white/50 hover:text-white text-sm transition-colors duration-200">Guides</Link></li>
-              <li><Link to="/industries"   className="text-white/50 hover:text-white text-sm transition-colors duration-200">Industries</Link></li>
               <li><Link to="/tools"        className="text-white/50 hover:text-white text-sm transition-colors duration-200">Tools</Link></li>
               <li><Link to="/contact"      className="text-white/50 hover:text-white text-sm transition-colors duration-200">Contact</Link></li>
             </ul>
@@ -112,7 +110,7 @@ export function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="pt-8 border-t border-white/8 flex flex-col md:flex-row items-center justify-between gap-4">
+        <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-white/30 text-xs">
             &copy; {currentYear} SOLKN. All rights reserved.
           </p>

@@ -75,7 +75,6 @@ const projects = [
   },
 ];
 
-// Fixed: categories match the actual category values used in projects above
 const categories = ['All', 'Web Design', 'Dashboards'];
 
 export function Portfolio() {
@@ -100,14 +99,14 @@ export function Portfolio() {
   };
 
   return (
-    <section className="py-24 bg-[#0f172a] text-white font-sans border-t border-slate-800/60">
+    <section className="py-24 bg-[#F7F7F7] text-[#000000] font-sans border-t border-[#E0E0E0]">
       <div className="w-full">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
-          <p className="text-[10px] font-semibold tracking-[0.2em] uppercase text-slate-500 mb-4">
+          <p className="text-[10px] font-semibold tracking-[0.2em] uppercase text-[#A3A3A3] mb-4">
             Selected works
           </p>
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
-            <h2 className="text-5xl md:text-7xl lg:text-8xl font-medium tracking-tighter text-white max-w-xl">
+            <h2 className="text-5xl md:text-7xl lg:text-8xl font-medium tracking-tighter text-[#000000] max-w-xl">
               Portfolio
             </h2>
             {/* Filter tabs */}
@@ -118,8 +117,8 @@ export function Portfolio() {
                   onClick={() => setActiveCategory(category)}
                   className={`pb-0.5 transition-all duration-200 ${
                     activeCategory === category
-                      ? 'text-white border-b border-white'
-                      : 'text-slate-500 hover:text-slate-300'
+                      ? 'text-[#E87722] border-b border-[#E87722]'
+                      : 'text-[#A3A3A3] hover:text-[#6B6B6B]'
                   }`}
                 >
                   {category}
@@ -135,7 +134,7 @@ export function Portfolio() {
           {filteredProjects.map((project, index) => (
             <div
               key={project.id}
-              className={`relative group overflow-hidden bg-slate-800 rounded-lg ${getGridItemClass(index)}`}
+              className={`relative group overflow-hidden bg-[#EFEFEF] rounded-lg ${getGridItemClass(index)}`}
             >
               <img
                 src={project.image}
@@ -143,17 +142,17 @@ export function Portfolio() {
                 className="w-full h-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] group-hover:scale-105"
               />
 
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0f172a]/95 via-[#0f172a]/20 to-transparent flex flex-col justify-end p-5 sm:p-6 opacity-80 group-hover:opacity-100 transition-opacity duration-300">
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-5 sm:p-6 opacity-80 group-hover:opacity-100 transition-opacity duration-300">
                 <h3 className="text-lg sm:text-xl font-medium text-white drop-shadow-md transform translate-y-1 group-hover:translate-y-0 transition-transform duration-300">
                   {project.title}
                 </h3>
 
                 <div className="overflow-hidden max-h-0 group-hover:max-h-[200px] transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)]">
                   <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
-                    <p className="text-sm text-slate-300 leading-relaxed mt-3 mb-4 line-clamp-2">
+                    <p className="text-sm text-white/80 leading-relaxed mt-3 mb-4 line-clamp-2">
                       {project.description}
                     </p>
-                    <div className="flex justify-between items-center text-[10px] font-medium text-slate-400">
+                    <div className="flex justify-between items-center text-[10px] font-medium text-white/60">
                       <span>{project.location}</span>
                       <span>{project.year}</span>
                     </div>

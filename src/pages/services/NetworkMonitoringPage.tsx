@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 export function NetworkMonitoringPage() {
   return (
-    <div className="min-h-screen bg-[#FAF9F6] font-sans selection:bg-slate-600/30">
+    <div className="min-h-screen bg-white font-sans selection:bg-[#E87722]/20">
       <style>{`
         @keyframes marquee {
           0% { transform: translateX(0%); }
@@ -15,12 +15,12 @@ export function NetworkMonitoringPage() {
       `}</style>
       
       {/* 1. Dark Hero Section */}
-      <section className="relative bg-[#090e17] text-white pt-32 pb-20 overflow-hidden">
+      <section className="relative bg-[#F7F7F7] text-[#000000] pt-32 pb-20 overflow-hidden">
                 {/* Background gradients for the blurred wave effect */}
-        <div className="absolute inset-0 z-0 overflow-hidden bg-[#090e17]">
+        <div className="absolute inset-0 z-0 overflow-hidden bg-[#F7F7F7]">
           {/* Main wave streak - slate blue */}
           <div 
-            className="absolute w-[150vw] md:w-[120vw] h-[100px] md:h-[150px] bg-[#2b3d5b] rounded-[100%]"
+            className="absolute w-[150vw] md:w-[120vw] h-[100px] md:h-[150px] bg-[#E87722] rounded-[100%]"
             style={{
               top: '57%',
               left: '56%',
@@ -31,7 +31,7 @@ export function NetworkMonitoringPage() {
           ></div>
           {/* Brighter core of the wave */}
           <div 
-            className="absolute w-[120vw] md:w-[90vw] h-[50px] md:h-[80px] bg-[#47638c] rounded-[100%]"
+            className="absolute w-[120vw] md:w-[90vw] h-[50px] md:h-[80px] bg-[#D4A574] rounded-[100%]"
             style={{
               top: '62%',
               left: '51%',
@@ -70,19 +70,19 @@ export function NetworkMonitoringPage() {
         </div>
         
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Link to="/" className="inline-flex items-center text-white/60 hover:text-white font-medium mb-16 transition-colors text-sm tracking-widest uppercase">
+          <Link to="/" className="inline-flex items-center text-[#6B6B6B] hover:text-white font-medium mb-16 transition-colors text-sm tracking-widest uppercase">
             <ArrowLeft className="w-4 h-4 mr-2" /> Back to Home
           </Link>
 
           <div className="flex flex-col md:flex-row justify-between items-start gap-12 mb-24">
-            <div className="text-xs md:text-sm tracking-widest uppercase text-white/60">
+            <div className="text-xs md:text-sm tracking-widest uppercase text-[#6B6B6B]">
               FROM BLINDSPOTS TO VISIBILITY 
             </div>
             <div className="max-w-md">
-              <p className="text-white/80 leading-relaxed text-xs md:text-sm tracking-wide uppercase mb-8">
+              <p className="text-[#6B6B6B] leading-relaxed text-xs md:text-sm tracking-wide uppercase mb-8">
                 Real-time visibility into your network infrastructure to preemptively identify and resolve issues before they impact operations. Complete peace of mind.
               </p>
-              <Link to="/contact" className="inline-flex items-center text-white hover:text-sky-300 transition-colors text-xs md:text-sm tracking-widest uppercase font-medium">
+              <Link to="/contact" className="inline-flex items-center text-[#000000] hover:text-sky-300 transition-colors text-xs md:text-sm tracking-widest uppercase font-medium">
                 Get a Free Consultation <ArrowUpRight className="w-4 h-4 ml-2" />
               </Link>
             </div>
@@ -104,7 +104,7 @@ export function NetworkMonitoringPage() {
       </section>
 
       {/* 2. Solutions Section (White) */}
-      <section className="py-24 md:py-32 bg-[#FAF9F6] text-[#1a1a1a]">
+      <section className="py-24 md:py-32 bg-white text-[#1a1a1a]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl md:text-6xl lg:text-7xl font-light tracking-tighter uppercase mb-16 md:mb-24">
             Our <br/>
@@ -125,10 +125,10 @@ export function NetworkMonitoringPage() {
               </div>
               <div className="md:col-span-4">
                 <ul className="space-y-3 text-sm text-black/70">
-                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#2b3d5b] mt-1.5"></div> Proactive Monitoring</li>
-                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#2b3d5b] mt-1.5"></div> Latency Tracking</li>
-                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#2b3d5b] mt-1.5"></div> Hardware Health</li>
-                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#2b3d5b] mt-1.5"></div> Uptime Verification</li>
+                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#E87722] mt-1.5"></div> Proactive Monitoring</li>
+                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#E87722] mt-1.5"></div> Latency Tracking</li>
+                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#E87722] mt-1.5"></div> Hardware Health</li>
+                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#E87722] mt-1.5"></div> Uptime Verification</li>
                 </ul>
               </div>
             </div>
@@ -144,10 +144,10 @@ export function NetworkMonitoringPage() {
               </div>
               <div className="md:col-span-4">
                 <ul className="space-y-3 text-sm text-black/70">
-                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#2b3d5b] mt-1.5"></div> Bandwidth Utilization</li>
-                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#2b3d5b] mt-1.5"></div> Anomaly Detection</li>
-                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#2b3d5b] mt-1.5"></div> Protocol Analysis</li>
-                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#2b3d5b] mt-1.5"></div> Performance Mapping</li>
+                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#E87722] mt-1.5"></div> Bandwidth Utilization</li>
+                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#E87722] mt-1.5"></div> Anomaly Detection</li>
+                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#E87722] mt-1.5"></div> Protocol Analysis</li>
+                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#E87722] mt-1.5"></div> Performance Mapping</li>
                 </ul>
               </div>
             </div>
@@ -163,10 +163,10 @@ export function NetworkMonitoringPage() {
               </div>
               <div className="md:col-span-4">
                 <ul className="space-y-3 text-sm text-black/70">
-                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#2b3d5b] mt-1.5"></div> Threshold Alerts</li>
-                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#2b3d5b] mt-1.5"></div> Escalation Paths</li>
-                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#2b3d5b] mt-1.5"></div> Incident Logging</li>
-                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#2b3d5b] mt-1.5"></div> False-Positive Reduction</li>
+                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#E87722] mt-1.5"></div> Threshold Alerts</li>
+                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#E87722] mt-1.5"></div> Escalation Paths</li>
+                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#E87722] mt-1.5"></div> Incident Logging</li>
+                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#E87722] mt-1.5"></div> False-Positive Reduction</li>
                 </ul>
               </div>
             </div>
@@ -175,11 +175,11 @@ export function NetworkMonitoringPage() {
       </section>
       
       {/* 3. New Section 1: Colored Mission Statement */}
-      <section className="py-24 md:py-32 bg-[#090e17] text-white relative overflow-hidden rounded-t-[3rem] md:rounded-[3rem] md:mx-6">
+      <section className="py-24 md:py-32 bg-[#F7F7F7] text-[#000000] relative overflow-hidden rounded-t-[3rem] md:rounded-[3rem] md:mx-6">
         {/* Background gradients for the blurred wave effect */}
         <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
           <div 
-            className="absolute w-[150vw] md:w-[120vw] h-[100px] md:h-[150px] bg-[#2b3d5b] rounded-[100%]"
+            className="absolute w-[150vw] md:w-[120vw] h-[100px] md:h-[150px] bg-[#E87722] rounded-[100%]"
             style={{
               top: '58%',
               left: '57%',
@@ -189,7 +189,7 @@ export function NetworkMonitoringPage() {
             }}
           ></div>
           <div 
-            className="absolute w-[120vw] md:w-[90vw] h-[50px] md:h-[80px] bg-[#47638c] rounded-[100%]"
+            className="absolute w-[120vw] md:w-[90vw] h-[50px] md:h-[80px] bg-[#D4A574] rounded-[100%]"
             style={{
               top: '63%',
               left: '52%',
@@ -228,7 +228,7 @@ export function NetworkMonitoringPage() {
 
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-16 relative z-10">
-           <span className="inline-block px-4 py-1.5 rounded-full border border-white/20 text-xs font-medium tracking-widest uppercase bg-white/5 backdrop-blur-sm">
+           <span className="inline-block px-4 py-1.5 rounded-full border border-[#E0E0E0] text-xs font-medium tracking-widest uppercase bg-[#EFEFEF] backdrop-blur-sm">
              Total Visibility
            </span>
         </div>
@@ -238,10 +238,10 @@ export function NetworkMonitoringPage() {
       <section className="py-24 md:py-32 bg-white text-[#1a1a1a]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-4xl mx-auto mb-20">
-            <h2 className="text-4xl md:text-6xl font-medium tracking-tight mb-6 text-[#1e293b] leading-tight">
+            <h2 className="text-4xl md:text-6xl font-medium tracking-tight mb-6 text-[#000000] leading-tight">
               Complete <span className="italic font-light">network</span> <span className="italic font-light">clarity</span>
             </h2>
-            <p className="text-lg md:text-xl text-slate-600 font-light max-w-2xl mx-auto">
+            <p className="text-lg md:text-xl text-[#6B6B6B] font-light max-w-2xl mx-auto">
               Move beyond basic ping tests. We deploy enterprise-grade monitoring strategies that provide deep, actionable insights into your infrastructure's performance.
             </p>
           </div>
@@ -250,7 +250,7 @@ export function NetworkMonitoringPage() {
             {/* Top Row (3 items) */}
             
             <div className="w-full md:w-[calc(33.333%-1rem)] bg-[#F0F4F8] rounded-3xl p-10 flex flex-col items-center text-center hover:scale-[1.02] transition-transform duration-300">
-              <div className="text-[#2b3d5b]">
+              <div className="text-[#E87722]">
                 <svg viewBox="0 0 100 100" className="w-20 h-20 mx-auto mb-6">
     <defs>
       <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -263,13 +263,13 @@ export function NetworkMonitoringPage() {
     <path d="M50,10 Q90,50 50,90 Q10,50 50,10" fill="none" stroke="#fff" strokeWidth="2" opacity="0.5"/>
   </svg>
               </div>
-              <p className="text-base font-medium text-slate-800">
+              <p className="text-base font-medium text-[#000000]">
                 Pinpoint performance bottlenecks before they impact end-users
               </p>
             </div>
             
             <div className="w-full md:w-[calc(33.333%-1rem)] bg-[#F0F4F8] rounded-3xl p-10 flex flex-col items-center text-center hover:scale-[1.02] transition-transform duration-300">
-              <div className="text-[#2b3d5b]">
+              <div className="text-[#E87722]">
                 <svg viewBox="0 0 100 100" className="w-20 h-20 mx-auto mb-6">
     <defs>
       <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -283,13 +283,13 @@ export function NetworkMonitoringPage() {
     <circle cx="65" cy="50" r="34" fill="url(#grad2)" />
   </svg>
               </div>
-              <p className="text-base font-medium text-slate-800">
+              <p className="text-base font-medium text-[#000000]">
                 Consolidate your monitoring tools to eliminate alert fatigue
               </p>
             </div>
             
             <div className="w-full md:w-[calc(33.333%-1rem)] bg-[#F0F4F8] rounded-3xl p-10 flex flex-col items-center text-center hover:scale-[1.02] transition-transform duration-300">
-              <div className="text-[#2b3d5b]">
+              <div className="text-[#E87722]">
                 <svg viewBox="0 0 100 100" className="w-20 h-20 mx-auto mb-6">
     <defs>
       <linearGradient id="grad3" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -301,7 +301,7 @@ export function NetworkMonitoringPage() {
     <circle cx="50" cy="50" r="10" fill="#fff" opacity="0.3" />
   </svg>
               </div>
-              <p className="text-base font-medium text-slate-800">
+              <p className="text-base font-medium text-[#000000]">
                 Ensure maximum uptime for mission-critical applications
               </p>
             </div>
@@ -311,7 +311,7 @@ export function NetworkMonitoringPage() {
             <div className="w-full flex flex-col md:flex-row justify-center gap-6 mt-2">
               
               <div className="w-full md:w-[calc(33.333%-1rem)] bg-[#F0F4F8] rounded-3xl p-10 flex flex-col items-center text-center hover:scale-[1.02] transition-transform duration-300">
-                <div className="text-[#2b3d5b]">
+                <div className="text-[#E87722]">
                   <svg viewBox="0 0 100 100" className="w-20 h-20 mx-auto mb-6">
     <defs>
       <linearGradient id="grad4" x1="0%" y1="100%" x2="100%" y2="0%">
@@ -324,13 +324,13 @@ export function NetworkMonitoringPage() {
     <polygon points="50,40 59,46 59,54 50,60 41,54 41,46" fill="url(#grad4)" />
   </svg>
                 </div>
-                <p className="text-base font-medium text-slate-800">
+                <p className="text-base font-medium text-[#000000]">
                   Automate compliance reporting and network health audits
                 </p>
               </div>
               
               <div className="w-full md:w-[calc(33.333%-1rem)] bg-[#F0F4F8] rounded-3xl p-10 flex flex-col items-center text-center hover:scale-[1.02] transition-transform duration-300">
-                <div className="text-[#2b3d5b]">
+                <div className="text-[#E87722]">
                   <svg viewBox="0 0 100 100" className="w-20 h-20 mx-auto mb-6">
     <defs>
       <linearGradient id="grad5" x1="100%" y1="0%" x2="0%" y2="100%">
@@ -343,7 +343,7 @@ export function NetworkMonitoringPage() {
     <circle cx="50" cy="50" r="10" fill="currentColor" opacity="0.8" />
   </svg>
                 </div>
-                <p className="text-base font-medium text-slate-800">
+                <p className="text-base font-medium text-[#000000]">
                   Transition from reactive firefighting to proactive capacity planning
                 </p>
               </div>
@@ -354,11 +354,11 @@ export function NetworkMonitoringPage() {
       </section>
       
       {/* 5. New Section 3: Text & Stats on Colored Full-Width */}
-      <section className="py-24 md:py-32 bg-[#090e17] text-white relative overflow-hidden rounded-t-[3rem] md:rounded-[3rem] md:mx-6">
+      <section className="py-24 md:py-32 bg-[#F7F7F7] text-[#000000] relative overflow-hidden rounded-t-[3rem] md:rounded-[3rem] md:mx-6">
         {/* Background gradients for the blurred wave effect */}
         <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
           <div 
-            className="absolute w-[150vw] md:w-[120vw] h-[100px] md:h-[150px] bg-[#2b3d5b] rounded-[100%]"
+            className="absolute w-[150vw] md:w-[120vw] h-[100px] md:h-[150px] bg-[#E87722] rounded-[100%]"
             style={{
               top: '78%',
               left: '87%',
@@ -368,7 +368,7 @@ export function NetworkMonitoringPage() {
             }}
           ></div>
           <div 
-            className="absolute w-[120vw] md:w-[90vw] h-[50px] md:h-[80px] bg-[#47638c] rounded-[100%]"
+            className="absolute w-[120vw] md:w-[90vw] h-[50px] md:h-[80px] bg-[#D4A574] rounded-[100%]"
             style={{
               top: '83%',
               left: '82%',
@@ -402,7 +402,7 @@ export function NetworkMonitoringPage() {
         </div>
         <div className="absolute inset-0 bg-gradient-to-tr from-black/40 via-transparent to-white/10 pointer-events-none"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-20 relative z-10">
-          <h2 className="text-2xl md:text-4xl font-light text-white/80 max-w-4xl leading-tight">
+          <h2 className="text-2xl md:text-4xl font-light text-[#6B6B6B] max-w-4xl leading-tight">
             For over a decade, we've worked alongside enterprises to rediscover their network essence. Through deep packet inspection and analytics, we craft observability that connects, protects, and drives real peace of mind.
           </h2>
         </div>
@@ -413,26 +413,26 @@ export function NetworkMonitoringPage() {
               Every alert is a fusion of precision, speed and context.
             </h3>
             
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-20 pt-12 border-t border-white/20">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-20 pt-12 border-t border-[#E0E0E0]">
               
               <div>
                 <div className="text-4xl md:text-5xl font-light mb-2">100%</div>
-                <div className="text-xs uppercase tracking-widest text-white/60">Visibility</div>
+                <div className="text-xs uppercase tracking-widest text-[#6B6B6B]">Visibility</div>
               </div>
               
               <div>
                 <div className="text-4xl md:text-5xl font-light mb-2">&lt;50ms</div>
-                <div className="text-xs uppercase tracking-widest text-white/60">Alert Latency</div>
+                <div className="text-xs uppercase tracking-widest text-[#6B6B6B]">Alert Latency</div>
               </div>
               
               <div>
                 <div className="text-4xl md:text-5xl font-light mb-2">24/7</div>
-                <div className="text-xs uppercase tracking-widest text-white/60">Uptime Tracking</div>
+                <div className="text-xs uppercase tracking-widest text-[#6B6B6B]">Uptime Tracking</div>
               </div>
               
               <div>
                 <div className="text-4xl md:text-5xl font-light mb-2">99%</div>
-                <div className="text-xs uppercase tracking-widest text-white/60">Threat Detection</div>
+                <div className="text-xs uppercase tracking-widest text-[#6B6B6B]">Threat Detection</div>
               </div>
               
             </div>
@@ -441,13 +441,13 @@ export function NetworkMonitoringPage() {
       </section>
 
       {/* 5.5 New Section: How We Work Timeline */}
-      <section className="py-24 md:py-32 bg-[#FAF9F6] text-[#1a1a1a]">
+      <section className="py-24 md:py-32 bg-white text-[#1a1a1a]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20 max-w-3xl mx-auto">
-            <h2 className="text-4xl md:text-6xl font-medium tracking-tight mb-6 text-[#1e293b]">
+            <h2 className="text-4xl md:text-6xl font-medium tracking-tight mb-6 text-[#000000]">
               How <span className="italic font-light">we</span> work
             </h2>
-            <p className="text-xl md:text-2xl font-light text-slate-600">
+            <p className="text-xl md:text-2xl font-light text-[#6B6B6B]">
               From initial baseline to full-scale visibility, here's how we secure your packets.
             </p>
           </div>
@@ -455,7 +455,7 @@ export function NetworkMonitoringPage() {
           <div className="flex flex-col md:flex-row gap-16 relative max-w-5xl mx-auto">
             
             {/* Left Graphics Area (Hidden on mobile) */}
-            <div className="hidden md:flex flex-col w-1/3 justify-around items-center text-[#2b3d5b]">
+            <div className="hidden md:flex flex-col w-1/3 justify-around items-center text-[#E87722]">
                <div className="w-64 h-64 rounded-full bg-black/5 flex items-center justify-center relative overflow-hidden">
                  <svg viewBox="0 0 100 100" className="w-full h-full opacity-30">
                    <circle cx="50" cy="50" r="40" fill="none" stroke="currentColor" strokeWidth="0.5" strokeDasharray="2 2" />
@@ -480,41 +480,41 @@ export function NetworkMonitoringPage() {
             {/* Right Timeline Area */}
             <div className="w-full md:w-2/3 relative py-8">
                {/* Vertical Line */}
-               <div className="absolute left-[11px] top-10 bottom-10 w-[2px] bg-[#2b3d5b] opacity-30"></div>
+               <div className="absolute left-[11px] top-10 bottom-10 w-[2px] bg-[#E87722] opacity-30"></div>
                
                <div className="space-y-16">
                  
                  <div className="relative pl-12">
-                   <div className="absolute left-0 top-1.5 w-6 h-6 rounded-full bg-[#2b3d5b] flex items-center justify-center border-4 border-[#FAF9F6] shadow-sm">
+                   <div className="absolute left-0 top-1.5 w-6 h-6 rounded-full bg-[#E87722] flex items-center justify-center border-4 border-[#F7F7F7] shadow-sm">
                    </div>
-                   <h3 className="text-[#1e293b] text-2xl font-medium mb-3">Network Strategy Call</h3>
+                   <h3 className="text-[#000000] text-2xl font-medium mb-3">Network Strategy Call</h3>
                    <p className="text-[#1a1a1a]/70 text-base leading-relaxed max-w-md">
                      We start with a deep dive into your current topology and latency bottlenecks to identify immediate monitoring needs.
                    </p>
                  </div>
                  
                  <div className="relative pl-12">
-                   <div className="absolute left-0 top-1.5 w-6 h-6 rounded-full bg-[#2b3d5b] flex items-center justify-center border-4 border-[#FAF9F6] shadow-sm">
+                   <div className="absolute left-0 top-1.5 w-6 h-6 rounded-full bg-[#E87722] flex items-center justify-center border-4 border-[#F7F7F7] shadow-sm">
                    </div>
-                   <h3 className="text-[#1e293b] text-2xl font-medium mb-3">Custom Architecture</h3>
+                   <h3 className="text-[#000000] text-2xl font-medium mb-3">Custom Architecture</h3>
                    <p className="text-[#1a1a1a]/70 text-base leading-relaxed max-w-md">
                      Based on your infrastructure, we craft a tailored observability and alert plan to drive measurable reliability.
                    </p>
                  </div>
                  
                  <div className="relative pl-12">
-                   <div className="absolute left-0 top-1.5 w-6 h-6 rounded-full bg-[#2b3d5b] flex items-center justify-center border-4 border-[#FAF9F6] shadow-sm">
+                   <div className="absolute left-0 top-1.5 w-6 h-6 rounded-full bg-[#E87722] flex items-center justify-center border-4 border-[#F7F7F7] shadow-sm">
                    </div>
-                   <h3 className="text-[#1e293b] text-2xl font-medium mb-3">Implementation</h3>
+                   <h3 className="text-[#000000] text-2xl font-medium mb-3">Implementation</h3>
                    <p className="text-[#1a1a1a]/70 text-base leading-relaxed max-w-md">
                      Our team sets everything up — from deep packet inspection agents to dashboards — for a seamless rollout.
                    </p>
                  </div>
                  
                  <div className="relative pl-12">
-                   <div className="absolute left-0 top-1.5 w-6 h-6 rounded-full bg-[#2b3d5b] flex items-center justify-center border-4 border-[#FAF9F6] shadow-sm">
+                   <div className="absolute left-0 top-1.5 w-6 h-6 rounded-full bg-[#E87722] flex items-center justify-center border-4 border-[#F7F7F7] shadow-sm">
                    </div>
-                   <h3 className="text-[#1e293b] text-2xl font-medium mb-3">Monitor & Optimize</h3>
+                   <h3 className="text-[#000000] text-2xl font-medium mb-3">Monitor & Optimize</h3>
                    <p className="text-[#1a1a1a]/70 text-base leading-relaxed max-w-md">
                      We continuously analyze traffic patterns and alert logs to maximize network uptime and scale efficiency.
                    </p>
@@ -526,7 +526,7 @@ export function NetworkMonitoringPage() {
           </div>
           
           <div className="mt-24 text-center">
-            <Link to="/contact" className="inline-flex items-center px-8 py-4 rounded-full bg-[#1e293b] text-white font-medium hover:bg-[#2b3d5b] transition-colors">
+            <Link to="/contact" className="inline-flex items-center px-8 py-4 rounded-full bg-[#E87722] text-[#000000] font-medium hover:bg-[#E87722] transition-colors">
               Book a free audit
               <div className="ml-4 bg-white text-black rounded-full p-1">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -538,12 +538,12 @@ export function NetworkMonitoringPage() {
       </section>
       
       {/* 6. FAQ Section */}
-      <section className="relative py-24 md:py-32 bg-[#090e17] text-white overflow-hidden">
+      <section className="relative py-24 md:py-32 bg-[#F7F7F7] text-[#000000] overflow-hidden">
         {/* Background gradients for the blurred wave effect */}
         <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
           {/* Main wave streak - slate blue */}
           <div 
-            className="absolute w-[150vw] md:w-[120vw] h-[100px] md:h-[150px] bg-[#2b3d5b] rounded-[100%]"
+            className="absolute w-[150vw] md:w-[120vw] h-[100px] md:h-[150px] bg-[#E87722] rounded-[100%]"
             style={{
               top: '65%',
               left: '60%',
@@ -554,7 +554,7 @@ export function NetworkMonitoringPage() {
           ></div>
           {/* Brighter core of the wave */}
           <div 
-            className="absolute w-[120vw] md:w-[90vw] h-[50px] md:h-[80px] bg-[#47638c] rounded-[100%]"
+            className="absolute w-[120vw] md:w-[90vw] h-[50px] md:h-[80px] bg-[#D4A574] rounded-[100%]"
             style={{
               top: '70%',
               left: '55%',
@@ -594,17 +594,17 @@ export function NetworkMonitoringPage() {
              Frequently Asked Questions
            </h2>
            <div className="space-y-8">
-             <div className="border-b border-white/10 pb-8">
+             <div className="border-b border-[#E0E0E0] pb-8">
                <h3 className="text-xl font-medium mb-3 text-white/90">How long does deployment take?</h3>
-               <p className="text-white/60 font-light leading-relaxed">Most monitoring environments can be provisioned and baseline-configured within 2 to 4 weeks, depending on the complexity and scale of your existing infrastructure.</p>
+               <p className="text-[#6B6B6B] font-light leading-relaxed">Most monitoring environments can be provisioned and baseline-configured within 2 to 4 weeks, depending on the complexity and scale of your existing infrastructure.</p>
              </div>
-             <div className="border-b border-white/10 pb-8">
+             <div className="border-b border-[#E0E0E0] pb-8">
                <h3 className="text-xl font-medium mb-3 text-white/90">How do you handle data privacy?</h3>
-               <p className="text-white/60 font-light leading-relaxed">We strictly analyze metadata, headers, and traffic patterns (like NetFlow and SNMP) without inspecting sensitive payload data, ensuring full compliance with privacy standards.</p>
+               <p className="text-[#6B6B6B] font-light leading-relaxed">We strictly analyze metadata, headers, and traffic patterns (like NetFlow and SNMP) without inspecting sensitive payload data, ensuring full compliance with privacy standards.</p>
              </div>
              <div className="pb-8">
                <h3 className="text-xl font-medium mb-3 text-white/90">What is your pricing model?</h3>
-               <p className="text-white/60 font-light leading-relaxed">Our pricing is typically tiered based on the number of monitored endpoints and network devices, offered as a predictable monthly managed service fee.</p>
+               <p className="text-[#6B6B6B] font-light leading-relaxed">Our pricing is typically tiered based on the number of monitored endpoints and network devices, offered as a predictable monthly managed service fee.</p>
              </div>
            </div>
         </div>

@@ -29,7 +29,7 @@ export function CaseStudyPage() {
     return (
       <div className="pt-40 pb-20 min-h-screen text-center">
         <h1 className="text-3xl font-semibold mb-4">Case Study not found</h1>
-        <Link to="/case-studies" className="text-[#2b3d5b] hover:underline">
+        <Link to="/case-studies" className="text-[#E87722] hover:underline">
           Return to Case Studies
         </Link>
       </div>
@@ -41,7 +41,7 @@ export function CaseStudyPage() {
       <div className="pt-32 pb-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <Link 
           to="/case-studies" 
-          className="inline-flex items-center text-sm font-medium text-gray-500 hover:text-gray-900 transition-colors mb-12"
+          className="inline-flex items-center text-sm font-medium text-[#6B6B6B] hover:text-[#000000] transition-colors mb-12"
         >
           <ArrowLeft className="w-4 h-4 mr-2" />
           Back to Case Studies
@@ -51,24 +51,24 @@ export function CaseStudyPage() {
           <div className="lg:col-span-8">
             <div className="mb-8">
               <div className="flex items-center gap-4 mb-6">
-                <span className="text-xs font-semibold text-[#2b3d5b] uppercase tracking-wider bg-[#F0F4F8] px-3 py-1 rounded-full">
+                <span className="text-xs font-semibold text-[#E87722] uppercase tracking-wider bg-[#F0F4F8] px-3 py-1 rounded-full">
                   {caseStudy.category}
                 </span>
-                <span className="text-sm text-gray-500">{caseStudy.date}</span>
+                <span className="text-sm text-[#6B6B6B]">{caseStudy.date}</span>
               </div>
-              <h1 className="text-4xl md:text-5xl font-medium text-gray-900 mb-8 leading-tight tracking-tight">
+              <h1 className="text-4xl md:text-5xl font-medium text-[#000000] mb-8 leading-tight tracking-tight">
                 {caseStudy.title}
               </h1>
             </div>
 
-            <div className="prose prose-lg prose-gray max-w-none prose-headings:font-medium prose-a:text-[#2b3d5b] hover:prose-a:text-[#1e293b]">
+            <div className="prose prose-lg prose-gray max-w-none prose-headings:font-medium prose-a:text-[#E87722] hover:prose-a:text-[#000000]">
                             {id === 'ai-powered-booking-assistant' ? (
                 <>
-                  <p className="mb-6 font-medium text-lg text-[#1e293b]">
+                  <p className="mb-6 font-medium text-lg text-[#000000]">
                     Helping Customers Find and Reserve Event Decorations Instantly with AI
                   </p>
                   
-                  <h2 className="text-xl font-medium text-gray-900 mb-6">The Challenge</h2>
+                  <h2 className="text-xl font-medium text-[#000000] mb-6">The Challenge</h2>
                   <p className="mb-4">
                     A decoration rental business was receiving frequent customer enquiries about product availability, especially for popular event items such as centrepieces, table decorations, and venue accessories.
                   </p>
@@ -88,7 +88,7 @@ export function CaseStudyPage() {
                     The business needed a solution that could provide quick responses, reduce administrative workload, and improve the customer booking experience.
                   </p>
 
-                  <h2 className="text-xl font-medium text-gray-900 mb-6">The Solution: An AI-Powered Decoration Booking Assistant</h2>
+                  <h2 className="text-xl font-medium text-[#000000] mb-6">The Solution: An AI-Powered Decoration Booking Assistant</h2>
                   <p className="mb-4">
                     Solkn developed an AI chatbot designed specifically for the decoration rental industry.
                   </p>
@@ -99,9 +99,9 @@ export function CaseStudyPage() {
                     Instead of simply answering general questions, the AI assistant was designed to understand customer requirements and help with the initial booking process.
                   </p>
 
-                  <h2 className="text-xl font-medium text-gray-900 mb-6">How the AI Booking Process Works</h2>
+                  <h2 className="text-xl font-medium text-[#000000] mb-6">How the AI Booking Process Works</h2>
                   
-                  <h3 className="text-lg font-medium text-gray-900 mb-4">1. Customer Starts a Conversation</h3>
+                  <h3 className="text-lg font-medium text-[#000000] mb-4">1. Customer Starts a Conversation</h3>
                   <p className="mb-4">A customer visits the website and asks the AI assistant:</p>
                   <p className="mb-4 italic">"Can I rent your gold centrepieces for my wedding on 15th September?"</p>
                   <p className="mb-4">The AI understands the customer's request and identifies key details, including:</p>
@@ -112,7 +112,7 @@ export function CaseStudyPage() {
                     <li>Type of event</li>
                   </ul>
 
-                  <h3 className="text-lg font-medium text-gray-900 mb-4">2. AI Checks Availability</h3>
+                  <h3 className="text-lg font-medium text-[#000000] mb-4">2. AI Checks Availability</h3>
                   <p className="mb-4">
                     The chatbot connects with the business booking system or inventory database to check whether the requested items are available.
                   </p>
@@ -124,13 +124,13 @@ export function CaseStudyPage() {
                     <li>Whether the rental period is possible</li>
                   </ul>
 
-                  <h3 className="text-lg font-medium text-gray-900 mb-4">3. Customer Receives an Instant Response</h3>
+                  <h3 className="text-lg font-medium text-[#000000] mb-4">3. Customer Receives an Instant Response</h3>
                   <p className="mb-4">If the item is available, the AI can respond:</p>
                   <p className="mb-4 italic">"Great news! We currently have enough gold centrepieces available for 15th September. We can reserve these for your event. Would you like to continue with a booking enquiry?"</p>
                   <p className="mb-4">If the item is unavailable:</p>
                   <p className="mb-8 italic">"Unfortunately, those centrepieces are already booked for your selected date. However, we do have similar designs available that may suit your event."</p>
 
-                  <h3 className="text-lg font-medium text-gray-900 mb-4">4. Lead Information Is Captured</h3>
+                  <h3 className="text-lg font-medium text-[#000000] mb-4">4. Lead Information Is Captured</h3>
                   <p className="mb-4">If the customer wants to proceed, the AI collects important information such as:</p>
                   <ul className="list-disc pl-6 mb-6 space-y-2">
                     <li>Customer name</li>
@@ -144,15 +144,15 @@ export function CaseStudyPage() {
                     This information is then passed to the business team, allowing staff to follow up with a qualified enquiry rather than starting from the beginning.
                   </p>
 
-                  <hr className="border-gray-200 my-8" />
+                  <hr className="border-[#E0E0E0] my-8" />
 
-                  <h2 className="text-xl font-medium text-gray-900 mb-6">The Benefits</h2>
+                  <h2 className="text-xl font-medium text-[#000000] mb-6">The Benefits</h2>
                   
-                  <h3 className="text-lg font-medium text-gray-900 mb-4">Faster Customer Responses</h3>
+                  <h3 className="text-lg font-medium text-[#000000] mb-4">Faster Customer Responses</h3>
                   <p className="mb-4">Customers no longer need to wait for business hours to receive answers.</p>
                   <p className="mb-8">The AI assistant provides support 24/7, helping customers make decisions even outside normal working hours.</p>
 
-                  <h3 className="text-lg font-medium text-gray-900 mb-4">Reduced Administrative Work</h3>
+                  <h3 className="text-lg font-medium text-[#000000] mb-4">Reduced Administrative Work</h3>
                   <p className="mb-4">Previously, staff had to manually respond to every availability enquiry.</p>
                   <p className="mb-4">The AI now handles repetitive questions, allowing employees to focus on:</p>
                   <ul className="list-disc pl-6 mb-8 space-y-2">
@@ -162,20 +162,20 @@ export function CaseStudyPage() {
                     <li>Growing the business</li>
                   </ul>
 
-                  <h3 className="text-lg font-medium text-gray-900 mb-4">Improved Customer Experience</h3>
+                  <h3 className="text-lg font-medium text-[#000000] mb-4">Improved Customer Experience</h3>
                   <p className="mb-4">Customers planning weddings, parties, and events often need quick answers.</p>
                   <p className="mb-8">Instant availability checks create a smoother booking experience and reduce the chance of customers choosing a competitor.</p>
 
-                  <h3 className="text-lg font-medium text-gray-900 mb-4">More Qualified Leads</h3>
+                  <h3 className="text-lg font-medium text-[#000000] mb-4">More Qualified Leads</h3>
                   <p className="mb-4">Instead of receiving incomplete enquiries, the business receives structured customer information.</p>
                   <p className="mb-8">Staff can focus their time on customers who are ready to proceed.</p>
 
-                  <hr className="border-gray-200 my-8" />
+                  <hr className="border-[#E0E0E0] my-8" />
 
-                  <h2 className="text-xl font-medium text-gray-900 mb-6">Future Enhancements</h2>
+                  <h2 className="text-xl font-medium text-[#000000] mb-6">Future Enhancements</h2>
                   <p className="mb-6">The AI assistant can continue to evolve with additional features, including:</p>
 
-                  <h3 className="text-lg font-medium text-gray-900 mb-2">Automated Quotes</h3>
+                  <h3 className="text-lg font-medium text-[#000000] mb-2">Automated Quotes</h3>
                   <p className="mb-4">The AI can calculate estimated rental costs based on:</p>
                   <ul className="list-disc pl-6 mb-6 space-y-2">
                     <li>Number of items required</li>
@@ -184,21 +184,21 @@ export function CaseStudyPage() {
                     <li>Additional services</li>
                   </ul>
 
-                  <h3 className="text-lg font-medium text-gray-900 mb-2">Appointment Booking</h3>
+                  <h3 className="text-lg font-medium text-[#000000] mb-2">Appointment Booking</h3>
                   <p className="mb-6">Customers could schedule consultations directly through the chatbot.</p>
 
-                  <h3 className="text-lg font-medium text-gray-900 mb-2">Image-Based Recommendations</h3>
+                  <h3 className="text-lg font-medium text-[#000000] mb-2">Image-Based Recommendations</h3>
                   <p className="mb-6">Customers could upload images of their venue or theme, allowing AI to suggest matching decoration options.</p>
 
-                  <h3 className="text-lg font-medium text-gray-900 mb-2">Automated Follow-Ups</h3>
+                  <h3 className="text-lg font-medium text-[#000000] mb-2">Automated Follow-Ups</h3>
                   <p className="mb-8">If a customer leaves without completing a booking, the system can send reminders or follow-up messages.</p>
 
-                  <hr className="border-gray-200 my-8" />
+                  <hr className="border-[#E0E0E0] my-8" />
 
-                  <h2 className="text-xl font-medium text-gray-900 mb-6">The Result</h2>
+                  <h2 className="text-xl font-medium text-[#000000] mb-6">The Result</h2>
                   <p className="mb-4">By implementing an AI-powered booking assistant, the decoration rental business transformed how it handles customer enquiries.</p>
                   <p className="mb-4">The solution helped the company:</p>
-                  <ul className="list-none mb-6 space-y-2 text-gray-800">
+                  <ul className="list-none mb-6 space-y-2 text-[#000000]">
                     <li>✔ Respond instantly to customer questions</li>
                     <li>✔ Reduce repetitive admin tasks</li>
                     <li>✔ Improve booking efficiency</li>
@@ -209,9 +209,9 @@ export function CaseStudyPage() {
                     AI became an extension of the team, helping the business manage demand while allowing employees to focus on delivering exceptional events.
                   </p>
 
-                  <hr className="border-gray-200 my-8" />
+                  <hr className="border-[#E0E0E0] my-8" />
 
-                  <h1 className="text-2xl font-normal text-gray-900 mb-6 tracking-tight">How Solkn Can Help</h1>
+                  <h1 className="text-2xl font-normal text-[#000000] mb-6 tracking-tight">How Solkn Can Help</h1>
                   <p className="mb-4">
                     At Solkn, we help businesses automate customer interactions using AI-powered solutions.
                   </p>
@@ -230,11 +230,11 @@ export function CaseStudyPage() {
                 </>
               ) : id === 'improving-business-connectivity' ? (
                 <>
-                  <p className="mb-6 font-medium text-lg text-[#1e293b]">
+                  <p className="mb-6 font-medium text-lg text-[#000000]">
                     Preventing Downtime Through Proactive IT Monitoring
                   </p>
                   
-                  <h2 className="text-xl font-medium text-gray-900 mb-6">The Challenge</h2>
+                  <h2 className="text-xl font-medium text-[#000000] mb-6">The Challenge</h2>
                   <p className="mb-4">
                     A growing business relied heavily on its network infrastructure to support daily operations. Employees depended on reliable internet access, cloud applications, printers, and internal systems to complete their work.
                   </p>
@@ -254,9 +254,9 @@ export function CaseStudyPage() {
                     They needed a proactive approach to monitoring and maintaining their IT environment.
                   </p>
 
-                  <hr className="border-gray-200 my-8" />
+                  <hr className="border-[#E0E0E0] my-8" />
 
-                  <h2 className="text-xl font-medium text-gray-900 mb-6">The Solution: Managed Network Monitoring</h2>
+                  <h2 className="text-xl font-medium text-[#000000] mb-6">The Solution: Managed Network Monitoring</h2>
                   <p className="mb-4">
                     Solkn implemented a network monitoring solution designed to provide continuous visibility into the company's IT infrastructure.
                   </p>
@@ -275,11 +275,11 @@ export function CaseStudyPage() {
                     Instead of waiting for users to report issues, potential problems could be identified and addressed earlier.
                   </p>
 
-                  <hr className="border-gray-200 my-8" />
+                  <hr className="border-[#E0E0E0] my-8" />
 
-                  <h2 className="text-xl font-medium text-gray-900 mb-6">How Network Monitoring Works</h2>
+                  <h2 className="text-xl font-medium text-[#000000] mb-6">How Network Monitoring Works</h2>
                   
-                  <h3 className="text-lg font-medium text-gray-900 mb-4">1. Continuous Monitoring</h3>
+                  <h3 className="text-lg font-medium text-[#000000] mb-4">1. Continuous Monitoring</h3>
                   <p className="mb-4">The monitoring platform regularly checks the health of network devices.</p>
                   <p className="mb-4">It tracks:</p>
                   <ul className="list-disc pl-6 mb-8 space-y-2">
@@ -291,7 +291,7 @@ export function CaseStudyPage() {
                     <li>Hardware performance</li>
                   </ul>
 
-                  <h3 className="text-lg font-medium text-gray-900 mb-4">2. Automated Alerts</h3>
+                  <h3 className="text-lg font-medium text-[#000000] mb-4">2. Automated Alerts</h3>
                   <p className="mb-4">If a problem occurs, alerts are generated automatically.</p>
                   <p className="mb-4">Examples include:</p>
                   <ul className="list-disc pl-6 mb-8 space-y-2">
@@ -302,7 +302,7 @@ export function CaseStudyPage() {
                   </ul>
                   <p className="mb-8">This allows issues to be investigated before they significantly impact users.</p>
 
-                  <h3 className="text-lg font-medium text-gray-900 mb-4">3. Proactive Maintenance</h3>
+                  <h3 className="text-lg font-medium text-[#000000] mb-4">3. Proactive Maintenance</h3>
                   <p className="mb-4">Instead of only fixing problems after failure, Solkn can identify trends and recommend improvements.</p>
                   <p className="mb-4">For example:</p>
                   <ul className="list-disc pl-6 mb-8 space-y-2">
@@ -312,26 +312,26 @@ export function CaseStudyPage() {
                     <li>Reducing unnecessary traffic</li>
                   </ul>
 
-                  <hr className="border-gray-200 my-8" />
+                  <hr className="border-[#E0E0E0] my-8" />
 
-                  <h2 className="text-xl font-medium text-gray-900 mb-6">The Benefits</h2>
+                  <h2 className="text-xl font-medium text-[#000000] mb-6">The Benefits</h2>
                   
-                  <h3 className="text-lg font-medium text-gray-900 mb-2">Reduced Downtime</h3>
+                  <h3 className="text-lg font-medium text-[#000000] mb-2">Reduced Downtime</h3>
                   <p className="mb-6">Early detection allows problems to be resolved faster, reducing disruption to employees and customers.</p>
 
-                  <h3 className="text-lg font-medium text-gray-900 mb-2">Improved Network Performance</h3>
+                  <h3 className="text-lg font-medium text-[#000000] mb-2">Improved Network Performance</h3>
                   <p className="mb-6">Monitoring helps identify bottlenecks and areas where improvements can be made.</p>
 
-                  <h3 className="text-lg font-medium text-gray-900 mb-2">Better Security Visibility</h3>
+                  <h3 className="text-lg font-medium text-[#000000] mb-2">Better Security Visibility</h3>
                   <p className="mb-6">Monitoring provides greater awareness of devices connected to the network and unusual activity patterns.</p>
 
-                  <h3 className="text-lg font-medium text-gray-900 mb-2">Less Stress for Business Owners</h3>
+                  <h3 className="text-lg font-medium text-[#000000] mb-2">Less Stress for Business Owners</h3>
                   <p className="mb-4">Business owners no longer need to wait for employees to report issues before action is taken.</p>
                   <p className="mb-8">Their IT environment is continuously monitored and supported.</p>
 
-                  <hr className="border-gray-200 my-8" />
+                  <hr className="border-[#E0E0E0] my-8" />
 
-                  <h2 className="text-xl font-medium text-gray-900 mb-6">Future Enhancements</h2>
+                  <h2 className="text-xl font-medium text-[#000000] mb-6">Future Enhancements</h2>
                   <p className="mb-4">The monitoring solution can be expanded with:</p>
                   <ul className="list-disc pl-6 mb-8 space-y-2">
                     <li>Automated device patching</li>
@@ -342,12 +342,12 @@ export function CaseStudyPage() {
                     <li>Backup monitoring</li>
                   </ul>
 
-                  <hr className="border-gray-200 my-8" />
+                  <hr className="border-[#E0E0E0] my-8" />
 
-                  <h2 className="text-xl font-medium text-gray-900 mb-6">The Result</h2>
+                  <h2 className="text-xl font-medium text-[#000000] mb-6">The Result</h2>
                   <p className="mb-4">By moving from reactive IT support to proactive monitoring, the business gained a more reliable and predictable technology environment.</p>
                   <p className="mb-4">The solution helped:</p>
-                  <ul className="list-none mb-6 space-y-2 text-gray-800">
+                  <ul className="list-none mb-6 space-y-2 text-[#000000]">
                     <li>✔ Reduce unexpected downtime</li>
                     <li>✔ Improve network reliability</li>
                     <li>✔ Identify issues faster</li>
@@ -355,9 +355,9 @@ export function CaseStudyPage() {
                     <li>✔ Create better visibility of IT systems</li>
                   </ul>
 
-                  <hr className="border-gray-200 my-8" />
+                  <hr className="border-[#E0E0E0] my-8" />
 
-                  <h1 className="text-2xl font-normal text-gray-900 mb-6 tracking-tight">How Solkn Can Help</h1>
+                  <h1 className="text-2xl font-normal text-[#000000] mb-6 tracking-tight">How Solkn Can Help</h1>
                   <p className="mb-4">
                     Solkn provides managed IT services designed to keep businesses secure, connected, and productive.
                   </p>
@@ -377,11 +377,11 @@ export function CaseStudyPage() {
                 </>
               ) : id === 'scaling-e-commerce' ? (
                 <>
-                  <p className="mb-6 font-medium text-lg text-[#1e293b]">
+                  <p className="mb-6 font-medium text-lg text-[#000000]">
                     Building a Fast, Reliable Infrastructure for a Growing Online Retailer
                   </p>
                   
-                  <h2 className="text-xl font-medium text-gray-900 mb-6">The Challenge</h2>
+                  <h2 className="text-xl font-medium text-[#000000] mb-6">The Challenge</h2>
                   <p className="mb-4">
                     An online retailer specialising in home and lifestyle products was experiencing rapid growth. While increased sales were great for business, the website and supporting infrastructure were beginning to struggle during busy periods.
                   </p>
@@ -399,9 +399,9 @@ export function CaseStudyPage() {
                     The company needed an infrastructure that could handle high volumes of visitors without compromising performance or the customer experience.
                   </p>
 
-                  <hr className="border-gray-200 my-8" />
+                  <hr className="border-[#E0E0E0] my-8" />
 
-                  <h2 className="text-xl font-medium text-gray-900 mb-6">The Solution</h2>
+                  <h2 className="text-xl font-medium text-[#000000] mb-6">The Solution</h2>
                   <p className="mb-4">
                     Solkn worked with the business to modernise its e-commerce infrastructure, creating a scalable platform capable of supporting future growth.
                   </p>
@@ -421,11 +421,11 @@ export function CaseStudyPage() {
                     <li>Enhanced cyber security</li>
                   </ul>
 
-                  <hr className="border-gray-200 my-8" />
+                  <hr className="border-[#E0E0E0] my-8" />
 
-                  <h2 className="text-xl font-medium text-gray-900 mb-6">How the Solution Works</h2>
+                  <h2 className="text-xl font-medium text-[#000000] mb-6">How the Solution Works</h2>
                   
-                  <h3 className="text-lg font-medium text-gray-900 mb-4">1. Scalable Cloud Hosting</h3>
+                  <h3 className="text-lg font-medium text-[#000000] mb-4">1. Scalable Cloud Hosting</h3>
                   <p className="mb-4">
                     Rather than relying on a single server, the website was migrated to a scalable cloud environment capable of handling increases in traffic.
                   </p>
@@ -433,7 +433,7 @@ export function CaseStudyPage() {
                     This ensured resources could be allocated efficiently during busy periods without affecting customer experience.
                   </p>
 
-                  <h3 className="text-lg font-medium text-gray-900 mb-4">2. Website Performance Optimisation</h3>
+                  <h3 className="text-lg font-medium text-[#000000] mb-4">2. Website Performance Optimisation</h3>
                   <p className="mb-4">Every second counts in e-commerce.</p>
                   <p className="mb-4">Solkn optimised the website by:</p>
                   <ul className="list-disc pl-6 mb-6 space-y-2">
@@ -447,7 +447,7 @@ export function CaseStudyPage() {
                     The result was a faster browsing experience across desktop and mobile devices.
                   </p>
 
-                  <h3 className="text-lg font-medium text-gray-900 mb-4">3. Continuous Infrastructure Monitoring</h3>
+                  <h3 className="text-lg font-medium text-[#000000] mb-4">3. Continuous Infrastructure Monitoring</h3>
                   <p className="mb-4">The entire platform was monitored 24/7.</p>
                   <p className="mb-4">This included:</p>
                   <ul className="list-disc pl-6 mb-6 space-y-2">
@@ -462,7 +462,7 @@ export function CaseStudyPage() {
                     Potential issues could be identified before they affected customers.
                   </p>
 
-                  <h3 className="text-lg font-medium text-gray-900 mb-4">4. Strengthened Security</h3>
+                  <h3 className="text-lg font-medium text-[#000000] mb-4">4. Strengthened Security</h3>
                   <p className="mb-4">As online sales increased, protecting customer data became even more important.</p>
                   <p className="mb-4">Additional security measures included:</p>
                   <ul className="list-disc pl-6 mb-6 space-y-2">
@@ -477,28 +477,28 @@ export function CaseStudyPage() {
                     These measures helped protect both the business and its customers.
                   </p>
 
-                  <hr className="border-gray-200 my-8" />
+                  <hr className="border-[#E0E0E0] my-8" />
 
-                  <h2 className="text-xl font-medium text-gray-900 mb-6">The Results</h2>
+                  <h2 className="text-xl font-medium text-[#000000] mb-6">The Results</h2>
                   <p className="mb-6">Following the infrastructure upgrade, the retailer experienced significant improvements.</p>
 
-                  <h3 className="text-lg font-medium text-gray-900 mb-2">Faster Website Performance</h3>
+                  <h3 className="text-lg font-medium text-[#000000] mb-2">Faster Website Performance</h3>
                   <p className="mb-6">Customers could browse products, search categories, and complete purchases much more quickly.</p>
 
-                  <h3 className="text-lg font-medium text-gray-900 mb-2">Improved Reliability</h3>
+                  <h3 className="text-lg font-medium text-[#000000] mb-2">Improved Reliability</h3>
                   <p className="mb-6">The website remained stable during promotional campaigns and periods of increased demand, reducing lost sales caused by downtime.</p>
 
-                  <h3 className="text-lg font-medium text-gray-900 mb-2">Better Customer Experience</h3>
+                  <h3 className="text-lg font-medium text-[#000000] mb-2">Better Customer Experience</h3>
                   <p className="mb-6">With faster loading pages and smoother checkout processes, customers were able to complete purchases more easily, leading to improved satisfaction and increased conversions.</p>
 
-                  <h3 className="text-lg font-medium text-gray-900 mb-2">Future-Ready Infrastructure</h3>
+                  <h3 className="text-lg font-medium text-[#000000] mb-2">Future-Ready Infrastructure</h3>
                   <p className="mb-8">The business now has an IT platform designed to grow alongside the company, supporting new products, additional customers, and future expansion without requiring a complete rebuild.</p>
 
-                  <hr className="border-gray-200 my-8" />
+                  <hr className="border-[#E0E0E0] my-8" />
 
-                  <h2 className="text-xl font-medium text-gray-900 mb-6">Business Benefits</h2>
+                  <h2 className="text-xl font-medium text-[#000000] mb-6">Business Benefits</h2>
                   <p className="mb-4">The project delivered several long-term benefits:</p>
-                  <ul className="list-none mb-8 space-y-2 text-gray-800">
+                  <ul className="list-none mb-8 space-y-2 text-[#000000]">
                     <li>✔ Improved website performance</li>
                     <li>✔ Reduced downtime</li>
                     <li>✔ Better customer experience</li>
@@ -508,9 +508,9 @@ export function CaseStudyPage() {
                     <li>✔ Greater confidence during seasonal sales and promotional campaigns</li>
                   </ul>
 
-                  <hr className="border-gray-200 my-8" />
+                  <hr className="border-[#E0E0E0] my-8" />
 
-                  <h1 className="text-2xl font-normal text-gray-900 mb-6 tracking-tight">How Solkn Can Help</h1>
+                  <h1 className="text-2xl font-normal text-[#000000] mb-6 tracking-tight">How Solkn Can Help</h1>
                   <p className="mb-4">
                     At Solkn, we help businesses build fast, secure, and scalable digital platforms that support growth.
                   </p>
@@ -529,9 +529,9 @@ export function CaseStudyPage() {
                     Whether you're launching a new online store or scaling an established e-commerce business, Solkn provides the technology and expertise to keep your business performing at its best.
                   </p>
 
-                  <hr className="border-gray-200 my-8" />
+                  <hr className="border-[#E0E0E0] my-8" />
 
-                  <h2 className="text-xl font-medium text-gray-900 mb-6">Final Thoughts</h2>
+                  <h2 className="text-xl font-medium text-[#000000] mb-6">Final Thoughts</h2>
                   <p className="mb-4">
                     As your online business grows, your technology needs to grow with it. Investing in reliable infrastructure isn't just about preventing downtime—it's about delivering a seamless shopping experience that keeps customers coming back.
                   </p>
@@ -540,7 +540,7 @@ export function CaseStudyPage() {
                   </p>
                 </>
               ) : (
-                <div className="py-12 text-center text-gray-500">
+                <div className="py-12 text-center text-[#6B6B6B]">
                   Case study content is being written...
                 </div>
               )}
@@ -552,7 +552,7 @@ export function CaseStudyPage() {
             <div className="sticky top-32 bg-[#F1F3EA] rounded-2xl p-8">
               {/* Icon graphic */}
               <div className="w-24 h-24 mb-6 flex items-center justify-center">
-                <svg viewBox="0 0 100 100" className="w-full h-full text-gray-800" fill="none" stroke="currentColor" strokeWidth="0.5">
+                <svg viewBox="0 0 100 100" className="w-full h-full text-[#000000]" fill="none" stroke="currentColor" strokeWidth="0.5">
                   <g transform="translate(50, 50)">
                     {Array.from({ length: 60 }).map((_, i) => (
                       <ellipse
@@ -568,33 +568,33 @@ export function CaseStudyPage() {
                 </svg>
               </div>
               
-              <h2 className="text-2xl font-normal text-gray-900 mb-4 tracking-tight">Knowledge is Power</h2>
+              <h2 className="text-2xl font-normal text-[#000000] mb-4 tracking-tight">Knowledge is Power</h2>
               
-              <p className="text-gray-700 text-sm mb-6 leading-relaxed">
+              <p className="text-[#000000] text-sm mb-6 leading-relaxed">
                 We offer informative insights on the latest technology trends on a regular basis. Check it out.
               </p>
               
               <form className="space-y-4">
                 <div>
-                  <label htmlFor="email" className="block text-xs text-gray-600 mb-2">
+                  <label htmlFor="email" className="block text-xs text-[#6B6B6B] mb-2">
                     Your Email address <span className="text-red-500">*</span>
                   </label>
                   <input 
                     type="email" 
                     id="email" 
                     placeholder="you@email.com" 
-                    className="w-full px-4 py-3 rounded-full border-none focus:ring-2 focus:ring-black outline-none text-sm placeholder:text-gray-400"
+                    className="w-full px-4 py-3 rounded-full border-none focus:ring-2 focus:ring-black outline-none text-sm placeholder:text-[#A3A3A3]"
                     required
                   />
                 </div>
                 
-                <p className="text-[11px] text-gray-500 leading-relaxed mb-6">
+                <p className="text-[11px] text-[#6B6B6B] leading-relaxed mb-6">
                   We respect your privacy and will only use the information provided to contact you. You may unsubscribe from these communications at anytime.
                 </p>
                 
                 <button 
                   type="submit" 
-                  className="bg-[#111111] hover:bg-black text-white px-6 py-3 rounded-full text-sm font-medium transition-colors flex items-center"
+                  className="bg-[#111111] hover:bg-black text-[#000000] px-6 py-3 rounded-full text-sm font-medium transition-colors flex items-center"
                 >
                   Sign Me Up <ArrowRight className="ml-2 w-4 h-4" />
                 </button>

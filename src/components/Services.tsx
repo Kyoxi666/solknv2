@@ -108,30 +108,30 @@ const services = [
 
 export function Services() {
   return (
-    <section id="services" className="py-24 relative overflow-hidden bg-white border-y border-gray-200">
+    <section id="services" className="py-24 relative overflow-hidden bg-white border-y border-[#E0E0E0]">
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-0 border-b border-gray-200 pb-10 gap-6 md:gap-12">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-0 border-b border-[#E0E0E0] pb-10 gap-6 md:gap-12">
           <div className="max-w-2xl">
-            <p className="text-[10px] font-semibold tracking-[0.2em] uppercase text-gray-400 mb-4">Our Services</p>
-            <h2 className="text-4xl md:text-5xl lg:text-[3.5rem] font-medium tracking-tight text-gray-900 leading-[1.1]">
+            <p className="text-[10px] font-semibold tracking-[0.2em] uppercase text-[#A3A3A3] mb-4">Our Services</p>
+            <h2 className="text-4xl md:text-5xl lg:text-[3.5rem] font-medium tracking-tight text-[#000000] leading-[1.1]">
               Everything your business needs to stay connected and secure.
             </h2>
           </div>
           <Link
             to="/services"
-            className="group shrink-0 inline-flex items-center gap-3 px-6 py-3 bg-black text-white font-medium text-sm rounded-full hover:bg-gray-900 transition-colors duration-300 active:scale-[0.98]"
+            className="group shrink-0 inline-flex items-center gap-3 px-6 py-3 bg-[#E87722] text-white font-medium text-sm rounded-full hover:bg-[#C4621A] transition-colors duration-300 active:scale-[0.98]"
           >
             View all services
-            <span className="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center group-hover:translate-x-0.5 transition-transform duration-300">
+            <span className="w-6 h-6 rounded-full bg-white/15 flex items-center justify-center group-hover:translate-x-0.5 transition-transform duration-300">
               <ArrowRight className="w-3.5 h-3.5" />
             </span>
           </Link>
         </div>
 
         {/* Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border-t border-l border-gray-200">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border-t border-l border-[#E0E0E0]">
           {services.map((service, idx) => (
             <motion.div
               key={idx}
@@ -139,23 +139,23 @@ export function Services() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-50px' }}
               transition={{ duration: 0.5, delay: (idx % 3) * 0.1, ease: [0.32, 0.72, 0, 1] }}
-              className="relative p-8 md:p-10 border-b border-r border-gray-200 min-h-[300px] flex flex-col group hover:bg-gray-50 transition-colors duration-300"
+              className="relative p-8 md:p-10 border-b border-r border-[#E0E0E0] min-h-[300px] flex flex-col group hover:bg-[#F7F7F7] transition-colors duration-300"
             >
-              {/* Left accent bar on hover */}
-              <div className="absolute left-0 top-8 bottom-8 w-0.5 bg-[#2563EB] scale-y-0 group-hover:scale-y-100 transition-transform duration-300 origin-top rounded-full" />
+              {/* Left accent bar on hover — brand orange */}
+              <div className="absolute left-0 top-8 bottom-8 w-0.5 bg-[#E87722] scale-y-0 group-hover:scale-y-100 transition-transform duration-300 origin-top rounded-full" />
 
-              <h3 className="text-lg font-medium text-gray-900 mb-3 pr-8 leading-snug">{service.title}</h3>
-              <p className="text-sm text-gray-500 font-light pr-12 leading-relaxed flex-grow">{service.description}</p>
+              <h3 className="text-lg font-medium text-[#000000] mb-3 pr-8 leading-snug">{service.title}</h3>
+              <p className="text-sm text-[#6B6B6B] font-normal pr-12 leading-relaxed flex-grow">{service.description}</p>
 
               <Link
                 to={service.link}
-                className="inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-widest text-gray-900 mt-6 hover:text-[#2563EB] transition-colors duration-300"
+                className="inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-widest text-[#000000] mt-6 hover:text-[#E87722] transition-colors duration-300"
               >
                 Learn more
                 <span className="group-hover:translate-x-1 transition-transform duration-300">→</span>
               </Link>
 
-              <div className="absolute bottom-8 right-8 text-gray-200 group-hover:text-gray-300 group-hover:scale-110 transition-all duration-500">
+              <div className="absolute bottom-8 right-8 text-[#E0E0E0] group-hover:text-[#D4A574] group-hover:scale-110 transition-all duration-500">
                 {React.cloneElement(service.icon as React.ReactElement<{ className?: string }>, { className: 'w-20 h-20 stroke-[1px]' })}
               </div>
             </motion.div>

@@ -21,9 +21,9 @@ export function Brands() {
   ];
 
   return (
-    <section className="py-12 md:py-16 bg-white border-b border-gray-100 overflow-hidden">
+    <section className="py-12 md:py-16 bg-white border-b border-[#E0E0E0] overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-8">
-        <p className="text-[10px] font-semibold text-gray-400 uppercase tracking-[0.2em]">
+        <p className="text-[10px] font-semibold text-[#A3A3A3] uppercase tracking-[0.2em]">
           Trusted technology partners
         </p>
       </div>
