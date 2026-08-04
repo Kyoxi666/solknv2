@@ -34,7 +34,7 @@ export function ServiceAccordion() {
     {
       title: "AI Business Solutions",
       content: "Leverage artificial intelligence to automate customer interactions, streamline operations, and accelerate business growth through intelligent automation and AI-driven marketing.",
-      link: "/services/ai-solutions"
+      link: "/services/ai-business-solutions"
     }
   ];
 
@@ -43,7 +43,7 @@ export function ServiceAccordion() {
       <div className="max-w-[1000px] mx-auto px-4 sm:px-6 lg:px-8">
         
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-[40px] font-light text-[#6B6B6B] max-w-2xl mx-auto leading-snug">
+          <h2 className="text-3xl md:text-[40px] font-light text-gray-500 max-w-2xl mx-auto leading-snug">
             Tailor-made services for all your<br />business needs
           </h2>
         </div>
@@ -61,11 +61,11 @@ export function ServiceAccordion() {
                   onClick={() => setOpenIdx(isOpen ? null : idx)}
                   className="w-full px-8 py-7 flex items-center justify-between text-left"
                 >
-                  <h3 className={`text-xl font-normal transition-colors ${isOpen ? 'text-[#000000]' : 'text-[#6B6B6B]'}`}>
+                  <h3 className={`text-xl font-normal transition-colors ${isOpen ? 'text-gray-900' : 'text-gray-600'}`}>
                     {service.title}
                   </h3>
                   
-                  <div className={`w-8 h-8 rounded-full flex items-center justify-center transition-colors duration-300 ${isOpen ? 'bg-[#E87722] text-white' : 'bg-[#EFEFEF] text-[#6B6B6B]'}`}>
+                  <div className={`w-8 h-8 rounded-full flex items-center justify-center transition-colors duration-300 ${isOpen ? 'bg-[#2b3d5b] text-white' : 'bg-[#EAEAEA] text-gray-500'}`}>
                     {isOpen ? <X className="w-4 h-4" /> : <Plus className="w-4 h-4" />}
                   </div>
                 </button>
@@ -74,12 +74,12 @@ export function ServiceAccordion() {
                   className={`px-8 overflow-hidden transition-all duration-500 ease-in-out ${isOpen ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'}`}
                 >
                   <div className="pt-2">
-                    <p className="text-sm text-[#6B6B6B] leading-relaxed max-w-3xl mb-10">
+                    <p className="text-sm text-gray-700 leading-relaxed max-w-3xl mb-10">
                       {service.content}
                     </p>
                     
                     {service.link && (
-                      <Link to={service.link} className="inline-flex items-center text-sm font-medium text-[#000000] hover:text-[#E87722] group transition-colors">
+                      <Link to={service.link} className="inline-flex items-center text-sm font-medium text-gray-900 hover:text-black group">
                         Learn more <ChevronRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
                       </Link>
                     )}

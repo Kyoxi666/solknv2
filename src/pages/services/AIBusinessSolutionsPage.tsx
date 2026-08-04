@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 export function AIBusinessSolutionsPage() {
   return (
-    <div className="min-h-screen bg-white font-sans selection:bg-[#E87722]/20">
+    <div className="min-h-screen bg-[#FAF9F6] font-sans selection:bg-slate-600/30">
       <style>{`
         @keyframes marquee {
           0% { transform: translateX(0%); }
@@ -15,12 +15,12 @@ export function AIBusinessSolutionsPage() {
       `}</style>
       
       {/* 1. Dark Hero Section */}
-      <section className="relative bg-[#F7F7F7] text-[#000000] pt-32 pb-20 overflow-hidden">
+      <section className="relative bg-[#090e17] text-white pt-32 pb-20 overflow-hidden">
                 {/* Background gradients for the blurred wave effect */}
-        <div className="absolute inset-0 z-0 overflow-hidden bg-[#F7F7F7]">
+        <div className="absolute inset-0 z-0 overflow-hidden bg-[#090e17]">
           {/* Main wave streak - slate blue */}
           <div 
-            className="absolute w-[150vw] md:w-[120vw] h-[100px] md:h-[150px] bg-[#E87722] rounded-[100%]"
+            className="absolute w-[150vw] md:w-[120vw] h-[100px] md:h-[150px] bg-[#2b3d5b] rounded-[100%]"
             style={{
               top: '48%',
               left: '44%',
@@ -31,7 +31,7 @@ export function AIBusinessSolutionsPage() {
           ></div>
           {/* Brighter core of the wave */}
           <div 
-            className="absolute w-[120vw] md:w-[90vw] h-[50px] md:h-[80px] bg-[#D4A574] rounded-[100%]"
+            className="absolute w-[120vw] md:w-[90vw] h-[50px] md:h-[80px] bg-[#47638c] rounded-[100%]"
             style={{
               top: '53%',
               left: '39%',
@@ -70,19 +70,19 @@ export function AIBusinessSolutionsPage() {
         </div>
         
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Link to="/" className="inline-flex items-center text-[#6B6B6B] hover:text-white font-medium mb-16 transition-colors text-sm tracking-widest uppercase">
+          <Link to="/" className="inline-flex items-center text-white/60 hover:text-white font-medium mb-16 transition-colors text-sm tracking-widest uppercase">
             <ArrowLeft className="w-4 h-4 mr-2" /> Back to Home
           </Link>
 
           <div className="flex flex-col md:flex-row justify-between items-start gap-12 mb-24">
-            <div className="text-xs md:text-sm tracking-widest uppercase text-[#6B6B6B]">
+            <div className="text-xs md:text-sm tracking-widest uppercase text-white/60">
               FROM QUERIES TO RESOLUTIONS 
             </div>
             <div className="max-w-md">
-              <p className="text-[#6B6B6B] leading-relaxed text-xs md:text-sm tracking-wide uppercase mb-8">
+              <p className="text-white/80 leading-relaxed text-xs md:text-sm tracking-wide uppercase mb-8">
                 Intelligent AI chatbots that answer customer questions instantly, automate WhatsApp and SMS marketing, and handle repetitive admin tasks — so your business runs smoother, day and night.
               </p>
-              <Link to="/contact" className="inline-flex items-center text-[#000000] hover:text-sky-300 transition-colors text-xs md:text-sm tracking-widest uppercase font-medium">
+              <Link to="/contact" className="inline-flex items-center text-white hover:text-sky-300 transition-colors text-xs md:text-sm tracking-widest uppercase font-medium">
                 Get a Free Consultation <ArrowUpRight className="w-4 h-4 ml-2" />
               </Link>
             </div>
@@ -104,7 +104,7 @@ export function AIBusinessSolutionsPage() {
       </section>
 
       {/* 2. Solutions Section (White) */}
-      <section className="py-24 md:py-32 bg-white text-[#1a1a1a]">
+      <section className="py-24 md:py-32 bg-[#FAF9F6] text-[#1a1a1a]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl md:text-6xl lg:text-7xl font-light tracking-tighter uppercase mb-16 md:mb-24">
             Our <br/>
@@ -122,16 +122,16 @@ export function AIBusinessSolutionsPage() {
                 <p className="text-black/60 leading-relaxed text-sm mb-4">
                   AI-powered chatbots for your website that answer common questions — opening hours, availability, pricing — any time, day or night.
                 </p>
-                <div className="bg-[#f8fafc] border border-[#E0E0E0] rounded-xl p-4 inline-block">
-                  <p className="text-sm text-[#6B6B6B] italic">"Ask our AI when we're open, what we offer, or if there's availability — it'll answer instantly, no waiting on hold."</p>
+                <div className="bg-[#f8fafc] border border-slate-200 rounded-xl p-4 inline-block">
+                  <p className="text-sm text-slate-600 italic">"Ask our AI when we're open, what we offer, or if there's availability — it'll answer instantly, no waiting on hold."</p>
                 </div>
               </div>
               <div className="md:col-span-4">
                 <ul className="space-y-3 text-sm text-black/70 mt-2">
-                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#E87722] mt-1.5"></div> Website Chatbot</li>
-                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#E87722] mt-1.5"></div> Instant Answers</li>
-                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#E87722] mt-1.5"></div> Booking & FAQ Handling</li>
-                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#E87722] mt-1.5"></div> Always-On Availability</li>
+                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#2b3d5b] mt-1.5"></div> Website Chatbot</li>
+                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#2b3d5b] mt-1.5"></div> Instant Answers</li>
+                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#2b3d5b] mt-1.5"></div> Booking & FAQ Handling</li>
+                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#2b3d5b] mt-1.5"></div> Always-On Availability</li>
                 </ul>
               </div>
             </div>
@@ -147,10 +147,10 @@ export function AIBusinessSolutionsPage() {
               </div>
               <div className="md:col-span-4">
                 <ul className="space-y-3 text-sm text-black/70">
-                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#E87722] mt-1.5"></div> WhatsApp Automation</li>
-                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#E87722] mt-1.5"></div> SMS Campaigns</li>
-                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#E87722] mt-1.5"></div> Appointment Reminders</li>
-                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#E87722] mt-1.5"></div> Customer Re-engagement</li>
+                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#2b3d5b] mt-1.5"></div> WhatsApp Automation</li>
+                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#2b3d5b] mt-1.5"></div> SMS Campaigns</li>
+                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#2b3d5b] mt-1.5"></div> Appointment Reminders</li>
+                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#2b3d5b] mt-1.5"></div> Customer Re-engagement</li>
                 </ul>
               </div>
             </div>
@@ -166,10 +166,10 @@ export function AIBusinessSolutionsPage() {
               </div>
               <div className="md:col-span-4">
                 <ul className="space-y-3 text-sm text-black/70">
-                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#E87722] mt-1.5"></div> Spreadsheet Automation</li>
-                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#E87722] mt-1.5"></div> Data Entry Reduction</li>
-                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#E87722] mt-1.5"></div> Automated Reporting</li>
-                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#E87722] mt-1.5"></div> Task Scheduling</li>
+                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#2b3d5b] mt-1.5"></div> Spreadsheet Automation</li>
+                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#2b3d5b] mt-1.5"></div> Data Entry Reduction</li>
+                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#2b3d5b] mt-1.5"></div> Automated Reporting</li>
+                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#2b3d5b] mt-1.5"></div> Task Scheduling</li>
                 </ul>
               </div>
             </div>
@@ -178,11 +178,11 @@ export function AIBusinessSolutionsPage() {
       </section>
       
       {/* 3. New Section 1: Colored Mission Statement */}
-      <section className="py-24 md:py-32 bg-[#F7F7F7] text-[#000000] relative overflow-hidden rounded-t-[3rem] md:rounded-[3rem] md:mx-6">
+      <section className="py-24 md:py-32 bg-[#090e17] text-white relative overflow-hidden rounded-t-[3rem] md:rounded-[3rem] md:mx-6">
         {/* Background gradients for the blurred wave effect */}
         <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
           <div 
-            className="absolute w-[150vw] md:w-[120vw] h-[100px] md:h-[150px] bg-[#E87722] rounded-[100%]"
+            className="absolute w-[150vw] md:w-[120vw] h-[100px] md:h-[150px] bg-[#2b3d5b] rounded-[100%]"
             style={{
               top: '52%',
               left: '48%',
@@ -192,7 +192,7 @@ export function AIBusinessSolutionsPage() {
             }}
           ></div>
           <div 
-            className="absolute w-[120vw] md:w-[90vw] h-[50px] md:h-[80px] bg-[#D4A574] rounded-[100%]"
+            className="absolute w-[120vw] md:w-[90vw] h-[50px] md:h-[80px] bg-[#47638c] rounded-[100%]"
             style={{
               top: '57%',
               left: '43%',
@@ -231,7 +231,7 @@ export function AIBusinessSolutionsPage() {
 
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-16 relative z-10">
-           <span className="inline-block px-4 py-1.5 rounded-full border border-[#E0E0E0] text-xs font-medium tracking-widest uppercase bg-[#EFEFEF] backdrop-blur-sm">
+           <span className="inline-block px-4 py-1.5 rounded-full border border-white/20 text-xs font-medium tracking-widest uppercase bg-white/5 backdrop-blur-sm">
              AI for Small Business
            </span>
         </div>
@@ -241,10 +241,10 @@ export function AIBusinessSolutionsPage() {
       <section className="py-24 md:py-32 bg-white text-[#1a1a1a]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-4xl mx-auto mb-20">
-            <h2 className="text-4xl md:text-6xl font-medium tracking-tight mb-6 text-[#000000] leading-tight">
+            <h2 className="text-4xl md:text-6xl font-medium tracking-tight mb-6 text-[#1e293b] leading-tight">
               AI that works <span className="italic font-light">while</span> <span className="italic font-light">you don't have to</span>
             </h2>
-            <p className="text-lg md:text-xl text-[#6B6B6B] font-light max-w-2xl mx-auto">
+            <p className="text-lg md:text-xl text-slate-600 font-light max-w-2xl mx-auto">
               From answering customer questions to automating your marketing and admin, our AI tools save you time and never miss an enquiry.
             </p>
           </div>
@@ -253,7 +253,7 @@ export function AIBusinessSolutionsPage() {
             {/* Top Row (3 items) */}
             
             <div className="w-full md:w-[calc(33.333%-1rem)] bg-[#F0F4F8] rounded-3xl p-10 flex flex-col items-center text-center hover:scale-[1.02] transition-transform duration-300">
-              <div className="text-[#E87722]">
+              <div className="text-[#2b3d5b]">
                 <svg viewBox="0 0 100 100" className="w-20 h-20 mx-auto mb-6">
     <defs>
       <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -266,13 +266,13 @@ export function AIBusinessSolutionsPage() {
     <path d="M50,10 Q90,50 50,90 Q10,50 50,10" fill="none" stroke="#fff" strokeWidth="2" opacity="0.5"/>
   </svg>
               </div>
-              <p className="text-base font-medium text-[#000000]">
+              <p className="text-base font-medium text-slate-800">
                 Answer customer questions instantly, any time of day
               </p>
             </div>
             
             <div className="w-full md:w-[calc(33.333%-1rem)] bg-[#F0F4F8] rounded-3xl p-10 flex flex-col items-center text-center hover:scale-[1.02] transition-transform duration-300">
-              <div className="text-[#E87722]">
+              <div className="text-[#2b3d5b]">
                 <svg viewBox="0 0 100 100" className="w-20 h-20 mx-auto mb-6">
     <defs>
       <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -286,13 +286,13 @@ export function AIBusinessSolutionsPage() {
     <circle cx="65" cy="50" r="34" fill="url(#grad2)" />
   </svg>
               </div>
-              <p className="text-base font-medium text-[#000000]">
+              <p className="text-base font-medium text-slate-800">
                 Cover evenings and weekends without hiring extra staff
               </p>
             </div>
             
             <div className="w-full md:w-[calc(33.333%-1rem)] bg-[#F0F4F8] rounded-3xl p-10 flex flex-col items-center text-center hover:scale-[1.02] transition-transform duration-300">
-              <div className="text-[#E87722]">
+              <div className="text-[#2b3d5b]">
                 <svg viewBox="0 0 100 100" className="w-20 h-20 mx-auto mb-6">
     <defs>
       <linearGradient id="grad3" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -304,7 +304,7 @@ export function AIBusinessSolutionsPage() {
     <circle cx="50" cy="50" r="10" fill="#fff" opacity="0.3" />
   </svg>
               </div>
-              <p className="text-base font-medium text-[#000000]">
+              <p className="text-base font-medium text-slate-800">
                 Send WhatsApp and SMS updates that keep customers coming back
               </p>
             </div>
@@ -314,7 +314,7 @@ export function AIBusinessSolutionsPage() {
             <div className="w-full flex flex-col md:flex-row justify-center gap-6 mt-2">
               
               <div className="w-full md:w-[calc(33.333%-1rem)] bg-[#F0F4F8] rounded-3xl p-10 flex flex-col items-center text-center hover:scale-[1.02] transition-transform duration-300">
-                <div className="text-[#E87722]">
+                <div className="text-[#2b3d5b]">
                   <svg viewBox="0 0 100 100" className="w-20 h-20 mx-auto mb-6">
     <defs>
       <linearGradient id="grad4" x1="0%" y1="100%" x2="100%" y2="0%">
@@ -327,13 +327,13 @@ export function AIBusinessSolutionsPage() {
     <polygon points="50,40 59,46 59,54 50,60 41,54 41,46" fill="url(#grad4)" />
   </svg>
                 </div>
-                <p className="text-base font-medium text-[#000000]">
+                <p className="text-base font-medium text-slate-800">
                   Turn website visitors into bookings and enquiries
                 </p>
               </div>
               
               <div className="w-full md:w-[calc(33.333%-1rem)] bg-[#F0F4F8] rounded-3xl p-10 flex flex-col items-center text-center hover:scale-[1.02] transition-transform duration-300">
-                <div className="text-[#E87722]">
+                <div className="text-[#2b3d5b]">
                   <svg viewBox="0 0 100 100" className="w-20 h-20 mx-auto mb-6">
     <defs>
       <linearGradient id="grad5" x1="100%" y1="0%" x2="0%" y2="100%">
@@ -346,7 +346,7 @@ export function AIBusinessSolutionsPage() {
     <circle cx="50" cy="50" r="10" fill="currentColor" opacity="0.8" />
   </svg>
                 </div>
-                <p className="text-base font-medium text-[#000000]">
+                <p className="text-base font-medium text-slate-800">
                   Cut hours spent on spreadsheets and repetitive admin
                 </p>
               </div>
@@ -357,11 +357,11 @@ export function AIBusinessSolutionsPage() {
       </section>
       
       {/* 5. New Section 3: Text & Stats on Colored Full-Width */}
-      <section className="py-24 md:py-32 bg-[#F7F7F7] text-[#000000] relative overflow-hidden rounded-t-[3rem] md:rounded-[3rem] md:mx-6">
+      <section className="py-24 md:py-32 bg-[#090e17] text-white relative overflow-hidden rounded-t-[3rem] md:rounded-[3rem] md:mx-6">
         {/* Background gradients for the blurred wave effect */}
         <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
           <div 
-            className="absolute w-[150vw] md:w-[120vw] h-[100px] md:h-[150px] bg-[#E87722] rounded-[100%]"
+            className="absolute w-[150vw] md:w-[120vw] h-[100px] md:h-[150px] bg-[#2b3d5b] rounded-[100%]"
             style={{
               top: '72%',
               left: '78%',
@@ -371,7 +371,7 @@ export function AIBusinessSolutionsPage() {
             }}
           ></div>
           <div 
-            className="absolute w-[120vw] md:w-[90vw] h-[50px] md:h-[80px] bg-[#D4A574] rounded-[100%]"
+            className="absolute w-[120vw] md:w-[90vw] h-[50px] md:h-[80px] bg-[#47638c] rounded-[100%]"
             style={{
               top: '77%',
               left: '73%',
@@ -405,7 +405,7 @@ export function AIBusinessSolutionsPage() {
         </div>
         <div className="absolute inset-0 bg-gradient-to-tr from-black/40 via-transparent to-white/10 pointer-events-none"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-20 relative z-10">
-          <h2 className="text-2xl md:text-4xl font-light text-[#6B6B6B] max-w-4xl leading-tight">
+          <h2 className="text-2xl md:text-4xl font-light text-white/80 max-w-4xl leading-tight">
             We help small businesses answer customers faster, market smarter, and cut down on repetitive admin — using simple, reliable AI tools.
           </h2>
         </div>
@@ -416,26 +416,26 @@ export function AIBusinessSolutionsPage() {
               Every message answered, every task automated, without the manual work.
             </h3>
             
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-20 pt-12 border-t border-[#E0E0E0]">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-20 pt-12 border-t border-white/20">
               
               <div>
                 <div className="text-4xl md:text-5xl font-light mb-2">50+</div>
-                <div className="text-xs uppercase tracking-widest text-[#6B6B6B]">Businesses Served</div>
+                <div className="text-xs uppercase tracking-widest text-white/60">Businesses Served</div>
               </div>
               
               <div>
                 <div className="text-4xl md:text-5xl font-light mb-2">40h</div>
-                <div className="text-xs uppercase tracking-widest text-[#6B6B6B]">Hours Saved per Month</div>
+                <div className="text-xs uppercase tracking-widest text-white/60">Hours Saved per Month</div>
               </div>
               
               <div>
                 <div className="text-4xl md:text-5xl font-light mb-2">24/7</div>
-                <div className="text-xs uppercase tracking-widest text-[#6B6B6B]">Chatbot Availability</div>
+                <div className="text-xs uppercase tracking-widest text-white/60">Chatbot Availability</div>
               </div>
               
               <div>
                 <div className="text-4xl md:text-5xl font-light mb-2">40%</div>
-                <div className="text-xs uppercase tracking-widest text-[#6B6B6B]">Missed Enquiries</div>
+                <div className="text-xs uppercase tracking-widest text-white/60">Missed Enquiries</div>
               </div>
               
             </div>
@@ -449,7 +449,7 @@ export function AIBusinessSolutionsPage() {
       <section className="py-24 md:py-32 bg-white text-[#1a1a1a]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-4xl md:text-5xl font-medium tracking-tight mb-6 text-[#000000]">
+            <h2 className="text-4xl md:text-5xl font-medium tracking-tight mb-6 text-[#1e293b]">
               The <span className="italic font-light">difference</span> AI automation makes
             </h2>
           </div>
@@ -468,8 +468,8 @@ export function AIBusinessSolutionsPage() {
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
                   </div>
                   <div>
-                    <p className="font-medium text-[#000000] mb-1">Missed Calls & Enquiries</p>
-                    <p className="text-sm text-[#6B6B6B] leading-relaxed">Losing potential customers because you can't answer the phone while working.</p>
+                    <p className="font-medium text-[#1e293b] mb-1">Missed Calls & Enquiries</p>
+                    <p className="text-sm text-slate-600 leading-relaxed">Losing potential customers because you can't answer the phone while working.</p>
                   </div>
                 </li>
                 <li className="flex items-start gap-4">
@@ -477,8 +477,8 @@ export function AIBusinessSolutionsPage() {
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
                   </div>
                   <div>
-                    <p className="font-medium text-[#000000] mb-1">Manual Replies</p>
-                    <p className="text-sm text-[#6B6B6B] leading-relaxed">Typing out the same answers to "What are your hours?" or "Do you have availability?"</p>
+                    <p className="font-medium text-[#1e293b] mb-1">Manual Replies</p>
+                    <p className="text-sm text-slate-600 leading-relaxed">Typing out the same answers to "What are your hours?" or "Do you have availability?"</p>
                   </div>
                 </li>
                 <li className="flex items-start gap-4">
@@ -486,8 +486,8 @@ export function AIBusinessSolutionsPage() {
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
                   </div>
                   <div>
-                    <p className="font-medium text-[#000000] mb-1">Hours on Spreadsheets</p>
-                    <p className="text-sm text-[#6B6B6B] leading-relaxed">Spending evenings and weekends catching up on data entry, admin, and reporting.</p>
+                    <p className="font-medium text-[#1e293b] mb-1">Hours on Spreadsheets</p>
+                    <p className="text-sm text-slate-600 leading-relaxed">Spending evenings and weekends catching up on data entry, admin, and reporting.</p>
                   </div>
                 </li>
               </ul>
@@ -506,8 +506,8 @@ export function AIBusinessSolutionsPage() {
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
                   </div>
                   <div>
-                    <p className="font-medium text-[#000000] mb-1">Instant Answers</p>
-                    <p className="text-sm text-[#6B6B6B] leading-relaxed">Customers get immediate responses, bookings, and info 24/7 without waiting.</p>
+                    <p className="font-medium text-[#1e293b] mb-1">Instant Answers</p>
+                    <p className="text-sm text-slate-600 leading-relaxed">Customers get immediate responses, bookings, and info 24/7 without waiting.</p>
                   </div>
                 </li>
                 <li className="flex items-start gap-4">
@@ -515,8 +515,8 @@ export function AIBusinessSolutionsPage() {
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
                   </div>
                   <div>
-                    <p className="font-medium text-[#000000] mb-1">Automated Marketing</p>
-                    <p className="text-sm text-[#6B6B6B] leading-relaxed">WhatsApp and SMS campaigns run themselves, driving repeat business on autopilot.</p>
+                    <p className="font-medium text-[#1e293b] mb-1">Automated Marketing</p>
+                    <p className="text-sm text-slate-600 leading-relaxed">WhatsApp and SMS campaigns run themselves, driving repeat business on autopilot.</p>
                   </div>
                 </li>
                 <li className="flex items-start gap-4">
@@ -524,8 +524,8 @@ export function AIBusinessSolutionsPage() {
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
                   </div>
                   <div>
-                    <p className="font-medium text-[#000000] mb-1">Admin on Autopilot</p>
-                    <p className="text-sm text-[#6B6B6B] leading-relaxed">Data entry and reporting are automated, giving you your evenings and weekends back.</p>
+                    <p className="font-medium text-[#1e293b] mb-1">Admin on Autopilot</p>
+                    <p className="text-sm text-slate-600 leading-relaxed">Data entry and reporting are automated, giving you your evenings and weekends back.</p>
                   </div>
                 </li>
               </ul>
@@ -535,12 +535,12 @@ export function AIBusinessSolutionsPage() {
       </section>
 
       {/* FAQ Section */}
-      <section className="relative py-24 md:py-32 bg-[#F7F7F7] text-[#000000] overflow-hidden">
+      <section className="relative py-24 md:py-32 bg-[#090e17] text-white overflow-hidden">
         {/* Background gradients for the blurred wave effect */}
         <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
           {/* Main wave streak - slate blue */}
           <div 
-            className="absolute w-[150vw] md:w-[120vw] h-[100px] md:h-[150px] bg-[#E87722] rounded-[100%]"
+            className="absolute w-[150vw] md:w-[120vw] h-[100px] md:h-[150px] bg-[#2b3d5b] rounded-[100%]"
             style={{
               top: '65%',
               left: '60%',
@@ -551,7 +551,7 @@ export function AIBusinessSolutionsPage() {
           ></div>
           {/* Brighter core of the wave */}
           <div 
-            className="absolute w-[120vw] md:w-[90vw] h-[50px] md:h-[80px] bg-[#D4A574] rounded-[100%]"
+            className="absolute w-[120vw] md:w-[90vw] h-[50px] md:h-[80px] bg-[#47638c] rounded-[100%]"
             style={{
               top: '70%',
               left: '55%',
@@ -591,34 +591,34 @@ export function AIBusinessSolutionsPage() {
              Frequently Asked Questions
            </h2>
            <div className="space-y-8">
-             <div className="border-b border-[#E0E0E0] pb-8">
+             <div className="border-b border-white/10 pb-8">
                <h3 className="text-xl font-medium mb-3 text-white/90">What if my business isn't tech-savvy?</h3>
-               <p className="text-[#6B6B6B] font-light leading-relaxed">You don't need any technical knowledge. We handle setup, integration, and training — you just tell us how your business runs.</p>
+               <p className="text-white/60 font-light leading-relaxed">You don't need any technical knowledge. We handle setup, integration, and training — you just tell us how your business runs.</p>
              </div>
-             <div className="border-b border-[#E0E0E0] pb-8">
+             <div className="border-b border-white/10 pb-8">
                <h3 className="text-xl font-medium mb-3 text-white/90">How long does it take to set up?</h3>
-               <p className="text-[#6B6B6B] font-light leading-relaxed">Most chatbots and automations are live within a week or two, depending on complexity.</p>
+               <p className="text-white/60 font-light leading-relaxed">Most chatbots and automations are live within a week or two, depending on complexity.</p>
              </div>
-             <div className="border-b border-[#E0E0E0] pb-8">
+             <div className="border-b border-white/10 pb-8">
                <h3 className="text-xl font-medium mb-3 text-white/90">Can it help with more than just customer questions?</h3>
-               <p className="text-[#6B6B6B] font-light leading-relaxed">Yes — beyond answering customers, we can automate repetitive admin like spreadsheets, data entry, and reporting, saving you hours each week.</p>
+               <p className="text-white/60 font-light leading-relaxed">Yes — beyond answering customers, we can automate repetitive admin like spreadsheets, data entry, and reporting, saving you hours each week.</p>
              </div>
              <div className="pb-8">
                <h3 className="text-xl font-medium mb-3 text-white/90">Will it work for my type of business?</h3>
-               <p className="text-[#6B6B6B] font-light leading-relaxed">Yes. Whether you run a shop, a clinic, a trades business, or a restaurant, we tailor the AI to your services, hours, and customer questions.</p>
+               <p className="text-white/60 font-light leading-relaxed">Yes. Whether you run a shop, a clinic, a trades business, or a restaurant, we tailor the AI to your services, hours, and customer questions.</p>
              </div>
            </div>
         </div>
       </section>
 
       {/* 5.5 New Section: How We Work Timeline */}
-      <section className="py-24 md:py-32 bg-white text-[#1a1a1a]">
+      <section className="py-24 md:py-32 bg-[#FAF9F6] text-[#1a1a1a]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20 max-w-3xl mx-auto">
-            <h2 className={`text-4xl md:text-6xl font-medium tracking-tight mb-6 ${"text-[#000000]"}`}>
+            <h2 className={`text-4xl md:text-6xl font-medium tracking-tight mb-6 ${"text-[#1e293b]"}`}>
               How <span className="italic font-light">we</span> work
             </h2>
-            <p className={`text-xl md:text-2xl font-light ${"text-[#000000]"}`}>
+            <p className={`text-xl md:text-2xl font-light ${"text-[#1e293b]"}`}>
               From first chat to full automation, here's how we set your business up.
             </p>
           </div>
@@ -626,7 +626,7 @@ export function AIBusinessSolutionsPage() {
           <div className="flex flex-col md:flex-row gap-16 relative max-w-5xl mx-auto">
             
             {/* Left Graphics Area (Hidden on mobile) */}
-            <div className={`hidden md:flex flex-col w-1/3 justify-around items-center ${"text-[#000000]"}`}>
+            <div className={`hidden md:flex flex-col w-1/3 justify-around items-center ${"text-[#1e293b]"}`}>
                <div className="w-64 h-64 rounded-full bg-black/5 flex items-center justify-center relative overflow-hidden">
                  <svg viewBox="0 0 100 100" className="w-full h-full opacity-30">
                    <circle cx="50" cy="50" r="40" fill="none" stroke="currentColor" strokeWidth="0.5" strokeDasharray="2 2" />
@@ -651,41 +651,41 @@ export function AIBusinessSolutionsPage() {
             {/* Right Timeline Area */}
             <div className="w-full md:w-2/3 relative py-8">
                {/* Vertical Line */}
-               <div className={`absolute left-[11px] top-10 bottom-10 w-[2px] ${"bg-[#E87722]"} opacity-30`}></div>
+               <div className={`absolute left-[11px] top-10 bottom-10 w-[2px] ${"bg-[#1e293b]"} opacity-30`}></div>
                
                <div className="space-y-16">
                  
                  <div className="relative pl-12">
-                   <div className={`absolute left-0 top-1.5 w-6 h-6 rounded-full ${"bg-[#E87722]"} flex items-center justify-center border-4 border-[#F7F7F7] shadow-sm`}>
+                   <div className={`absolute left-0 top-1.5 w-6 h-6 rounded-full ${"bg-[#1e293b]"} flex items-center justify-center border-4 border-[#FAF9F6] shadow-sm`}>
                    </div>
-                   <h3 className={`${"text-[#000000]"} text-2xl font-medium mb-3`}>Discovery Call</h3>
+                   <h3 className={`${"text-[#1e293b]"} text-2xl font-medium mb-3`}>Discovery Call</h3>
                    <p className="text-[#1a1a1a]/70 text-base leading-relaxed max-w-md">
                      We learn about your business, your customers' most common questions, and where you're losing time to admin.
                    </p>
                  </div>
                  
                  <div className="relative pl-12">
-                   <div className={`absolute left-0 top-1.5 w-6 h-6 rounded-full ${"bg-[#E87722]"} flex items-center justify-center border-4 border-[#F7F7F7] shadow-sm`}>
+                   <div className={`absolute left-0 top-1.5 w-6 h-6 rounded-full ${"bg-[#1e293b]"} flex items-center justify-center border-4 border-[#FAF9F6] shadow-sm`}>
                    </div>
-                   <h3 className={`${"text-[#000000]"} text-2xl font-medium mb-3`}>Build & Customize</h3>
+                   <h3 className={`${"text-[#1e293b]"} text-2xl font-medium mb-3`}>Build & Customize</h3>
                    <p className="text-[#1a1a1a]/70 text-base leading-relaxed max-w-md">
                      We set up your chatbot, WhatsApp/SMS flows, and automations to match your brand and how your business runs.
                    </p>
                  </div>
                  
                  <div className="relative pl-12">
-                   <div className={`absolute left-0 top-1.5 w-6 h-6 rounded-full ${"bg-[#E87722]"} flex items-center justify-center border-4 border-[#F7F7F7] shadow-sm`}>
+                   <div className={`absolute left-0 top-1.5 w-6 h-6 rounded-full ${"bg-[#1e293b]"} flex items-center justify-center border-4 border-[#FAF9F6] shadow-sm`}>
                    </div>
-                   <h3 className={`${"text-[#000000]"} text-2xl font-medium mb-3`}>Launch</h3>
+                   <h3 className={`${"text-[#1e293b]"} text-2xl font-medium mb-3`}>Launch</h3>
                    <p className="text-[#1a1a1a]/70 text-base leading-relaxed max-w-md">
                      We connect everything to your website, WhatsApp, and existing tools — live and working within days.
                    </p>
                  </div>
                  
                  <div className="relative pl-12">
-                   <div className={`absolute left-0 top-1.5 w-6 h-6 rounded-full ${"bg-[#E87722]"} flex items-center justify-center border-4 border-[#F7F7F7] shadow-sm`}>
+                   <div className={`absolute left-0 top-1.5 w-6 h-6 rounded-full ${"bg-[#1e293b]"} flex items-center justify-center border-4 border-[#FAF9F6] shadow-sm`}>
                    </div>
-                   <h3 className={`${"text-[#000000]"} text-2xl font-medium mb-3`}>Support & Improve</h3>
+                   <h3 className={`${"text-[#1e293b]"} text-2xl font-medium mb-3`}>Support & Improve</h3>
                    <p className="text-[#1a1a1a]/70 text-base leading-relaxed max-w-md">
                      We keep an eye on performance and fine-tune responses and automations as your business grows.
                    </p>
@@ -697,7 +697,7 @@ export function AIBusinessSolutionsPage() {
           </div>
           
           <div className="mt-24 text-center">
-            <Link to="/contact" className={`inline-flex items-center px-8 py-4 rounded-full ${"bg-[#E87722]"} text-[#000000] font-medium hover:opacity-90 transition-opacity`}>
+            <Link to="/contact" className={`inline-flex items-center px-8 py-4 rounded-full ${"bg-[#1e293b]"} text-white font-medium hover:opacity-90 transition-opacity`}>
               Book a free consultation
               <div className="ml-4 bg-white text-black rounded-full p-1">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -708,11 +708,11 @@ export function AIBusinessSolutionsPage() {
         </div>
       </section>
       
-            <section id="contact" className="py-24 bg-white text-[#000000] relative overflow-hidden rounded-[3rem] border border-[#E0E0E0] mx-4 sm:mx-6 lg:mx-8 mb-8">
+            <section id="contact" className="py-24 bg-white text-gray-900 relative overflow-hidden rounded-[3rem] border border-gray-100 mx-4 sm:mx-6 lg:mx-8 mb-8">
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl md:text-6xl font-semibold mb-6 tracking-tight">Ready to see what AI can do?</h2>
-          <p className="text-xl text-[#6B6B6B] mb-10 max-w-2xl mx-auto font-light leading-relaxed">See what AI can take off your plate — book a free consultation today.</p>
-          <Link to="/contact" className="bg-black text-[#000000] hover:bg-[#000000] px-10 py-4 rounded-full font-bold text-lg transition-colors inline-flex items-center shadow-md hover:shadow-lg hover:-translate-y-1 duration-300">
+          <p className="text-xl text-gray-500 mb-10 max-w-2xl mx-auto font-light leading-relaxed">See what AI can take off your plate — book a free consultation today.</p>
+          <Link to="/contact" className="bg-black text-white hover:bg-gray-800 px-10 py-4 rounded-full font-bold text-lg transition-colors inline-flex items-center shadow-md hover:shadow-lg hover:-translate-y-1 duration-300">
             Book your free consultation
           </Link>
         </div>

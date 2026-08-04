@@ -17,10 +17,10 @@ export function GuidePage() {
   const title = id && guideTitles[id] ? guideTitles[id] : 'Introduction: The Changing Cybersecurity Landscape';
 
   return (
-    <div className="bg-white min-h-screen text-[#000000] pt-32 pb-24">
+    <div className="bg-white min-h-screen text-gray-900 pt-32 pb-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-8">
-          <Link to="/guides" className="inline-flex items-center text-sm font-medium text-[#6B6B6B] hover:text-[#E87722] transition-colors group">
+          <Link to="/guides" className="inline-flex items-center text-sm font-medium text-gray-500 hover:text-[#2b3d5b] transition-colors group">
             <ArrowLeft className="w-4 h-4 mr-2 group-hover:-translate-x-1 transition-transform" />
             Back to Guides
           </Link>
@@ -30,11 +30,11 @@ export function GuidePage() {
           
           {/* Main Content Column */}
           <div className="lg:col-span-8 lg:pr-8">
-            <h1 className="text-3xl md:text-4xl font-normal text-[#000000] mb-8 tracking-tight">
+            <h1 className="text-3xl md:text-4xl font-normal text-gray-900 mb-8 tracking-tight">
               {title}
             </h1>
             
-            <div className="prose prose-lg text-[#6B6B6B] max-w-none">
+            <div className="prose prose-lg text-gray-600 max-w-none">
               {id === 'why-your-business-wi-fi-is-slow' ? (
                 <>
                   <p className="mb-6">
@@ -44,7 +44,7 @@ export function GuidePage() {
                     Many businesses assume poor internet speeds are the problem, but in reality, the issue often lies within the Wi-Fi network itself. Here's why your business Wi-Fi might be underperforming and what you can do to improve it.
                   </p>
 
-                  <h2 className="text-xl font-medium text-[#000000] mb-6">1. Your Wi-Fi Equipment Is Outdated</h2>
+                  <h2 className="text-xl font-medium text-gray-900 mb-6">1. Your Wi-Fi Equipment Is Outdated</h2>
                   <p className="mb-4">
                     Technology evolves rapidly. If your wireless access points or router are more than five years old, they're likely struggling to support today's number of connected devices and bandwidth requirements.
                   </p>
@@ -56,12 +56,12 @@ export function GuidePage() {
                     <li>Improved support for dozens of connected devices</li>
                   </ul>
                   <p className="mb-8">
-                    <strong className="text-[#000000] font-semibold">Solution:</strong> Upgrade ageing networking equipment to modern business-grade wireless access points designed for commercial environments.
+                    <strong className="text-gray-900 font-semibold">Solution:</strong> Upgrade ageing networking equipment to modern business-grade wireless access points designed for commercial environments.
                   </p>
 
-                  <hr className="border-[#E0E0E0] my-8" />
+                  <hr className="border-gray-200 my-8" />
 
-                  <h2 className="text-xl font-medium text-[#000000] mb-6">2. Too Many Devices Connected</h2>
+                  <h2 className="text-xl font-medium text-gray-900 mb-6">2. Too Many Devices Connected</h2>
                   <p className="mb-4">
                     Every smartphone, laptop, printer, tablet, CCTV camera, smart TV, and IoT device competes for wireless bandwidth. Even if these devices aren't actively being used, they can still consume network resources.
                   </p>
@@ -69,7 +69,7 @@ export function GuidePage() {
                     As businesses grow, it's common for networks that once supported 10 users to suddenly support 50 or more.
                   </p>
                   <p className="mb-4">
-                    <strong className="text-[#000000] font-semibold">Solution:</strong>
+                    <strong className="text-gray-900 font-semibold">Solution:</strong>
                   </p>
                   <ul className="list-disc pl-6 mb-8 space-y-2">
                     <li>Review how many devices are connected.</li>
@@ -77,9 +77,9 @@ export function GuidePage() {
                     <li>Use multiple wireless access points instead of relying on a single router.</li>
                   </ul>
 
-                  <hr className="border-[#E0E0E0] my-8" />
+                  <hr className="border-gray-200 my-8" />
 
-                  <h2 className="text-xl font-medium text-[#000000] mb-6">3. Poor Access Point Placement</h2>
+                  <h2 className="text-xl font-medium text-gray-900 mb-6">3. Poor Access Point Placement</h2>
                   <p className="mb-4">
                     Many businesses install a Wi-Fi router in a cupboard, under a desk, or in a corner of the building. Unfortunately, Wi-Fi signals don't travel well through thick walls, metal shelving, machinery, or multiple floors.
                   </p>
@@ -87,7 +87,7 @@ export function GuidePage() {
                     Dead zones and weak signal areas are often caused by poor placement rather than slow internet.
                   </p>
                   <p className="mb-4">
-                    <strong className="text-[#000000] font-semibold">Solution:</strong>
+                    <strong className="text-gray-900 font-semibold">Solution:</strong>
                   </p>
                   <ul className="list-disc pl-6 mb-8 space-y-2">
                     <li>Position access points centrally.</li>
@@ -95,9 +95,9 @@ export function GuidePage() {
                     <li>Perform a professional wireless site survey to identify coverage gaps.</li>
                   </ul>
 
-                  <hr className="border-[#E0E0E0] my-8" />
+                  <hr className="border-gray-200 my-8" />
 
-                  <h2 className="text-xl font-medium text-[#000000] mb-6">4. Wireless Interference</h2>
+                  <h2 className="text-xl font-medium text-gray-900 mb-6">4. Wireless Interference</h2>
                   <p className="mb-4">
                     Your Wi-Fi isn't the only wireless signal in the building.
                   </p>
@@ -114,12 +114,12 @@ export function GuidePage() {
                     These signals can overlap with your wireless channels, reducing performance.
                   </p>
                   <p className="mb-8">
-                    <strong className="text-[#000000] font-semibold">Solution:</strong> Configure your wireless network to use the least congested channels and take advantage of both the 2.4 GHz and 5 GHz bands. In larger offices, professional Wi-Fi planning can significantly improve performance.
+                    <strong className="text-gray-900 font-semibold">Solution:</strong> Configure your wireless network to use the least congested channels and take advantage of both the 2.4 GHz and 5 GHz bands. In larger offices, professional Wi-Fi planning can significantly improve performance.
                   </p>
 
-                  <hr className="border-[#E0E0E0] my-8" />
+                  <hr className="border-gray-200 my-8" />
 
-                  <h2 className="text-xl font-medium text-[#000000] mb-6">5. Everyone Is Sharing the Same Network</h2>
+                  <h2 className="text-xl font-medium text-gray-900 mb-6">5. Everyone Is Sharing the Same Network</h2>
                   <p className="mb-4">
                     Many businesses allow staff, guests, visitors, and company devices to use the same Wi-Fi network.
                   </p>
@@ -127,7 +127,7 @@ export function GuidePage() {
                     This creates unnecessary congestion and increases security risks.
                   </p>
                   <p className="mb-4">
-                    <strong className="text-[#000000] font-semibold">Solution:</strong> Create separate wireless networks (SSIDs) for:
+                    <strong className="text-gray-900 font-semibold">Solution:</strong> Create separate wireless networks (SSIDs) for:
                   </p>
                   <ul className="list-disc pl-6 mb-8 space-y-2">
                     <li>Employees</li>
@@ -138,9 +138,9 @@ export function GuidePage() {
                   </ul>
                   <p className="mb-8">Segmenting your network improves both speed and security.</p>
 
-                  <hr className="border-[#E0E0E0] my-8" />
+                  <hr className="border-gray-200 my-8" />
 
-                  <h2 className="text-xl font-medium text-[#000000] mb-6">6. Your Internet Connection Isn't the Problem</h2>
+                  <h2 className="text-xl font-medium text-gray-900 mb-6">6. Your Internet Connection Isn't the Problem</h2>
                   <p className="mb-4">
                     Businesses often upgrade from 100 Mbps to 500 Mbps broadband expecting instant improvements.
                   </p>
@@ -151,12 +151,12 @@ export function GuidePage() {
                     Think of it like replacing the engine in a car with flat tyres it still won't perform properly.
                   </p>
                   <p className="mb-8">
-                    <strong className="text-[#000000] font-semibold">Solution:</strong> Before upgrading your internet package, assess your internal network to identify bottlenecks.
+                    <strong className="text-gray-900 font-semibold">Solution:</strong> Before upgrading your internet package, assess your internal network to identify bottlenecks.
                   </p>
 
-                  <hr className="border-[#E0E0E0] my-8" />
+                  <hr className="border-gray-200 my-8" />
 
-                  <h2 className="text-xl font-medium text-[#000000] mb-6">7. No Ongoing Network Monitoring</h2>
+                  <h2 className="text-xl font-medium text-gray-900 mb-6">7. No Ongoing Network Monitoring</h2>
                   <p className="mb-4">
                     Many businesses only discover Wi-Fi problems when employees begin complaining.
                   </p>
@@ -164,7 +164,7 @@ export function GuidePage() {
                     Without proactive monitoring, issues such as overloaded access points, failing hardware, or unusual traffic can go unnoticed.
                   </p>
                   <p className="mb-4">
-                    <strong className="text-[#000000] font-semibold">Solution:</strong> Implement network monitoring to:
+                    <strong className="text-gray-900 font-semibold">Solution:</strong> Implement network monitoring to:
                   </p>
                   <ul className="list-disc pl-6 mb-8 space-y-2">
                     <li>Detect faults early</li>
@@ -174,9 +174,9 @@ export function GuidePage() {
                   </ul>
                   <p className="mb-8">Proactive monitoring reduces downtime and keeps your business running smoothly.</p>
 
-                  <hr className="border-[#E0E0E0] my-8" />
+                  <hr className="border-gray-200 my-8" />
 
-                  <h1 className="text-2xl font-normal text-[#000000] mb-6 tracking-tight">How Solkn Can Help</h1>
+                  <h1 className="text-2xl font-normal text-gray-900 mb-6 tracking-tight">How Solkn Can Help</h1>
                   <p className="mb-4">
                     At Solkn, we provide professional network monitoring and managed IT services to ensure your business Wi-Fi performs reliably every day.
                   </p>
@@ -193,7 +193,7 @@ export function GuidePage() {
                     Whether you operate a small office, retail store, warehouse, or multi-site business, we can help build a fast, secure, and reliable wireless network that grows with your business.
                   </p>
 
-                  <h2 className="text-xl font-medium text-[#000000] mb-6">Final Thoughts</h2>
+                  <h2 className="text-xl font-medium text-gray-900 mb-6">Final Thoughts</h2>
                   <p className="mb-4">
                     Slow Wi-Fi doesn't just frustrate employees—it costs businesses time, productivity, and money. Fortunately, most wireless issues can be resolved without replacing your entire infrastructure.
                   </p>
@@ -213,7 +213,7 @@ export function GuidePage() {
                     The good news is that moving to Windows 11 doesn't have to be complicated. With the right planning, your business can upgrade smoothly while minimising disruption to day-to-day operations.
                   </p>
 
-                  <h2 className="text-xl font-medium text-[#000000] mb-6">Why Upgrade to Windows 11?</h2>
+                  <h2 className="text-xl font-medium text-gray-900 mb-6">Why Upgrade to Windows 11?</h2>
                   <p className="mb-4">
                     Windows 11 has been designed with modern businesses in mind. It offers stronger security, better performance, improved productivity features, and enhanced support for hybrid working.
                   </p>
@@ -230,9 +230,9 @@ export function GuidePage() {
                     Businesses that remain on unsupported operating systems become increasingly vulnerable to cyber threats and compliance issues.
                   </p>
 
-                  <hr className="border-[#E0E0E0] my-8" />
+                  <hr className="border-gray-200 my-8" />
 
-                  <h2 className="text-xl font-medium text-[#000000] mb-6">Check Whether Your Devices Are Compatible</h2>
+                  <h2 className="text-xl font-medium text-gray-900 mb-6">Check Whether Your Devices Are Compatible</h2>
                   <p className="mb-4">
                     Not every Windows 10 PC can be upgraded to Windows 11. Microsoft has introduced stricter hardware requirements to improve performance and security.
                   </p>
@@ -251,12 +251,12 @@ export function GuidePage() {
                     Many computers purchased before 2018 may not support Windows 11 without hardware replacement.
                   </p>
                   <p className="mb-8">
-                    <strong className="text-[#000000] font-semibold">Tip:</strong> Create an inventory of all company laptops and desktops to identify which devices can be upgraded and which should be replaced.
+                    <strong className="text-gray-900 font-semibold">Tip:</strong> Create an inventory of all company laptops and desktops to identify which devices can be upgraded and which should be replaced.
                   </p>
 
-                  <hr className="border-[#E0E0E0] my-8" />
+                  <hr className="border-gray-200 my-8" />
 
-                  <h2 className="text-xl font-medium text-[#000000] mb-6">Back Up Your Business Data</h2>
+                  <h2 className="text-xl font-medium text-gray-900 mb-6">Back Up Your Business Data</h2>
                   <p className="mb-4">
                     Before making any major operating system upgrade, ensure your important business data is backed up.
                   </p>
@@ -273,9 +273,9 @@ export function GuidePage() {
                     Having a verified backup means you can quickly recover if anything unexpected occurs during the upgrade process.
                   </p>
 
-                  <hr className="border-[#E0E0E0] my-8" />
+                  <hr className="border-gray-200 my-8" />
 
-                  <h2 className="text-xl font-medium text-[#000000] mb-6">Check Software Compatibility</h2>
+                  <h2 className="text-xl font-medium text-gray-900 mb-6">Check Software Compatibility</h2>
                   <p className="mb-4">
                     Most modern applications work perfectly on Windows 11, but older or industry-specific software may require updates.
                   </p>
@@ -288,9 +288,9 @@ export function GuidePage() {
                   </ul>
                   <p className="mb-8">Testing before deployment helps avoid unexpected downtime.</p>
 
-                  <hr className="border-[#E0E0E0] my-8" />
+                  <hr className="border-gray-200 my-8" />
 
-                  <h2 className="text-xl font-medium text-[#000000] mb-6">Review Your Cyber Security</h2>
+                  <h2 className="text-xl font-medium text-gray-900 mb-6">Review Your Cyber Security</h2>
                   <p className="mb-4">
                     An operating system upgrade is an excellent opportunity to strengthen your overall security.
                   </p>
@@ -307,9 +307,9 @@ export function GuidePage() {
                     Windows 11 includes several security enhancements, but they work best as part of a wider cyber security strategy.
                   </p>
 
-                  <hr className="border-[#E0E0E0] my-8" />
+                  <hr className="border-gray-200 my-8" />
 
-                  <h2 className="text-xl font-medium text-[#000000] mb-6">Plan the Upgrade</h2>
+                  <h2 className="text-xl font-medium text-gray-900 mb-6">Plan the Upgrade</h2>
                   <p className="mb-4">Avoid upgrading every computer at once.</p>
                   <p className="mb-4">Instead:</p>
                   <ol className="list-decimal pl-6 mb-6 space-y-2">
@@ -323,9 +323,9 @@ export function GuidePage() {
                     A staged deployment reduces disruption and makes any issues easier to manage.
                   </p>
 
-                  <hr className="border-[#E0E0E0] my-8" />
+                  <hr className="border-gray-200 my-8" />
 
-                  <h2 className="text-xl font-medium text-[#000000] mb-6">Replace Ageing Hardware</h2>
+                  <h2 className="text-xl font-medium text-gray-900 mb-6">Replace Ageing Hardware</h2>
                   <p className="mb-4">
                     If some of your computers aren't compatible with Windows 11, replacing them may be more cost-effective than trying to extend their lifespan.
                   </p>
@@ -341,9 +341,9 @@ export function GuidePage() {
                     Although replacing hardware requires an upfront investment, it often reduces maintenance costs and improves employee productivity over time.
                   </p>
 
-                  <hr className="border-[#E0E0E0] my-8" />
+                  <hr className="border-gray-200 my-8" />
 
-                  <h2 className="text-xl font-medium text-[#000000] mb-6">Train Your Employees</h2>
+                  <h2 className="text-xl font-medium text-gray-900 mb-6">Train Your Employees</h2>
                   <p className="mb-4">
                     Windows 11 introduces a refreshed interface and several productivity improvements. While the changes are straightforward, providing employees with a brief introduction can help them adapt more quickly.
                   </p>
@@ -360,9 +360,9 @@ export function GuidePage() {
                     Even a short training session can reduce support requests after deployment.
                   </p>
 
-                  <hr className="border-[#E0E0E0] my-8" />
+                  <hr className="border-gray-200 my-8" />
 
-                  <h2 className="text-xl font-medium text-[#000000] mb-6">Don't Leave It Until the Last Minute</h2>
+                  <h2 className="text-xl font-medium text-gray-900 mb-6">Don't Leave It Until the Last Minute</h2>
                   <p className="mb-4">
                     Waiting until Windows 10 is no longer supported can create unnecessary pressure, particularly if multiple devices need replacing or key business software requires testing.
                   </p>
@@ -378,9 +378,9 @@ export function GuidePage() {
                     The earlier you begin preparing, the smoother the transition will be.
                   </p>
 
-                  <hr className="border-[#E0E0E0] my-8" />
+                  <hr className="border-gray-200 my-8" />
 
-                  <h1 className="text-2xl font-normal text-[#000000] mb-6 tracking-tight">How Solkn Can Help</h1>
+                  <h1 className="text-2xl font-normal text-gray-900 mb-6 tracking-tight">How Solkn Can Help</h1>
                   <p className="mb-4">
                     At Solkn, we help businesses upgrade to Windows 11 with minimal disruption.
                   </p>
@@ -398,7 +398,7 @@ export function GuidePage() {
                     Whether you have five computers or hundreds, we'll ensure your transition is secure, efficient and tailored to your business.
                   </p>
 
-                  <h2 className="text-xl font-medium text-[#000000] mb-6">Final Thoughts</h2>
+                  <h2 className="text-xl font-medium text-gray-900 mb-6">Final Thoughts</h2>
                   <p className="mb-4">
                     Upgrading to Windows 11 is more than installing a new operating system—it's an opportunity to improve security, modernise your IT infrastructure and increase productivity.
                   </p>
@@ -421,7 +421,7 @@ export function GuidePage() {
                     Investing in reliable business-grade equipment isn't about buying the most expensive products—it's about choosing technology that delivers long-term value and supports your business as it grows.
                   </p>
 
-                  <h2 className="text-xl font-medium text-[#000000] mb-6">1. More Downtime Means Less Productivity</h2>
+                  <h2 className="text-xl font-medium text-gray-900 mb-6">1. More Downtime Means Less Productivity</h2>
                   <p className="mb-4">
                     Consumer-grade hardware is often designed for occasional home use rather than the demands of a busy workplace.
                   </p>
@@ -432,12 +432,12 @@ export function GuidePage() {
                     Business-grade equipment is built for reliability, with higher-quality components designed to operate continuously in demanding environments.
                   </p>
                   <p className="mb-8">
-                    <strong className="text-[#000000] font-semibold">Solution:</strong> Invest in hardware that's designed for business use and backed by professional warranties.
+                    <strong className="text-gray-900 font-semibold">Solution:</strong> Invest in hardware that's designed for business use and backed by professional warranties.
                   </p>
 
-                  <hr className="border-[#E0E0E0] my-8" />
+                  <hr className="border-gray-200 my-8" />
 
-                  <h2 className="text-xl font-medium text-[#000000] mb-6">2. Cheap Hardware Usually Has a Shorter Lifespan</h2>
+                  <h2 className="text-xl font-medium text-gray-900 mb-6">2. Cheap Hardware Usually Has a Shorter Lifespan</h2>
                   <p className="mb-4">
                     A low-cost PC or router may appear to save money initially, but cheaper components often wear out faster.
                   </p>
@@ -448,12 +448,12 @@ export function GuidePage() {
                     When you factor in replacement costs, installation, configuration, and lost productivity, the "cheap" option often becomes the expensive one.
                   </p>
                   <p className="mb-8">
-                    <strong className="text-[#000000] font-semibold">Solution:</strong> Consider the total cost of ownership rather than just the purchase price.
+                    <strong className="text-gray-900 font-semibold">Solution:</strong> Consider the total cost of ownership rather than just the purchase price.
                   </p>
 
-                  <hr className="border-[#E0E0E0] my-8" />
+                  <hr className="border-gray-200 my-8" />
 
-                  <h2 className="text-xl font-medium text-[#000000] mb-6">3. Poor Performance Slows Everyone Down</h2>
+                  <h2 className="text-xl font-medium text-gray-900 mb-6">3. Poor Performance Slows Everyone Down</h2>
                   <p className="mb-4">
                     Older processors, limited memory, slow storage, and basic networking hardware can create daily frustrations for your team.
                   </p>
@@ -469,12 +469,12 @@ export function GuidePage() {
                     While each delay may only last a few minutes, those lost minutes add up across your workforce every day.
                   </p>
                   <p className="mb-8">
-                    <strong className="text-[#000000] font-semibold">Solution:</strong> Choose hardware that comfortably meets both your current and future business requirements.
+                    <strong className="text-gray-900 font-semibold">Solution:</strong> Choose hardware that comfortably meets both your current and future business requirements.
                   </p>
 
-                  <hr className="border-[#E0E0E0] my-8" />
+                  <hr className="border-gray-200 my-8" />
 
-                  <h2 className="text-xl font-medium text-[#000000] mb-6">4. Increased Security Risks</h2>
+                  <h2 className="text-xl font-medium text-gray-900 mb-6">4. Increased Security Risks</h2>
                   <p className="mb-4">
                     Lower-cost equipment often lacks advanced security features that help protect business data.
                   </p>
@@ -490,12 +490,12 @@ export function GuidePage() {
                     Without these protections, your organisation may be more vulnerable to cyber threats and data breaches.
                   </p>
                   <p className="mb-8">
-                    <strong className="text-[#000000] font-semibold">Solution:</strong> Prioritise security features when purchasing business devices, not just specifications.
+                    <strong className="text-gray-900 font-semibold">Solution:</strong> Prioritise security features when purchasing business devices, not just specifications.
                   </p>
 
-                  <hr className="border-[#E0E0E0] my-8" />
+                  <hr className="border-gray-200 my-8" />
 
-                  <h2 className="text-xl font-medium text-[#000000] mb-6">5. Limited Warranty and Support</h2>
+                  <h2 className="text-xl font-medium text-gray-900 mb-6">5. Limited Warranty and Support</h2>
                   <p className="mb-4">
                     Many consumer products include only a basic return-to-base warranty, meaning you'll need to send the device away for repair.
                   </p>
@@ -511,9 +511,9 @@ export function GuidePage() {
                   </ul>
                   <p className="mb-8">This reduces downtime and keeps your team working.</p>
 
-                  <hr className="border-[#E0E0E0] my-8" />
+                  <hr className="border-gray-200 my-8" />
 
-                  <h2 className="text-xl font-medium text-[#000000] mb-6">6. Hidden Maintenance Costs</h2>
+                  <h2 className="text-xl font-medium text-gray-900 mb-6">6. Hidden Maintenance Costs</h2>
                   <p className="mb-4">
                     Lower-quality equipment tends to require more repairs, troubleshooting, and replacements.
                   </p>
@@ -524,12 +524,12 @@ export function GuidePage() {
                     Those support costs can quickly exceed the money saved when purchasing cheaper hardware.
                   </p>
                   <p className="mb-8">
-                    <strong className="text-[#000000] font-semibold">Solution:</strong> Reliable equipment reduces ongoing maintenance costs and allows your IT provider to focus on improving your systems rather than constantly repairing them.
+                    <strong className="text-gray-900 font-semibold">Solution:</strong> Reliable equipment reduces ongoing maintenance costs and allows your IT provider to focus on improving your systems rather than constantly repairing them.
                   </p>
 
-                  <hr className="border-[#E0E0E0] my-8" />
+                  <hr className="border-gray-200 my-8" />
 
-                  <h2 className="text-xl font-medium text-[#000000] mb-6">7. Networking Equipment Matters Too</h2>
+                  <h2 className="text-xl font-medium text-gray-900 mb-6">7. Networking Equipment Matters Too</h2>
                   <p className="mb-4">
                     Many businesses focus on computers while overlooking their network infrastructure.
                   </p>
@@ -545,9 +545,9 @@ export function GuidePage() {
                     Reliable networking equipment keeps employees connected and supports cloud applications, VoIP phones, and hybrid working without interruption.
                   </p>
 
-                  <hr className="border-[#E0E0E0] my-8" />
+                  <hr className="border-gray-200 my-8" />
 
-                  <h2 className="text-xl font-medium text-[#000000] mb-6">8. Compatibility and Scalability Issues</h2>
+                  <h2 className="text-xl font-medium text-gray-900 mb-6">8. Compatibility and Scalability Issues</h2>
                   <p className="mb-4">
                     Cheap equipment may meet your needs today but struggle as your business grows.
                   </p>
@@ -558,12 +558,12 @@ export function GuidePage() {
                     Replacing equipment earlier than planned often costs more than investing in scalable solutions from the beginning.
                   </p>
                   <p className="mb-8">
-                    <strong className="text-[#000000] font-semibold">Solution:</strong> Buy with future growth in mind, not just today's requirements.
+                    <strong className="text-gray-900 font-semibold">Solution:</strong> Buy with future growth in mind, not just today's requirements.
                   </p>
 
-                  <hr className="border-[#E0E0E0] my-8" />
+                  <hr className="border-gray-200 my-8" />
 
-                  <h1 className="text-2xl font-normal text-[#000000] mb-6 tracking-tight">How to Buy IT Equipment the Smart Way</h1>
+                  <h1 className="text-2xl font-normal text-gray-900 mb-6 tracking-tight">How to Buy IT Equipment the Smart Way</h1>
                   <p className="mb-4">Before purchasing new hardware, ask yourself:</p>
                   <ul className="list-disc pl-6 mb-6 space-y-2">
                     <li>Will it still meet our needs in three to five years?</li>
@@ -577,9 +577,9 @@ export function GuidePage() {
                     Thinking beyond the price tag helps ensure you're making a long-term investment rather than a short-term compromise.
                   </p>
 
-                  <hr className="border-[#E0E0E0] my-8" />
+                  <hr className="border-gray-200 my-8" />
 
-                  <h1 className="text-2xl font-normal text-[#000000] mb-6 tracking-tight">How Solkn Can Help</h1>
+                  <h1 className="text-2xl font-normal text-gray-900 mb-6 tracking-tight">How Solkn Can Help</h1>
                   <p className="mb-4">
                     At Solkn, we help businesses choose the right IT equipment based on performance, reliability, security, and long-term value—not simply the lowest price.
                   </p>
@@ -597,7 +597,7 @@ export function GuidePage() {
                     We work with businesses of all sizes to ensure every technology investment delivers lasting value and supports future growth.
                   </p>
 
-                  <h2 className="text-xl font-medium text-[#000000] mb-6">Final Thoughts</h2>
+                  <h2 className="text-xl font-medium text-gray-900 mb-6">Final Thoughts</h2>
                   <p className="mb-4">
                     Buying the cheapest IT equipment may reduce your upfront costs, but it can lead to more downtime, higher maintenance expenses, security risks, and reduced productivity.
                   </p>
@@ -623,7 +623,7 @@ export function GuidePage() {
                     If you're considering Microsoft 365 for your business—or want to make better use of your existing subscription—this guide explains what it offers and why it's become an essential tool for businesses of all sizes.
                   </p>
 
-                  <h2 className="text-xl font-medium text-[#000000] mb-6">What Is Microsoft 365?</h2>
+                  <h2 className="text-xl font-medium text-gray-900 mb-6">What Is Microsoft 365?</h2>
                   <p className="mb-4">
                     Microsoft 365 is a cloud-based subscription service that combines productivity applications, business email, collaboration tools, cloud storage, and security features into one platform.
                   </p>
@@ -642,9 +642,9 @@ export function GuidePage() {
                     Instead of purchasing software every few years, businesses receive continuous updates, new features, and the latest security improvements.
                   </p>
 
-                  <hr className="border-[#E0E0E0] my-8" />
+                  <hr className="border-gray-200 my-8" />
 
-                  <h2 className="text-xl font-medium text-[#000000] mb-6">Work From Anywhere</h2>
+                  <h2 className="text-xl font-medium text-gray-900 mb-6">Work From Anywhere</h2>
                   <p className="mb-4">Modern businesses are no longer tied to the office.</p>
                   <p className="mb-4">
                     Whether your employees work from home, travel regularly, or operate across multiple locations, Microsoft 365 allows them to securely access their files, emails, and applications from virtually any device with an internet connection.
@@ -660,9 +660,9 @@ export function GuidePage() {
                     Employees can begin work on one device and continue seamlessly on another without losing progress.
                   </p>
 
-                  <hr className="border-[#E0E0E0] my-8" />
+                  <hr className="border-gray-200 my-8" />
 
-                  <h2 className="text-xl font-medium text-[#000000] mb-6">Professional Business Email</h2>
+                  <h2 className="text-xl font-medium text-gray-900 mb-6">Professional Business Email</h2>
                   <p className="mb-4">
                     A professional email address using your company domain creates a more credible image than a free personal email account.
                   </p>
@@ -678,9 +678,9 @@ export function GuidePage() {
                     Having a professional email solution also improves communication between employees and customers.
                   </p>
 
-                  <hr className="border-[#E0E0E0] my-8" />
+                  <hr className="border-gray-200 my-8" />
 
-                  <h2 className="text-xl font-medium text-[#000000] mb-6">Secure Cloud Storage</h2>
+                  <h2 className="text-xl font-medium text-gray-900 mb-6">Secure Cloud Storage</h2>
                   <p className="mb-4">OneDrive gives each employee secure cloud storage for their work files.</p>
                   <p className="mb-4">Benefits include:</p>
                   <ul className="list-disc pl-6 mb-6 space-y-2">
@@ -694,9 +694,9 @@ export function GuidePage() {
                     If a laptop is lost or damaged, important business files remain safely stored in the cloud.
                   </p>
 
-                  <hr className="border-[#E0E0E0] my-8" />
+                  <hr className="border-gray-200 my-8" />
 
-                  <h2 className="text-xl font-medium text-[#000000] mb-6">Better Team Collaboration</h2>
+                  <h2 className="text-xl font-medium text-gray-900 mb-6">Better Team Collaboration</h2>
                   <p className="mb-4">Microsoft Teams has become much more than a video conferencing application.</p>
                   <p className="mb-4">It provides one central location for:</p>
                   <ul className="list-disc pl-6 mb-6 space-y-2">
@@ -711,9 +711,9 @@ export function GuidePage() {
                     Rather than switching between multiple applications, employees can communicate and collaborate within a single platform.
                   </p>
 
-                  <hr className="border-[#E0E0E0] my-8" />
+                  <hr className="border-gray-200 my-8" />
 
-                  <h2 className="text-xl font-medium text-[#000000] mb-6">Stronger Security</h2>
+                  <h2 className="text-xl font-medium text-gray-900 mb-6">Stronger Security</h2>
                   <p className="mb-4">Cybersecurity is one of the biggest challenges facing businesses today.</p>
                   <p className="mb-4">
                     Microsoft 365 includes several built-in security features that help protect users and business data.
@@ -732,9 +732,9 @@ export function GuidePage() {
                     These features significantly reduce the risk of cyber attacks when configured correctly.
                   </p>
 
-                  <hr className="border-[#E0E0E0] my-8" />
+                  <hr className="border-gray-200 my-8" />
 
-                  <h2 className="text-xl font-medium text-[#000000] mb-6">Automatic Software Updates</h2>
+                  <h2 className="text-xl font-medium text-gray-900 mb-6">Automatic Software Updates</h2>
                   <p className="mb-4">Outdated software is one of the most common causes of security vulnerabilities.</p>
                   <p className="mb-4">Microsoft 365 automatically delivers:</p>
                   <ul className="list-disc pl-6 mb-6 space-y-2">
@@ -747,9 +747,9 @@ export function GuidePage() {
                     This ensures employees always have access to the latest versions without purchasing new software.
                   </p>
 
-                  <hr className="border-[#E0E0E0] my-8" />
+                  <hr className="border-gray-200 my-8" />
 
-                  <h2 className="text-xl font-medium text-[#000000] mb-6">Simplified File Sharing</h2>
+                  <h2 className="text-xl font-medium text-gray-900 mb-6">Simplified File Sharing</h2>
                   <p className="mb-4">
                     Instead of emailing multiple versions of the same document, Microsoft 365 allows teams to work together in real time.
                   </p>
@@ -763,9 +763,9 @@ export function GuidePage() {
                   </ul>
                   <p className="mb-8">This reduces confusion and improves productivity across the business.</p>
 
-                  <hr className="border-[#E0E0E0] my-8" />
+                  <hr className="border-gray-200 my-8" />
 
-                  <h2 className="text-xl font-medium text-[#000000] mb-6">Easier IT Management</h2>
+                  <h2 className="text-xl font-medium text-gray-900 mb-6">Easier IT Management</h2>
                   <p className="mb-4">
                     For businesses with multiple employees and devices, Microsoft 365 provides centralised administration.
                   </p>
@@ -780,9 +780,9 @@ export function GuidePage() {
                   </ul>
                   <p className="mb-8">Central management saves time while improving security and compliance.</p>
 
-                  <hr className="border-[#E0E0E0] my-8" />
+                  <hr className="border-gray-200 my-8" />
 
-                  <h2 className="text-xl font-medium text-[#000000] mb-6">Choosing the Right Microsoft 365 Plan</h2>
+                  <h2 className="text-xl font-medium text-gray-900 mb-6">Choosing the Right Microsoft 365 Plan</h2>
                   <p className="mb-4">Microsoft offers a range of plans designed for different business needs.</p>
                   <p className="mb-4">
                     Smaller businesses may only require professional email and Office applications, while growing organisations often benefit from plans that include advanced security, device management, and compliance features.
@@ -800,9 +800,9 @@ export function GuidePage() {
                     Choosing the correct plan from the outset can save money while ensuring your business has the features it needs.
                   </p>
 
-                  <hr className="border-[#E0E0E0] my-8" />
+                  <hr className="border-gray-200 my-8" />
 
-                  <h1 className="text-2xl font-normal text-[#000000] mb-6 tracking-tight">How Solkn Can Help</h1>
+                  <h1 className="text-2xl font-normal text-gray-900 mb-6 tracking-tight">How Solkn Can Help</h1>
                   <p className="mb-4">
                     At Solkn, we help businesses get the most from Microsoft 365 by ensuring it's set up securely, configured correctly, and tailored to the way your organisation works.
                   </p>
@@ -821,7 +821,7 @@ export function GuidePage() {
                     Whether you're moving from another email provider or looking to improve your existing Microsoft 365 environment, we can help you maximise productivity while keeping your business secure.
                   </p>
 
-                  <h2 className="text-xl font-medium text-[#000000] mb-6">Final Thoughts</h2>
+                  <h2 className="text-xl font-medium text-gray-900 mb-6">Final Thoughts</h2>
                   <p className="mb-4">
                     Microsoft 365 is much more than a collection of Office applications. It's a powerful business platform that combines productivity, collaboration, cloud storage, and cybersecurity into a single solution.
                   </p>
@@ -838,13 +838,13 @@ export function GuidePage() {
                     Cybercriminals don't always rely on sophisticated hacking techniques. In many cases, they simply trick someone into clicking a malicious link, downloading an infected attachment, or revealing sensitive information.
                   </p>
                   <p className="mb-6">
-                    These scams, known as <strong className="text-[#000000] font-semibold">phishing emails</strong>, are one of the most common causes of data breaches and financial fraud. The good news is that most phishing attempts can be identified in under 30 seconds if you know what to look for.
+                    These scams, known as <strong className="text-gray-900 font-semibold">phishing emails</strong>, are one of the most common causes of data breaches and financial fraud. The good news is that most phishing attempts can be identified in under 30 seconds if you know what to look for.
                   </p>
                   <p className="mb-8">
                     This guide will help you recognise the warning signs and protect both your business and your customers.
                   </p>
 
-                  <h2 className="text-xl font-medium text-[#000000] mb-6">What Is a Phishing Email?</h2>
+                  <h2 className="text-xl font-medium text-gray-900 mb-6">What Is a Phishing Email?</h2>
                   <p className="mb-4">
                     A phishing email is a fraudulent message designed to appear as though it comes from a trusted source, such as your bank, a supplier, a delivery company, or even a colleague.
                   </p>
@@ -860,30 +860,30 @@ export function GuidePage() {
                     Modern phishing emails can look remarkably convincing, making awareness your first line of defence.
                   </p>
 
-                  <hr className="border-[#E0E0E0] my-8" />
+                  <hr className="border-gray-200 my-8" />
 
-                  <h2 className="text-xl font-medium text-[#000000] mb-6">1. Check the Sender's Email Address</h2>
+                  <h2 className="text-xl font-medium text-gray-900 mb-6">1. Check the Sender's Email Address</h2>
                   <p className="mb-4">
                     The display name might say "Microsoft" or "Royal Mail", but the actual email address often tells a different story.
                   </p>
                   <p className="mb-4">For example:</p>
-                  <p className="mb-4 font-semibold text-[#000000]">Legitimate:</p>
+                  <p className="mb-4 font-semibold text-gray-900">Legitimate:</p>
                   <ul className="list-disc pl-6 mb-6 space-y-2">
-                    <li><a href="mailto:support@companyname.co.uk" className="text-[#E87722] hover:underline">support@companyname.co.uk</a></li>
+                    <li><a href="mailto:support@companyname.co.uk" className="text-[#2b3d5b] hover:underline">support@companyname.co.uk</a></li>
                   </ul>
-                  <p className="mb-4 font-semibold text-[#000000]">Suspicious:</p>
+                  <p className="mb-4 font-semibold text-gray-900">Suspicious:</p>
                   <ul className="list-disc pl-6 mb-6 space-y-2">
-                    <li><a href="mailto:company-support247@gmail.com" className="text-[#E87722] hover:underline">company-support247@gmail.com</a></li>
-                    <li><a href="mailto:support@company-secure.net" className="text-[#E87722] hover:underline">support@company-secure.net</a></li>
-                    <li><a href="mailto:microsoft.account.verify@randomdomain.com" className="text-[#E87722] hover:underline">microsoft.account.verify@randomdomain.com</a></li>
+                    <li><a href="mailto:company-support247@gmail.com" className="text-[#2b3d5b] hover:underline">company-support247@gmail.com</a></li>
+                    <li><a href="mailto:support@company-secure.net" className="text-[#2b3d5b] hover:underline">support@company-secure.net</a></li>
+                    <li><a href="mailto:microsoft.account.verify@randomdomain.com" className="text-[#2b3d5b] hover:underline">microsoft.account.verify@randomdomain.com</a></li>
                   </ul>
                   <p className="mb-8">
                     Always check the full email address rather than relying on the sender's name.
                   </p>
 
-                  <hr className="border-[#E0E0E0] my-8" />
+                  <hr className="border-gray-200 my-8" />
 
-                  <h2 className="text-xl font-medium text-[#000000] mb-6">2. Look for Urgent or Threatening Language</h2>
+                  <h2 className="text-xl font-medium text-gray-900 mb-6">2. Look for Urgent or Threatening Language</h2>
                   <p className="mb-4">
                     Phishing emails often try to create panic so you'll act without thinking.
                   </p>
@@ -902,22 +902,22 @@ export function GuidePage() {
                     If a message creates a sense of urgency, pause and verify it before responding.
                   </p>
 
-                  <hr className="border-[#E0E0E0] my-8" />
+                  <hr className="border-gray-200 my-8" />
 
-                  <h2 className="text-xl font-medium text-[#000000] mb-6">3. Hover Over Links Before Clicking</h2>
+                  <h2 className="text-xl font-medium text-gray-900 mb-6">3. Hover Over Links Before Clicking</h2>
                   <p className="mb-4">Never click a link immediately.</p>
                   <p className="mb-4">Instead, hover your mouse over it to reveal the destination.</p>
                   <p className="mb-4">For example, a button that says:</p>
-                  <p className="mb-4 font-semibold text-[#000000]">[www.yourbank.co.uk]</p>
+                  <p className="mb-4 font-semibold text-gray-900">[www.yourbank.co.uk]</p>
                   <p className="mb-4">might actually lead to:</p>
-                  <p className="mb-4 font-semibold text-[#000000]">secure-login-verify-example.com</p>
+                  <p className="mb-4 font-semibold text-gray-900">secure-login-verify-example.com</p>
                   <p className="mb-8">
                     If the web address looks unfamiliar, misspelt, or unrelated to the company, don't click it.
                   </p>
 
-                  <hr className="border-[#E0E0E0] my-8" />
+                  <hr className="border-gray-200 my-8" />
 
-                  <h2 className="text-xl font-medium text-[#000000] mb-6">4. Watch Out for Unexpected Attachments</h2>
+                  <h2 className="text-xl font-medium text-gray-900 mb-6">4. Watch Out for Unexpected Attachments</h2>
                   <p className="mb-4">
                     Be cautious if you receive an attachment you weren't expecting, even if it appears to come from someone you know.
                   </p>
@@ -933,9 +933,9 @@ export function GuidePage() {
                     If you're unsure, contact the sender using a trusted phone number or email address to confirm they sent it.
                   </p>
 
-                  <hr className="border-[#E0E0E0] my-8" />
+                  <hr className="border-gray-200 my-8" />
 
-                  <h2 className="text-xl font-medium text-[#000000] mb-6">5. Poor Grammar Isn't the Only Warning Sign</h2>
+                  <h2 className="text-xl font-medium text-gray-900 mb-6">5. Poor Grammar Isn't the Only Warning Sign</h2>
                   <p className="mb-4">
                     Years ago, phishing emails were easy to spot because they contained spelling mistakes and awkward wording.
                   </p>
@@ -951,9 +951,9 @@ export function GuidePage() {
                   </ul>
                   <p className="mb-8">Even a perfectly written email can be malicious.</p>
 
-                  <hr className="border-[#E0E0E0] my-8" />
+                  <hr className="border-gray-200 my-8" />
 
-                  <h2 className="text-xl font-medium text-[#000000] mb-6">6. Be Wary of Requests for Sensitive Information</h2>
+                  <h2 className="text-xl font-medium text-gray-900 mb-6">6. Be Wary of Requests for Sensitive Information</h2>
                   <p className="mb-4">
                     Reputable organisations rarely ask you to send passwords, bank details, or verification codes by email.
                   </p>
@@ -964,9 +964,9 @@ export function GuidePage() {
                     If in doubt, contact the organisation directly using details from its official website—not the contact information provided in the email.
                   </p>
 
-                  <hr className="border-[#E0E0E0] my-8" />
+                  <hr className="border-gray-200 my-8" />
 
-                  <h2 className="text-xl font-medium text-[#000000] mb-6">7. Verify Payment Requests</h2>
+                  <h2 className="text-xl font-medium text-gray-900 mb-6">7. Verify Payment Requests</h2>
                   <p className="mb-4">
                     One of the most expensive phishing scams involves fake invoices or requests to change bank account details.
                   </p>
@@ -978,9 +978,9 @@ export function GuidePage() {
                   </ul>
                   <p className="mb-8">Taking a minute to verify payment details can prevent costly fraud.</p>
 
-                  <hr className="border-[#E0E0E0] my-8" />
+                  <hr className="border-gray-200 my-8" />
 
-                  <h2 className="text-xl font-medium text-[#000000] mb-6">8. If Something Feels Wrong, It Probably Is</h2>
+                  <h2 className="text-xl font-medium text-gray-900 mb-6">8. If Something Feels Wrong, It Probably Is</h2>
                   <p className="mb-4">Sometimes there isn't one obvious warning sign—it just doesn't feel right.</p>
                   <p className="mb-4">Perhaps:</p>
                   <ul className="list-disc pl-6 mb-6 space-y-2">
@@ -993,9 +993,9 @@ export function GuidePage() {
                     Trust your instincts. It's always better to verify a message than risk compromising your business.
                   </p>
 
-                  <hr className="border-[#E0E0E0] my-8" />
+                  <hr className="border-gray-200 my-8" />
 
-                  <h2 className="text-xl font-medium text-[#000000] mb-6">What Should You Do If You Receive a Phishing Email?</h2>
+                  <h2 className="text-xl font-medium text-gray-900 mb-6">What Should You Do If You Receive a Phishing Email?</h2>
                   <p className="mb-4">If you suspect an email is fraudulent:</p>
                   <ol className="list-decimal pl-6 mb-6 space-y-2">
                     <li>Don't click any links.</li>
@@ -1008,9 +1008,9 @@ export function GuidePage() {
                     If you've already clicked a suspicious link or entered your credentials, change your password immediately and notify your IT provider as soon as possible. Acting quickly can limit the impact of an attack.
                   </p>
 
-                  <hr className="border-[#E0E0E0] my-8" />
+                  <hr className="border-gray-200 my-8" />
 
-                  <h1 className="text-2xl font-normal text-[#000000] mb-6 tracking-tight">How Solkn Can Help</h1>
+                  <h1 className="text-2xl font-normal text-gray-900 mb-6 tracking-tight">How Solkn Can Help</h1>
                   <p className="mb-4">
                     At Solkn, we help businesses strengthen their cyber security by reducing the risk of phishing attacks and other online threats.
                   </p>
@@ -1028,7 +1028,7 @@ export function GuidePage() {
                     By combining technology with user awareness, we help businesses stay protected against today's evolving cyber threats.
                   </p>
 
-                  <h2 className="text-xl font-medium text-[#000000] mb-6">Final Thoughts</h2>
+                  <h2 className="text-xl font-medium text-gray-900 mb-6">Final Thoughts</h2>
                   <p className="mb-4">
                     Phishing emails are becoming more sophisticated, but the basic warning signs remain the same. Spending just 30 seconds checking the sender, links, attachments, and the nature of the request can prevent serious financial loss and protect sensitive business data.
                   </p>
@@ -1048,7 +1048,7 @@ export function GuidePage() {
                     Use this checklist to make sure nothing is overlooked.
                   </p>
 
-                  <h2 className="text-xl font-medium text-[#000000] mb-6">1. Reliable Business Internet Connection</h2>
+                  <h2 className="text-xl font-medium text-gray-900 mb-6">1. Reliable Business Internet Connection</h2>
                   <p className="mb-4">
                     Your internet connection is the backbone of your business. Before moving in, ensure you have a broadband service that meets your current and future needs.
                   </p>
@@ -1064,9 +1064,9 @@ export function GuidePage() {
                     Remember, even the best office network can't perform well if your internet connection is unreliable.
                   </p>
 
-                  <hr className="border-[#E0E0E0] my-8" />
+                  <hr className="border-gray-200 my-8" />
 
-                  <h2 className="text-xl font-medium text-[#000000] mb-6">2. Business-Grade Network Equipment</h2>
+                  <h2 className="text-xl font-medium text-gray-900 mb-6">2. Business-Grade Network Equipment</h2>
                   <p className="mb-4">
                     Avoid relying on the router supplied by your internet provider for a busy office.
                   </p>
@@ -1083,9 +1083,9 @@ export function GuidePage() {
                     Professional networking equipment provides better security, reliability, and room for future growth.
                   </p>
 
-                  <hr className="border-[#E0E0E0] my-8" />
+                  <hr className="border-gray-200 my-8" />
 
-                  <h2 className="text-xl font-medium text-[#000000] mb-6">3. Strong Wi-Fi Coverage</h2>
+                  <h2 className="text-xl font-medium text-gray-900 mb-6">3. Strong Wi-Fi Coverage</h2>
                   <p className="mb-4">One wireless router is rarely enough for an entire office.</p>
                   <p className="mb-4">To ensure reliable connectivity:</p>
                   <ul className="list-disc pl-6 mb-6 space-y-2">
@@ -1099,9 +1099,9 @@ export function GuidePage() {
                     A wireless site survey can help identify the best locations for access points.
                   </p>
 
-                  <hr className="border-[#E0E0E0] my-8" />
+                  <hr className="border-gray-200 my-8" />
 
-                  <h2 className="text-xl font-medium text-[#000000] mb-6">4. Computers and Laptops</h2>
+                  <h2 className="text-xl font-medium text-gray-900 mb-6">4. Computers and Laptops</h2>
                   <p className="mb-4">Choose hardware that suits how your employees work.</p>
                   <p className="mb-4">When purchasing devices, consider:</p>
                   <ul className="list-disc pl-6 mb-6 space-y-2">
@@ -1116,9 +1116,9 @@ export function GuidePage() {
                     Standardising hardware also makes support and maintenance much easier.
                   </p>
 
-                  <hr className="border-[#E0E0E0] my-8" />
+                  <hr className="border-gray-200 my-8" />
 
-                  <h2 className="text-xl font-medium text-[#000000] mb-6">5. Professional Email and Productivity Tools</h2>
+                  <h2 className="text-xl font-medium text-gray-900 mb-6">5. Professional Email and Productivity Tools</h2>
                   <p className="mb-4">
                     Every business should have professional email addresses using its own domain.
                   </p>
@@ -1135,9 +1135,9 @@ export function GuidePage() {
                     This enables employees to communicate and work efficiently from anywhere.
                   </p>
 
-                  <hr className="border-[#E0E0E0] my-8" />
+                  <hr className="border-gray-200 my-8" />
 
-                  <h2 className="text-xl font-medium text-[#000000] mb-6">6. Data Backup and Recovery</h2>
+                  <h2 className="text-xl font-medium text-gray-900 mb-6">6. Data Backup and Recovery</h2>
                   <p className="mb-4">
                     Hardware failures, accidental deletion, and cyber attacks can happen without warning.
                   </p>
@@ -1153,9 +1153,9 @@ export function GuidePage() {
                     A backup is only useful if it can be restored successfully.
                   </p>
 
-                  <hr className="border-[#E0E0E0] my-8" />
+                  <hr className="border-gray-200 my-8" />
 
-                  <h2 className="text-xl font-medium text-[#000000] mb-6">7. Cyber Security</h2>
+                  <h2 className="text-xl font-medium text-gray-900 mb-6">7. Cyber Security</h2>
                   <p className="mb-4">
                     Security should be built into your office from the beginning rather than added later.
                   </p>
@@ -1173,9 +1173,9 @@ export function GuidePage() {
                     A layered approach provides the best protection against modern cyber threats.
                   </p>
 
-                  <hr className="border-[#E0E0E0] my-8" />
+                  <hr className="border-gray-200 my-8" />
 
-                  <h2 className="text-xl font-medium text-[#000000] mb-6">8. Printers and Shared Devices</h2>
+                  <h2 className="text-xl font-medium text-gray-900 mb-6">8. Printers and Shared Devices</h2>
                   <p className="mb-4">
                     Although many businesses are becoming paperless, shared office equipment still plays an important role.
                   </p>
@@ -1191,9 +1191,9 @@ export function GuidePage() {
                     Place devices where they are easily accessible without creating unnecessary congestion.
                   </p>
 
-                  <hr className="border-[#E0E0E0] my-8" />
+                  <hr className="border-gray-200 my-8" />
 
-                  <h2 className="text-xl font-medium text-[#000000] mb-6">9. Network Cabling</h2>
+                  <h2 className="text-xl font-medium text-gray-900 mb-6">9. Network Cabling</h2>
                   <p className="mb-4">
                     Reliable wired connections remain essential for many business systems.
                   </p>
@@ -1210,9 +1210,9 @@ export function GuidePage() {
                     Well-labelled cabling makes future maintenance and expansion much simpler.
                   </p>
 
-                  <hr className="border-[#E0E0E0] my-8" />
+                  <hr className="border-gray-200 my-8" />
 
-                  <h2 className="text-xl font-medium text-[#000000] mb-6">10. Device Management</h2>
+                  <h2 className="text-xl font-medium text-gray-900 mb-6">10. Device Management</h2>
                   <p className="mb-4">
                     As your business grows, manually configuring every device becomes inefficient.
                   </p>
@@ -1229,9 +1229,9 @@ export function GuidePage() {
                     This saves time while improving consistency and security.
                   </p>
 
-                  <hr className="border-[#E0E0E0] my-8" />
+                  <hr className="border-gray-200 my-8" />
 
-                  <h2 className="text-xl font-medium text-[#000000] mb-6">11. Meeting Room Technology</h2>
+                  <h2 className="text-xl font-medium text-gray-900 mb-6">11. Meeting Room Technology</h2>
                   <p className="mb-4">
                     Modern meeting spaces often require more than just a table and chairs.
                   </p>
@@ -1247,9 +1247,9 @@ export function GuidePage() {
                     Well-equipped meeting rooms improve communication with clients and remote employees.
                   </p>
 
-                  <hr className="border-[#E0E0E0] my-8" />
+                  <hr className="border-gray-200 my-8" />
 
-                  <h2 className="text-xl font-medium text-[#000000] mb-6">12. Ongoing Network Monitoring</h2>
+                  <h2 className="text-xl font-medium text-gray-900 mb-6">12. Ongoing Network Monitoring</h2>
                   <p className="mb-4">
                     Many businesses only discover IT problems after they disrupt operations.
                   </p>
@@ -1266,9 +1266,9 @@ export function GuidePage() {
                     Monitoring allows potential issues to be resolved before they affect your business.
                   </p>
 
-                  <hr className="border-[#E0E0E0] my-8" />
+                  <hr className="border-gray-200 my-8" />
 
-                  <h2 className="text-xl font-medium text-[#000000] mb-6">13. Plan for Future Growth</h2>
+                  <h2 className="text-xl font-medium text-gray-900 mb-6">13. Plan for Future Growth</h2>
                   <p className="mb-4">
                     Your office may have ten employees today, but what about next year?
                   </p>
@@ -1285,9 +1285,9 @@ export function GuidePage() {
                     Scalable infrastructure reduces costly upgrades later.
                   </p>
 
-                  <hr className="border-[#E0E0E0] my-8" />
+                  <hr className="border-gray-200 my-8" />
 
-                  <h2 className="text-xl font-medium text-[#000000] mb-6">Office IT Setup Checklist</h2>
+                  <h2 className="text-xl font-medium text-gray-900 mb-6">Office IT Setup Checklist</h2>
                   <p className="mb-4">Use this quick checklist before opening your office:</p>
                   <ul className="list-none pl-0 mb-8 space-y-2">
                     <li>✔ Business internet installed and tested</li>
@@ -1306,9 +1306,9 @@ export function GuidePage() {
                     <li>✔ Future expansion considered</li>
                   </ul>
 
-                  <hr className="border-[#E0E0E0] my-8" />
+                  <hr className="border-gray-200 my-8" />
 
-                  <h1 className="text-2xl font-normal text-[#000000] mb-6 tracking-tight">How Solkn Can Help</h1>
+                  <h1 className="text-2xl font-normal text-gray-900 mb-6 tracking-tight">How Solkn Can Help</h1>
                   <p className="mb-4">
                     At Solkn, we design, install, and manage complete office IT solutions for businesses of all sizes.
                   </p>
@@ -1328,7 +1328,7 @@ export function GuidePage() {
                     Whether you're moving into a new office or upgrading your existing workspace, we'll ensure your technology is secure, reliable, and ready to support your business from day one.
                   </p>
 
-                  <h2 className="text-xl font-medium text-[#000000] mb-6">Final Thoughts</h2>
+                  <h2 className="text-xl font-medium text-gray-900 mb-6">Final Thoughts</h2>
                   <p className="mb-4">
                     A successful office isn't just about desks, chairs, and meeting rooms—it's about creating an IT environment that enables your team to work efficiently, securely, and without interruption.
                   </p>
@@ -1353,16 +1353,16 @@ export function GuidePage() {
                     In today's digital world, those defenses come as innovative technology and cybersecurity expertise that work together without a hitch. This concept forms the basis of an all-in-one managed IT solution that combines three key parts: Managed Extended Detection and Response (MXDR), Managed Security Information and Event Management (SIEM), and a Managed Security Operations Center (SOC).
                   </p>
 
-                  <h2 className="text-xl font-medium text-[#000000] mb-6">What Do These Terms Actually Mean?</h2>
+                  <h2 className="text-xl font-medium text-gray-900 mb-6">What Do These Terms Actually Mean?</h2>
                   
                   <p className="mb-8">Let's explain these in a way that makes sense without all the tech talk.</p>
 
                   <div className="space-y-8 mb-12">
                     <div className="flex gap-4">
-                      <span className="text-[#A3A3A3] font-medium shrink-0">1.</span>
+                      <span className="text-gray-400 font-medium shrink-0">1.</span>
                       <div>
                         <p className="mb-4">
-                          <strong className="text-[#000000] font-semibold">Managed Extended Detection and Response (MXDR):</strong> Picture MXDR as the cutting-edge alarm system for your stronghold. It keeps a watchful eye on all the entry points of your digital space—from your computer systems to cloud services and even mobile apps. MXDR uses advanced algorithms and machine learning to identify anything out of the ordinary.
+                          <strong className="text-gray-900 font-semibold">Managed Extended Detection and Response (MXDR):</strong> Picture MXDR as the cutting-edge alarm system for your stronghold. It keeps a watchful eye on all the entry points of your digital space—from your computer systems to cloud services and even mobile apps. MXDR uses advanced algorithms and machine learning to identify anything out of the ordinary.
                         </p>
                         <p className="text-sm">
                           Studies indicate that businesses with sophisticated threat detection tools can spot breaches up to 80% quicker than those using old-school methods. Since each minute of a breach could set you back about $17k, quick detection isn't just a nice-to-have... it's crucial.
@@ -1371,19 +1371,19 @@ export function GuidePage() {
                     </div>
 
                     <div className="flex gap-4">
-                      <span className="text-[#A3A3A3] font-medium shrink-0">2.</span>
+                      <span className="text-gray-400 font-medium shrink-0">2.</span>
                       <div>
                         <p>
-                          <strong className="text-[#000000] font-semibold">Managed Security Information and Event Management (SIEM):</strong> Think of SIEM as your sensor network and central hub. Picture a space where all the warnings and records from your sensors come together. SIEM gathers and sorts data from every corner of your IT environment—servers, networks, cloud apps—and then searches for signs that might point to an issue. It's like having a vigilant guard who understands what "regular" looks like and raises the alarm when something appears unusual.
+                          <strong className="text-gray-900 font-semibold">Managed Security Information and Event Management (SIEM):</strong> Think of SIEM as your sensor network and central hub. Picture a space where all the warnings and records from your sensors come together. SIEM gathers and sorts data from every corner of your IT environment—servers, networks, cloud apps—and then searches for signs that might point to an issue. It's like having a vigilant guard who understands what "regular" looks like and raises the alarm when something appears unusual.
                         </p>
                       </div>
                     </div>
 
                     <div className="flex gap-4">
-                      <span className="text-[#A3A3A3] font-medium shrink-0">3.</span>
+                      <span className="text-gray-400 font-medium shrink-0">3.</span>
                       <div>
                         <p>
-                          <strong className="text-[#000000] font-semibold">Managed Security Operations Center (SOC):</strong> Lastly, the SOC brings in human expertise. Even with leading technology, having skilled people keep an eye on your defenses 24/7 makes a dramatic difference. SOC experts work around the clock to manage any alerts from MXDR and SIEM. They're on hand to examine, limit, and deal with threats before they can do serious harm. With cyberattacks going up—a recent jump of over 300% since COVID-19 hit—a dedicated team proves priceless.
+                          <strong className="text-gray-900 font-semibold">Managed Security Operations Center (SOC):</strong> Lastly, the SOC brings in human expertise. Even with leading technology, having skilled people keep an eye on your defenses 24/7 makes a dramatic difference. SOC experts work around the clock to manage any alerts from MXDR and SIEM. They're on hand to examine, limit, and deal with threats before they can do serious harm. With cyberattacks going up—a recent jump of over 300% since COVID-19 hit—a dedicated team proves priceless.
                         </p>
                       </div>
                     </div>
@@ -1393,25 +1393,25 @@ export function GuidePage() {
                   <div className="overflow-x-auto">
                     <table className="w-full text-sm text-left border-collapse">
                       <thead>
-                        <tr className="border-b border-[#E0E0E0]">
-                          <th className="py-4 pr-4 font-semibold text-[#000000]">Component</th>
-                          <th className="py-4 px-4 font-semibold text-[#000000]">Analogy</th>
-                          <th className="py-4 pl-4 font-semibold text-[#000000]">Function</th>
+                        <tr className="border-b border-gray-200">
+                          <th className="py-4 pr-4 font-semibold text-gray-900">Component</th>
+                          <th className="py-4 px-4 font-semibold text-gray-900">Analogy</th>
+                          <th className="py-4 pl-4 font-semibold text-gray-900">Function</th>
                         </tr>
                       </thead>
-                      <tbody className="text-[#6B6B6B]">
-                        <tr className="border-b border-[#E0E0E0]">
-                          <td className="py-4 pr-4 font-semibold text-[#000000]">Managed Extended<br/>Detection & Response</td>
+                      <tbody className="text-gray-600">
+                        <tr className="border-b border-gray-100">
+                          <td className="py-4 pr-4 font-semibold text-gray-900">Managed Extended<br/>Detection & Response</td>
                           <td className="py-4 px-4">Security cameras & motion sensors</td>
                           <td className="py-4 pl-4">Monitors all entry points (workstations, cloud, email, etc.) for threats in real-time.</td>
                         </tr>
-                        <tr className="border-b border-[#E0E0E0]">
-                          <td className="py-4 pr-4 font-semibold text-[#000000]">SIEM</td>
+                        <tr className="border-b border-gray-100">
+                          <td className="py-4 pr-4 font-semibold text-gray-900">SIEM</td>
                           <td className="py-4 px-4">Central control hub</td>
                           <td className="py-4 pl-4">Collects and analyzes logs across the entire network to identify suspicious patterns.</td>
                         </tr>
                         <tr>
-                          <td className="py-4 pr-4 font-semibold text-[#000000]">SOC</td>
+                          <td className="py-4 pr-4 font-semibold text-gray-900">SOC</td>
                           <td className="py-4 px-4">24/7 Security guards</td>
                           <td className="py-4 pl-4">Human experts who investigate alerts, stop attacks, and restore safety continuously.</td>
                         </tr>
@@ -1428,7 +1428,7 @@ export function GuidePage() {
             <div className="sticky top-32 bg-[#F1F3EA] rounded-2xl p-8">
               {/* Icon graphic */}
               <div className="w-24 h-24 mb-6 flex items-center justify-center">
-                <svg viewBox="0 0 100 100" className="w-full h-full text-[#000000]" fill="none" stroke="currentColor" strokeWidth="0.5">
+                <svg viewBox="0 0 100 100" className="w-full h-full text-gray-800" fill="none" stroke="currentColor" strokeWidth="0.5">
                   <g transform="translate(50, 50)">
                     {Array.from({ length: 60 }).map((_, i) => (
                       <ellipse
@@ -1444,33 +1444,33 @@ export function GuidePage() {
                 </svg>
               </div>
               
-              <h2 className="text-2xl font-normal text-[#000000] mb-4 tracking-tight">Knowledge is Power</h2>
+              <h2 className="text-2xl font-normal text-gray-900 mb-4 tracking-tight">Knowledge is Power</h2>
               
-              <p className="text-[#000000] text-sm mb-6 leading-relaxed">
+              <p className="text-gray-700 text-sm mb-6 leading-relaxed">
                 We offer informative insights on the latest technology trends on a regular basis. Check it out.
               </p>
               
               <form className="space-y-4">
                 <div>
-                  <label htmlFor="email" className="block text-xs text-[#6B6B6B] mb-2">
+                  <label htmlFor="email" className="block text-xs text-gray-600 mb-2">
                     Your Email address <span className="text-red-500">*</span>
                   </label>
                   <input 
                     type="email" 
                     id="email" 
                     placeholder="you@email.com" 
-                    className="w-full px-4 py-3 rounded-full border-none focus:ring-2 focus:ring-black outline-none text-sm placeholder:text-[#A3A3A3]"
+                    className="w-full px-4 py-3 rounded-full border-none focus:ring-2 focus:ring-black outline-none text-sm placeholder:text-gray-400"
                     required
                   />
                 </div>
                 
-                <p className="text-[11px] text-[#6B6B6B] leading-relaxed mb-6">
+                <p className="text-[11px] text-gray-500 leading-relaxed mb-6">
                   We respect your privacy and will only use the information provided to contact you. You may unsubscribe from these communications at anytime.
                 </p>
                 
                 <button 
                   type="submit" 
-                  className="bg-[#111111] hover:bg-black text-[#000000] px-6 py-3 rounded-full text-sm font-medium transition-colors flex items-center"
+                  className="bg-[#111111] hover:bg-black text-white px-6 py-3 rounded-full text-sm font-medium transition-colors flex items-center"
                 >
                   Sign Me Up <ArrowRight className="ml-2 w-4 h-4" />
                 </button>

@@ -20,48 +20,48 @@ const markers = [
 export function ContactMapBanner() {
   return (
     <div className="w-full max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 mt-16 relative z-20 mb-8">
-      <div className="bg-white rounded-[2rem] p-8 md:p-12 shadow-xl border border-[#E0E0E0] flex flex-col lg:flex-row items-center gap-12">
+      <div className="bg-white rounded-[2rem] p-8 md:p-12 shadow-xl border border-gray-200 flex flex-col lg:flex-row items-center gap-12">
         
         {/* Contact Info */}
         <div className="lg:w-1/3 flex flex-col gap-8">
-          <h3 className="text-3xl font-medium tracking-tight text-[#000000]">Global Reach,<br/>Local Focus.</h3>
+          <h3 className="text-3xl font-medium tracking-tight text-gray-900">Global Reach,<br/>Local Focus.</h3>
           
           <div className="flex flex-col gap-6">
             <div className="flex items-start gap-4 group">
-              <div className="bg-[#F7F7F7] p-3 rounded-full text-[#000000] group-hover:bg-[#E87722] group-hover:text-white transition-colors duration-300">
+              <div className="bg-gray-100 p-3 rounded-full text-gray-900 group-hover:bg-black group-hover:text-white transition-colors duration-300">
                 <Phone className="w-5 h-5" />
               </div>
               <div>
-                <p className="text-sm text-[#6B6B6B] mb-1">Give us a call</p>
-                <a href="tel:+447540319866" className="text-lg font-medium text-[#000000] hover:text-[#E87722] transition-colors">+44 7540 319866</a>
+                <p className="text-sm text-gray-500 mb-1">Give us a call</p>
+                <a href="tel:+447540319866" className="text-lg font-medium text-gray-900 hover:text-sky-600 transition-colors">+44 7540 319866</a>
               </div>
             </div>
 
             <div className="flex items-start gap-4 group">
-              <div className="bg-[#F7F7F7] p-3 rounded-full text-[#000000] group-hover:bg-[#E87722] group-hover:text-white transition-colors duration-300">
+              <div className="bg-gray-100 p-3 rounded-full text-gray-900 group-hover:bg-black group-hover:text-white transition-colors duration-300">
                 <Mail className="w-5 h-5" />
               </div>
               <div>
-                <p className="text-sm text-[#6B6B6B] mb-1">Send an email</p>
-                <a href="mailto:info@solkn.com" className="text-lg font-medium text-[#000000] hover:text-[#E87722] transition-colors">info@solkn.com</a>
+                <p className="text-sm text-gray-500 mb-1">Send an email</p>
+                <a href="mailto:info@solkn.com" className="text-lg font-medium text-gray-900 hover:text-sky-600 transition-colors">info@solkn.com</a>
               </div>
             </div>
 
             <div className="flex items-start gap-4 group">
-              <div className="bg-[#F7F7F7] p-3 rounded-full text-[#000000] group-hover:bg-[#E87722] group-hover:text-white transition-colors duration-300">
+              <div className="bg-gray-100 p-3 rounded-full text-gray-900 group-hover:bg-black group-hover:text-white transition-colors duration-300">
                 <MapPin className="w-5 h-5" />
               </div>
               <div>
-                <p className="text-sm text-[#6B6B6B] mb-1">Our locations</p>
-                <p className="text-lg font-medium text-[#000000]">Harrow, London</p>
-                <p className="text-lg font-medium text-[#000000] mt-1">Gujarat, India</p>
+                <p className="text-sm text-gray-500 mb-1">Our locations</p>
+                <p className="text-lg font-medium text-gray-900">Harrow, London</p>
+                <p className="text-lg font-medium text-gray-900 mt-1">Gujarat, India</p>
               </div>
             </div>
           </div>
         </div>
 
         {/* Map */}
-        <div className="lg:w-2/3 w-full bg-[#F7F7F7] rounded-3xl overflow-hidden relative flex items-center justify-center border border-[#E0E0E0]" style={{ height: '400px' }}>
+        <div className="lg:w-2/3 w-full bg-gray-50 rounded-3xl overflow-hidden relative flex items-center justify-center border border-gray-100" style={{ height: '400px' }}>
           <ComposableMap
             projection="geoMercator"
             projectionConfig={{
@@ -76,12 +76,12 @@ export function ContactMapBanner() {
                   <Geography
                     key={geo.rsmKey}
                     geography={geo}
-                    fill="#F7F7F7"
-                    stroke="#E0E0E0"
+                    fill="#F3F4F6"
+                    stroke="#E5E7EB"
                     strokeWidth={0.5}
                     style={{
                       default: { outline: "none" },
-                      hover: { outline: "none", fill: "#EFEFEF" },
+                      hover: { outline: "none", fill: "#e5e7eb" },
                       pressed: { outline: "none" },
                     }}
                   />
@@ -91,7 +91,7 @@ export function ContactMapBanner() {
             {markers.map(({ name, coordinates, markerOffset }) => (
               <Marker key={name} coordinates={coordinates}>
                 <g
-                  fill="#E87722"
+                  fill="#000000"
                   stroke="white"
                   strokeWidth="2"
                   strokeLinecap="round"

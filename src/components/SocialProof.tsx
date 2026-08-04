@@ -60,7 +60,7 @@ export function SocialProof() {
   return (
     <>
       {/* Testimonials — single featured quote with switcher */}
-      <section className="py-24 md:py-32 bg-white text-[#000000]">
+      <section className="py-24 md:py-32 bg-white text-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
           {/* Trust headline */}
@@ -71,12 +71,12 @@ export function SocialProof() {
             transition={{ duration: 0.7, ease: [0.32, 0.72, 0, 1] }}
             className="text-center mb-16 md:mb-20"
           >
-            <p className="text-[10px] font-semibold tracking-[0.2em] uppercase text-[#A3A3A3] mb-4">
+            <p className="text-[10px] font-semibold tracking-[0.2em] uppercase text-gray-400 mb-4">
               Trusted by businesses across London
             </p>
             <h2 className="text-5xl md:text-7xl lg:text-8xl font-medium tracking-tighter leading-none">
-              <span className="text-[#E0E0E0]">200+</span>{' '}
-              <span className="text-[#000000]">businesses.</span>
+              <span className="text-gray-300">200+</span>{' '}
+              <span className="text-gray-900">businesses.</span>
             </h2>
           </motion.div>
 
@@ -88,15 +88,15 @@ export function SocialProof() {
             transition={{ duration: 0.5, ease: [0.32, 0.72, 0, 1] }}
             className="max-w-4xl mx-auto"
           >
-            <p className="text-[#A3A3A3] text-xs font-semibold uppercase tracking-widest mb-6 text-center">
+            <p className="text-gray-400 text-xs font-semibold uppercase tracking-widest mb-6 text-center">
               {t.highlight}
             </p>
-            <blockquote className="text-2xl md:text-3xl lg:text-4xl font-light text-[#000000] leading-relaxed text-center mb-10">
+            <blockquote className="text-2xl md:text-3xl lg:text-4xl font-light text-gray-800 leading-relaxed text-center mb-10">
               &ldquo;{t.quote}&rdquo;
             </blockquote>
             <div className="text-center">
-              <p className="text-sm font-semibold text-[#000000]">{t.author}</p>
-              <p className="text-xs text-[#A3A3A3] mt-1">{t.role}</p>
+              <p className="text-sm font-semibold text-gray-900">{t.author}</p>
+              <p className="text-xs text-gray-400 mt-1">{t.role}</p>
             </div>
           </motion.div>
 
@@ -109,8 +109,8 @@ export function SocialProof() {
                 aria-label={`View testimonial from ${testimonials[idx].author}`}
                 className={`rounded-full transition-all duration-300 ${
                   idx === activeTestimonial
-                    ? 'w-8 h-2 bg-[#E87722]'
-                    : 'w-2 h-2 bg-[#E0E0E0] hover:bg-[#A3A3A3]'
+                    ? 'w-8 h-2 bg-gray-900'
+                    : 'w-2 h-2 bg-gray-300 hover:bg-gray-400'
                 }`}
               />
             ))}
@@ -132,24 +132,24 @@ export function SocialProof() {
             transition={{ duration: 0.7, ease: [0.32, 0.72, 0, 1] }}
             className="mb-14"
           >
-            <h2 className="text-4xl md:text-5xl font-medium tracking-tight text-[#000000]">
+            <h2 className="text-4xl md:text-5xl font-medium tracking-tight text-gray-900">
               Your questions, answered.
             </h2>
           </motion.div>
 
           <div className="space-y-0">
             {faqs.map((faq, idx) => (
-              <div key={idx} className="border-b border-[#E0E0E0]">
+              <div key={idx} className="border-b border-gray-100">
                 <button
                   className="w-full flex items-center justify-between py-5 text-left focus:outline-none group"
                   onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
                   aria-expanded={openFaq === idx}
                 >
-                  <span className="text-base md:text-lg font-medium text-[#000000] group-hover:text-[#6B6B6B] transition-colors pr-8">
+                  <span className="text-base md:text-lg font-medium text-gray-900 group-hover:text-gray-600 transition-colors pr-8">
                     {faq.q}
                   </span>
                   <ChevronDown
-                    className={`w-5 h-5 text-[#A3A3A3] shrink-0 transition-transform duration-300 ${
+                    className={`w-5 h-5 text-gray-400 shrink-0 transition-transform duration-300 ${
                       openFaq === idx ? 'rotate-180' : ''
                     }`}
                   />
@@ -159,7 +159,7 @@ export function SocialProof() {
                     openFaq === idx ? 'max-h-48 opacity-100 pb-5' : 'max-h-0 opacity-0'
                   }`}
                 >
-                  <p className="text-[#6B6B6B] text-sm leading-relaxed pr-8">{faq.a}</p>
+                  <p className="text-gray-500 text-sm leading-relaxed pr-8">{faq.a}</p>
                 </div>
               </div>
             ))}
@@ -170,8 +170,20 @@ export function SocialProof() {
       {/* Final CTA */}
       <section
         id="contact"
-        className="py-24 md:py-32 relative overflow-hidden rounded-[2.5rem] border border-[#E0E0E0] mx-4 sm:mx-6 lg:mx-8 mb-8 bg-[#F7F7F7] text-[#000000]"
+        className="py-24 md:py-32 relative overflow-hidden rounded-[2.5rem] border border-gray-800 mx-4 sm:mx-6 lg:mx-8 mb-8 bg-[#090e17] text-white"
       >
+        {/* Background image — corrected path (Vite serves public/ from root) */}
+        <div
+          className="absolute inset-0 z-0 opacity-60 mix-blend-screen"
+          style={{
+            backgroundImage: 'url("/lastback.png")',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat',
+          }}
+        />
+        <div className="absolute inset-0 z-0 bg-gradient-to-t from-[#090e17]/80 to-transparent" />
+
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -179,22 +191,22 @@ export function SocialProof() {
           transition={{ duration: 0.7, ease: [0.32, 0.72, 0, 1] }}
           className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center"
         >
-          <p className="text-[10px] font-semibold tracking-[0.2em] uppercase text-[#A3A3A3] mb-6">
+          <p className="text-[10px] font-semibold tracking-[0.2em] uppercase text-white/40 mb-6">
             Get started today
           </p>
-          <h2 className="text-4xl md:text-6xl font-semibold mb-6 tracking-tight text-[#000000]">
+          <h2 className="text-4xl md:text-6xl font-semibold mb-6 tracking-tight text-white">
             Ready to transform your IT?
           </h2>
-          <p className="text-lg text-[#6B6B6B] mb-10 max-w-xl mx-auto font-normal leading-relaxed">
+          <p className="text-lg text-white/60 mb-10 max-w-xl mx-auto font-light leading-relaxed">
             Book a free consultation and discover how managed IT and AI automation
             can help your business run better.
           </p>
           <Link
             to="/contact"
-            className="group inline-flex items-center gap-3 bg-[#E87722] text-white pl-8 pr-3 py-3 rounded-full font-semibold text-sm hover:bg-[#C4621A] transition-colors shadow-lg shadow-[#E87722]/10 active:scale-[0.98]"
+            className="group inline-flex items-center gap-3 bg-white text-black pl-8 pr-3 py-3 rounded-full font-semibold text-sm hover:bg-gray-100 transition-colors shadow-lg shadow-white/10 active:scale-[0.98]"
           >
             Book a call now
-            <span className="w-9 h-9 rounded-full bg-white/15 flex items-center justify-center group-hover:translate-x-0.5 group-hover:-translate-y-px transition-transform duration-300">
+            <span className="w-9 h-9 rounded-full bg-black/8 flex items-center justify-center group-hover:translate-x-0.5 group-hover:-translate-y-px transition-transform duration-300">
               <ChevronDown className="w-4 h-4 -rotate-90" />
             </span>
           </Link>

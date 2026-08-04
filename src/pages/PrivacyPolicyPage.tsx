@@ -2,17 +2,17 @@ import React from 'react';
 
 export function PrivacyPolicyPage() {
   return (
-    <div className="pt-32 pb-24 bg-white min-h-screen text-[#000000] font-sans">
+    <div className="pt-32 pb-24 bg-white min-h-screen text-gray-900 font-sans">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h1 className="text-4xl md:text-5xl font-light mb-8 text-[#000000] tracking-tight">Privacy Policy</h1>
-        <div className="prose prose-lg text-[#6B6B6B] prose-a:text-[#E87722] hover:prose-a:text-[#000000]">
+        <h1 className="text-4xl md:text-5xl font-light mb-8 text-gray-900 tracking-tight">Privacy Policy</h1>
+        <div className="prose prose-lg text-gray-600 prose-a:text-[#2b3d5b] hover:prose-a:text-[#1e293b]">
           <p className="lead">Effective Date: {new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</p>
           
           <p className="mt-8">
             SOLKN ("we", "us", or "our") is committed to protecting the privacy and security of your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our IT, development, and AI automation services.
           </p>
 
-          <h2 className="text-2xl font-medium text-[#000000] mt-12 mb-4">1. Information We Collect</h2>
+          <h2 className="text-2xl font-medium text-gray-900 mt-12 mb-4">1. Information We Collect</h2>
           <p>
             We may collect information about you in various ways, including:
           </p>
@@ -22,7 +22,7 @@ export function PrivacyPolicyPage() {
             <li><strong>Usage Data:</strong> Information automatically collected when you access our website (e.g., IP address, browser type, pages viewed, time spent on site) using cookies and similar tracking technologies.</li>
           </ul>
 
-          <h2 className="text-2xl font-medium text-[#000000] mt-12 mb-4">2. How We Use Your Information</h2>
+          <h2 className="text-2xl font-medium text-gray-900 mt-12 mb-4">2. How We Use Your Information</h2>
           <p>
             We use the information we collect to:
           </p>
@@ -36,7 +36,7 @@ export function PrivacyPolicyPage() {
             <li>Protect our systems, prevent fraud, and ensure security.</li>
           </ul>
 
-          <h2 className="text-2xl font-medium text-[#000000] mt-12 mb-4">3. Disclosure of Your Information</h2>
+          <h2 className="text-2xl font-medium text-gray-900 mt-12 mb-4">3. Disclosure of Your Information</h2>
           <p>
             We may share your information in certain situations:
           </p>
@@ -46,12 +46,12 @@ export function PrivacyPolicyPage() {
             <li><strong>Business Transfers:</strong> In connection with any merger, sale of company assets, financing, or acquisition of all or a portion of our business to another company.</li>
           </ul>
 
-          <h2 className="text-2xl font-medium text-[#000000] mt-12 mb-4">4. Data Security</h2>
+          <h2 className="text-2xl font-medium text-gray-900 mt-12 mb-4">4. Data Security</h2>
           <p>
             We implement reasonable and industry-standard technical and organizational security measures designed to protect the security of any personal information we process. However, please note that no electronic transmission over the Internet or information storage technology can be guaranteed to be 100% secure.
           </p>
 
-          <h2 className="text-2xl font-medium text-[#000000] mt-12 mb-4">5. Your Privacy Rights</h2>
+          <h2 className="text-2xl font-medium text-gray-900 mt-12 mb-4">5. Your Privacy Rights</h2>
           <p>
             Depending on your location, you may have the right to:
           </p>
@@ -64,17 +64,17 @@ export function PrivacyPolicyPage() {
           </ul>
           <p>To exercise these rights, please contact us using the information provided below.</p>
 
-          <h2 className="text-2xl font-medium text-[#000000] mt-12 mb-4">6. Third-Party Websites</h2>
+          <h2 className="text-2xl font-medium text-gray-900 mt-12 mb-4">6. Third-Party Websites</h2>
           <p>
             Our website may contain links to third-party websites and applications of interest. Once you have used these links to leave our site, any information you provide to these third parties is not covered by this Privacy Policy.
           </p>
 
-          <h2 className="text-2xl font-medium text-[#000000] mt-12 mb-4">7. Changes to This Privacy Policy</h2>
+          <h2 className="text-2xl font-medium text-gray-900 mt-12 mb-4">7. Changes to This Privacy Policy</h2>
           <p>
             We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Effective Date" at the top.
           </p>
 
-          <h2 className="text-2xl font-medium text-[#000000] mt-12 mb-4">8. Contact Us</h2>
+          <h2 className="text-2xl font-medium text-gray-900 mt-12 mb-4">8. Contact Us</h2>
           <p>
             If you have questions or comments about this Privacy Policy, please contact us at:
           </p>

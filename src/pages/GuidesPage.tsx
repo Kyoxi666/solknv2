@@ -60,7 +60,7 @@ export function GuidesPage() {
       
       <div className="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-16 text-center max-w-4xl mx-auto">
-          <h2 className="text-4xl md:text-6xl font-medium tracking-tight text-[#000000]">
+          <h2 className="text-4xl md:text-6xl font-medium tracking-tight text-gray-900">
             Managed IT & Cyber Security Knowledge Base
           </h2>
         </div>
@@ -80,7 +80,7 @@ export function GuidesPage() {
                 </div>
                 
                 <div className="bg-[#f2f6f7] rounded-[24px] p-6 sm:p-8 flex flex-col h-full transition-colors duration-300 group-hover:bg-[#e8ecef]">
-                  <h3 className="text-xl sm:text-2xl font-medium tracking-tight text-[#000000] mb-3">{guide.title}</h3>
+                  <h3 className="text-xl sm:text-2xl font-medium tracking-tight text-gray-900 mb-3">{guide.title}</h3>
                   <p className="text-[#425357] text-sm leading-relaxed mb-8 flex-grow">
                     {guide.description}
                   </p>

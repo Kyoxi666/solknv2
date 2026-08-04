@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { ChevronDown, ChevronRight } from 'lucide-react';
+import { Menu, X, ChevronDown, ChevronRight } from 'lucide-react';
 import { Link, NavLink } from 'react-router-dom';
 import { Logo } from './Logo';
 
@@ -29,13 +29,13 @@ export function Header() {
   ];
 
   return (
-    <header className="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-7xl bg-white/90 backdrop-blur-xl rounded-[2rem] border border-[#E0E0E0] shadow-[0_1px_3px_rgba(0,0,0,0.08)]">
+    <header className="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-7xl bg-black/90 backdrop-blur-xl rounded-[2rem] border border-white/8 shadow-[0_8px_32px_rgba(0,0,0,0.5)]">
       <div className="px-5 sm:px-7">
         <div className="flex items-center justify-between h-[3.5rem]">
 
           {/* Logo */}
           <Link to="/" onClick={closeAll} className="shrink-0">
-            <Logo className="text-black" />
+            <Logo className="text-white" />
           </Link>
 
           {/* Desktop nav */}
@@ -45,7 +45,7 @@ export function Header() {
             <NavLink
               to="/"
               className={({ isActive }) =>
-                `text-sm font-medium transition-colors duration-200 ${isActive ? 'text-[#000000]' : 'text-[#6B6B6B] hover:text-[#000000]'}`
+                `text-sm font-medium transition-colors duration-200 ${isActive ? 'text-white' : 'text-white/65 hover:text-white'}`
               }
             >
               Home
@@ -58,7 +58,7 @@ export function Header() {
               onMouseLeave={() => setIsServicesOpen(false)}
             >
               <button
-                className={`text-sm font-medium transition-colors duration-200 flex items-center gap-1 ${isServicesOpen ? 'text-[#000000]' : 'text-[#6B6B6B] hover:text-[#000000]'}`}
+                className={`text-sm font-medium transition-colors duration-200 flex items-center gap-1 ${isServicesOpen ? 'text-white' : 'text-white/65 hover:text-white'}`}
                 aria-expanded={isServicesOpen}
                 aria-haspopup="true"
               >
@@ -75,16 +75,16 @@ export function Header() {
                     : 'opacity-0 invisible -translate-y-3 scale-95'
                 }`}
               >
-                <div className="relative bg-white rounded-3xl border border-[#E0E0E0] shadow-[0_4px_20px_rgba(0,0,0,0.12)] w-[780px] flex p-2">
+                <div className="relative bg-[#0a0a0a] rounded-3xl border border-white/8 shadow-[0_20px_60px_rgba(0,0,0,0.8)] w-[780px] flex p-2">
                   {/* Left panel */}
-                  <div className="w-[240px] p-7 rounded-2xl bg-[#F7F7F7] flex flex-col justify-between shrink-0">
-                    <h3 className="text-lg font-medium text-[#000000] leading-snug">
+                  <div className="w-[240px] p-7 rounded-2xl bg-gradient-to-br from-[#111] to-[#1e293b] flex flex-col justify-between shrink-0">
+                    <h3 className="text-lg font-medium text-white leading-snug">
                       Comprehensive digital solutions for your business.
                     </h3>
                     <Link
                       to="/services"
                       onClick={() => setIsServicesOpen(false)}
-                      className="text-sm font-medium text-[#6B6B6B] hover:text-[#000000] flex items-center gap-1 transition-colors mt-12 group"
+                      className="text-sm font-medium text-white/70 hover:text-white flex items-center gap-1 transition-colors mt-12 group"
                     >
                       View all services
                       <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -100,7 +100,7 @@ export function Header() {
                         onClick={() => setIsServicesOpen(false)}
                         className={({ isActive }) =>
                           `block text-sm font-medium transition-colors duration-200 ${
-                            isActive ? 'text-[#000000]' : 'text-[#6B6B6B] hover:text-[#000000]'
+                            isActive ? 'text-white' : 'text-white/60 hover:text-white'
                           }`
                         }
                       >
@@ -112,6 +112,16 @@ export function Header() {
               </div>
             </div>
 
+            {/* Industries — was missing from nav */}
+            <NavLink
+              to="/industries"
+              className={({ isActive }) =>
+                `text-sm font-medium transition-colors duration-200 ${isActive ? 'text-white' : 'text-white/65 hover:text-white'}`
+              }
+            >
+              Industries
+            </NavLink>
+
             {/* Resources dropdown */}
             <div
               className="relative"
@@ -119,7 +129,7 @@ export function Header() {
               onMouseLeave={() => setIsResourcesOpen(false)}
             >
               <button
-                className={`text-sm font-medium transition-colors duration-200 flex items-center gap-1 ${isResourcesOpen ? 'text-[#000000]' : 'text-[#6B6B6B] hover:text-[#000000]'}`}
+                className={`text-sm font-medium transition-colors duration-200 flex items-center gap-1 ${isResourcesOpen ? 'text-white' : 'text-white/65 hover:text-white'}`}
                 aria-expanded={isResourcesOpen}
                 aria-haspopup="true"
               >
@@ -136,10 +146,10 @@ export function Header() {
                     : 'opacity-0 invisible -translate-y-3 scale-95'
                 }`}
               >
-                <div className="relative bg-white rounded-3xl border border-[#E0E0E0] shadow-[0_4px_20px_rgba(0,0,0,0.12)] w-[360px] flex p-2">
+                <div className="relative bg-[#0a0a0a] rounded-3xl border border-white/8 shadow-[0_20px_60px_rgba(0,0,0,0.8)] w-[360px] flex p-2">
                   {/* Left panel */}
-                  <div className="w-[160px] p-7 rounded-2xl bg-[#F7F7F7] flex flex-col justify-between shrink-0">
-                    <h3 className="text-base font-medium text-[#000000] leading-snug">
+                  <div className="w-[160px] p-7 rounded-2xl bg-gradient-to-br from-[#111] to-[#1e293b] flex flex-col justify-between shrink-0">
+                    <h3 className="text-base font-medium text-white leading-snug">
                       Insights & guides
                     </h3>
                   </div>
@@ -153,7 +163,7 @@ export function Header() {
                           onClick={() => setIsResourcesOpen(false)}
                           className={({ isActive }) =>
                             `block text-sm font-medium transition-colors duration-200 ${
-                              isActive ? 'text-[#000000]' : 'text-[#6B6B6B] hover:text-[#000000]'
+                              isActive ? 'text-white' : 'text-white/60 hover:text-white'
                             }`
                           }
                         >
@@ -170,33 +180,41 @@ export function Header() {
             <NavLink
               to="/contact"
               className={({ isActive }) =>
-                `text-sm font-medium transition-colors duration-200 ${isActive ? 'text-[#000000]' : 'text-[#6B6B6B] hover:text-[#000000]'}`
+                `text-sm font-medium transition-colors duration-200 ${isActive ? 'text-white' : 'text-white/65 hover:text-white'}`
               }
             >
               Contact
             </NavLink>
+
+            {/* CTA button */}
+            <Link
+              to="/contact"
+              className="ml-2 px-5 py-2 bg-white text-black text-sm font-semibold rounded-full hover:bg-gray-100 transition-colors duration-200 active:scale-[0.98] shrink-0"
+            >
+              Get a quote
+            </Link>
           </nav>
 
           {/* Mobile hamburger */}
           <button
-            className="lg:hidden text-[#000000] p-1.5 rounded-xl hover:bg-[#F7F7F7] transition-colors"
+            className="lg:hidden text-white p-1.5 rounded-xl hover:bg-white/8 transition-colors"
             onClick={() => setIsOpen(!isOpen)}
             aria-label={isOpen ? 'Close navigation' : 'Open navigation'}
             aria-expanded={isOpen}
           >
             <span className="relative w-5 h-5 flex flex-col justify-center items-center">
               <span
-                className={`absolute w-5 h-px bg-[#000000] transition-all duration-300 ${
+                className={`absolute w-5 h-px bg-white transition-all duration-300 ${
                   isOpen ? 'rotate-45 translate-y-0' : '-translate-y-1.5'
                 }`}
               />
               <span
-                className={`absolute w-5 h-px bg-[#000000] transition-all duration-300 ${
+                className={`absolute w-5 h-px bg-white transition-all duration-300 ${
                   isOpen ? 'opacity-0 translate-x-2' : 'opacity-100'
                 }`}
               />
               <span
-                className={`absolute w-5 h-px bg-[#000000] transition-all duration-300 ${
+                className={`absolute w-5 h-px bg-white transition-all duration-300 ${
                   isOpen ? '-rotate-45 translate-y-0' : 'translate-y-1.5'
                 }`}
               />
@@ -211,12 +229,12 @@ export function Header() {
           isOpen ? 'max-h-[600px] opacity-100' : 'max-h-0 opacity-0'
         }`}
       >
-        <div className="border-t border-[#E0E0E0] px-4 pt-3 pb-5 space-y-1">
+        <div className="border-t border-white/8 px-4 pt-3 pb-5 space-y-1">
           <NavLink
             to="/"
             onClick={closeAll}
             className={({ isActive }) =>
-              `block px-3 py-2.5 text-sm font-medium rounded-xl transition-colors ${isActive ? 'text-[#000000] bg-[#F7F7F7]' : 'text-[#6B6B6B] hover:text-[#000000] hover:bg-[#F7F7F7]'}`
+              `block px-3 py-2.5 text-sm font-medium rounded-xl transition-colors ${isActive ? 'text-white bg-white/5' : 'text-white/70 hover:text-white hover:bg-white/5'}`
             }
           >
             Home
@@ -226,7 +244,7 @@ export function Header() {
           <div>
             <button
               onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
-              className="w-full flex items-center justify-between px-3 py-2.5 text-sm font-medium text-[#6B6B6B] hover:text-[#000000] rounded-xl hover:bg-[#F7F7F7] transition-colors"
+              className="w-full flex items-center justify-between px-3 py-2.5 text-sm font-medium text-white/70 hover:text-white rounded-xl hover:bg-white/5 transition-colors"
             >
               Services
               <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${mobileServicesOpen ? 'rotate-180' : ''}`} />
@@ -236,14 +254,14 @@ export function Header() {
                 mobileServicesOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
               }`}
             >
-              <div className="pl-5 py-1 space-y-0.5 border-l border-[#E0E0E0] ml-3 mt-1">
+              <div className="pl-5 py-1 space-y-0.5 border-l border-white/8 ml-3 mt-1">
                 {serviceLinks.map((link) => (
                   <NavLink
                     key={link.name}
                     to={link.path}
                     onClick={closeAll}
                     className={({ isActive }) =>
-                      `block px-3 py-2 text-sm transition-colors rounded-lg ${isActive ? 'text-[#000000]' : 'text-[#A3A3A3] hover:text-[#000000]'}`
+                      `block px-3 py-2 text-sm transition-colors rounded-lg ${isActive ? 'text-white' : 'text-white/50 hover:text-white'}`
                     }
                   >
                     {link.name}
@@ -252,7 +270,7 @@ export function Header() {
                 <NavLink
                   to="/services"
                   onClick={closeAll}
-                  className="block px-3 py-2 text-sm text-[#A3A3A3] hover:text-[#000000] transition-colors rounded-lg"
+                  className="block px-3 py-2 text-sm text-white/50 hover:text-white transition-colors rounded-lg"
                 >
                   View all services
                 </NavLink>
@@ -260,11 +278,22 @@ export function Header() {
             </div>
           </div>
 
+          {/* Mobile Industries */}
+          <NavLink
+            to="/industries"
+            onClick={closeAll}
+            className={({ isActive }) =>
+              `block px-3 py-2.5 text-sm font-medium rounded-xl transition-colors ${isActive ? 'text-white bg-white/5' : 'text-white/70 hover:text-white hover:bg-white/5'}`
+            }
+          >
+            Industries
+          </NavLink>
+
           {/* Mobile Resources */}
           <div>
             <button
               onClick={() => setMobileResourcesOpen(!mobileResourcesOpen)}
-              className="w-full flex items-center justify-between px-3 py-2.5 text-sm font-medium text-[#6B6B6B] hover:text-[#000000] rounded-xl hover:bg-[#F7F7F7] transition-colors"
+              className="w-full flex items-center justify-between px-3 py-2.5 text-sm font-medium text-white/70 hover:text-white rounded-xl hover:bg-white/5 transition-colors"
             >
               Resources
               <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${mobileResourcesOpen ? 'rotate-180' : ''}`} />
@@ -274,14 +303,14 @@ export function Header() {
                 mobileResourcesOpen ? 'max-h-64 opacity-100' : 'max-h-0 opacity-0'
               }`}
             >
-              <div className="pl-5 py-1 space-y-0.5 border-l border-[#E0E0E0] ml-3 mt-1">
+              <div className="pl-5 py-1 space-y-0.5 border-l border-white/8 ml-3 mt-1">
                 {resourceLinks.map((link) => (
                   <NavLink
                     key={link.name}
                     to={link.path}
                     onClick={closeAll}
                     className={({ isActive }) =>
-                      `block px-3 py-2 text-sm transition-colors rounded-lg ${isActive ? 'text-[#000000]' : 'text-[#A3A3A3] hover:text-[#000000]'}`
+                      `block px-3 py-2 text-sm transition-colors rounded-lg ${isActive ? 'text-white' : 'text-white/50 hover:text-white'}`
                     }
                   >
                     {link.name}
@@ -295,7 +324,7 @@ export function Header() {
             to="/contact"
             onClick={closeAll}
             className={({ isActive }) =>
-              `block px-3 py-2.5 text-sm font-medium rounded-xl transition-colors ${isActive ? 'text-[#000000] bg-[#F7F7F7]' : 'text-[#6B6B6B] hover:text-[#000000] hover:bg-[#F7F7F7]'}`
+              `block px-3 py-2.5 text-sm font-medium rounded-xl transition-colors ${isActive ? 'text-white bg-white/5' : 'text-white/70 hover:text-white hover:bg-white/5'}`
             }
           >
             Contact
@@ -305,11 +334,22 @@ export function Header() {
             to="/client-portal"
             onClick={closeAll}
             className={({ isActive }) =>
-              `block px-3 py-2.5 text-sm font-medium rounded-xl transition-colors ${isActive ? 'text-[#000000] bg-[#F7F7F7]' : 'text-[#6B6B6B] hover:text-[#000000] hover:bg-[#F7F7F7]'}`
+              `block px-3 py-2.5 text-sm font-medium rounded-xl transition-colors ${isActive ? 'text-white bg-white/5' : 'text-white/70 hover:text-white hover:bg-white/5'}`
             }
           >
             Client Portal
           </NavLink>
+
+          {/* Mobile CTA */}
+          <div className="pt-2 pb-1 px-3">
+            <Link
+              to="/contact"
+              onClick={closeAll}
+              className="block w-full text-center py-3 bg-white text-black text-sm font-semibold rounded-full hover:bg-gray-100 transition-colors"
+            >
+              Get a quote
+            </Link>
+          </div>
         </div>
       </div>
     </header>
