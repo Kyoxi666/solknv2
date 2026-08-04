@@ -1,0 +1,57 @@
+import { ToolsBanner } from '../components/ToolsBanner';
+import { ArrowRight, Calculator } from 'lucide-react';
+import { Link } from 'react-router-dom';
+
+export function ToolsPage() {
+  const tools = [
+    {
+      title: "IT Support Cost Calculator",
+      category: "Pricing Tools",
+      date: "Aug 01, 2026",
+      description: "Quickly estimate your monthly managed IT support costs based on your infrastructure and device count.",
+      link: "/tools/it-support-calculator",
+      image: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&q=80&w=1200"
+    }
+  ];
+
+  return (
+    <div className="bg-transparent min-h-screen">
+      <ToolsBanner />
+      
+      <div className="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 className="text-3xl md:text-4xl font-normal tracking-tight text-gray-900 mb-12">Tools</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {tools.map((tool, idx) => (
+            <Link key={idx} to={tool.link} className="group block w-full outline-none">
+              <div className="flex flex-col gap-3 h-full">
+                <div className="relative w-full aspect-[16/10] bg-white rounded-[24px] overflow-hidden">
+                  <img 
+                    src={tool.image} 
+                    alt={tool.title} 
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                  <div className="absolute top-4 left-4 bg-[#0b0e0f]/75 backdrop-blur-sm rounded-xl px-4 py-1.5">
+                    <span className="text-[#f6f8f9] text-sm font-medium">{tool.category}</span>
+                  </div>
+                </div>
+                
+                <div className="bg-[#f2f6f7] rounded-[24px] p-6 sm:p-8 flex flex-col h-full transition-colors duration-300 group-hover:bg-[#e8ecef]">
+                  <h3 className="text-xl sm:text-2xl font-medium tracking-tight text-gray-900 mb-3">{tool.title}</h3>
+                  <p className="text-[#425357] text-sm leading-relaxed mb-8 flex-grow">
+                    {tool.description}
+                  </p>
+                  <div className="flex items-center justify-between text-[#425357] text-sm font-medium tracking-wide uppercase">
+                    <div className="flex items-center">
+                      Use tool <ArrowRight className="w-4 h-4 ml-1.5 transition-transform group-hover:translate-x-1" />
+                    </div>
+                    <span className="text-xs text-gray-400 font-light normal-case">{tool.date}</span>
+                  </div>
+                </div>
+              </div>
+            </Link>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}

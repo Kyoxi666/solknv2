@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-black: #1F1C1B;
+  --color-brand-blue: #0000EE;
+  --color-brand-cyan: #0099FF;
+  --font-sans: 'Outfit', sans-serif;
+  --font-serif: 'Playfair Display', serif;
+}
+
+html, body {
+  font-family: 'Outfit', sans-serif;
+  background-color: var(--color-brand-black);
+  color: white;
+  overflow-x: hidden;
+  max-width: 100vw;
+  scroll-behavior: smooth;
+}
+
+#root {
+  overflow-x: hidden;
+  width: 100%;
+}

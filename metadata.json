@@ -1,0 +1,6 @@
+{
+  "name": "SOLKN IT Services",
+  "description": "A responsive marketing website for SOLKN IT Services with alternating dark/light sections.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
