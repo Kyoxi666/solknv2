@@ -112,18 +112,6 @@ export function Hero() {
         style={{ scale: fgScale, opacity: fgOpacity, filter: fgFilter }}
         className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-8 md:pt-0 -mt-[60px]"
       >
-        {/* Eyebrow */}
-        <motion.span
-          initial={{ opacity: 0, y: 12 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.1 }}
-          className="inline-flex items-center gap-2 mb-6 md:mb-8 px-4 py-1.5 rounded-full border border-white/10 bg-white/5 text-white/60 uppercase tracking-[0.18em]"
-          style={{ fontSize: 'clamp(0.5rem, 0.45rem + 0.2vw, 0.65rem)' }}
-        >
-          <span className="w-1.5 h-1.5 rounded-full bg-[#2563EB] inline-block" />
-          SOLKN IT Solutions
-        </motion.span>
-
         {/* H1 — wider container, larger clamp, max 3 lines */}
         <motion.h1
           initial={{ opacity: 0, scale: 1.06 }}
