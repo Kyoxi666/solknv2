@@ -9,18 +9,6 @@ export function Footer() {
     <footer className="bg-black pt-20 pb-10 border-t border-white/8 relative z-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-        {/* Top CTA headline */}
-        <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-8 mb-16 pb-16 border-b border-white/8">
-          <p className="text-3xl md:text-4xl font-medium text-white tracking-tight max-w-md">
-            Ready to simplify your IT?
-          </p>
-          <Link
-            to="/contact"
-            className="shrink-0 inline-flex items-center gap-2 px-7 py-3.5 bg-white text-black rounded-full font-semibold text-sm hover:bg-gray-100 transition-colors duration-300 active:scale-[0.98]"
-          >
-            Get a free consultation
-          </Link>
-        </div>
 
         {/* Link columns */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-10 mb-16">
@@ -84,7 +72,6 @@ export function Footer() {
               <li><Link to="/case-studies" className="text-white/50 hover:text-white text-sm transition-colors duration-200">Case Studies</Link></li>
               <li><Link to="/articles"     className="text-white/50 hover:text-white text-sm transition-colors duration-200">Articles</Link></li>
               <li><Link to="/guides"       className="text-white/50 hover:text-white text-sm transition-colors duration-200">Guides</Link></li>
-              <li><Link to="/industries"   className="text-white/50 hover:text-white text-sm transition-colors duration-200">Industries</Link></li>
               <li><Link to="/tools"        className="text-white/50 hover:text-white text-sm transition-colors duration-200">Tools</Link></li>
               <li><Link to="/contact"      className="text-white/50 hover:text-white text-sm transition-colors duration-200">Contact</Link></li>
             </ul>

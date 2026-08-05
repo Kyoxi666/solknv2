@@ -25,8 +25,6 @@ import { ITOutsourcingPage } from './pages/services/ITOutsourcingPage';
 import { AIBusinessSolutionsPage } from './pages/services/AIBusinessSolutionsPage';
 import { NetworkInfrastructurePage } from './pages/services/NetworkInfrastructurePage';
 import { NetworkMonitoringPage } from './pages/services/NetworkMonitoringPage';
-import { IndustriesPage } from './pages/IndustriesPage';
-import { IndustryPage } from './pages/IndustryPage';
 import { PrivacyPolicyPage } from './pages/PrivacyPolicyPage';
 import { TermsOfServicePage } from './pages/TermsOfServicePage';
 
@@ -56,8 +54,6 @@ export default function App() {
               <Route path="/services/ai-solutions" element={<AIBusinessSolutionsPage />} />
               <Route path="/services/network-infrastructure" element={<NetworkInfrastructurePage />} />
               <Route path="/services/network-monitoring" element={<NetworkMonitoringPage />} />
-              <Route path="/industries" element={<IndustriesPage />} />
-              <Route path="/industries/:id" element={<IndustryPage />} />
               <Route path="/case-studies" element={<CaseStudiesPage />} />
               <Route path="/case-studies/:id" element={<CaseStudyPage />} />
               <Route path="/articles" element={<ArticlesPage />} />
