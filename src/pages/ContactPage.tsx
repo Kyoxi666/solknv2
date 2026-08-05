@@ -190,8 +190,8 @@ export function ContactPage() {
       <div className="max-w-[1400px] w-full mx-auto px-4 sm:px-6 lg:px-8 mt-12 relative z-20">
         <div className="bg-white rounded-[2rem] p-2 md:p-3 shadow-2xl flex flex-col lg:flex-row-reverse">
 
-          {/* Info Panel */}
-          <div className="lg:w-5/12 flex flex-col p-2 lg:p-3">
+          {/* Info Panel — hidden on mobile */}
+          <div className="hidden lg:flex lg:w-5/12 flex-col p-2 lg:p-3">
             <div className="relative overflow-hidden rounded-[1.5rem] p-8 md:p-10 text-white bg-[#0a0f1a] shadow-2xl h-full flex flex-col justify-between">
               <div
                 className="absolute inset-0 pointer-events-none opacity-80 mix-blend-screen"
@@ -246,7 +246,7 @@ export function ContactPage() {
           </div>
 
           {/* Form */}
-          <div className="lg:w-7/12 p-6 md:p-12 lg:p-16 flex flex-col overflow-y-auto">
+          <div className="w-full lg:w-7/12 p-6 md:p-12 lg:p-16 flex flex-col overflow-y-auto">
             <h2 className="text-4xl md:text-5xl font-medium mb-4 text-gray-900 tracking-tight">Send Us a Message</h2>
             <p className="text-lg font-light text-gray-600 mb-8 leading-relaxed">
               Fill out the form below and let us know what you need — from network management and secure cloud hosting to custom application development. A member of our team will be in touch shortly.

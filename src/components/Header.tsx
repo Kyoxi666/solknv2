@@ -112,16 +112,6 @@ export function Header() {
               </div>
             </div>
 
-            {/* Industries — was missing from nav */}
-            <NavLink
-              to="/industries"
-              className={({ isActive }) =>
-                `text-sm font-medium transition-colors duration-200 ${isActive ? 'text-white' : 'text-white/65 hover:text-white'}`
-              }
-            >
-              Industries
-            </NavLink>
-
             {/* Resources dropdown */}
             <div
               className="relative"
@@ -277,17 +267,6 @@ export function Header() {
               </div>
             </div>
           </div>
-
-          {/* Mobile Industries */}
-          <NavLink
-            to="/industries"
-            onClick={closeAll}
-            className={({ isActive }) =>
-              `block px-3 py-2.5 text-sm font-medium rounded-xl transition-colors ${isActive ? 'text-white bg-white/5' : 'text-white/70 hover:text-white hover:bg-white/5'}`
-            }
-          >
-            Industries
-          </NavLink>
 
           {/* Mobile Resources */}
           <div>

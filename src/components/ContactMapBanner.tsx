@@ -3,6 +3,7 @@ import { ComposableMap, Geographies, Geography, Marker } from "react-simple-maps
 import { Phone, Mail, MapPin } from 'lucide-react';
 
 const geoUrl = "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json";
+const indiaGeoUrl = "/india-soi.json";
 
 const markers = [
   {
@@ -70,11 +71,34 @@ export function ContactMapBanner() {
             }}
             style={{ width: "100%", height: "100%" }}
           >
+            {/* World map geographies (excluding default India polygon) */}
             <Geographies geography={geoUrl}>
+              {({ geographies }) =>
+                geographies
+                  .filter((geo) => geo.id !== "356" && geo.properties?.name !== "India")
+                  .map((geo) => (
+                    <Geography
+                      key={geo.rsmKey}
+                      geography={geo}
+                      fill="#F3F4F6"
+                      stroke="#E5E7EB"
+                      strokeWidth={0.5}
+                      style={{
+                        default: { outline: "none" },
+                        hover: { outline: "none", fill: "#e5e7eb" },
+                        pressed: { outline: "none" },
+                      }}
+                    />
+                  ))
+              }
+            </Geographies>
+
+            {/* Official Survey of India boundary (full J&K, Ladakh, Aksai Chin, Arunachal Pradesh) */}
+            <Geographies geography={indiaGeoUrl}>
               {({ geographies }) =>
                 geographies.map((geo) => (
                   <Geography
-                    key={geo.rsmKey}
+                    key={geo.rsmKey || 'india-soi'}
                     geography={geo}
                     fill="#F3F4F6"
                     stroke="#E5E7EB"
