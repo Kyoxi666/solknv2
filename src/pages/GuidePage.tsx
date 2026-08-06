@@ -1480,6 +1480,40 @@ export function GuidePage() {
           
         </div>
       </div>
+
+      <div className="pb-16 pt-4">
+        <section id="contact" className="py-24 bg-[#0a0a0a] text-white relative overflow-hidden rounded-[3rem] border border-gray-800 mx-4 sm:mx-6 lg:mx-8 shadow-2xl">
+          {/* Background image */}
+          <div
+            className="absolute inset-0 z-0 opacity-70 mix-blend-screen"
+            style={{
+              backgroundImage: 'url("/marketingbanner.png")',
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              backgroundRepeat: 'no-repeat'
+            }}
+            aria-hidden="true"
+          ></div>
+          <div className="absolute inset-0 z-0 bg-black/50"></div>
+
+          {/* Flare effect for the banner */}
+          <div className="absolute inset-0 pointer-events-none">
+            <div className="absolute top-[-50%] right-[-10%] w-[80%] h-[150%] bg-[radial-gradient(ellipse_at_center,rgba(217,119,6,0.3)_0%,transparent_70%)] blur-[80px]"></div>
+            <div className="absolute top-[0%] right-[10%] w-[1px] h-[200%] bg-white/20 rotate-[45deg] blur-[2px]"></div>
+            <div className="absolute top-[10%] right-[0%] w-[200%] h-[1px] bg-white/20 rotate-[45deg] blur-[2px]"></div>
+            {/* Noise overlay */}
+            <div className="absolute inset-0 opacity-20 mix-blend-overlay" style={{ backgroundImage: 'url("data:image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noiseFilter%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.8%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noiseFilter)%22/%3E%3C/svg%3E")' }}></div>
+          </div>
+
+          <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center justify-center w-full">
+            <h2 className="text-4xl md:text-6xl font-semibold mb-6 text-white tracking-tight leading-[1.05]">Need expert help applying this guide?</h2>
+            <p className="text-xl text-white/70 mb-10 max-w-2xl mx-auto font-light leading-relaxed">Our engineers are available to review your existing setup and guide your team through implementation.</p>
+            <Link to="/contact" className="bg-white text-black hover:bg-gray-100 px-10 py-4 rounded-full font-bold text-lg transition-colors inline-flex items-center shadow-md hover:shadow-lg hover:-translate-y-1 duration-300">
+              Get a free consultation
+            </Link>
+          </div>
+        </section>
+      </div>
     </div>
   );
 }
