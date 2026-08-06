@@ -35,7 +35,7 @@ export function ToolsPage() {
                   </div>
                 </div>
                 
-                <div className="bg-[#f2f6f7] rounded-[24px] p-6 sm:p-8 flex flex-col h-full transition-colors duration-300 group-hover:bg-[#e8ecef]">
+                <div className="bg-[#e8ecef] rounded-[24px] p-6 sm:p-8 flex flex-col h-full transition-colors duration-300 group-hover:bg-[#d8dfe4]">
                   <h3 className="text-xl sm:text-2xl font-medium tracking-tight text-gray-900 mb-3">{tool.title}</h3>
                   <p className="text-[#425357] text-sm leading-relaxed mb-8 flex-grow">
                     {tool.description}
