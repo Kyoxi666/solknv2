@@ -17,7 +17,7 @@ export function GuidePage() {
   const title = id && guideTitles[id] ? guideTitles[id] : 'Introduction: The Changing Cybersecurity Landscape';
 
   return (
-    <div className="bg-white min-h-screen text-gray-900 pt-32 pb-24">
+    <div className="bg-[#F4F6FB] min-h-screen text-gray-900 pt-32 pb-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-8">
           <Link to="/guides" className="inline-flex items-center text-sm font-medium text-gray-500 hover:text-[#2b3d5b] transition-colors group">

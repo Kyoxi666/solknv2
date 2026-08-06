@@ -104,7 +104,7 @@ export function ITSupportCalculatorPage() {
   };
 
   return (
-    <div className="bg-gray-50 min-h-screen text-gray-900 pb-24 flex flex-col items-center relative">
+    <div className="bg-[#f0f3f5] min-h-screen text-gray-900 pb-24 flex flex-col items-center relative">
       {/* Header Banner */}
       <div className="w-full pt-32 pb-32 md:pb-40 bg-[#000000] relative overflow-hidden flex items-center justify-center">
         <div className="absolute inset-0 z-0 opacity-80 mix-blend-screen">

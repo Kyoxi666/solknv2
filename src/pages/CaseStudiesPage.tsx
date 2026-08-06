@@ -31,7 +31,7 @@ export function CaseStudiesPage() {
   ];
 
   return (
-    <div className="bg-transparent min-h-screen">
+    <div className="bg-[#f0f3f5] min-h-screen">
       <CaseStudiesBanner />
       
       <div className="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
