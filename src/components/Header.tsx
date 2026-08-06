@@ -176,12 +176,12 @@ export function Header() {
               Contact
             </NavLink>
 
-            {/* CTA button */}
+            {/* Client Portal CTA button */}
             <Link
-              to="/contact"
+              to="/client-portal"
               className="ml-2 px-5 py-2 bg-white text-black text-sm font-semibold rounded-full hover:bg-gray-100 transition-colors duration-200 active:scale-[0.98] shrink-0"
             >
-              Get a quote
+              Client Portal
             </Link>
           </nav>
 
@@ -309,24 +309,14 @@ export function Header() {
             Contact
           </NavLink>
 
-          <NavLink
-            to="/client-portal"
-            onClick={closeAll}
-            className={({ isActive }) =>
-              `block px-3 py-2.5 text-sm font-medium rounded-xl transition-colors ${isActive ? 'text-white bg-white/5' : 'text-white/70 hover:text-white hover:bg-white/5'}`
-            }
-          >
-            Client Portal
-          </NavLink>
-
           {/* Mobile CTA */}
           <div className="pt-2 pb-1 px-3">
             <Link
-              to="/contact"
+              to="/client-portal"
               onClick={closeAll}
               className="block w-full text-center py-3 bg-white text-black text-sm font-semibold rounded-full hover:bg-gray-100 transition-colors"
             >
-              Get a quote
+              Client Portal
             </Link>
           </div>
         </div>

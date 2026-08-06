@@ -166,19 +166,7 @@ export function ContactPage() {
       />
 
       {/* Header Banner */}
-      <div className="w-full h-[400px] md:h-[500px] bg-[#0A111F] relative overflow-hidden flex items-center justify-center">
-        <div
-          className="absolute inset-0 z-0 opacity-80 mix-blend-screen"
-          style={{
-            backgroundImage: 'url("/contactbanner.png")',
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            backgroundRepeat: 'no-repeat'
-          }}
-          aria-hidden="true"
-        ></div>
-        <div className="absolute inset-0 z-0 bg-black/50"></div>
-
+      <div className="w-full h-[400px] md:h-[500px] bg-black relative overflow-hidden flex items-center justify-center">
         <div className="relative z-10 text-center px-4">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-normal text-white mb-6 tracking-tight drop-shadow-lg">Get in Touch</h1>
           <p className="text-lg text-white/90 max-w-2xl mx-auto font-light drop-shadow">
@@ -192,18 +180,7 @@ export function ContactPage() {
 
           {/* Info Panel — hidden on mobile */}
           <div className="hidden lg:flex lg:w-5/12 flex-col p-2 lg:p-3">
-            <div className="relative overflow-hidden rounded-[1.5rem] p-8 md:p-10 text-white bg-[#0a0f1a] shadow-2xl h-full flex flex-col justify-between">
-              <div
-                className="absolute inset-0 pointer-events-none opacity-80 mix-blend-screen"
-                style={{
-                  backgroundImage: 'url("/contactside.png")',
-                  backgroundSize: 'cover',
-                  backgroundPosition: 'center',
-                  backgroundRepeat: 'no-repeat'
-                }}
-                aria-hidden="true"
-              ></div>
-              <div className="absolute inset-0 pointer-events-none bg-black/40"></div>
+            <div className="relative overflow-hidden rounded-[1.5rem] p-8 md:p-10 text-white bg-black shadow-2xl h-full flex flex-col justify-between">
 
               <div className="relative z-10 flex flex-col">
                 <h3 className="text-3xl md:text-4xl font-light mb-6 tracking-tight">Let's connect you with the right team</h3>

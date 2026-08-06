@@ -7,9 +7,9 @@ export function ArticlesBanner() {
       <div className="absolute inset-0 z-0 opacity-80 mix-blend-screen">
         {/* Top left dark area is just the background color */}
         
-        {/* Main wave streak - cyan/light blue */}
+        {/* Main wave streak - dark charcoal */}
         <div 
-          className="absolute w-[150vw] md:w-[120vw] h-[100px] md:h-[150px] bg-[#0088cc] rounded-[100%]"
+          className="absolute w-[150vw] md:w-[120vw] h-[100px] md:h-[150px] bg-[#1a1d21] rounded-[100%]"
           style={{
             top: '50%',
             left: '50%',
@@ -19,9 +19,9 @@ export function ArticlesBanner() {
           }}
         ></div>
 
-        {/* Brighter core of the wave */}
+        {/* Brighter core of the wave - deep slate black */}
         <div 
-          className="absolute w-[120vw] md:w-[90vw] h-[50px] md:h-[80px] bg-[#33bbff] rounded-[100%]"
+          className="absolute w-[120vw] md:w-[90vw] h-[50px] md:h-[80px] bg-[#2a2e35] rounded-[100%]"
           style={{
             top: '55%',
             left: '45%',

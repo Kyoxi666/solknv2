@@ -125,7 +125,7 @@ export function Features() {
       </section>
 
       {/* Dual capabilities callout — merged from two redundant dark banners */}
-      <section className="bg-[#090e17] py-16 md:py-20 overflow-hidden relative">
+      <section className="bg-[#090e17] py-16 md:py-20 overflow-hidden relative rounded-3xl md:rounded-[40px] mx-4 sm:mx-6 lg:mx-8 mb-24 md:mb-32">
         <div
           className="absolute top-0 right-0 w-[600px] h-[600px] pointer-events-none"
           style={{
