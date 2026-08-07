@@ -12,44 +12,30 @@ jobs:
         env:
           DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK_URL }}
         run: |
-          COMMIT_MSG="${{ github.event.head_commit.message }}"
-          COMMIT_URL="${{ github.event.head_commit.url }}"
-          ACTOR="${{ github.actor }}"
-          BRANCH="${{ github.ref_name }}"
-          REPO="${{ github.repository }}"
-          AVATAR="https://github.com/${ACTOR}.png"
-          TIMESTAMP=$(date -u +%Y-%m-%dT%H:%M:%SZ)
+          COMMIT_MSG=$(echo "${{ github.event.head_commit.message }}" | head -n1)
+          
+          PAYLOAD=$(jq -n \
+            --arg actor "${{ github.actor }}" \
+            --arg avatar "https://github.com/${${{ github.actor }}}.png" \
+            --arg title "📦 New commit on \`${{ github.ref_name }}\`" \
+            --arg url "${{ github.event.head_commit.url }}" \
+            --arg desc "$COMMIT_MSG" \
+            --arg repo "${{ github.repository }}" \
+            --arg timestamp "$(date -u +%Y-%m-%dT%H:%M:%SZ)" \
+            '{
+              username: "GitHub",
+              avatar_url: "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+              embeds: [{
+                color: 5814783,
+                author: { name: $actor, icon_url: $avatar },
+                title: $title,
+                url: $url,
+                description: $desc,
+                footer: { text: $repo },
+                timestamp: $timestamp
+              }]
+            }')
 
-          # Truncate commit message to first line
-          COMMIT_MSG=$(echo "$COMMIT_MSG" | head -n1)
-
-          # Escape special characters in commit message for JSON
-          COMMIT_MSG=$(echo "$COMMIT_MSG" | sed 's/"/\\"/g' | sed 's/\\n/ /g')
-
-          PAYLOAD=$(cat <<EOF
-          {
-            "username": "GitHub",
-            "avatar_url": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
-            "embeds": [
-              {
-                "color": 5814783,
-                "author": {
-                  "name": "${ACTOR}",
-                  "icon_url": "${AVATAR}"
-                },
-                "title": "\U0001F4E6 New commit on \`${BRANCH}\`",
-                "url": "${COMMIT_URL}",
-                "description": "${COMMIT_MSG}",
-                "footer": {
-                  "text": "${REPO}"
-                },
-                "timestamp": "${TIMESTAMP}"
-              }
-            ]
-          }
-EOF
-          )
-
-          curl -s -X POST "$DISCORD_WEBHOOK" \
+          curl -s -X POST "$DISCORD_WEBHOOK/github" \
             -H "Content-Type: application/json" \
             -d "$PAYLOAD"
