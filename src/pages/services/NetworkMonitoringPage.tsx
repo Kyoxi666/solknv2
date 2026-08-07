@@ -1,9 +1,27 @@
 import { ArrowLeft, ArrowUpRight} from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { PageSEO } from '../../components/PageSEO';
 
 export function NetworkMonitoringPage() {
   return (
     <div className="min-h-screen bg-white font-sans selection:bg-slate-600/30">
+      <PageSEO
+        title="24/7 Proactive Network Monitoring & Telemetry | SOLKN"
+        description="Real-time network monitoring, automated incident alerting, and threat isolation preventing outages before they impact your operations."
+        canonicalUrl="https://solkn.com/services/network-monitoring"
+        jsonLd={{
+          '@context': 'https://schema.org',
+          '@type': 'Service',
+          name: 'Network Monitoring',
+          provider: {
+            '@type': 'Organization',
+            name: 'SOLKN',
+            url: 'https://solkn.com',
+          },
+          areaServed: 'United Kingdom',
+          description: '24/7 real-time telemetry, bandwidth probing, and proactive incident response.',
+        }}
+      />
       <style>{`
         @keyframes marquee {
           0% { transform: translateX(0%); }

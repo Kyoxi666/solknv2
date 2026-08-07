@@ -1,5 +1,5 @@
 import { Logo } from './Logo';
-import { Mail, Linkedin, Twitter, Facebook } from 'lucide-react';
+import { Mail, Phone, Linkedin, Twitter, Facebook } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export function Footer() {
@@ -81,21 +81,28 @@ export function Footer() {
           {/* Contact */}
           <div>
             <h4 className="text-white text-sm font-semibold mb-5 tracking-wide">Contact</h4>
-            <div className="space-y-4">
-              <div className="text-white/50 text-sm leading-relaxed">
-                Harrow, London<br />United Kingdom
+              <div className="space-y-4">
+                <div className="text-white/50 text-sm leading-relaxed">
+                  Harrow, London<br />United Kingdom
+                </div>
+                <div className="text-white/50 text-sm leading-relaxed">
+                  Kapadvanj, Gujarat<br />India
+                </div>
+                <a
+                  href="tel:+447540319866"
+                  className="flex items-center gap-2.5 text-white/50 hover:text-white text-sm transition-colors duration-200 group"
+                >
+                  <Phone className="w-4 h-4 shrink-0" />
+                  <span>+44 7540 319866</span>
+                </a>
+                <a
+                  href="mailto:hello@solkn.com"
+                  className="flex items-center gap-2.5 text-white/50 hover:text-white text-sm transition-colors duration-200 group"
+                >
+                  <Mail className="w-4 h-4 shrink-0" />
+                  <span>hello@solkn.com</span>
+                </a>
               </div>
-              <div className="text-white/50 text-sm leading-relaxed">
-                Kapadvanj, Gujarat<br />India
-              </div>
-              <a
-                href="mailto:hello@solkn.com"
-                className="flex items-center gap-2.5 text-white/50 hover:text-white text-sm transition-colors duration-200 group"
-              >
-                <Mail className="w-4 h-4 shrink-0" />
-                <span>hello@solkn.com</span>
-              </a>
-            </div>
           </div>
         </div>
 

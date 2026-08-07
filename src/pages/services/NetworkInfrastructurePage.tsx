@@ -1,9 +1,27 @@
 import { ArrowLeft, ArrowUpRight} from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { PageSEO } from '../../components/PageSEO';
 
 export function NetworkInfrastructurePage() {
   return (
     <div className="min-h-screen bg-white font-sans selection:bg-slate-600/30">
+      <PageSEO
+        title="Network Infrastructure Installation & Wi-Fi Cabling | SOLKN"
+        description="Enterprise Wi-Fi systems, structured Cat6 cabling, switches, firewalls, and multi-site network installation for UK businesses."
+        canonicalUrl="https://solkn.com/services/network-infrastructure"
+        jsonLd={{
+          '@context': 'https://schema.org',
+          '@type': 'Service',
+          name: 'Network Infrastructure',
+          provider: {
+            '@type': 'Organization',
+            name: 'SOLKN',
+            url: 'https://solkn.com',
+          },
+          areaServed: 'United Kingdom',
+          description: 'Professional installation and management of business Wi-Fi, switches, firewalls, and cabling.',
+        }}
+      />
       <style>{`
         @keyframes marquee {
           0% { transform: translateX(0%); }

@@ -1,9 +1,27 @@
 import { ArrowLeft, ArrowUpRight} from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { PageSEO } from '../../components/PageSEO';
 
 export function ITOutsourcingPage() {
   return (
     <div className="min-h-screen bg-white font-sans selection:bg-slate-600/30">
+      <PageSEO
+        title="IT Outsourcing Services & Dedicated Remote Teams | SOLKN"
+        description="Flexible IT outsourcing, dedicated systems engineers, remote helpdesk, and strategic IT management for UK businesses."
+        canonicalUrl="https://solkn.com/services/it-outsourcing"
+        jsonLd={{
+          '@context': 'https://schema.org',
+          '@type': 'Service',
+          name: 'IT Outsourcing',
+          provider: {
+            '@type': 'Organization',
+            name: 'SOLKN',
+            url: 'https://solkn.com',
+          },
+          areaServed: 'United Kingdom',
+          description: 'Fully outsourced IT department, dedicated systems engineers, and helpdesk support.',
+        }}
+      />
       <style>{`
         @keyframes marquee {
           0% { transform: translateX(0%); }

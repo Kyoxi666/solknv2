@@ -1,9 +1,27 @@
 import { ArrowLeft, ArrowUpRight} from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { PageSEO } from '../../components/PageSEO';
 
 export function WebDevelopmentPage() {
   return (
     <div className="min-h-screen bg-white font-sans selection:bg-slate-600/30">
+      <PageSEO
+        title="Web Development, Custom Apps & Enterprise Hosting | SOLKN"
+        description="High-performance, secure, and scalable web solutions, landing pages, and custom internal applications integrated with your IT infrastructure."
+        canonicalUrl="https://solkn.com/services/web-development"
+        jsonLd={{
+          '@context': 'https://schema.org',
+          '@type': 'Service',
+          name: 'Web Development & Hosting',
+          provider: {
+            '@type': 'Organization',
+            name: 'SOLKN',
+            url: 'https://solkn.com',
+          },
+          areaServed: 'United Kingdom',
+          description: 'High-performance web development, custom web applications, and enterprise-grade hosting.',
+        }}
+      />
       <style>{`
         @keyframes marquee {
           0% { transform: translateX(0%); }

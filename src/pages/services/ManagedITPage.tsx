@@ -1,6 +1,7 @@
 import { ArrowLeft, ArrowUpRight, Plus, X } from 'lucide-react';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { PageSEO } from '../../components/PageSEO';
 
 export function ManagedITPage() {
   const [expandedId, setExpandedId] = useState<string | null>('infrastructure');
@@ -34,6 +35,23 @@ export function ManagedITPage() {
 
   return (
     <div className="min-h-screen bg-white font-sans selection:bg-slate-600/30">
+      <PageSEO
+        title="Managed IT Support & Infrastructure Services | SOLKN"
+        description="Comprehensive 24/7 managed IT support, proactive infrastructure monitoring, cybersecurity, and workplace management for UK small businesses."
+        canonicalUrl="https://solkn.com/services/managed-it"
+        jsonLd={{
+          '@context': 'https://schema.org',
+          '@type': 'Service',
+          name: 'Managed IT Support',
+          provider: {
+            '@type': 'Organization',
+            name: 'SOLKN',
+            url: 'https://solkn.com',
+          },
+          areaServed: 'United Kingdom',
+          description: 'Comprehensive managed IT support, 24/7 incident management, and proactive infrastructure monitoring.',
+        }}
+      />
       <style>{`
         @keyframes marquee {
           0% { transform: translateX(0%); }

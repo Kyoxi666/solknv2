@@ -1,9 +1,27 @@
 import { ArrowLeft, ArrowUpRight} from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { PageSEO } from '../../components/PageSEO';
 
 export function AIBusinessSolutionsPage() {
   return (
     <div className="min-h-screen bg-white font-sans selection:bg-slate-600/30">
+      <PageSEO
+        title="AI Business Solutions & Workflow Automation | SOLKN"
+        description="Automate business operations, customer interactions, and data processing with custom AI agents and workflow automation."
+        canonicalUrl="https://solkn.com/services/ai-solutions"
+        jsonLd={{
+          '@context': 'https://schema.org',
+          '@type': 'Service',
+          name: 'AI Business Solutions',
+          provider: {
+            '@type': 'Organization',
+            name: 'SOLKN',
+            url: 'https://solkn.com',
+          },
+          areaServed: 'United Kingdom',
+          description: 'Custom AI agents, customer interaction chatbots, and automated business workflows.',
+        }}
+      />
       <style>{`
         @keyframes marquee {
           0% { transform: translateX(0%); }
