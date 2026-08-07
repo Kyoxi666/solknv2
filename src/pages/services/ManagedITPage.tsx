@@ -45,12 +45,12 @@ export function ManagedITPage() {
       `}</style>
       
       {/* 1. Dark Hero Section */}
-      <section className="relative bg-[#090e17] text-white pt-32 pb-20 overflow-hidden">
+      <section className="relative bg-black text-white pt-32 pb-20 overflow-hidden">
                 {/* Background gradients for the blurred wave effect */}
-        <div className="absolute inset-0 z-0 overflow-hidden bg-[#090e17]">
-          {/* Main wave streak - slate blue */}
+        <div className="absolute inset-0 z-0 overflow-hidden bg-black">
+          {/* Main wave streak - dark charcoal */}
           <div 
-            className="absolute w-[150vw] md:w-[120vw] h-[100px] md:h-[150px] bg-[#2b3d5b] rounded-[100%]"
+            className="absolute w-[150vw] md:w-[120vw] h-[100px] md:h-[150px] bg-[#1a1d21] rounded-[100%]"
             style={{
               top: '54%',
               left: '52%',
@@ -59,9 +59,9 @@ export function ManagedITPage() {
               opacity: 0.8
             }}
           ></div>
-          {/* Brighter core of the wave */}
+          {/* Brighter core of the wave - deep slate black */}
           <div 
-            className="absolute w-[120vw] md:w-[90vw] h-[50px] md:h-[80px] bg-[#47638c] rounded-[100%]"
+            className="absolute w-[120vw] md:w-[90vw] h-[50px] md:h-[80px] bg-[#2a2e35] rounded-[100%]"
             style={{
               top: '59%',
               left: '47%',
@@ -72,7 +72,7 @@ export function ManagedITPage() {
           ></div>
           {/* Bottom right dark curve encroaching */}
           <div 
-            className="absolute w-[150vw] md:w-[100vw] h-[100vw] bg-[#05080f] rounded-full"
+            className="absolute w-[150vw] md:w-[100vw] h-[100vw] bg-black rounded-full"
             style={{
               top: '70%',
               left: '30%',
@@ -83,7 +83,7 @@ export function ManagedITPage() {
           
           {/* Top left dark area pushing down */}
           <div 
-            className="absolute w-[100vw] md:w-[80vw] h-[80vw] bg-[#05080f] rounded-full"
+            className="absolute w-[100vw] md:w-[80vw] h-[80vw] bg-black rounded-full"
             style={{
               top: '-50%',
               left: '-20%',
