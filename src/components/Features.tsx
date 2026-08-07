@@ -125,92 +125,94 @@ export function Features() {
       </section>
 
       {/* Dual capabilities callout — merged from two redundant dark banners */}
-      <section className="bg-black py-16 md:py-20 overflow-hidden relative rounded-3xl md:rounded-[40px] mx-4 sm:mx-6 lg:mx-8 mb-24 md:mb-32 border border-neutral-900 shadow-2xl">
-        <div
-          className="absolute top-0 right-0 w-[600px] h-[600px] pointer-events-none"
-          style={{
-            background: 'radial-gradient(circle at top right, rgba(255,255,255,0.07) 0%, transparent 65%)',
-            filter: 'blur(60px)',
-          }}
-        />
-        <div
-          className="absolute bottom-0 left-0 w-[400px] h-[400px] pointer-events-none"
-          style={{
-            background: 'radial-gradient(circle at bottom left, rgba(255,255,255,0.04) 0%, transparent 65%)',
-            filter: 'blur(60px)',
-          }}
-        />
+      <div className="bg-black pb-24 md:pb-32 pt-4">
+        <section className="bg-black py-16 md:py-20 overflow-hidden relative rounded-3xl md:rounded-[40px] mx-4 sm:mx-6 lg:mx-8 border border-neutral-900 shadow-2xl">
+          <div
+            className="absolute top-0 right-0 w-[600px] h-[600px] pointer-events-none"
+            style={{
+              background: 'radial-gradient(circle at top right, rgba(255,255,255,0.07) 0%, transparent 65%)',
+              filter: 'blur(60px)',
+            }}
+          />
+          <div
+            className="absolute bottom-0 left-0 w-[400px] h-[400px] pointer-events-none"
+            style={{
+              background: 'radial-gradient(circle at bottom left, rgba(255,255,255,0.04) 0%, transparent 65%)',
+              filter: 'blur(60px)',
+            }}
+          />
 
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-white/5 rounded-3xl overflow-hidden border border-white/5">
+          <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-white/5 rounded-3xl overflow-hidden border border-white/5">
 
-            {/* Card 1 — AI Automation */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, ease: [0.32, 0.72, 0, 1] }}
-              className="bg-black p-10 md:p-14 flex flex-col justify-between gap-10"
-            >
-              <div>
-                <p className="text-[10px] font-semibold text-white/40 tracking-[0.2em] uppercase mb-4">
-                  AI & Automation
-                </p>
-                <h3 className="text-3xl md:text-4xl font-medium tracking-tight text-white mb-4">
-                  Work smarter, not harder.
-                </h3>
-                <p className="text-white/60 text-base font-light leading-relaxed max-w-sm">
-                  From reducing manual data entry to creating intelligent customer
-                  support experiences, our custom automation solutions streamline
-                  operations so you can focus on growth.
-                </p>
-              </div>
-              <Link
-                to="/services/ai-solutions"
-                className="group self-start inline-flex items-center gap-3 px-6 py-3 bg-white text-black rounded-full font-medium text-sm hover:bg-gray-100 transition-colors duration-300 shadow-lg active:scale-[0.98]"
+              {/* Card 1 — AI Automation */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, ease: [0.32, 0.72, 0, 1] }}
+                className="bg-black p-10 md:p-14 flex flex-col justify-between gap-10"
               >
-                Explore automation
-                <span className="w-6 h-6 rounded-full bg-black/8 flex items-center justify-center group-hover:translate-x-0.5 transition-transform duration-300">
-                  <ArrowRight className="w-3.5 h-3.5" />
-                </span>
-              </Link>
-            </motion.div>
+                <div>
+                  <p className="text-[10px] font-semibold text-white/40 tracking-[0.2em] uppercase mb-4">
+                    AI & Automation
+                  </p>
+                  <h3 className="text-3xl md:text-4xl font-medium tracking-tight text-white mb-4">
+                    Work smarter, not harder.
+                  </h3>
+                  <p className="text-white/60 text-base font-light leading-relaxed max-w-sm">
+                    From reducing manual data entry to creating intelligent customer
+                    support experiences, our custom automation solutions streamline
+                    operations so you can focus on growth.
+                  </p>
+                </div>
+                <Link
+                  to="/services/ai-solutions"
+                  className="group self-start inline-flex items-center gap-3 px-6 py-3 bg-white text-black rounded-full font-medium text-sm hover:bg-gray-100 transition-colors duration-300 shadow-lg active:scale-[0.98]"
+                >
+                  Explore automation
+                  <span className="w-6 h-6 rounded-full bg-black/8 flex items-center justify-center group-hover:translate-x-0.5 transition-transform duration-300">
+                    <ArrowRight className="w-3.5 h-3.5" />
+                  </span>
+                </Link>
+              </motion.div>
 
-            {/* Card 2 — Web Development */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.15, ease: [0.32, 0.72, 0, 1] }}
-              className="bg-black p-10 md:p-14 flex flex-col justify-between gap-10"
-            >
-              <div>
-                <p className="text-[10px] font-semibold text-white/40 tracking-[0.2em] uppercase mb-4">
-                  Web & Development
-                </p>
-                <h3 className="text-3xl md:text-4xl font-medium tracking-tight text-white mb-4">
-                  Web design, hosting & app development.
-                </h3>
-                <p className="text-white/60 text-base font-light leading-relaxed max-w-sm">
-                  Our in-house development team builds modern, scalable web
-                  solutions that work in harmony with your IT infrastructure —
-                  from landing pages to custom internal applications.
-                </p>
-              </div>
-              <Link
-                to="/services/web-development"
-                className="group self-start inline-flex items-center gap-3 px-6 py-3 bg-white text-black rounded-full font-medium text-sm hover:bg-gray-100 transition-colors duration-300 shadow-lg active:scale-[0.98]"
+              {/* Card 2 — Web Development */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.15, ease: [0.32, 0.72, 0, 1] }}
+                className="bg-black p-10 md:p-14 flex flex-col justify-between gap-10"
               >
-                Explore web services
-                <span className="w-6 h-6 rounded-full bg-black/8 flex items-center justify-center group-hover:translate-x-0.5 transition-transform duration-300">
-                  <ArrowRight className="w-3.5 h-3.5" />
-                </span>
-              </Link>
-            </motion.div>
+                <div>
+                  <p className="text-[10px] font-semibold text-white/40 tracking-[0.2em] uppercase mb-4">
+                    Web & Development
+                  </p>
+                  <h3 className="text-3xl md:text-4xl font-medium tracking-tight text-white mb-4">
+                    Web design, hosting & app development.
+                  </h3>
+                  <p className="text-white/60 text-base font-light leading-relaxed max-w-sm">
+                    Our in-house development team builds modern, scalable web
+                    solutions that work in harmony with your IT infrastructure —
+                    from landing pages to custom internal applications.
+                  </p>
+                </div>
+                <Link
+                  to="/services/web-development"
+                  className="group self-start inline-flex items-center gap-3 px-6 py-3 bg-white text-black rounded-full font-medium text-sm hover:bg-gray-100 transition-colors duration-300 shadow-lg active:scale-[0.98]"
+                >
+                  Explore web services
+                  <span className="w-6 h-6 rounded-full bg-black/8 flex items-center justify-center group-hover:translate-x-0.5 transition-transform duration-300">
+                    <ArrowRight className="w-3.5 h-3.5" />
+                  </span>
+                </Link>
+              </motion.div>
 
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
     </>
   );
 }
