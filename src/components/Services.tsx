@@ -108,7 +108,7 @@ const services = [
 
 export function Services() {
   return (
-    <section id="services" className="py-24 relative overflow-hidden bg-white border-y border-gray-200">
+    <section id="services" data-theme="light" className="py-24 relative overflow-hidden bg-white border-y border-gray-200">
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Header */}
