@@ -434,7 +434,8 @@ export function ContactPage() {
       </section>
 
       {/* Newsletter Banner */}
-      <div className="py-24 relative overflow-hidden rounded-[3rem] border border-gray-800 mx-4 sm:mx-6 lg:mx-8 mt-12 mb-8 bg-[#0a0a0a] text-white shadow-2xl self-stretch">
+      <div className="pb-16 pt-4 w-full">
+        <section id="contact" className="py-24 bg-[#0a0a0a] text-white relative overflow-hidden rounded-[3rem] border border-gray-800 mx-4 sm:mx-6 lg:mx-8 shadow-2xl">
         {/* Background image */}
         <div
           className="absolute inset-0 z-0 opacity-70 mix-blend-screen"
@@ -481,6 +482,7 @@ export function ContactPage() {
             </button>
           </form>
         </div>
+        </section>
       </div>
 
     </div>
