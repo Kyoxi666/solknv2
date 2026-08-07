@@ -1,10 +1,106 @@
-import { ArrowRight, ArrowUpRight } from 'lucide-react';
+import { ArrowRight, ArrowUpRight, ShieldCheck, Cpu, Zap } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { motion } from 'motion/react';
 
 export function Features() {
   return (
     <>
+      {/* High-Impact AI & Infrastructure Overview Section */}
+      <section className="py-20 md:py-28 bg-black text-white relative overflow-hidden border-b border-neutral-900">
+        {/* Background glow effects */}
+        <div
+          className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[300px] pointer-events-none"
+          style={{
+            background: 'radial-gradient(ellipse at top, rgba(255,255,255,0.08) 0%, transparent 70%)',
+            filter: 'blur(70px)',
+          }}
+        />
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7, ease: [0.32, 0.72, 0, 1] }}
+            className="text-center max-w-3xl mx-auto mb-16 md:mb-20"
+          >
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-neutral-900 border border-neutral-800 text-xs font-semibold tracking-wider text-neutral-300 uppercase mb-6 shadow-inner">
+              <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+              Next-Gen Business Intelligence
+            </div>
+
+            <h2 className="text-4xl sm:text-5xl md:text-6xl font-medium tracking-tight leading-[1.08] mb-6 text-white">
+              Engineered for speed. <br className="hidden sm:inline" />
+              Built for zero downtime.
+            </h2>
+
+            <p className="text-neutral-400 text-base sm:text-lg font-light leading-relaxed max-w-2xl mx-auto">
+              We fuse proactive IT infrastructure management with custom AI automations, eliminating operational bottlenecks so your business moves faster.
+            </p>
+          </motion.div>
+
+          {/* 3 Mobile-friendly Feature Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              className="bg-neutral-950/80 border border-neutral-800/80 rounded-3xl p-8 hover:border-neutral-700 transition-all duration-300 flex flex-col justify-between group shadow-xl hover:-translate-y-1"
+            >
+              <div>
+                <div className="w-12 h-12 rounded-2xl bg-neutral-900 border border-neutral-800 flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <ShieldCheck className="w-6 h-6 text-emerald-400" />
+                </div>
+                <div className="text-3xl font-medium text-white mb-1 tracking-tight">99.9%</div>
+                <div className="text-xs uppercase tracking-widest text-neutral-400 font-semibold mb-4">Proactive Uptime</div>
+                <p className="text-sm text-neutral-400 font-light leading-relaxed">
+                  24/7 automated network monitoring and threat isolation prevent system failures before they impact your daily operations.
+                </p>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="bg-neutral-950/80 border border-neutral-800/80 rounded-3xl p-8 hover:border-neutral-700 transition-all duration-300 flex flex-col justify-between group shadow-xl hover:-translate-y-1"
+            >
+              <div>
+                <div className="w-12 h-12 rounded-2xl bg-neutral-900 border border-neutral-800 flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <Cpu className="w-6 h-6 text-sky-400" />
+                </div>
+                <div className="text-3xl font-medium text-white mb-1 tracking-tight">70%</div>
+                <div className="text-xs uppercase tracking-widest text-neutral-400 font-semibold mb-4">Task Automation</div>
+                <p className="text-sm text-neutral-400 font-light leading-relaxed">
+                  Custom AI bots and internal workflow engines automate repetitive tasks, client queries, and backend data processing.
+                </p>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              className="bg-neutral-950/80 border border-neutral-800/80 rounded-3xl p-8 hover:border-neutral-700 transition-all duration-300 flex flex-col justify-between group shadow-xl hover:-translate-y-1"
+            >
+              <div>
+                <div className="w-12 h-12 rounded-2xl bg-neutral-900 border border-neutral-800 flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <Zap className="w-6 h-6 text-amber-400" />
+                </div>
+                <div className="text-3xl font-medium text-white mb-1 tracking-tight">&lt; 15 min</div>
+                <div className="text-xs uppercase tracking-widest text-neutral-400 font-semibold mb-4">Avg. Engineer Response</div>
+                <p className="text-sm text-neutral-400 font-light leading-relaxed">
+                  Direct access to dedicated UK-based engineers without phone queues or multi-tiered support escalation delays.
+                </p>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
       {/* AI Chatbot Feature Section */}
       <section className="py-24 md:py-32 bg-white text-gray-900 overflow-hidden relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
