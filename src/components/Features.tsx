@@ -1,102 +1,165 @@
-import { ArrowRight, ArrowUpRight, ShieldCheck, Cpu, Zap } from 'lucide-react';
+import { ArrowRight, ArrowUpRight, ShieldCheck, Terminal, Cpu, Clock, Activity, CheckCircle2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { motion } from 'motion/react';
 
 export function Features() {
   return (
     <>
-      {/* High-Impact AI & Infrastructure Overview Section */}
-      <section className="py-20 md:py-28 bg-black text-white relative overflow-hidden border-b border-neutral-900">
-        {/* Background glow effects */}
+      {/* High-Impact AI & Infrastructure Overview Section — Anti-Slop Bento Design */}
+      <section className="py-20 md:py-28 bg-black text-white relative overflow-hidden border-b border-neutral-900 font-sans">
+        {/* Subtle background glow */}
         <div
-          className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[300px] pointer-events-none"
+          className="absolute top-0 left-1/2 -translate-x-1/2 w-[900px] h-[350px] pointer-events-none opacity-40"
           style={{
-            background: 'radial-gradient(ellipse at top, rgba(255,255,255,0.08) 0%, transparent 70%)',
-            filter: 'blur(70px)',
+            background: 'radial-gradient(ellipse at top, rgba(255,255,255,0.12) 0%, transparent 70%)',
+            filter: 'blur(80px)',
           }}
         />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          {/* Section Header */}
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7, ease: [0.32, 0.72, 0, 1] }}
-            className="text-center max-w-3xl mx-auto mb-16 md:mb-20"
+            className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16 md:mb-20"
           >
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-neutral-900 border border-neutral-800 text-xs font-semibold tracking-wider text-neutral-300 uppercase mb-6 shadow-inner">
-              <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-              Next-Gen Business Intelligence
+            <div className="max-w-2xl">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-neutral-900 border border-neutral-800 text-[11px] font-mono tracking-wider text-neutral-300 uppercase mb-6">
+                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                SOLKN Managed OS
+              </div>
+              <h2 className="text-4xl sm:text-5xl lg:text-6xl font-medium tracking-tighter leading-[1.05] text-white">
+                Proactive infrastructure meet intelligent automation.
+              </h2>
             </div>
-
-            <h2 className="text-4xl sm:text-5xl md:text-6xl font-medium tracking-tight leading-[1.08] mb-6 text-white">
-              Engineered for speed. <br className="hidden sm:inline" />
-              Built for zero downtime.
-            </h2>
-
-            <p className="text-neutral-400 text-base sm:text-lg font-light leading-relaxed max-w-2xl mx-auto">
-              We fuse proactive IT infrastructure management with custom AI automations, eliminating operational bottlenecks so your business moves faster.
+            <p className="text-neutral-400 text-base sm:text-lg font-light leading-relaxed max-w-md">
+              We monitor your systems around the clock and deploy custom AI agents so your business stays online, secure, and moving forward.
             </p>
           </motion.div>
 
-          {/* 3 Mobile-friendly Feature Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+          {/* Asymmetric Bento Grid (Anti-Template Layout) */}
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
+            
+            {/* Bento Cell 1 (Span 7) — Live Terminal & System Health Preview */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="bg-neutral-950/80 border border-neutral-800/80 rounded-3xl p-8 hover:border-neutral-700 transition-all duration-300 flex flex-col justify-between group shadow-xl hover:-translate-y-1"
+              className="md:col-span-7 bg-neutral-950 border border-neutral-800 rounded-3xl p-6 sm:p-8 flex flex-col justify-between group hover:border-neutral-700 transition-all duration-300 shadow-2xl relative overflow-hidden"
             >
               <div>
-                <div className="w-12 h-12 rounded-2xl bg-neutral-900 border border-neutral-800 flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <ShieldCheck className="w-6 h-6 text-emerald-400" />
+                <div className="flex items-center justify-between mb-6">
+                  <div className="flex items-center gap-2 text-xs font-mono text-neutral-400">
+                    <Activity className="w-4 h-4 text-emerald-400 animate-pulse" />
+                    <span>LIVE INFRASTRUCTURE PULSE</span>
+                  </div>
+                  <span className="text-[10px] font-mono text-emerald-400 bg-emerald-950/60 border border-emerald-800/60 px-2.5 py-0.5 rounded-full">
+                    99.9% Uptime Verified
+                  </span>
                 </div>
-                <div className="text-3xl font-medium text-white mb-1 tracking-tight">99.9%</div>
-                <div className="text-xs uppercase tracking-widest text-neutral-400 font-semibold mb-4">Proactive Uptime</div>
-                <p className="text-sm text-neutral-400 font-light leading-relaxed">
-                  24/7 automated network monitoring and threat isolation prevent system failures before they impact your daily operations.
+
+                <h3 className="text-2xl sm:text-3xl font-medium tracking-tight text-white mb-3">
+                  Zero-Downtime Network Guard
+                </h3>
+                <p className="text-sm text-neutral-400 font-light leading-relaxed mb-6 max-w-lg">
+                  Automated telemetry constantly probes your gateways, servers, and cloud endpoints to isolate bottlenecks before users ever notice a slowdown.
                 </p>
+              </div>
+
+              {/* Simulated Terminal / Status Bar UI */}
+              <div className="bg-black/80 border border-neutral-800 rounded-2xl p-4 font-mono text-xs text-neutral-300 space-y-2.5 shadow-inner">
+                <div className="flex items-center justify-between border-b border-neutral-800/80 pb-2">
+                  <div className="flex items-center gap-2">
+                    <div className="w-2.5 h-2.5 rounded-full bg-emerald-500"></div>
+                    <span className="text-white font-medium">UK-London Primary Node</span>
+                  </div>
+                  <span className="text-neutral-500">Latency: 2ms</span>
+                </div>
+                <div className="flex items-center justify-between text-[11px]">
+                  <span className="text-neutral-400">Cloud Sync & Backup</span>
+                  <span className="text-emerald-400 flex items-center gap-1">
+                    <CheckCircle2 className="w-3 h-3" /> Synchronized
+                  </span>
+                </div>
+                <div className="flex items-center justify-between text-[11px]">
+                  <span className="text-neutral-400">Threat Isolation Engine</span>
+                  <span className="text-emerald-400 flex items-center gap-1">
+                    <CheckCircle2 className="w-3 h-3" /> Active (0 Flagged)
+                  </span>
+                </div>
               </div>
             </motion.div>
 
+            {/* Bento Cell 2 (Span 5) — Custom AI Dispatch & Ticket Triage */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="bg-neutral-950/80 border border-neutral-800/80 rounded-3xl p-8 hover:border-neutral-700 transition-all duration-300 flex flex-col justify-between group shadow-xl hover:-translate-y-1"
+              className="md:col-span-5 bg-neutral-950 border border-neutral-800 rounded-3xl p-6 sm:p-8 flex flex-col justify-between group hover:border-neutral-700 transition-all duration-300 shadow-2xl relative overflow-hidden"
             >
               <div>
-                <div className="w-12 h-12 rounded-2xl bg-neutral-900 border border-neutral-800 flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <Cpu className="w-6 h-6 text-sky-400" />
+                <div className="flex items-center gap-2 text-xs font-mono text-neutral-400 mb-6">
+                  <Cpu className="w-4 h-4 text-sky-400" />
+                  <span>AI WORKFLOW ENGINE</span>
                 </div>
-                <div className="text-3xl font-medium text-white mb-1 tracking-tight">70%</div>
-                <div className="text-xs uppercase tracking-widest text-neutral-400 font-semibold mb-4">Task Automation</div>
-                <p className="text-sm text-neutral-400 font-light leading-relaxed">
-                  Custom AI bots and internal workflow engines automate repetitive tasks, client queries, and backend data processing.
+
+                <h3 className="text-2xl sm:text-3xl font-medium tracking-tight text-white mb-3">
+                  70% Ticket Reduction
+                </h3>
+                <p className="text-sm text-neutral-400 font-light leading-relaxed mb-6">
+                  Tailored AI workflows handle repetitive onboarding, password resets, and access requests automatically.
                 </p>
+              </div>
+
+              {/* AI Dispatch Card Snippet */}
+              <div className="bg-neutral-900/90 border border-neutral-800 rounded-2xl p-4 space-y-3">
+                <div className="flex items-center gap-2.5">
+                  <div className="w-7 h-7 rounded-lg bg-sky-950 border border-sky-800 flex items-center justify-center text-sky-400 shrink-0">
+                    <Terminal className="w-3.5 h-3.5" />
+                  </div>
+                  <div className="text-xs">
+                    <span className="text-white font-medium">Auto-Provisioning Agent</span>
+                    <p className="text-[10px] text-neutral-400 font-mono">Executed M365 & Slack setup in 3.8s</p>
+                  </div>
+                </div>
               </div>
             </motion.div>
 
+            {/* Bento Cell 3 (Span 12) — Human SLA Bar */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.3 }}
-              className="bg-neutral-950/80 border border-neutral-800/80 rounded-3xl p-8 hover:border-neutral-700 transition-all duration-300 flex flex-col justify-between group shadow-xl hover:-translate-y-1"
+              className="md:col-span-12 bg-neutral-950 border border-neutral-800 rounded-3xl p-6 sm:p-8 flex flex-col sm:flex-row sm:items-center justify-between gap-6 group hover:border-neutral-700 transition-all duration-300 shadow-xl"
             >
-              <div>
-                <div className="w-12 h-12 rounded-2xl bg-neutral-900 border border-neutral-800 flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <Zap className="w-6 h-6 text-amber-400" />
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 rounded-2xl bg-neutral-900 border border-neutral-800 flex items-center justify-center text-amber-400 shrink-0">
+                  <Clock className="w-6 h-6" />
                 </div>
-                <div className="text-3xl font-medium text-white mb-1 tracking-tight">&lt; 15 min</div>
-                <div className="text-xs uppercase tracking-widest text-neutral-400 font-semibold mb-4">Avg. Engineer Response</div>
-                <p className="text-sm text-neutral-400 font-light leading-relaxed">
-                  Direct access to dedicated UK-based engineers without phone queues or multi-tiered support escalation delays.
-                </p>
+                <div>
+                  <h4 className="text-lg sm:text-xl font-medium text-white tracking-tight">
+                    Dedicated UK Engineers On-Call
+                  </h4>
+                  <p className="text-sm text-neutral-400 font-light">
+                    Average response time under 15 minutes. Direct access to senior specialists — no phone queues or endless bot loops.
+                  </p>
+                </div>
               </div>
+
+              <Link
+                to="/contact"
+                className="group/btn shrink-0 inline-flex items-center gap-3 px-6 py-3 bg-white text-black rounded-full font-medium text-sm hover:bg-neutral-200 transition-colors duration-300"
+              >
+                Speak with an engineer
+                <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-300" />
+              </Link>
             </motion.div>
+
           </div>
         </div>
       </section>
