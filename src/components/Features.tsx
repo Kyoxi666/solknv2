@@ -125,24 +125,24 @@ export function Features() {
       </section>
 
       {/* Dual capabilities callout — merged from two redundant dark banners */}
-      <section className="bg-[#090e17] py-16 md:py-20 overflow-hidden relative rounded-3xl md:rounded-[40px] mx-4 sm:mx-6 lg:mx-8 mb-24 md:mb-32">
+      <section className="bg-black py-16 md:py-20 overflow-hidden relative rounded-3xl md:rounded-[40px] mx-4 sm:mx-6 lg:mx-8 mb-24 md:mb-32 border border-neutral-900 shadow-2xl">
         <div
           className="absolute top-0 right-0 w-[600px] h-[600px] pointer-events-none"
           style={{
-            background: 'radial-gradient(circle at top right, rgba(37,99,235,0.25) 0%, transparent 65%)',
+            background: 'radial-gradient(circle at top right, rgba(255,255,255,0.07) 0%, transparent 65%)',
             filter: 'blur(60px)',
           }}
         />
         <div
           className="absolute bottom-0 left-0 w-[400px] h-[400px] pointer-events-none"
           style={{
-            background: 'radial-gradient(circle at bottom left, rgba(30,64,138,0.2) 0%, transparent 65%)',
+            background: 'radial-gradient(circle at bottom left, rgba(255,255,255,0.04) 0%, transparent 65%)',
             filter: 'blur(60px)',
           }}
         />
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-white/8 rounded-3xl overflow-hidden border border-white/8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-white/5 rounded-3xl overflow-hidden border border-white/5">
 
             {/* Card 1 — AI Automation */}
             <motion.div
@@ -150,7 +150,7 @@ export function Features() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, ease: [0.32, 0.72, 0, 1] }}
-              className="bg-[#090e17] p-10 md:p-14 flex flex-col justify-between gap-10"
+              className="bg-black p-10 md:p-14 flex flex-col justify-between gap-10"
             >
               <div>
                 <p className="text-[10px] font-semibold text-white/40 tracking-[0.2em] uppercase mb-4">
@@ -167,7 +167,7 @@ export function Features() {
               </div>
               <Link
                 to="/services/ai-solutions"
-                className="group self-start inline-flex items-center gap-3 px-6 py-3 bg-white text-[#090e17] rounded-full font-medium text-sm hover:bg-gray-100 transition-colors duration-300 shadow-lg active:scale-[0.98]"
+                className="group self-start inline-flex items-center gap-3 px-6 py-3 bg-white text-black rounded-full font-medium text-sm hover:bg-gray-100 transition-colors duration-300 shadow-lg active:scale-[0.98]"
               >
                 Explore automation
                 <span className="w-6 h-6 rounded-full bg-black/8 flex items-center justify-center group-hover:translate-x-0.5 transition-transform duration-300">
@@ -182,7 +182,7 @@ export function Features() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.15, ease: [0.32, 0.72, 0, 1] }}
-              className="bg-[#090e17] p-10 md:p-14 flex flex-col justify-between gap-10"
+              className="bg-black p-10 md:p-14 flex flex-col justify-between gap-10"
             >
               <div>
                 <p className="text-[10px] font-semibold text-white/40 tracking-[0.2em] uppercase mb-4">
@@ -199,7 +199,7 @@ export function Features() {
               </div>
               <Link
                 to="/services/web-development"
-                className="group self-start inline-flex items-center gap-3 px-6 py-3 bg-white text-[#090e17] rounded-full font-medium text-sm hover:bg-gray-100 transition-colors duration-300 shadow-lg active:scale-[0.98]"
+                className="group self-start inline-flex items-center gap-3 px-6 py-3 bg-white text-black rounded-full font-medium text-sm hover:bg-gray-100 transition-colors duration-300 shadow-lg active:scale-[0.98]"
               >
                 Explore web services
                 <span className="w-6 h-6 rounded-full bg-black/8 flex items-center justify-center group-hover:translate-x-0.5 transition-transform duration-300">
