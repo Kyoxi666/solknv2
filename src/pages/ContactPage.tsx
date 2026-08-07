@@ -215,7 +215,7 @@ export function ContactPage() {
                 <div>
                   <p className="text-sm font-medium text-white mb-2">Questions?</p>
                   <p className="text-sm text-blue-100/60 font-light">
-                    Reach us at <a href="mailto:info@solkn.com" className="text-blue-300 underline">info@solkn.com</a> or call <a href="tel:+442012345678" className="text-blue-300 underline">+44 20 1234 5678</a>
+                    Reach us at <a href="mailto:info@solkn.com" className="text-blue-300 underline">info@solkn.com</a> or call <a href="tel:+447540319866" className="text-blue-300 underline">+44 7540 319866</a>
                   </p>
                 </div>
               </div>
