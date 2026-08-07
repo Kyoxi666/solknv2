@@ -8,8 +8,48 @@ jobs:
   notify:
     runs-on: ubuntu-latest
     steps:
-      - uses: Ilshidur/action-discord@0.3.2
+      - name: Send Discord notification
         env:
           DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK_URL }}
-        with:
-          args: "📦 New commit on `{{ github.ref_name }}` by **${{ github.actor }}** — [View commit]({{ github.event.head_commit.url }})"
+        run: |
+          COMMIT_MSG="${{ github.event.head_commit.message }}"
+          COMMIT_URL="${{ github.event.head_commit.url }}"
+          ACTOR="${{ github.actor }}"
+          BRANCH="${{ github.ref_name }}"
+          REPO="${{ github.repository }}"
+          AVATAR="https://github.com/${ACTOR}.png"
+          TIMESTAMP=$(date -u +%Y-%m-%dT%H:%M:%SZ)
+
+          # Truncate commit message to first line
+          COMMIT_MSG=$(echo "$COMMIT_MSG" | head -n1)
+
+          # Escape special characters in commit message for JSON
+          COMMIT_MSG=$(echo "$COMMIT_MSG" | sed 's/"/\\"/g' | sed 's/\\n/ /g')
+
+          PAYLOAD=$(cat <<EOF
+          {
+            "username": "GitHub",
+            "avatar_url": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+            "embeds": [
+              {
+                "color": 5814783,
+                "author": {
+                  "name": "${ACTOR}",
+                  "icon_url": "${AVATAR}"
+                },
+                "title": "\U0001F4E6 New commit on \`${BRANCH}\`",
+                "url": "${COMMIT_URL}",
+                "description": "${COMMIT_MSG}",
+                "footer": {
+                  "text": "${REPO}"
+                },
+                "timestamp": "${TIMESTAMP}"
+              }
+            ]
+          }
+EOF
+          )
+
+          curl -s -X POST "$DISCORD_WEBHOOK" \
+            -H "Content-Type: application/json" \
+            -d "$PAYLOAD"
