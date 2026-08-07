@@ -8,34 +8,12 @@ jobs:
   notify:
     runs-on: ubuntu-latest
     steps:
-      - name: Send Discord notification
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Send Discord Notification
+        uses: IlshatS/discord-action@v1.2.0
+        with:
+          args: "**New commit on `${{ github.ref_name }}` by ${{ github.actor }}**\n> ${{ github.event.head_commit.message }}\n\n${{ github.event.head_commit.url }}"
         env:
           DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK_URL }}
-        run: |
-          COMMIT_MSG=$(echo "${{ github.event.head_commit.message }}" | head -n1)
-          
-          PAYLOAD=$(jq -n \
-            --arg actor "${{ github.actor }}" \
-            --arg avatar "https://github.com/${${{ github.actor }}}.png" \
-            --arg title "📦 New commit on \`${{ github.ref_name }}\`" \
-            --arg url "${{ github.event.head_commit.url }}" \
-            --arg desc "$COMMIT_MSG" \
-            --arg repo "${{ github.repository }}" \
-            --arg timestamp "$(date -u +%Y-%m-%dT%H:%M:%SZ)" \
-            '{
-              username: "GitHub",
-              avatar_url: "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
-              embeds: [{
-                color: 5814783,
-                author: { name: $actor, icon_url: $avatar },
-                title: $title,
-                url: $url,
-                description: $desc,
-                footer: { text: $repo },
-                timestamp: $timestamp
-              }]
-            }')
-
-          curl -s -X POST "$DISCORD_WEBHOOK/github" \
-            -H "Content-Type: application/json" \
-            -d "$PAYLOAD"
