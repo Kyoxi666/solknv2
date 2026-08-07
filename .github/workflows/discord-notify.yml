@@ -9,10 +9,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Send Discord Notification
-        uses: tsickert/discord-webhook@v1
+        uses: rjstone/discord-webhook-notify@v1
         with:
-          webhook-url: ${{ secrets.DISCORD_WEBHOOK_URL }}
-          content: |
-            **New commit on `${{ github.ref_name }}` by ${{ github.actor }}**
+          severity: info
+          text: "**New commit on `${{ github.ref_name }}` by ${{ github.actor }}**"
+          description: |
             > ${{ github.event.head_commit.message }}
-            ${{ github.event.head_commit.url }}
+            
+            [View Commit](${{ github.event.head_commit.url }})
+          webhookUrl: ${{ secrets.DISCORD_WEBHOOK_URL }}
