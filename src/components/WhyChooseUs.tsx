@@ -72,7 +72,7 @@ const reasons = [
 
 export function WhyChooseUs() {
   return (
-    <section className="py-24 md:py-32 bg-[#090e17] text-white">
+    <section className="py-24 md:py-32 bg-black text-white border-t border-neutral-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         <motion.div
@@ -101,7 +101,7 @@ export function WhyChooseUs() {
               transition={{ duration: 0.6, delay: idx * 0.1, ease: [0.32, 0.72, 0, 1] }}
               className="flex flex-col"
             >
-              <div className="w-32 h-32 md:w-44 md:h-44 mb-6 text-[#98badb] opacity-80">
+              <div className="w-32 h-32 md:w-44 md:h-44 mb-6 text-zinc-400 opacity-80">
                 {reason.icon}
               </div>
               <h3 className="text-3xl md:text-5xl font-medium tracking-tighter mb-3">{reason.title}</h3>

@@ -1,0 +1,20 @@
+name: Discord Notify
+
+on:
+  push:
+    branches: [main, develop]
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send Discord Notification
+        uses: rjstone/discord-webhook-notify@v1
+        with:
+          severity: info
+          text: "**New commit on `${{ github.ref_name }}` by ${{ github.actor }}**"
+          description: |
+            > ${{ github.event.head_commit.message }}
+            
+            [View Commit](${{ github.event.head_commit.url }})
+          webhookUrl: ${{ secrets.DISCORD_WEBHOOK_URL }}

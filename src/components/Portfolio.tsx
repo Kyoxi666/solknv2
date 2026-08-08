@@ -100,7 +100,7 @@ export function Portfolio() {
   };
 
   return (
-    <section className="py-24 bg-[#0f172a] text-white font-sans border-t border-slate-800/60">
+    <section className="py-24 bg-black text-white font-sans border-t border-neutral-900">
       <div className="w-full">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
           <p className="text-[10px] font-semibold tracking-[0.2em] uppercase text-slate-500 mb-4">
@@ -143,7 +143,7 @@ export function Portfolio() {
                 className="w-full h-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] group-hover:scale-105"
               />
 
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0f172a]/95 via-[#0f172a]/20 to-transparent flex flex-col justify-end p-5 sm:p-6 opacity-80 group-hover:opacity-100 transition-opacity duration-300">
+              <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/20 to-transparent flex flex-col justify-end p-5 sm:p-6 opacity-80 group-hover:opacity-100 transition-opacity duration-300">
                 <h3 className="text-lg sm:text-xl font-medium text-white drop-shadow-md transform translate-y-1 group-hover:translate-y-0 transition-transform duration-300">
                   {project.title}
                 </h3>

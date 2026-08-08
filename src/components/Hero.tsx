@@ -87,18 +87,18 @@ export function Hero() {
     <section
       ref={sectionRef}
       id="home"
-      className="relative min-h-[100dvh] bg-[#090e17] overflow-hidden flex items-center justify-center pt-20"
+      className="relative min-h-[100dvh] bg-black overflow-hidden flex items-center justify-center pt-20"
     >
       {/* Background radial gradients */}
-      <div className="absolute inset-0 w-full h-full z-0 overflow-hidden bg-[#090e17]">
+      <div className="absolute inset-0 w-full h-full z-0 overflow-hidden bg-black">
         <div
           className="absolute inset-0"
           style={{
             background:
-              'radial-gradient(circle at 65% 35%, rgba(37,99,235,0.30) 0%, rgba(9,14,23,0) 55%), radial-gradient(circle at 20% 80%, rgba(30,64,138,0.20) 0%, rgba(9,14,23,0) 60%)',
+              'radial-gradient(circle at 65% 35%, rgba(255,255,255,0.08) 0%, rgba(0,0,0,0) 55%), radial-gradient(circle at 20% 80%, rgba(255,255,255,0.04) 0%, rgba(0,0,0,0) 60%)',
           }}
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#090e17] via-[#090e17]/40 to-transparent z-[1]" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent z-[1]" />
       </div>
 
       {/* Architectural cubes */}

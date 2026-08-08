@@ -48,7 +48,7 @@ export function ServicesPage() {
       <ServiceBanner />
       <ServiceAccordion />
 
-      <div className="bg-white pt-12 pb-16">
+      <div className="bg-white pb-16 pt-4">
         <section id="contact" className="py-24 bg-[#0a0a0a] text-white relative overflow-hidden rounded-[3rem] border border-gray-800 mx-4 sm:mx-6 lg:mx-8 shadow-2xl">
           {/* Background image */}
           <div

@@ -104,18 +104,18 @@ export function ITSupportCalculatorPage() {
   };
 
   return (
-    <div className="bg-[#f0f3f5] min-h-screen text-gray-900 pb-24 flex flex-col items-center relative">
+    <div className="bg-[#f0f3f5] min-h-screen text-gray-900 flex flex-col items-center relative">
       {/* Header Banner */}
       <div className="w-full pt-32 pb-32 md:pb-40 bg-[#000000] relative overflow-hidden flex items-center justify-center">
         <div className="absolute inset-0 z-0 opacity-80 mix-blend-screen">
-          <div className="absolute w-[150vw] md:w-[120vw] h-[100px] md:h-[150px] bg-[#0088cc] rounded-[100%]" style={{ top: '50%', left: '50%', transform: 'translate(-50%, -50%) rotate(-25deg)', filter: 'blur(60px)', opacity: 0.7 }}></div>
-          <div className="absolute w-[120vw] md:w-[90vw] h-[50px] md:h-[80px] bg-[#33bbff] rounded-[100%]" style={{ top: '55%', left: '45%', transform: 'translate(-50%, -50%) rotate(-20deg)', filter: 'blur(40px)', opacity: 0.9 }}></div>
+          <div className="absolute w-[150vw] md:w-[120vw] h-[100px] md:h-[150px] bg-[#1a1d21] rounded-[100%]" style={{ top: '50%', left: '50%', transform: 'translate(-50%, -50%) rotate(-25deg)', filter: 'blur(60px)', opacity: 0.8 }}></div>
+          <div className="absolute w-[120vw] md:w-[90vw] h-[50px] md:h-[80px] bg-[#2a2e35] rounded-[100%]" style={{ top: '55%', left: '45%', transform: 'translate(-50%, -50%) rotate(-20deg)', filter: 'blur(40px)', opacity: 0.7 }}></div>
           <div className="absolute w-[150vw] md:w-[100vw] h-[100vw] bg-[#000000] rounded-full" style={{ top: '70%', left: '30%', filter: 'blur(40px)', opacity: 1 }}></div>
           <div className="absolute w-[100vw] md:w-[80vw] h-[80vw] bg-[#000000] rounded-full" style={{ top: '-50%', left: '-20%', filter: 'blur(50px)', opacity: 1 }}></div>
         </div>
 
         <div className="relative z-10 text-center px-4">
-          <Link to="/tools" className="inline-flex items-center text-[#33bbff] hover:text-white transition-colors mb-6 font-medium text-sm">
+          <Link to="/tools" className="inline-flex items-center text-white/70 hover:text-white transition-colors mb-6 font-medium text-sm">
             <ArrowLeft className="w-4 h-4 mr-2" /> Back to Tools
           </Link>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-normal text-white mb-6 tracking-tight drop-shadow-lg">IT Support Cost Calculator</h1>
@@ -306,7 +306,7 @@ export function ITSupportCalculatorPage() {
         </div>
       </div>
 
-      <div className="w-full bg-white pt-4 pb-16">
+      <div className="w-full bg-[#f0f3f5] pb-16 pt-4">
         <section id="contact" className="py-24 bg-[#0a0a0a] text-white relative overflow-hidden rounded-[3rem] border border-gray-800 mx-4 sm:mx-6 lg:mx-8 shadow-2xl">
           {/* Background image */}
           <div

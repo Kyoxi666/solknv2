@@ -168,50 +168,47 @@ export function SocialProof() {
       </section>
 
       {/* Final CTA */}
-      <div className="bg-white py-8 md:py-14 px-4 sm:px-6 lg:px-8">
+      <div className="bg-white pb-16 pt-4">
         <section
           id="contact"
-          className="py-24 md:py-32 relative overflow-hidden rounded-[2.5rem] border border-gray-800 shadow-[0_25px_60px_-15px_rgba(0,0,0,0.5)] max-w-7xl mx-auto bg-[#090e17] text-white"
+          className="py-24 bg-[#0a0a0a] text-white relative overflow-hidden rounded-[3rem] border border-gray-800 mx-4 sm:mx-6 lg:mx-8 shadow-2xl"
         >
-          {/* Background image — corrected path (Vite serves public/ from root) */}
+          {/* Background image */}
           <div
-            className="absolute inset-0 z-0 opacity-60 mix-blend-screen"
+            className="absolute inset-0 z-0 opacity-70 mix-blend-screen"
             style={{
-              backgroundImage: 'url("/lastback.png")',
+              backgroundImage: 'url("/marketingbanner.png")',
               backgroundSize: 'cover',
               backgroundPosition: 'center',
               backgroundRepeat: 'no-repeat',
             }}
-          />
-          <div className="absolute inset-0 z-0 bg-gradient-to-t from-[#090e17]/80 to-transparent" />
+            aria-hidden="true"
+          ></div>
+          <div className="absolute inset-0 z-0 bg-black/50"></div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 24 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7, ease: [0.32, 0.72, 0, 1] }}
-            className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center"
-          >
-            <p className="text-[10px] font-semibold tracking-[0.2em] uppercase text-white/40 mb-6">
-              Get started today
-            </p>
-            <h2 className="text-4xl md:text-6xl font-semibold mb-6 tracking-tight text-white">
+          {/* Flare effect for the banner */}
+          <div className="absolute inset-0 pointer-events-none">
+            <div className="absolute top-[-50%] right-[-10%] w-[80%] h-[150%] bg-[radial-gradient(ellipse_at_center,rgba(217,119,6,0.3)_0%,transparent_70%)] blur-[80px]"></div>
+            <div className="absolute top-[0%] right-[10%] w-[1px] h-[200%] bg-white/20 rotate-[45deg] blur-[2px]"></div>
+            <div className="absolute top-[10%] right-[0%] w-[200%] h-[1px] bg-white/20 rotate-[45deg] blur-[2px]"></div>
+            {/* Noise overlay */}
+            <div className="absolute inset-0 opacity-20 mix-blend-overlay" style={{ backgroundImage: 'url("data:image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noiseFilter%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.8%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noiseFilter)%22/%3E%3C/svg%3E")' }}></div>
+          </div>
+
+          <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center justify-center w-full">
+            <h2 className="text-4xl md:text-6xl font-semibold mb-6 text-white tracking-tight leading-[1.05]">
               Ready to transform your IT?
             </h2>
-            <p className="text-lg text-white/60 mb-10 max-w-xl mx-auto font-light leading-relaxed">
-              Book a free consultation and discover how managed IT and AI automation
-              can help your business run better.
+            <p className="text-xl text-white/70 mb-10 max-w-2xl mx-auto font-light leading-relaxed">
+              Book a free consultation and discover how managed IT and AI automation can help your business run better.
             </p>
             <Link
               to="/contact"
-              className="group inline-flex items-center gap-3 bg-white text-black pl-8 pr-3 py-3 rounded-full font-semibold text-sm hover:bg-gray-100 transition-colors shadow-lg shadow-white/10 active:scale-[0.98]"
+              className="bg-white text-black hover:bg-gray-100 px-10 py-4 rounded-full font-bold text-lg transition-colors inline-flex items-center shadow-md hover:shadow-lg hover:-translate-y-1 duration-300"
             >
-              Book a call now
-              <span className="w-9 h-9 rounded-full bg-black/8 flex items-center justify-center group-hover:translate-x-0.5 group-hover:-translate-y-px transition-transform duration-300">
-                <ChevronDown className="w-4 h-4 -rotate-90" />
-              </span>
+              Schedule a consultation
             </Link>
-          </motion.div>
+          </div>
         </section>
       </div>
     </>

@@ -4,14 +4,18 @@ export function Brands() {
     { name: 'Ubiquiti',    logo: 'https://upload.wikimedia.org/wikipedia/commons/3/3d/Ubiquiti_Logo_Horizontal.png' },
     { name: 'Cisco',       logo: 'https://upload.wikimedia.org/wikipedia/commons/0/08/Cisco_logo_blue_2016.svg' },
     { name: 'Fortinet',    logo: 'https://upload.wikimedia.org/wikipedia/commons/6/62/Fortinet_logo.svg' },
+    { name: 'Anthropic',   logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Anthropic_logo.svg/330px-Anthropic_logo.svg.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail' },
     { name: 'Microsoft',   logo: 'https://upload.wikimedia.org/wikipedia/commons/9/96/Microsoft_logo_%282012%29.svg' },
     { name: 'AWS',         logo: 'https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg' },
+    { name: 'SolarWinds',  logo: 'https://upload.wikimedia.org/wikipedia/commons/7/76/Official_SolarWinds_Logo.svg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original' },
     { name: 'Cloudflare',  logo: 'https://upload.wikimedia.org/wikipedia/commons/4/4b/Cloudflare_Logo.svg' },
     { name: 'TP-Link',     logo: 'https://upload.wikimedia.org/wikipedia/commons/d/d0/TPLINK_Logo_2.svg' },
   ];
 
   const row2 = [
+    { name: 'SolarWinds',  logo: 'https://upload.wikimedia.org/wikipedia/commons/7/76/Official_SolarWinds_Logo.svg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original' },
     { name: 'Cloudflare',  logo: 'https://upload.wikimedia.org/wikipedia/commons/4/4b/Cloudflare_Logo.svg' },
+    { name: 'Anthropic',   logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Anthropic_logo.svg/330px-Anthropic_logo.svg.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail' },
     { name: 'TP-Link',     logo: 'https://upload.wikimedia.org/wikipedia/commons/d/d0/TPLINK_Logo_2.svg' },
     { name: 'Ubiquiti',    logo: 'https://upload.wikimedia.org/wikipedia/commons/3/3d/Ubiquiti_Logo_Horizontal.png' },
     { name: 'AWS',         logo: 'https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg' },
