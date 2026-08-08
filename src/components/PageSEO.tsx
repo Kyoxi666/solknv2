@@ -85,3 +85,38 @@ export function PageSEO({ title, description, canonicalUrl, jsonLd }: PageSEOPro
 
   return null;
 }
+
+export function SchemaOrg() {
+  const schemaData = {
+    "@context": "https://schema.org",
+    "@type": "ITService",
+    "name": "SOLKN",
+    "url": "https://solkn.com",
+    "logo": "https://solkn.com/solknlogo.png",
+    "description": "Managed IT support, secure cloud hosting, custom web development, and AI-powered business solutions.",
+    "telephone": "+447540319866",
+    "email": "info@solkn.com",
+    "address": [
+      {
+        "@type": "PostalAddress",
+        "addressLocality": "London",
+        "addressCountry": "GB"
+      },
+      {
+        "@type": "PostalAddress",
+        "addressLocality": "Gujarat",
+        "addressCountry": "IN"
+      }
+    ],
+    "sameAs": [
+      "https://github.com/Kyoxi666"
+    ]
+  };
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+    />
+  );
+}

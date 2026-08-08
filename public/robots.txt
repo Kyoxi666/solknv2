@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# Prevent indexing of internal portal pages if applicable
+Disallow: /client-portal
+
+Sitemap: https://solkn.com/sitemap.xml
