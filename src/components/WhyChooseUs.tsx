@@ -72,25 +72,39 @@ const reasons = [
 
 export function WhyChooseUs() {
   return (
-    <section className="py-24 md:py-32 bg-black text-white border-t border-neutral-900">
+    <section
+      className="py-24 md:py-32 text-white border-t border-white/5 relative"
+      style={{ background: '#080c14' }}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Ambient background glow — distinct from hero */}
+        <div
+          className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[300px] pointer-events-none"
+          style={{
+            background: 'radial-gradient(ellipse at top, rgba(37,99,235,0.08) 0%, transparent 70%)',
+            filter: 'blur(80px)',
+          }}
+          aria-hidden="true"
+        />
 
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7, ease: [0.32, 0.72, 0, 1] }}
-          className="mb-20 md:mb-24"
+          className="mb-20 md:mb-24 relative"
         >
-          <h2 className="text-5xl md:text-7xl lg:text-8xl font-medium tracking-tighter mb-6 max-w-3xl">
+          <h2 className="text-5xl md:text-7xl lg:text-8xl font-medium tracking-tighter mb-5 max-w-3xl">
             Why partner with SOLKN?
           </h2>
+          <div className="w-16 h-px bg-white/15 mb-6" />
           <p className="text-white/55 text-lg md:text-xl font-light leading-relaxed max-w-2xl">
             We bridge the gap between large MSPs and small businesses — delivering
             enterprise-quality networks and IT support with a personal touch.
           </p>
         </motion.div>
 
+        {/* Cards with stagger-offset descent */}
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-12 md:gap-x-12 md:gap-y-16">
           {reasons.map((reason, idx) => (
             <motion.div
@@ -99,7 +113,7 @@ export function WhyChooseUs() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: idx * 0.1, ease: [0.32, 0.72, 0, 1] }}
-              className="flex flex-col"
+              className={`flex flex-col ${idx % 2 === 1 ? 'lg:mt-10' : ''}`}
             >
               <div className="w-32 h-32 md:w-44 md:h-44 mb-6 text-zinc-400 opacity-80">
                 {reason.icon}
