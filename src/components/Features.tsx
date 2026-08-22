@@ -1,4 +1,4 @@
-import { ArrowRight, ArrowUpRight, ShieldCheck, Terminal, Cpu, Clock, Activity, CheckCircle2, Lock } from 'lucide-react';
+import { ArrowRight, ArrowUpRight, ShieldCheck, Cpu, Clock } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { motion } from 'motion/react';
 
@@ -10,15 +10,6 @@ export function Features() {
         className="py-20 md:py-28 text-white relative overflow-hidden border-b border-white/5 font-sans"
         style={{ background: '#080c14' }}
       >
-        {/* Subtle background glow */}
-        <div
-          className="absolute top-0 left-1/2 -translate-x-1/2 w-[900px] h-[350px] pointer-events-none opacity-40"
-          style={{
-            background: 'radial-gradient(ellipse at top, rgba(255,255,255,0.10) 0%, transparent 70%)',
-            filter: 'blur(80px)',
-          }}
-        />
-
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           {/* Section Header */}
           <motion.div
@@ -26,19 +17,13 @@ export function Features() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7, ease: [0.32, 0.72, 0, 1] }}
-            className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16 md:mb-20"
+            className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 mb-16 md:mb-20"
           >
-            <div className="max-w-2xl">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-neutral-900 border border-neutral-800 text-[11px] font-mono tracking-wider text-neutral-300 uppercase mb-6">
-                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-                SOLKN Managed OS
-              </div>
-              <h2 className="text-4xl sm:text-5xl lg:text-6xl font-medium tracking-tighter leading-[1.05] text-white">
-                Proactive infrastructure meets intelligent automation.
-              </h2>
-            </div>
-            <p className="text-neutral-400 text-base sm:text-lg font-light leading-relaxed max-w-md">
-              We monitor your systems around the clock and deploy custom AI agents so your business stays online, secure, and moving forward.
+            <h2 className="lg:col-span-7 text-4xl sm:text-5xl lg:text-6xl font-medium tracking-[-0.035em] leading-[1.05] text-white max-w-3xl">
+              IT support that prevents problems, not just fixes them.
+            </h2>
+            <p className="lg:col-span-5 lg:self-end text-neutral-300 text-base sm:text-lg font-light leading-relaxed max-w-xl">
+              We look after your systems, security and day-to-day support. Where a routine task can be automated safely, we automate it. When it needs a person, a UK-based engineer handles it.
             </p>
           </motion.div>
 
@@ -51,67 +36,28 @@ export function Features() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="md:col-span-7 bg-neutral-950 border border-neutral-800 rounded-3xl p-6 sm:p-8 flex flex-col justify-between group hover:border-neutral-700 transition-all duration-300 shadow-2xl relative overflow-hidden"
-              style={{
-                boxShadow: '0 0 0 0 rgba(37,99,235,0)',
-                transition: 'border-color 0.3s, box-shadow 0.3s',
-              }}
-              whileHover={{ boxShadow: '0 0 40px -10px rgba(37,99,235,0.15)' }}
+              className="md:col-span-7 bg-neutral-950 border border-neutral-800 rounded-2xl p-6 sm:p-8 flex flex-col justify-between"
             >
               <div>
-                <div className="flex items-center justify-between mb-6">
-                  <div className="flex items-center gap-2 text-xs font-mono text-neutral-400">
-                    <Activity className="w-4 h-4 text-emerald-400 animate-pulse" />
-                    <span>LIVE INFRASTRUCTURE PULSE</span>
-                  </div>
-                  <span className="text-[10px] font-mono text-emerald-400 bg-emerald-950/60 border border-emerald-800/60 px-2.5 py-0.5 rounded-full">
-                    99.7% Uptime Verified
-                  </span>
+                <div className="flex items-center gap-2 text-sm text-neutral-300 mb-6">
+                  <ShieldCheck className="w-4 h-4" strokeWidth={1.5} />
+                  <span>Managed monitoring and security</span>
                 </div>
 
                 <h3 className="text-2xl sm:text-3xl font-medium tracking-tight text-white mb-3">
-                  Zero-downtime network guard
+                  We keep watch in the background
                 </h3>
                 <p className="text-sm text-neutral-400 font-light leading-relaxed mb-6 max-w-lg">
-                  Automated telemetry constantly probes your gateways, servers, and cloud endpoints to isolate bottlenecks before users ever notice a slowdown.
+                  Devices, networks, backups and cloud services are monitored for early signs of trouble, so small issues can be dealt with before they interrupt your team.
                 </p>
               </div>
 
-              {/* Simulated Terminal / Status Bar UI */}
-              <div className="bg-black/80 border border-neutral-800 rounded-2xl p-4 font-mono text-xs text-neutral-300 space-y-2.5 shadow-inner">
-                <div className="flex items-center justify-between border-b border-neutral-800/80 pb-2">
-                  <div className="flex items-center gap-2">
-                    <div className="w-2.5 h-2.5 rounded-full bg-emerald-500"></div>
-                    <span className="text-white font-medium">UK-London Primary Node</span>
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-px bg-neutral-800 border border-neutral-800 rounded-2xl overflow-hidden text-sm">
+                {['Backups checked', 'Security maintained', 'Issues investigated'].map((item) => (
+                  <div key={item} className="bg-neutral-950 px-4 py-4 text-neutral-300">
+                    {item}
                   </div>
-                  <span className="text-neutral-500">Latency: 2ms</span>
-                </div>
-                <div className="flex items-center justify-between text-[11px]">
-                  <span className="text-neutral-400">Cloud sync & backup</span>
-                  <span className="text-emerald-400 flex items-center gap-1">
-                    <CheckCircle2 className="w-3 h-3" /> Synchronised
-                  </span>
-                </div>
-                <div className="flex items-center justify-between text-[11px]">
-                  <span className="text-neutral-400">Threat isolation engine</span>
-                  <span className="text-emerald-400 flex items-center gap-1">
-                    <CheckCircle2 className="w-3 h-3" /> Active (0 flagged)
-                  </span>
-                </div>
-                <div className="flex items-center justify-between text-[11px]">
-                  <span className="text-neutral-400">Firewall rule sync</span>
-                  <span className="text-emerald-400 flex items-center gap-1">
-                    <CheckCircle2 className="w-3 h-3" /> Up to date
-                  </span>
-                </div>
-              </div>
-
-              {/* Security badge */}
-              <div className="absolute top-6 right-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <div className="flex items-center gap-1.5 bg-neutral-900 border border-neutral-800 px-2.5 py-1.5 rounded-full text-[10px] font-mono text-neutral-400">
-                  <ShieldCheck className="w-3 h-3 text-blue-400" />
-                  <span>SOC monitored</span>
-                </div>
+                ))}
               </div>
             </motion.div>
 
@@ -121,43 +67,24 @@ export function Features() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="md:col-span-5 bg-neutral-950 border border-neutral-800 rounded-3xl p-6 sm:p-8 flex flex-col justify-between group hover:border-neutral-700 transition-all duration-300 shadow-2xl relative overflow-hidden"
-              whileHover={{ boxShadow: '0 0 40px -10px rgba(37,99,235,0.15)' }}
+              className="md:col-span-5 bg-neutral-950 border border-neutral-800 rounded-2xl p-6 sm:p-8 flex flex-col justify-between"
             >
               <div>
-                <div className="flex items-center gap-2 text-xs font-mono text-neutral-400 mb-6">
-                  <Cpu className="w-4 h-4 text-sky-400" />
-                  <span>AI WORKFLOW ENGINE</span>
+                <div className="flex items-center gap-2 text-sm text-neutral-300 mb-6">
+                  <Cpu className="w-4 h-4" strokeWidth={1.5} />
+                  <span>Practical automation</span>
                 </div>
 
                 <h3 className="text-2xl sm:text-3xl font-medium tracking-tight text-white mb-3">
-                  70% ticket reduction
+                  Less repetitive admin
                 </h3>
                 <p className="text-sm text-neutral-400 font-light leading-relaxed mb-6">
-                  Tailored AI workflows handle repetitive onboarding, password resets, and access requests automatically — with full audit trails.
+                  We automate routine work such as onboarding, password resets and access requests when it is safe and useful to do so.
                 </p>
               </div>
 
-              {/* AI Dispatch Card Snippet */}
-              <div className="bg-neutral-900/90 border border-neutral-800 rounded-2xl p-4 space-y-3">
-                <div className="flex items-center gap-2.5">
-                  <div className="w-7 h-7 rounded-lg bg-sky-950 border border-sky-800 flex items-center justify-center text-sky-400 shrink-0">
-                    <Terminal className="w-3.5 h-3.5" />
-                  </div>
-                  <div className="text-xs">
-                    <span className="text-white font-medium">Auto-provisioning agent</span>
-                    <p className="text-[10px] text-neutral-400 font-mono">Executed M365 & VPN onboarding in 4.1s</p>
-                  </div>
-                </div>
-                <div className="flex items-center gap-2.5">
-                  <div className="w-7 h-7 rounded-lg bg-emerald-950 border border-emerald-800 flex items-center justify-center text-emerald-400 shrink-0">
-                    <Lock className="w-3.5 h-3.5" />
-                  </div>
-                  <div className="text-xs">
-                    <span className="text-white font-medium">Password reset resolved</span>
-                    <p className="text-[10px] text-neutral-400 font-mono">User re-authenticated in under 30s</p>
-                  </div>
-                </div>
+              <div className="border-t border-neutral-800 pt-5 text-sm text-neutral-300 leading-relaxed">
+                Clear approvals and audit trails stay in place, so automation never becomes a black box.
               </div>
             </motion.div>
 
@@ -167,19 +94,18 @@ export function Features() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.3 }}
-              className="md:col-span-12 bg-neutral-950 border border-neutral-800 rounded-3xl p-6 sm:p-8 flex flex-col sm:flex-row sm:items-center justify-between gap-6 group hover:border-neutral-700 transition-all duration-300 shadow-xl"
-              whileHover={{ boxShadow: '0 0 40px -10px rgba(37,99,235,0.12)' }}
+              className="md:col-span-12 border-y border-neutral-800 py-7 sm:py-8 flex flex-col sm:flex-row sm:items-center justify-between gap-6 group"
             >
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-2xl bg-neutral-900 border border-neutral-800 flex items-center justify-center text-amber-400 shrink-0">
-                  <Clock className="w-6 h-6" />
+                <div className="w-10 h-10 flex items-center justify-center text-neutral-300 shrink-0">
+                  <Clock className="w-5 h-5" strokeWidth={1.5} />
                 </div>
                 <div>
                   <h4 className="text-lg sm:text-xl font-medium text-white tracking-tight">
-                    Dedicated UK engineers on-call
+                    UK-based engineers, without the runaround
                   </h4>
                   <p className="text-sm text-neutral-400 font-light">
-                    Average response under 15 minutes. Direct access to senior specialists — no phone queues or bot loops.
+                    Get direct help from specialists who know your setup, without being passed through a phone queue or bot loop.
                   </p>
                 </div>
               </div>
