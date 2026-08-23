@@ -72,59 +72,61 @@ const reasons = [
 
 export function WhyChooseUs() {
   return (
-    <section
-      className="py-24 md:py-32 text-white border-t border-white/5 relative"
-      style={{ background: '#080c14' }}
-    >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Ambient background glow — distinct from hero */}
-        <div
-          className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[300px] pointer-events-none"
-          style={{
-            background: 'radial-gradient(ellipse at top, rgba(37,99,235,0.08) 0%, transparent 70%)',
-            filter: 'blur(80px)',
-          }}
-          aria-hidden="true"
-        />
+    <div className="bg-white pb-16 md:pb-24 pt-4">
+      <section
+        className="py-16 md:py-24 text-white relative overflow-hidden rounded-[3rem] border border-gray-800 mx-4 sm:mx-6 lg:mx-8 shadow-2xl"
+        style={{ background: '#080c14' }}
+      >
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Ambient background glow — distinct from hero */}
+          <div
+            className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[300px] pointer-events-none"
+            style={{
+              background: 'radial-gradient(ellipse at top, rgba(37,99,235,0.08) 0%, transparent 70%)',
+              filter: 'blur(80px)',
+            }}
+            aria-hidden="true"
+          />
 
-        <motion.div
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.7, ease: [0.32, 0.72, 0, 1] }}
-          className="mb-20 md:mb-24 relative"
-        >
-          <h2 className="text-5xl md:text-7xl lg:text-8xl font-medium tracking-tighter mb-5 max-w-3xl">
-            Why partner with SOLKN?
-          </h2>
-          <div className="w-16 h-px bg-white/15 mb-6" />
-          <p className="text-white/55 text-lg md:text-xl font-light leading-relaxed max-w-2xl">
-            We bridge the gap between large MSPs and small businesses — delivering
-            enterprise-quality networks and IT support with a personal touch.
-          </p>
-        </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7, ease: [0.32, 0.72, 0, 1] }}
+            className="mb-20 md:mb-24 relative"
+          >
+            <h2 className="text-5xl md:text-7xl lg:text-8xl font-medium tracking-tighter mb-5 max-w-3xl">
+              Why partner with SOLKN?
+            </h2>
+            <div className="w-16 h-px bg-white/15 mb-6" />
+            <p className="text-white/55 text-lg md:text-xl font-light leading-relaxed max-w-2xl">
+              We bridge the gap between large MSPs and small businesses — delivering
+              enterprise-quality networks and IT support with a personal touch.
+            </p>
+          </motion.div>
 
-        {/* Cards with stagger-offset descent */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-12 md:gap-x-12 md:gap-y-16">
-          {reasons.map((reason, idx) => (
-            <motion.div
-              key={idx}
-              initial={{ opacity: 0, y: 24 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: idx * 0.1, ease: [0.32, 0.72, 0, 1] }}
-              className={`flex flex-col ${idx % 2 === 1 ? 'lg:mt-10' : ''}`}
-            >
-              <div className="w-32 h-32 md:w-44 md:h-44 mb-6 text-zinc-400 opacity-80">
-                {reason.icon}
-              </div>
-              <h3 className="text-3xl md:text-5xl font-medium tracking-tighter mb-3">{reason.title}</h3>
-              <p className="text-white/55 text-sm md:text-base leading-relaxed font-light">{reason.description}</p>
-            </motion.div>
-          ))}
+          {/* Cards with stagger-offset descent */}
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-12 md:gap-x-12 md:gap-y-16">
+            {reasons.map((reason, idx) => (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, y: 24 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: idx * 0.1, ease: [0.32, 0.72, 0, 1] }}
+                className={`flex flex-col ${idx % 2 === 1 ? 'lg:mt-10' : ''}`}
+              >
+                <div className="w-32 h-32 md:w-44 md:h-44 mb-6 text-zinc-400 opacity-80">
+                  {reason.icon}
+                </div>
+                <h3 className="text-3xl md:text-5xl font-medium tracking-tighter mb-3">{reason.title}</h3>
+                <p className="text-white/55 text-sm md:text-base leading-relaxed font-light">{reason.description}</p>
+              </motion.div>
+            ))}
+          </div>
+
         </div>
-
-      </div>
-    </section>
+      </section>
+    </div>
   );
 }

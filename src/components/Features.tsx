@@ -5,11 +5,12 @@ import { motion } from 'motion/react';
 export function Features() {
   return (
     <>
-      {/* High-Impact AI & Infrastructure Overview Section — Anti-Slop Bento Design */}
-      <section
-        className="py-20 md:py-28 text-white relative overflow-hidden border-b border-white/5 font-sans"
-        style={{ background: '#080c14' }}
-      >
+      {/* High-Impact AI & Infrastructure Overview Section — Floating Dark Bubble */}
+      <div className="bg-white pb-16 md:pb-24 pt-4">
+        <section
+          className="py-16 md:py-24 text-white relative overflow-hidden rounded-[3rem] border border-gray-800 mx-4 sm:mx-6 lg:mx-8 shadow-2xl font-sans"
+          style={{ background: '#080c14' }}
+        >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           {/* Section Header */}
           <motion.div
@@ -122,6 +123,7 @@ export function Features() {
           </div>
         </div>
       </section>
+      </div>
 
       {/* AI Chatbot Feature Section */}
       <section
@@ -245,11 +247,11 @@ export function Features() {
         </div>
       </section>
 
-      {/* Dual capabilities callout — real contrast between cards and section */}
-      <div style={{ background: '#080c14' }} className="pb-24 md:pb-32">
+      {/* Dual capabilities callout — floating dark bubble on white background */}
+      <div className="bg-white pb-20 md:pb-28 pt-4">
         <section
-          className="py-16 md:py-20 overflow-hidden relative rounded-3xl md:rounded-[40px] mx-4 sm:mx-6 lg:mx-8 border border-white/5 shadow-2xl"
-          style={{ background: '#0d1117' }}
+          className="py-16 md:py-24 text-white relative overflow-hidden rounded-[3rem] border border-gray-800 mx-4 sm:mx-6 lg:mx-8 shadow-2xl"
+          style={{ background: '#080c14' }}
         >
           <div
             className="absolute top-0 right-0 w-[600px] h-[600px] pointer-events-none"
