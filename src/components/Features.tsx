@@ -6,10 +6,10 @@ export function Features() {
   return (
     <>
       {/* High-Impact AI & Infrastructure Overview Section — Floating Dark Bubble */}
-      <div className="bg-white pb-16 md:pb-24 pt-4">
+      <div className="bg-surface-light pb-16 md:pb-24 pt-4">
         <section
           className="py-16 md:py-24 text-white relative overflow-hidden rounded-[3rem] border border-gray-800 mx-4 sm:mx-6 lg:mx-8 shadow-2xl font-sans"
-          style={{ background: '#080c14' }}
+          style={{ background: '#0a0a0a' }}
         >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           {/* Section Header */}
@@ -127,8 +127,7 @@ export function Features() {
 
       {/* AI Chatbot Feature Section */}
       <section
-        className="py-24 md:py-32 text-gray-900 overflow-hidden relative"
-        style={{ background: '#f8f7f5' }}
+        className="py-24 md:py-32 text-gray-900 overflow-hidden relative bg-surface-light"
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
@@ -248,10 +247,10 @@ export function Features() {
       </section>
 
       {/* Dual capabilities callout — floating dark bubble on white background */}
-      <div className="bg-white pb-20 md:pb-28 pt-4">
+      <div className="bg-surface-light pb-20 md:pb-28 pt-4">
         <section
           className="py-16 md:py-24 text-white relative overflow-hidden rounded-[3rem] border border-gray-800 mx-4 sm:mx-6 lg:mx-8 shadow-2xl"
-          style={{ background: '#080c14' }}
+          style={{ background: '#0a0a0a' }}
         >
           <div
             className="absolute top-0 right-0 w-[600px] h-[600px] pointer-events-none"

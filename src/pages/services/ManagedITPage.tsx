@@ -2,6 +2,7 @@ import { ArrowLeft, ArrowUpRight, Plus, X } from 'lucide-react';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { PageSEO } from '../../components/PageSEO';
+import { ServiceCapabilityRail } from '../../components/ServiceCapabilityRail';
 
 export function ManagedITPage() {
   const [expandedId, setExpandedId] = useState<string | null>('infrastructure');
@@ -151,83 +152,43 @@ export function ManagedITPage() {
         </div>
       </section>
 
-      {/* 2. Solutions Section (White) */}
-      <section className="py-24 md:py-32 bg-[#FAF9F6] text-[#1a1a1a]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl md:text-6xl lg:text-7xl font-light tracking-tighter uppercase mb-16 md:mb-24">
-            Our <br/>
-             Solutions
-          </h2>
-
-          <div className="space-y-0">
-            
-            <div className="grid grid-cols-1 md:grid-cols-12 gap-8 py-12 border-t border-black/10">
-              <div className="md:col-span-3 text-xs font-semibold text-black/50 tracking-widest uppercase">
-                (01) 24/7 Monitoring
-              </div>
-              <div className="md:col-span-5 pr-8">
-                <h3 className="text-xl md:text-2xl font-light tracking-tight mb-4 uppercase">Prevent downtime before it happens.</h3>
-                <p className="text-black/60 leading-relaxed text-sm">
-                  We watch your systems around the clock and fix issues before they cause downtime.
-                </p>
-              </div>
-              <div className="md:col-span-4">
-                <ul className="space-y-3 text-sm text-black/70">
-                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#2b3d5b] mt-1.5"></div> System Health Tracking</li>
-                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#2b3d5b] mt-1.5"></div> Proactive Alert Management</li>
-                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#2b3d5b] mt-1.5"></div> Performance Optimization</li>
-                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#2b3d5b] mt-1.5"></div> Hardware Lifecycle Management</li>
-                </ul>
-              </div>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-12 gap-8 py-12 border-t border-black/10">
-              <div className="md:col-span-3 text-xs font-semibold text-black/50 tracking-widest uppercase">
-                (02) Cybersecurity
-              </div>
-              <div className="md:col-span-5 pr-8">
-                <h3 className="text-xl md:text-2xl font-light tracking-tight mb-4 uppercase">Protect your most valuable assets.</h3>
-                <p className="text-black/60 leading-relaxed text-sm">
-                  Implementing robust security measures to protect sensitive data from emerging threats.
-                </p>
-              </div>
-              <div className="md:col-span-4">
-                <ul className="space-y-3 text-sm text-black/70">
-                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#2b3d5b] mt-1.5"></div> Threat Detection</li>
-                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#2b3d5b] mt-1.5"></div> Firewall Management</li>
-                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#2b3d5b] mt-1.5"></div> Data Encryption</li>
-                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#2b3d5b] mt-1.5"></div> Security Audits</li>
-                </ul>
-              </div>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-12 gap-8 py-12 border-t border-black/10">
-              <div className="md:col-span-3 text-xs font-semibold text-black/50 tracking-widest uppercase">
-                (03) Cloud Solutions
-              </div>
-              <div className="md:col-span-5 pr-8">
-                <h3 className="text-xl md:text-2xl font-light tracking-tight mb-4 uppercase">Seamless transition to the cloud.</h3>
-                <p className="text-black/60 leading-relaxed text-sm">
-                  Seamless transition and management of cloud-based resources for ultimate scalability and flexibility.
-                </p>
-              </div>
-              <div className="md:col-span-4">
-                <ul className="space-y-3 text-sm text-black/70">
-                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#2b3d5b] mt-1.5"></div> Cloud Migration</li>
-                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#2b3d5b] mt-1.5"></div> Microsoft 365 & Google Workspace</li>
-                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#2b3d5b] mt-1.5"></div> Scalability Planning</li>
-                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#2b3d5b] mt-1.5"></div> Cloud Cost Optimization</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <ServiceCapabilityRail
+        headline="One IT team for every part of your business."
+        items={[
+          {
+            icon: 'activity',
+            title: '24/7 monitoring',
+            description: 'Spot and resolve issues before they interrupt your team.',
+          },
+          {
+            icon: 'helpdesk',
+            title: 'Helpdesk support',
+            description: 'Give staff direct access to engineers who understand your setup.',
+          },
+          {
+            icon: 'security',
+            title: 'Security & backups',
+            description: 'Protect devices, accounts, and business-critical data.',
+          },
+          {
+            icon: 'cloud',
+            title: 'Cloud & Microsoft 365',
+            description: 'Keep email, files, access, and collaboration running smoothly.',
+          },
+          {
+            icon: 'strategy',
+            title: 'IT strategy',
+            description: 'Plan upgrades, budgets, and growth with a clear technology roadmap.',
+          },
+        ]}
+      />
       
       {/* 3. New Section 1: Colored Mission Statement */}
-      <section className="py-24 md:py-32 bg-[#090e17] text-white relative overflow-hidden rounded-t-[3rem] md:rounded-[3rem] md:mx-6">
+      <section className="py-24 md:py-32 bg-black text-white relative overflow-hidden rounded-t-[3rem] md:rounded-[3rem] md:mx-6">
         {/* Background gradients for the blurred wave effect */}
         <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
           <div 
-            className="absolute w-[150vw] md:w-[120vw] h-[100px] md:h-[150px] bg-[#2b3d5b] rounded-[100%]"
+            className="absolute w-[150vw] md:w-[120vw] h-[100px] md:h-[150px] bg-[#1a1d21] rounded-[100%]"
             style={{
               top: '56%',
               left: '54%',
@@ -237,7 +198,7 @@ export function ManagedITPage() {
             }}
           ></div>
           <div 
-            className="absolute w-[120vw] md:w-[90vw] h-[50px] md:h-[80px] bg-[#47638c] rounded-[100%]"
+            className="absolute w-[120vw] md:w-[90vw] h-[50px] md:h-[80px] bg-[#2a2e35] rounded-[100%]"
             style={{
               top: '61%',
               left: '49%',
@@ -247,7 +208,7 @@ export function ManagedITPage() {
             }}
           ></div>
           <div 
-            className="absolute w-[150vw] md:w-[100vw] h-[100vw] bg-[#05080f] rounded-full"
+            className="absolute w-[150vw] md:w-[100vw] h-[100vw] bg-black rounded-full"
             style={{
               top: '80%',
               left: '40%',
@@ -256,7 +217,7 @@ export function ManagedITPage() {
             }}
           ></div>
           <div 
-            className="absolute w-[100vw] md:w-[80vw] h-[80vw] bg-[#05080f] rounded-full"
+            className="absolute w-[100vw] md:w-[80vw] h-[80vw] bg-black rounded-full"
             style={{
               top: '-40%',
               left: '-10%',
@@ -402,11 +363,11 @@ export function ManagedITPage() {
       </section>
       
       {/* 5. New Section 3: Text & Stats on Colored Full-Width */}
-      <section className="py-24 md:py-32 bg-[#090e17] text-white relative overflow-hidden rounded-t-[3rem] md:rounded-[3rem] md:mx-6">
+      <section className="py-24 md:py-32 bg-black text-white relative overflow-hidden rounded-t-[3rem] md:rounded-[3rem] md:mx-6">
         {/* Background gradients for the blurred wave effect */}
         <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
           <div 
-            className="absolute w-[150vw] md:w-[120vw] h-[100px] md:h-[150px] bg-[#2b3d5b] rounded-[100%]"
+            className="absolute w-[150vw] md:w-[120vw] h-[100px] md:h-[150px] bg-[#1a1d21] rounded-[100%]"
             style={{
               top: '76%',
               left: '84%',
@@ -416,7 +377,7 @@ export function ManagedITPage() {
             }}
           ></div>
           <div 
-            className="absolute w-[120vw] md:w-[90vw] h-[50px] md:h-[80px] bg-[#47638c] rounded-[100%]"
+            className="absolute w-[120vw] md:w-[90vw] h-[50px] md:h-[80px] bg-[#2a2e35] rounded-[100%]"
             style={{
               top: '81%',
               left: '79%',
@@ -426,7 +387,7 @@ export function ManagedITPage() {
             }}
           ></div>
           <div 
-            className="absolute w-[150vw] md:w-[100vw] h-[100vw] bg-[#05080f] rounded-full"
+            className="absolute w-[150vw] md:w-[100vw] h-[100vw] bg-black rounded-full"
             style={{
               top: '80%',
               left: '40%',
@@ -435,7 +396,7 @@ export function ManagedITPage() {
             }}
           ></div>
           <div 
-            className="absolute w-[100vw] md:w-[80vw] h-[80vw] bg-[#05080f] rounded-full"
+            className="absolute w-[100vw] md:w-[80vw] h-[80vw] bg-black rounded-full"
             style={{
               top: '-40%',
               left: '-10%',

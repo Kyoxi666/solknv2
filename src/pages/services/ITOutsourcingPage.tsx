@@ -1,6 +1,7 @@
 import { ArrowLeft, ArrowUpRight} from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { PageSEO } from '../../components/PageSEO';
+import { ServiceCapabilityRail } from '../../components/ServiceCapabilityRail';
 
 export function ITOutsourcingPage() {
   return (
@@ -121,86 +122,43 @@ export function ITOutsourcingPage() {
         </div>
       </section>
 
-      {/* 2. Solutions Section (White) */}
-      <section className="py-24 md:py-32 bg-[#FAF9F6] text-[#1a1a1a]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl md:text-6xl lg:text-7xl font-light tracking-tighter uppercase mb-16 md:mb-24">
-            Our <br/>
-             Solutions
-          </h2>
-
-          <div className="space-y-0">
-            
-            <div className="grid grid-cols-1 md:grid-cols-12 gap-8 py-12 border-t border-black/10">
-              <div className="md:col-span-3 text-xs font-semibold text-black/50 tracking-widest uppercase">
-                (01) 24/7 Helpdesk
-              </div>
-              <div className="md:col-span-5 pr-8">
-                <h3 className="text-xl md:text-2xl font-light tracking-tight mb-4 uppercase">Support around the clock.</h3>
-                <p className="text-black/60 leading-relaxed text-sm">
-                  A dedicated helpdesk your team can call or message any time — day, night, or weekend — for fast, reliable IT support.
-                </p>
-                <div className="mt-4 bg-[#f8fafc] border border-slate-200 rounded-xl p-4 inline-block">
-                  <p className="text-sm text-slate-600 font-medium">Average response time: &lt; 15 minutes</p>
-                </div>
-              </div>
-              <div className="md:col-span-4">
-                <ul className="space-y-3 text-sm text-black/70">
-                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#2b3d5b] mt-1.5"></div> 24/7 Availability</li>
-                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#2b3d5b] mt-1.5"></div> Ticket Tracking</li>
-                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#2b3d5b] mt-1.5"></div> Fast Response Times</li>
-                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#2b3d5b] mt-1.5"></div> Phone, Email, & Chat</li>
-                </ul>
-              </div>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-12 gap-8 py-12 border-t border-black/10">
-              <div className="md:col-span-3 text-xs font-semibold text-black/50 tracking-widest uppercase">
-                (02) Remote IT Support
-              </div>
-              <div className="md:col-span-5 pr-8">
-                <h3 className="text-xl md:text-2xl font-light tracking-tight mb-4 uppercase">Fixed fast, without the wait.</h3>
-                <p className="text-black/60 leading-relaxed text-sm">
-                  Most issues resolved remotely — no need to wait around for an on-site visit. We connect in, diagnose, and fix problems quickly.
-                </p>
-              </div>
-              <div className="md:col-span-4">
-                <ul className="space-y-3 text-sm text-black/70">
-                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#2b3d5b] mt-1.5"></div> Remote Troubleshooting</li>
-                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#2b3d5b] mt-1.5"></div> Software & System Fixes</li>
-                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#2b3d5b] mt-1.5"></div> Device Setup & Support</li>
-                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#2b3d5b] mt-1.5"></div> Secure Remote Access</li>
-                </ul>
-              </div>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-12 gap-8 py-12 border-t border-black/10">
-              <div className="md:col-span-3 text-xs font-semibold text-black/50 tracking-widest uppercase">
-                (03) Ongoing IT Management
-              </div>
-              <div className="md:col-span-5 pr-8">
-                <h3 className="text-xl md:text-2xl font-light tracking-tight mb-4 uppercase">One team looking after it all.</h3>
-                <p className="text-black/60 leading-relaxed text-sm">
-                  We manage updates, monitoring, and maintenance in the background, so small issues get caught before they become big ones.
-                </p>
-              </div>
-              <div className="md:col-span-4">
-                <ul className="space-y-3 text-sm text-black/70">
-                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#2b3d5b] mt-1.5"></div> System Monitoring</li>
-                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#2b3d5b] mt-1.5"></div> Software Updates</li>
-                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#2b3d5b] mt-1.5"></div> Device Management</li>
-                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#2b3d5b] mt-1.5"></div> Proactive Maintenance</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <ServiceCapabilityRail
+        headline="The IT department your business needs, without the in-house overhead."
+        items={[
+          {
+            icon: 'helpdesk',
+            title: '24/7 helpdesk',
+            description: 'Give your team a reliable place to call or message whenever technology gets in the way.',
+          },
+          {
+            icon: 'remoteSupport',
+            title: 'Remote IT support',
+            description: 'Diagnose and resolve most day-to-day issues without waiting for an on-site visit.',
+          },
+          {
+            icon: 'team',
+            title: 'Dedicated IT team',
+            description: 'Work with engineers who understand your people, systems, and priorities.',
+          },
+          {
+            icon: 'infrastructure',
+            title: 'Workplace management',
+            description: 'Keep devices, software, access, and updates organised across your business.',
+          },
+          {
+            icon: 'strategy',
+            title: 'IT leadership',
+            description: 'Plan budgets, upgrades, suppliers, and growth with experienced technical guidance.',
+          },
+        ]}
+      />
       
       {/* 3. New Section 1: Colored Mission Statement */}
-      <section className="py-24 md:py-32 bg-[#090e17] text-white relative overflow-hidden rounded-t-[3rem] md:rounded-[3rem] md:mx-6">
+      <section className="py-24 md:py-32 bg-black text-white relative overflow-hidden rounded-t-[3rem] md:rounded-[3rem] md:mx-6">
         {/* Background gradients for the blurred wave effect */}
         <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
           <div 
-            className="absolute w-[150vw] md:w-[120vw] h-[100px] md:h-[150px] bg-[#2b3d5b] rounded-[100%]"
+            className="absolute w-[150vw] md:w-[120vw] h-[100px] md:h-[150px] bg-[#1a1d21] rounded-[100%]"
             style={{
               top: '54%',
               left: '51%',
@@ -210,7 +168,7 @@ export function ITOutsourcingPage() {
             }}
           ></div>
           <div 
-            className="absolute w-[120vw] md:w-[90vw] h-[50px] md:h-[80px] bg-[#47638c] rounded-[100%]"
+            className="absolute w-[120vw] md:w-[90vw] h-[50px] md:h-[80px] bg-[#2a2e35] rounded-[100%]"
             style={{
               top: '59%',
               left: '46%',
@@ -220,7 +178,7 @@ export function ITOutsourcingPage() {
             }}
           ></div>
           <div 
-            className="absolute w-[150vw] md:w-[100vw] h-[100vw] bg-[#05080f] rounded-full"
+            className="absolute w-[150vw] md:w-[100vw] h-[100vw] bg-black rounded-full"
             style={{
               top: '80%',
               left: '95%',
@@ -229,7 +187,7 @@ export function ITOutsourcingPage() {
             }}
           ></div>
           <div 
-            className="absolute w-[100vw] md:w-[80vw] h-[80vw] bg-[#05080f] rounded-full"
+            className="absolute w-[100vw] md:w-[80vw] h-[80vw] bg-black rounded-full"
             style={{
               top: '-40%',
               left: '-10%',
@@ -375,11 +333,11 @@ export function ITOutsourcingPage() {
       </section>
       
       {/* 5. New Section 3: Text & Stats on Colored Full-Width */}
-      <section className="py-24 md:py-32 bg-[#090e17] text-white relative overflow-hidden rounded-t-[3rem] md:rounded-[3rem] md:mx-6">
+      <section className="py-24 md:py-32 bg-black text-white relative overflow-hidden rounded-t-[3rem] md:rounded-[3rem] md:mx-6">
         {/* Background gradients for the blurred wave effect */}
         <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
           <div 
-            className="absolute w-[150vw] md:w-[120vw] h-[100px] md:h-[150px] bg-[#2b3d5b] rounded-[100%]"
+            className="absolute w-[150vw] md:w-[120vw] h-[100px] md:h-[150px] bg-[#1a1d21] rounded-[100%]"
             style={{
               top: '74%',
               left: '81%',
@@ -389,7 +347,7 @@ export function ITOutsourcingPage() {
             }}
           ></div>
           <div 
-            className="absolute w-[120vw] md:w-[90vw] h-[50px] md:h-[80px] bg-[#47638c] rounded-[100%]"
+            className="absolute w-[120vw] md:w-[90vw] h-[50px] md:h-[80px] bg-[#2a2e35] rounded-[100%]"
             style={{
               top: '79%',
               left: '76%',
@@ -399,7 +357,7 @@ export function ITOutsourcingPage() {
             }}
           ></div>
           <div 
-            className="absolute w-[150vw] md:w-[100vw] h-[100vw] bg-[#05080f] rounded-full"
+            className="absolute w-[150vw] md:w-[100vw] h-[100vw] bg-black rounded-full"
             style={{
               top: '80%',
               left: '40%',
@@ -408,7 +366,7 @@ export function ITOutsourcingPage() {
             }}
           ></div>
           <div 
-            className="absolute w-[100vw] md:w-[80vw] h-[80vw] bg-[#05080f] rounded-full"
+            className="absolute w-[100vw] md:w-[80vw] h-[80vw] bg-black rounded-full"
             style={{
               top: '-40%',
               left: '-10%',

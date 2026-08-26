@@ -88,7 +88,7 @@ export function Hero() {
       ref={sectionRef}
       id="home"
       className="relative min-h-[100dvh] overflow-hidden flex items-center justify-center pt-20"
-      style={{ background: '#080c14' }}
+      style={{ background: '#000000' }}
     >
       {/* Background: deep navy base + ambient glows */}
       <div className="absolute inset-0 w-full h-full z-0 overflow-hidden">
@@ -117,7 +117,7 @@ export function Hero() {
           }}
         />
         {/* Bottom fade to match brand dark */}
-        <div className="absolute inset-x-0 bottom-0 h-48 bg-gradient-to-t from-[#080c14] to-transparent z-[1]" />
+        <div className="absolute inset-x-0 bottom-0 h-48 bg-gradient-to-t from-black to-transparent z-[1]" />
         {/* Grain / noise overlay */}
         <div
           className="absolute inset-0 pointer-events-none opacity-[0.035]"
@@ -175,10 +175,10 @@ export function Hero() {
           {/* Primary CTA */}
           <Link
             to="/contact"
-            className="group w-full sm:w-auto flex items-center justify-center gap-3 bg-white text-[#080c14] pl-7 pr-2.5 py-2.5 rounded-full font-semibold text-sm hover:bg-gray-100 transition-all duration-300 shadow-lg shadow-white/10 active:scale-[0.98]"
+            className="group w-full sm:w-auto flex items-center justify-center gap-3 bg-white text-black pl-7 pr-2.5 py-2.5 rounded-full font-semibold text-sm hover:bg-gray-100 transition-all duration-300 shadow-lg shadow-white/10 active:scale-[0.98]"
           >
             Book a call
-            <span className="w-8 h-8 rounded-full bg-[#080c14]/8 flex items-center justify-center group-hover:translate-x-0.5 group-hover:-translate-y-px transition-transform duration-300">
+            <span className="w-8 h-8 rounded-full bg-black/10 flex items-center justify-center group-hover:translate-x-0.5 group-hover:-translate-y-px transition-transform duration-300">
               <ArrowRight className="w-4 h-4" />
             </span>
           </Link>

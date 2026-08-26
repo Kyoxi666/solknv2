@@ -41,7 +41,7 @@ export default function App() {
       </a>
       {/* Grain noise overlay — fixed, non-interactive */}
       <div className="grain-overlay" aria-hidden="true" />
-      <div className="min-h-screen relative overflow-hidden bg-[#090e17] text-white flex flex-col">
+      <div className="min-h-screen relative overflow-hidden bg-black text-white flex flex-col">
         <div className="relative z-10 flex flex-col flex-grow">
           <Header />
           <main id="main-content" className="flex-grow">

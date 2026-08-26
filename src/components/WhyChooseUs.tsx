@@ -72,10 +72,10 @@ const reasons = [
 
 export function WhyChooseUs() {
   return (
-    <div className="bg-white pb-16 md:pb-24 pt-4">
+    <div className="bg-surface-light pb-16 md:pb-24 pt-4">
       <section
         className="py-16 md:py-24 text-white relative overflow-hidden rounded-[3rem] border border-gray-800 mx-4 sm:mx-6 lg:mx-8 shadow-2xl"
-        style={{ background: '#080c14' }}
+        style={{ background: '#0a0a0a' }}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Ambient background glow — distinct from hero */}

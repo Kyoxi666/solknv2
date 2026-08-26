@@ -90,9 +90,15 @@ export function Footer() {
         <Link
           to="/"
           aria-label="SOLKN home"
-          className="mt-24 block whitespace-nowrap text-center text-[clamp(5rem,24vw,24rem)] font-bold leading-[0.72] tracking-[-0.04em] text-white sm:mt-28 lg:mt-36"
+          className="mt-24 flex items-center justify-center gap-[0.02em] whitespace-nowrap text-[clamp(4rem,18.5vw,18rem)] font-bold leading-[0.72] tracking-[-0.04em] text-white sm:mt-28 lg:mt-36"
         >
-          SOLKN
+          <img
+            src="/solknlogo.png"
+            alt=""
+            aria-hidden="true"
+            className="h-[1em] w-[1em] shrink-0 object-contain brightness-0 invert"
+          />
+          <span>SOLKN</span>
         </Link>
 
         <div className="mt-9 flex flex-col gap-4 border-t border-white/10 pt-6 text-xs text-white/50 sm:flex-row sm:items-center sm:justify-between">

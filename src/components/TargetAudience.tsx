@@ -84,8 +84,7 @@ const industries = [
 export function TargetAudience() {
   return (
     <section
-      className="py-24 md:py-32 font-sans text-gray-900"
-      style={{ background: '#f8f7f5' }}
+      className="py-24 md:py-32 font-sans text-gray-900 bg-surface-light"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 

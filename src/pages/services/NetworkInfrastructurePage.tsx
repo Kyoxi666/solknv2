@@ -1,6 +1,7 @@
 import { ArrowLeft, ArrowUpRight} from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { PageSEO } from '../../components/PageSEO';
+import { ServiceCapabilityRail } from '../../components/ServiceCapabilityRail';
 
 export function NetworkInfrastructurePage() {
   return (
@@ -120,85 +121,42 @@ export function NetworkInfrastructurePage() {
         </div>
       </section>
 
-      {/* 2. Solutions Section (White) */}
-      <section className="py-24 md:py-32 bg-[#FAF9F6] text-[#1a1a1a]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl md:text-6xl lg:text-7xl font-light tracking-tighter uppercase mb-16 md:mb-24">
-            Our <br/>
-             Solutions
-          </h2>
-
-          <div className="space-y-0">
-            
-            
-            <div className="grid grid-cols-1 md:grid-cols-12 gap-8 py-12 border-t border-black/10">
-              <div className="md:col-span-3 text-xs font-semibold text-black/50 tracking-widest uppercase">
-                (01) Network Design & Wi-Fi
-              </div>
-              <div className="md:col-span-5 pr-8">
-                <h3 className="text-xl md:text-2xl font-light tracking-tight mb-4 uppercase">Business Wi-Fi that covers every corner.</h3>
-                <p className="text-black/60 leading-relaxed text-sm">
-                  We design and install reliable Wi-Fi networks built for your space — strong signal for staff, customers, and connected devices.
-                </p>
-              </div>
-              <div className="md:col-span-4">
-                <ul className="space-y-3 text-sm text-black/70">
-                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#2b3d5b] mt-1.5"></div> Business Wi-Fi</li>
-                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#2b3d5b] mt-1.5"></div> Guest Wi-Fi</li>
-                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#2b3d5b] mt-1.5"></div> Site Survey & Design</li>
-                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#2b3d5b] mt-1.5"></div> Coverage Planning</li>
-                </ul>
-              </div>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-12 gap-8 py-12 border-t border-black/10">
-              <div className="md:col-span-3 text-xs font-semibold text-black/50 tracking-widest uppercase">
-                (02) Routers, Firewalls & Switches
-              </div>
-              <div className="md:col-span-5 pr-8">
-                <h3 className="text-xl md:text-2xl font-light tracking-tight mb-4 uppercase">The right hardware, properly installed.</h3>
-                <p className="text-black/60 leading-relaxed text-sm">
-                  We supply and install routers, firewalls, and managed switches sized correctly for your business.
-                </p>
-              </div>
-              <div className="md:col-span-4">
-                <ul className="space-y-3 text-sm text-black/70">
-                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#2b3d5b] mt-1.5"></div> Router & Firewall Installation</li>
-                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#2b3d5b] mt-1.5"></div> Managed Switches</li>
-                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#2b3d5b] mt-1.5"></div> Secure Setup</li>
-                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#2b3d5b] mt-1.5"></div> Ongoing Support</li>
-                </ul>
-              </div>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-12 gap-8 py-12 border-t border-black/10 border-b">
-              <div className="md:col-span-3 text-xs font-semibold text-black/50 tracking-widest uppercase">
-                (03) Structured Cabling
-              </div>
-              <div className="md:col-span-5 pr-8">
-                <h3 className="text-xl md:text-2xl font-light tracking-tight mb-4 uppercase">Clean, reliable wiring done right.</h3>
-                <p className="text-black/60 leading-relaxed text-sm">
-                  Professional cabling for offices, shops, and restaurants — no messy setups, no dropped connections.
-                </p>
-              </div>
-              <div className="md:col-span-4">
-                <ul className="space-y-3 text-sm text-black/70">
-                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#2b3d5b] mt-1.5"></div> Structured Cabling</li>
-                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#2b3d5b] mt-1.5"></div> Cabinet & Rack Setup</li>
-                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#2b3d5b] mt-1.5"></div> Cable Management</li>
-                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#2b3d5b] mt-1.5"></div> Future-Proof Layout</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <ServiceCapabilityRail
+        headline="A business network designed to work everywhere it needs to."
+        items={[
+          {
+            icon: 'wifi',
+            title: 'Business Wi-Fi',
+            description: 'Design reliable staff and guest coverage around the shape and use of your premises.',
+          },
+          {
+            icon: 'router',
+            title: 'Routers & firewalls',
+            description: 'Install correctly sized hardware with secure configuration from the start.',
+          },
+          {
+            icon: 'infrastructure',
+            title: 'Switching & segmentation',
+            description: 'Connect teams, systems, and devices without putting everything on one flat network.',
+          },
+          {
+            icon: 'cabling',
+            title: 'Structured cabling',
+            description: 'Build clean, dependable data cabling, cabinets, and patching for daily operations.',
+          },
+          {
+            icon: 'security',
+            title: 'Ongoing network support',
+            description: 'Maintain, document, and improve the network as your sites and requirements change.',
+          },
+        ]}
+      />
       
-<section className="py-24 md:py-32 bg-[#090e17] text-white relative overflow-hidden rounded-t-[3rem] md:rounded-[3rem] md:mx-6">
+<section className="py-24 md:py-32 bg-black text-white relative overflow-hidden rounded-t-[3rem] md:rounded-[3rem] md:mx-6">
         {/* Background gradients for the blurred wave effect */}
         <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
           <div 
-            className="absolute w-[150vw] md:w-[120vw] h-[100px] md:h-[150px] bg-[#2b3d5b] rounded-[100%]"
+            className="absolute w-[150vw] md:w-[120vw] h-[100px] md:h-[150px] bg-[#1a1d21] rounded-[100%]"
             style={{
               top: '50%',
               left: '45%',
@@ -208,7 +166,7 @@ export function NetworkInfrastructurePage() {
             }}
           ></div>
           <div 
-            className="absolute w-[120vw] md:w-[90vw] h-[50px] md:h-[80px] bg-[#47638c] rounded-[100%]"
+            className="absolute w-[120vw] md:w-[90vw] h-[50px] md:h-[80px] bg-[#2a2e35] rounded-[100%]"
             style={{
               top: '55%',
               left: '40%',
@@ -218,7 +176,7 @@ export function NetworkInfrastructurePage() {
             }}
           ></div>
           <div 
-            className="absolute w-[150vw] md:w-[100vw] h-[100vw] bg-[#05080f] rounded-full"
+            className="absolute w-[150vw] md:w-[100vw] h-[100vw] bg-black rounded-full"
             style={{
               top: 'Free',
               left: '40%',
@@ -227,7 +185,7 @@ export function NetworkInfrastructurePage() {
             }}
           ></div>
           <div 
-            className="absolute w-[100vw] md:w-[80vw] h-[80vw] bg-[#05080f] rounded-full"
+            className="absolute w-[100vw] md:w-[80vw] h-[80vw] bg-black rounded-full"
             style={{
               top: '-40%',
               left: '-10%',
@@ -373,11 +331,11 @@ export function NetworkInfrastructurePage() {
       </section>
       
       {/* 5. New Section 3: Text & Stats on Colored Full-Width */}
-      <section className="py-24 md:py-32 bg-[#090e17] text-white relative overflow-hidden rounded-t-[3rem] md:rounded-[3rem] md:mx-6">
+      <section className="py-24 md:py-32 bg-black text-white relative overflow-hidden rounded-t-[3rem] md:rounded-[3rem] md:mx-6">
         {/* Background gradients for the blurred wave effect */}
         <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
           <div 
-            className="absolute w-[150vw] md:w-[120vw] h-[100px] md:h-[150px] bg-[#2b3d5b] rounded-[100%]"
+            className="absolute w-[150vw] md:w-[120vw] h-[100px] md:h-[150px] bg-[#1a1d21] rounded-[100%]"
             style={{
               top: '70%',
               left: '75%',
@@ -387,7 +345,7 @@ export function NetworkInfrastructurePage() {
             }}
           ></div>
           <div 
-            className="absolute w-[120vw] md:w-[90vw] h-[50px] md:h-[80px] bg-[#47638c] rounded-[100%]"
+            className="absolute w-[120vw] md:w-[90vw] h-[50px] md:h-[80px] bg-[#2a2e35] rounded-[100%]"
             style={{
               top: '75%',
               left: '70%',
@@ -397,7 +355,7 @@ export function NetworkInfrastructurePage() {
             }}
           ></div>
           <div 
-            className="absolute w-[150vw] md:w-[100vw] h-[100vw] bg-[#05080f] rounded-full"
+            className="absolute w-[150vw] md:w-[100vw] h-[100vw] bg-black rounded-full"
             style={{
               top: '100x',
               left: '40%',
@@ -406,7 +364,7 @@ export function NetworkInfrastructurePage() {
             }}
           ></div>
           <div 
-            className="absolute w-[100vw] md:w-[80vw] h-[80vw] bg-[#05080f] rounded-full"
+            className="absolute w-[100vw] md:w-[80vw] h-[80vw] bg-black rounded-full"
             style={{
               top: '-40%',
               left: '-10%',

@@ -68,7 +68,6 @@ const services = [
     description:
       'Professional installation and configuration of routers, switches, firewalls, Wi-Fi systems, structured cabling, and secure business networks.',
     link: '/services/network-infrastructure',
-    featured: true,
   },
   {
     icon: <Vector6 />,
@@ -76,7 +75,6 @@ const services = [
     description:
       'Real-time monitoring of your network infrastructure to proactively identify, alert, and resolve issues before they impact your business.',
     link: '/services/network-monitoring',
-    featured: false,
   },
   {
     icon: <Vector1 />,
@@ -84,7 +82,6 @@ const services = [
     description:
       'Comprehensive infrastructure management, proactive monitoring, and responsive technical support to keep your business running without interruption.',
     link: '/services/managed-it',
-    featured: false,
   },
   {
     icon: <Vector2 />,
@@ -92,7 +89,6 @@ const services = [
     description:
       'Flexible outsourced IT departments, dedicated engineers, remote helpdesk, and on-site support for businesses that need expert IT without the cost of an in-house team.',
     link: '/services/it-outsourcing',
-    featured: true,
   },
   {
     icon: <Vector4 />,
@@ -100,7 +96,6 @@ const services = [
     description:
       'Automate customer interactions, streamline operations, and accelerate growth through intelligent automation and AI-driven marketing tools.',
     link: '/services/ai-solutions',
-    featured: false,
   },
   {
     icon: <Vector3 />,
@@ -108,7 +103,6 @@ const services = [
     description:
       'High-performance, secure, and scalable websites hosted on enterprise-grade infrastructure with guaranteed uptime.',
     link: '/services/web-development',
-    featured: false,
   },
 ];
 
@@ -117,8 +111,7 @@ export function Services() {
     <section
       id="services"
       data-theme="light"
-      className="py-24 md:py-32 relative overflow-hidden border-y border-gray-200"
-      style={{ background: '#f8f7f5' }}
+      className="py-24 md:py-32 relative overflow-hidden border-y border-gray-200 bg-surface-light"
     >
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
@@ -150,21 +143,10 @@ export function Services() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-50px' }}
               transition={{ duration: 0.5, delay: (idx % 3) * 0.1, ease: [0.32, 0.72, 0, 1] }}
-              className={`relative p-8 md:p-10 border-b border-r border-gray-200 flex flex-col group transition-all duration-300 hover:-translate-y-px ${
-                service.featured
-                  ? 'min-h-[340px] bg-white hover:bg-gray-50'
-                  : 'min-h-[300px] hover:bg-gray-50'
-              }`}
+              className="relative min-h-[340px] bg-white p-8 md:p-10 border-b border-r border-gray-200 flex flex-col group transition-all duration-300 hover:-translate-y-px hover:bg-gray-50"
             >
               {/* Left accent bar on hover */}
               <div className="absolute left-0 top-8 bottom-8 w-0.5 bg-[#2563EB] scale-y-0 group-hover:scale-y-100 transition-transform duration-300 origin-top rounded-full" />
-
-              {/* Featured badge */}
-              {service.featured && (
-                <span className="self-start mb-4 px-2.5 py-0.5 text-[10px] font-semibold tracking-widest uppercase bg-blue-50 text-blue-600 border border-blue-100 rounded-full">
-                  Popular
-                </span>
-              )}
 
               <h3 className="text-lg font-medium text-gray-900 mb-3 pr-8 leading-snug">{service.title}</h3>
               <p className="text-sm text-gray-500 font-light pr-12 leading-relaxed flex-grow">{service.description}</p>

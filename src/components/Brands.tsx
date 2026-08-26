@@ -25,12 +25,12 @@ export function Brands() {
   ];
 
   return (
-    <section className="relative overflow-hidden" style={{ background: '#f8f7f5' }}>
+    <section className="relative overflow-hidden bg-surface-light">
       {/* Cinematic gradient bridge from the dark hero above */}
       <div
         className="absolute top-0 inset-x-0 h-16 pointer-events-none"
         style={{
-          background: 'linear-gradient(to bottom, #080c14 0%, rgba(8,12,20,0) 100%)',
+          background: 'linear-gradient(to bottom, #000000 0%, rgba(0,0,0,0) 100%)',
           zIndex: 10,
         }}
         aria-hidden="true"

@@ -63,7 +63,7 @@ export function SocialProof() {
   return (
     <>
       {/* Testimonials — 3-card grid layout */}
-      <section className="py-24 md:py-32 bg-white text-gray-900">
+      <section className="py-24 md:py-32 bg-surface-light text-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
           {/* Trust headline */}
@@ -92,7 +92,7 @@ export function SocialProof() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: idx * 0.12, ease: [0.32, 0.72, 0, 1] }}
-                className="bg-gray-50 border border-gray-100 rounded-3xl p-8 flex flex-col justify-between gap-8 hover:bg-gray-100 transition-colors duration-300"
+                className="bg-white border border-gray-200 rounded-3xl p-8 flex flex-col justify-between gap-8 hover:bg-gray-50 transition-colors duration-300"
               >
                 <div>
                   <p className="text-gray-400 text-xs font-semibold uppercase tracking-widest mb-5">
@@ -125,7 +125,7 @@ export function SocialProof() {
       <Portfolio />
 
       {/* FAQ */}
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-surface-light">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 24 }}
@@ -170,11 +170,11 @@ export function SocialProof() {
       </section>
 
       {/* Final CTA — revised copy */}
-      <div className="bg-white pb-16 pt-4">
+      <div className="bg-surface-light pb-16 pt-4">
         <section
           id="contact"
           className="py-24 text-white relative overflow-hidden rounded-[3rem] border border-gray-800 mx-4 sm:mx-6 lg:mx-8 shadow-2xl"
-          style={{ background: '#080c14' }}
+          style={{ background: '#0a0a0a' }}
         >
           {/* Background image */}
           <div

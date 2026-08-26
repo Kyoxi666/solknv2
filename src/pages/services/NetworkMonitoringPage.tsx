@@ -193,11 +193,11 @@ export function NetworkMonitoringPage() {
       </section>
       
       {/* 3. New Section 1: Colored Mission Statement */}
-      <section className="py-24 md:py-32 bg-[#090e17] text-white relative overflow-hidden rounded-t-[3rem] md:rounded-[3rem] md:mx-6">
+      <section className="py-24 md:py-32 bg-black text-white relative overflow-hidden rounded-t-[3rem] md:rounded-[3rem] md:mx-6">
         {/* Background gradients for the blurred wave effect */}
         <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
           <div 
-            className="absolute w-[150vw] md:w-[120vw] h-[100px] md:h-[150px] bg-[#2b3d5b] rounded-[100%]"
+            className="absolute w-[150vw] md:w-[120vw] h-[100px] md:h-[150px] bg-[#1a1d21] rounded-[100%]"
             style={{
               top: '58%',
               left: '57%',
@@ -207,7 +207,7 @@ export function NetworkMonitoringPage() {
             }}
           ></div>
           <div 
-            className="absolute w-[120vw] md:w-[90vw] h-[50px] md:h-[80px] bg-[#47638c] rounded-[100%]"
+            className="absolute w-[120vw] md:w-[90vw] h-[50px] md:h-[80px] bg-[#2a2e35] rounded-[100%]"
             style={{
               top: '63%',
               left: '52%',
@@ -217,7 +217,7 @@ export function NetworkMonitoringPage() {
             }}
           ></div>
           <div 
-            className="absolute w-[150vw] md:w-[100vw] h-[100vw] bg-[#05080f] rounded-full"
+            className="absolute w-[150vw] md:w-[100vw] h-[100vw] bg-black rounded-full"
             style={{
               top: '80%',
               left: '40%',
@@ -226,7 +226,7 @@ export function NetworkMonitoringPage() {
             }}
           ></div>
           <div 
-            className="absolute w-[100vw] md:w-[80vw] h-[80vw] bg-[#05080f] rounded-full"
+            className="absolute w-[100vw] md:w-[80vw] h-[80vw] bg-black rounded-full"
             style={{
               top: '-40%',
               left: '-10%',
@@ -372,11 +372,11 @@ export function NetworkMonitoringPage() {
       </section>
       
       {/* 5. New Section 3: Text & Stats on Colored Full-Width */}
-      <section className="py-24 md:py-32 bg-[#090e17] text-white relative overflow-hidden rounded-t-[3rem] md:rounded-[3rem] md:mx-6">
+      <section className="py-24 md:py-32 bg-black text-white relative overflow-hidden rounded-t-[3rem] md:rounded-[3rem] md:mx-6">
         {/* Background gradients for the blurred wave effect */}
-        <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+        <div className="absolute inset-0 z-0 overflow-hidden bg-black pointer-events-none">
           <div 
-            className="absolute w-[150vw] md:w-[120vw] h-[100px] md:h-[150px] bg-[#2b3d5b] rounded-[100%]"
+            className="absolute w-[150vw] md:w-[120vw] h-[100px] md:h-[150px] bg-[#1a1d21] rounded-[100%]"
             style={{
               top: '78%',
               left: '87%',
@@ -386,7 +386,7 @@ export function NetworkMonitoringPage() {
             }}
           ></div>
           <div 
-            className="absolute w-[120vw] md:w-[90vw] h-[50px] md:h-[80px] bg-[#47638c] rounded-[100%]"
+            className="absolute w-[120vw] md:w-[90vw] h-[50px] md:h-[80px] bg-[#2a2e35] rounded-[100%]"
             style={{
               top: '83%',
               left: '82%',
@@ -396,7 +396,7 @@ export function NetworkMonitoringPage() {
             }}
           ></div>
           <div 
-            className="absolute w-[150vw] md:w-[100vw] h-[100vw] bg-[#05080f] rounded-full"
+            className="absolute w-[150vw] md:w-[100vw] h-[100vw] bg-black rounded-full"
             style={{
               top: '80%',
               left: '40%',
@@ -405,7 +405,7 @@ export function NetworkMonitoringPage() {
             }}
           ></div>
           <div 
-            className="absolute w-[100vw] md:w-[80vw] h-[80vw] bg-[#05080f] rounded-full"
+            className="absolute w-[100vw] md:w-[80vw] h-[80vw] bg-black rounded-full"
             style={{
               top: '-40%',
               left: '-10%',
@@ -556,12 +556,12 @@ export function NetworkMonitoringPage() {
       </section>
       
       {/* 6. FAQ Section */}
-      <section className="relative py-24 md:py-32 bg-[#090e17] text-white overflow-hidden">
+      <section className="relative py-24 md:py-32 bg-black text-white overflow-hidden">
         {/* Background gradients for the blurred wave effect */}
         <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
           {/* Main wave streak - slate blue */}
           <div 
-            className="absolute w-[150vw] md:w-[120vw] h-[100px] md:h-[150px] bg-[#2b3d5b] rounded-[100%]"
+            className="absolute w-[150vw] md:w-[120vw] h-[100px] md:h-[150px] bg-[#1a1d21] rounded-[100%]"
             style={{
               top: '65%',
               left: '60%',
@@ -572,7 +572,7 @@ export function NetworkMonitoringPage() {
           ></div>
           {/* Brighter core of the wave */}
           <div 
-            className="absolute w-[120vw] md:w-[90vw] h-[50px] md:h-[80px] bg-[#47638c] rounded-[100%]"
+            className="absolute w-[120vw] md:w-[90vw] h-[50px] md:h-[80px] bg-[#2a2e35] rounded-[100%]"
             style={{
               top: '70%',
               left: '55%',
@@ -583,7 +583,7 @@ export function NetworkMonitoringPage() {
           ></div>
           {/* Bottom right dark curve encroaching */}
           <div 
-            className="absolute w-[150vw] md:w-[100vw] h-[100vw] bg-[#05080f] rounded-full"
+            className="absolute w-[150vw] md:w-[100vw] h-[100vw] bg-black rounded-full"
             style={{
               top: '80%',
               left: '40%',
@@ -593,7 +593,7 @@ export function NetworkMonitoringPage() {
           ></div>
           {/* Top left dark area pushing down */}
           <div 
-            className="absolute w-[100vw] md:w-[80vw] h-[80vw] bg-[#05080f] rounded-full"
+            className="absolute w-[100vw] md:w-[80vw] h-[80vw] bg-black rounded-full"
             style={{
               top: '-40%',
               left: '-10%',

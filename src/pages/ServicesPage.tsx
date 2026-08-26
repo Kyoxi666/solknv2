@@ -7,7 +7,7 @@ export function ServicesPage() {
   return (
     <div className="bg-transparent min-h-screen">
       {/* Full screen landing section */}
-      <div className="relative min-h-screen w-full flex flex-col bg-[#050510] overflow-hidden">
+      <div className="relative min-h-screen w-full flex flex-col bg-black overflow-hidden">
         {/* Background glow effects */}
         <div className="absolute -bottom-1/2 left-1/2 -translate-x-1/2 w-[200%] h-[100%] bg-[radial-gradient(ellipse_at_bottom,white_0%,#2a52be_40%,transparent_70%)] opacity-80 blur-[80px] rounded-[100%] pointer-events-none"></div>
         

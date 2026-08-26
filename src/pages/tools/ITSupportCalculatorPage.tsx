@@ -129,13 +129,13 @@ export function ITSupportCalculatorPage() {
         <div className="bg-white rounded-[2rem] shadow-2xl overflow-hidden flex flex-col lg:flex-row min-h-[700px] border border-gray-100">
           
           {/* Left Panel - Get Your Quote (Dark Coloured) */}
-          <div className="lg:w-[45%] relative p-8 sm:p-12 lg:p-16 flex flex-col justify-center bg-[#050812] text-white overflow-hidden order-2 lg:order-1">
+          <div className="lg:w-[45%] relative p-8 sm:p-12 lg:p-16 flex flex-col justify-center bg-black text-white overflow-hidden order-2 lg:order-1">
             
             {/* Background Glows (Dark Misty Blue) */}
             <div className="absolute bottom-0 left-0 right-0 flex items-end justify-center h-[60%] opacity-60 pointer-events-none mix-blend-screen">
-              <div className="w-[30%] h-[120%] bg-blue-600 blur-[70px] translate-y-1/3 rounded-full"></div>
-              <div className="w-[40%] h-full bg-[#0088cc] blur-[80px] translate-y-1/4 rounded-full"></div>
-              <div className="w-[30%] h-[80%] bg-cyan-400 blur-[60px] translate-y-1/2 rounded-full"></div>
+              <div className="w-[30%] h-[120%] bg-[#1a1d21] blur-[70px] translate-y-1/3 rounded-full"></div>
+              <div className="w-[40%] h-full bg-[#2a2e35] blur-[80px] translate-y-1/4 rounded-full"></div>
+              <div className="w-[30%] h-[80%] bg-black blur-[60px] translate-y-1/2 rounded-full"></div>
             </div>
 
             <div className="relative z-10 mb-10">

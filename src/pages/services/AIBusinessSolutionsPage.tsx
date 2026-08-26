@@ -1,6 +1,7 @@
 import { ArrowLeft, ArrowUpRight} from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { PageSEO } from '../../components/PageSEO';
+import { ServiceCapabilityRail } from '../../components/ServiceCapabilityRail';
 
 export function AIBusinessSolutionsPage() {
   return (
@@ -121,86 +122,43 @@ export function AIBusinessSolutionsPage() {
         </div>
       </section>
 
-      {/* 2. Solutions Section (White) */}
-      <section className="py-24 md:py-32 bg-[#FAF9F6] text-[#1a1a1a]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl md:text-6xl lg:text-7xl font-light tracking-tighter uppercase mb-16 md:mb-24">
-            Our <br/>
-             Solutions
-          </h2>
-
-          <div className="space-y-0">
-            
-            <div className="grid grid-cols-1 md:grid-cols-12 gap-8 py-12 border-t border-black/10">
-              <div className="md:col-span-3 text-xs font-semibold text-black/50 tracking-widest uppercase">
-                (01) AI Chatbots
-              </div>
-              <div className="md:col-span-5 pr-8">
-                <h3 className="text-xl md:text-2xl font-light tracking-tight mb-4 uppercase">Answers your customers instantly.</h3>
-                <p className="text-black/60 leading-relaxed text-sm mb-4">
-                  AI-powered chatbots for your website that answer common questions — opening hours, availability, pricing — any time, day or night.
-                </p>
-                <div className="bg-[#f8fafc] border border-slate-200 rounded-xl p-4 inline-block">
-                  <p className="text-sm text-slate-600 italic">"Ask our AI when we're open, what we offer, or if there's availability — it'll answer instantly, no waiting on hold."</p>
-                </div>
-              </div>
-              <div className="md:col-span-4">
-                <ul className="space-y-3 text-sm text-black/70 mt-2">
-                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#2b3d5b] mt-1.5"></div> Website Chatbot</li>
-                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#2b3d5b] mt-1.5"></div> Instant Answers</li>
-                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#2b3d5b] mt-1.5"></div> Booking & FAQ Handling</li>
-                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#2b3d5b] mt-1.5"></div> Always-On Availability</li>
-                </ul>
-              </div>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-12 gap-8 py-12 border-t border-black/10">
-              <div className="md:col-span-3 text-xs font-semibold text-black/50 tracking-widest uppercase">
-                (02) WhatsApp & SMS Marketing
-              </div>
-              <div className="md:col-span-5 pr-8">
-                <h3 className="text-xl md:text-2xl font-light tracking-tight mb-4 uppercase">Reach customers where they already are.</h3>
-                <p className="text-black/60 leading-relaxed text-sm">
-                  Automated WhatsApp and SMS campaigns that send offers, reminders, and updates — without you lifting a finger.
-                </p>
-              </div>
-              <div className="md:col-span-4">
-                <ul className="space-y-3 text-sm text-black/70">
-                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#2b3d5b] mt-1.5"></div> WhatsApp Automation</li>
-                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#2b3d5b] mt-1.5"></div> SMS Campaigns</li>
-                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#2b3d5b] mt-1.5"></div> Appointment Reminders</li>
-                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#2b3d5b] mt-1.5"></div> Customer Re-engagement</li>
-                </ul>
-              </div>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-12 gap-8 py-12 border-t border-black/10">
-              <div className="md:col-span-3 text-xs font-semibold text-black/50 tracking-widest uppercase">
-                (03) Workflow & Spreadsheet Automation
-              </div>
-              <div className="md:col-span-5 pr-8">
-                <h3 className="text-xl md:text-2xl font-light tracking-tight mb-4 uppercase">Less admin, more time back.</h3>
-                <p className="text-black/60 leading-relaxed text-sm">
-                  We automate repetitive tasks — spreadsheets, data entry, reporting — so your team spends less time on admin and more on customers.
-                </p>
-              </div>
-              <div className="md:col-span-4">
-                <ul className="space-y-3 text-sm text-black/70">
-                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#2b3d5b] mt-1.5"></div> Spreadsheet Automation</li>
-                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#2b3d5b] mt-1.5"></div> Data Entry Reduction</li>
-                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#2b3d5b] mt-1.5"></div> Automated Reporting</li>
-                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#2b3d5b] mt-1.5"></div> Task Scheduling</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <ServiceCapabilityRail
+        headline="AI that takes repetitive customer and admin work off your plate."
+        items={[
+          {
+            icon: 'bot',
+            title: 'Website chatbots',
+            description: 'Answer common customer questions instantly, at any time of day.',
+          },
+          {
+            icon: 'calendar',
+            title: 'Bookings & enquiries',
+            description: 'Turn conversations into appointments and qualified enquiries without manual follow-up.',
+          },
+          {
+            icon: 'marketing',
+            title: 'WhatsApp & SMS',
+            description: 'Send timely offers, reminders, and updates through automated customer journeys.',
+          },
+          {
+            icon: 'automation',
+            title: 'Workflow automation',
+            description: 'Move information between forms, spreadsheets, and business tools with less admin.',
+          },
+          {
+            icon: 'dashboard',
+            title: 'Reporting & oversight',
+            description: 'Track activity, review outcomes, and keep people in control of every automation.',
+          },
+        ]}
+      />
       
       {/* 3. New Section 1: Colored Mission Statement */}
-      <section className="py-24 md:py-32 bg-[#090e17] text-white relative overflow-hidden rounded-t-[3rem] md:rounded-[3rem] md:mx-6">
+      <section className="py-24 md:py-32 bg-black text-white relative overflow-hidden rounded-t-[3rem] md:rounded-[3rem] md:mx-6">
         {/* Background gradients for the blurred wave effect */}
         <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
           <div 
-            className="absolute w-[150vw] md:w-[120vw] h-[100px] md:h-[150px] bg-[#2b3d5b] rounded-[100%]"
+            className="absolute w-[150vw] md:w-[120vw] h-[100px] md:h-[150px] bg-[#1a1d21] rounded-[100%]"
             style={{
               top: '52%',
               left: '48%',
@@ -210,7 +168,7 @@ export function AIBusinessSolutionsPage() {
             }}
           ></div>
           <div 
-            className="absolute w-[120vw] md:w-[90vw] h-[50px] md:h-[80px] bg-[#47638c] rounded-[100%]"
+            className="absolute w-[120vw] md:w-[90vw] h-[50px] md:h-[80px] bg-[#2a2e35] rounded-[100%]"
             style={{
               top: '57%',
               left: '43%',
@@ -220,7 +178,7 @@ export function AIBusinessSolutionsPage() {
             }}
           ></div>
           <div 
-            className="absolute w-[150vw] md:w-[100vw] h-[100vw] bg-[#05080f] rounded-full"
+            className="absolute w-[150vw] md:w-[100vw] h-[100vw] bg-black rounded-full"
             style={{
               top: '80%',
               left: 'Fewer',
@@ -229,7 +187,7 @@ export function AIBusinessSolutionsPage() {
             }}
           ></div>
           <div 
-            className="absolute w-[100vw] md:w-[80vw] h-[80vw] bg-[#05080f] rounded-full"
+            className="absolute w-[100vw] md:w-[80vw] h-[80vw] bg-black rounded-full"
             style={{
               top: '-40%',
               left: '-10%',
@@ -375,11 +333,11 @@ export function AIBusinessSolutionsPage() {
       </section>
       
       {/* 5. New Section 3: Text & Stats on Colored Full-Width */}
-      <section className="py-24 md:py-32 bg-[#090e17] text-white relative overflow-hidden rounded-t-[3rem] md:rounded-[3rem] md:mx-6">
+      <section className="py-24 md:py-32 bg-black text-white relative overflow-hidden rounded-t-[3rem] md:rounded-[3rem] md:mx-6">
         {/* Background gradients for the blurred wave effect */}
         <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
           <div 
-            className="absolute w-[150vw] md:w-[120vw] h-[100px] md:h-[150px] bg-[#2b3d5b] rounded-[100%]"
+            className="absolute w-[150vw] md:w-[120vw] h-[100px] md:h-[150px] bg-[#1a1d21] rounded-[100%]"
             style={{
               top: '72%',
               left: '78%',
@@ -389,7 +347,7 @@ export function AIBusinessSolutionsPage() {
             }}
           ></div>
           <div 
-            className="absolute w-[120vw] md:w-[90vw] h-[50px] md:h-[80px] bg-[#47638c] rounded-[100%]"
+            className="absolute w-[120vw] md:w-[90vw] h-[50px] md:h-[80px] bg-[#2a2e35] rounded-[100%]"
             style={{
               top: '77%',
               left: '73%',
@@ -399,7 +357,7 @@ export function AIBusinessSolutionsPage() {
             }}
           ></div>
           <div 
-            className="absolute w-[150vw] md:w-[100vw] h-[100vw] bg-[#05080f] rounded-full"
+            className="absolute w-[150vw] md:w-[100vw] h-[100vw] bg-black rounded-full"
             style={{
               top: '80%',
               left: '40%',
@@ -408,7 +366,7 @@ export function AIBusinessSolutionsPage() {
             }}
           ></div>
           <div 
-            className="absolute w-[100vw] md:w-[80vw] h-[80vw] bg-[#05080f] rounded-full"
+            className="absolute w-[100vw] md:w-[80vw] h-[80vw] bg-black rounded-full"
             style={{
               top: '-40%',
               left: '-10%',
@@ -553,12 +511,12 @@ export function AIBusinessSolutionsPage() {
       </section>
 
       {/* FAQ Section */}
-      <section className="relative py-24 md:py-32 bg-[#090e17] text-white overflow-hidden">
+      <section className="relative py-24 md:py-32 bg-black text-white overflow-hidden">
         {/* Background gradients for the blurred wave effect */}
         <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
           {/* Main wave streak - slate blue */}
           <div 
-            className="absolute w-[150vw] md:w-[120vw] h-[100px] md:h-[150px] bg-[#2b3d5b] rounded-[100%]"
+            className="absolute w-[150vw] md:w-[120vw] h-[100px] md:h-[150px] bg-[#1a1d21] rounded-[100%]"
             style={{
               top: '65%',
               left: '60%',
@@ -569,7 +527,7 @@ export function AIBusinessSolutionsPage() {
           ></div>
           {/* Brighter core of the wave */}
           <div 
-            className="absolute w-[120vw] md:w-[90vw] h-[50px] md:h-[80px] bg-[#47638c] rounded-[100%]"
+            className="absolute w-[120vw] md:w-[90vw] h-[50px] md:h-[80px] bg-[#2a2e35] rounded-[100%]"
             style={{
               top: '70%',
               left: '55%',
@@ -580,7 +538,7 @@ export function AIBusinessSolutionsPage() {
           ></div>
           {/* Bottom right dark curve encroaching */}
           <div 
-            className="absolute w-[150vw] md:w-[100vw] h-[100vw] bg-[#05080f] rounded-full"
+            className="absolute w-[150vw] md:w-[100vw] h-[100vw] bg-black rounded-full"
             style={{
               top: '80%',
               left: '40%',
@@ -590,7 +548,7 @@ export function AIBusinessSolutionsPage() {
           ></div>
           {/* Top left dark area pushing down */}
           <div 
-            className="absolute w-[100vw] md:w-[80vw] h-[80vw] bg-[#05080f] rounded-full"
+            className="absolute w-[100vw] md:w-[80vw] h-[80vw] bg-black rounded-full"
             style={{
               top: '-40%',
               left: '-10%',

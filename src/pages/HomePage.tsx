@@ -49,13 +49,15 @@ export function HomePage() {
           ],
         }}
       />
-      <Hero />
-      <Brands />
-      <Services />
-      <WhyChooseUs />
-      <TargetAudience />
-      <Features />
-      <SocialProof />
+      <div className="bg-surface-light">
+        <Hero />
+        <Brands />
+        <Services />
+        <WhyChooseUs />
+        <TargetAudience />
+        <Features />
+        <SocialProof />
+      </div>
     </>
   );
 }

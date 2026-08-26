@@ -100,14 +100,14 @@ export function Portfolio() {
   };
 
   return (
-    <section className="py-24 bg-black text-white font-sans border-t border-neutral-900">
+    <section className="py-24 bg-surface-light text-gray-900 font-sans border-t border-gray-200">
       <div className="w-full">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
-          <p className="text-[10px] font-semibold tracking-[0.2em] uppercase text-slate-500 mb-4">
+          <p className="text-[10px] font-semibold tracking-[0.2em] uppercase text-gray-400 mb-4">
             Selected works
           </p>
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
-            <h2 className="text-5xl md:text-7xl lg:text-8xl font-medium tracking-tighter text-white max-w-xl">
+            <h2 className="text-5xl md:text-7xl lg:text-8xl font-medium tracking-tighter text-gray-900 max-w-xl">
               Portfolio
             </h2>
             {/* Filter tabs */}
@@ -118,8 +118,8 @@ export function Portfolio() {
                   onClick={() => setActiveCategory(category)}
                   className={`pb-0.5 transition-all duration-200 ${
                     activeCategory === category
-                      ? 'text-white border-b border-white'
-                      : 'text-slate-500 hover:text-slate-300'
+                      ? 'text-gray-900 border-b border-gray-900'
+                      : 'text-gray-500 hover:text-gray-900'
                   }`}
                 >
                   {category}

@@ -1,6 +1,7 @@
 import { ArrowLeft, ArrowUpRight} from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { PageSEO } from '../../components/PageSEO';
+import { ServiceCapabilityRail } from '../../components/ServiceCapabilityRail';
 
 export function WebDevelopmentPage() {
   return (
@@ -121,86 +122,43 @@ export function WebDevelopmentPage() {
         </div>
       </section>
 
-      {/* 2. Solutions Section (White) */}
-      <section className="py-24 md:py-32 bg-[#FAF9F6] text-[#1a1a1a]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl md:text-6xl lg:text-7xl font-light tracking-tighter uppercase mb-16 md:mb-24">
-            Our <br/>
-             Solutions
-          </h2>
-
-          <div className="space-y-0">
-            
-            <div className="grid grid-cols-1 md:grid-cols-12 gap-8 py-12 border-t border-black/10">
-              <div className="md:col-span-3 text-xs font-semibold text-black/50 tracking-widest uppercase">
-                (01) Website Design & Development
-              </div>
-              <div className="md:col-span-5 pr-8">
-                <h3 className="text-xl md:text-2xl font-light tracking-tight mb-4 uppercase">Websites built around your business.</h3>
-                <p className="text-black/60 leading-relaxed text-sm">
-                  Custom-designed websites — from simple brochure sites to fully custom web apps — built to represent your brand and convert visitors.
-                </p>
-              </div>
-              <div className="md:col-span-4">
-                <ul className="space-y-3 text-sm text-black/70">
-                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#2b3d5b] mt-1.5"></div> Custom Design</li>
-                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#2b3d5b] mt-1.5"></div> Mobile-Responsive Builds</li>
-                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#2b3d5b] mt-1.5"></div> API Integrations</li>
-                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#2b3d5b] mt-1.5"></div> Ongoing Site Management</li>
-                </ul>
-              </div>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-12 gap-8 py-12 border-t border-black/10">
-              <div className="md:col-span-3 text-xs font-semibold text-black/50 tracking-widest uppercase">
-                (02) E-commerce
-              </div>
-              <div className="md:col-span-5 pr-8">
-                <h3 className="text-xl md:text-2xl font-light tracking-tight mb-4 uppercase">Secure storefronts that convert.</h3>
-                <p className="text-black/60 leading-relaxed text-sm">
-                  Scalable online stores engineered to maximize sales, reduce cart abandonment, and stay secure and up to date — we build it and keep managing it.
-                </p>
-              </div>
-              <div className="md:col-span-4">
-                <ul className="space-y-3 text-sm text-black/70">
-                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#2b3d5b] mt-1.5"></div> Shopify & Custom Builds</li>
-                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#2b3d5b] mt-1.5"></div> Payment Gateways</li>
-                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#2b3d5b] mt-1.5"></div> Inventory Syncing</li>
-                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#2b3d5b] mt-1.5"></div> Conversion Optimization</li>
-                </ul>
-              </div>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-12 gap-8 py-12 border-t border-black/10">
-              <div className="md:col-span-3 text-xs font-semibold text-black/50 tracking-widest uppercase">
-                (03) Hosting & Global CDN
-              </div>
-              <div className="md:col-span-5 pr-8">
-                <h3 className="text-xl md:text-2xl font-light tracking-tight mb-4 uppercase">Fast, secure hosting anywhere.</h3>
-                <p className="text-black/60 leading-relaxed text-sm">
-                  Reliable hosting backed by Cloudflare's worldwide CDN network, keeping your site fast for visitors wherever they are, with continuous maintenance and automated backups.
-                </p>
-                <div className="mt-4 bg-[#f8fafc] border border-slate-200 rounded-xl p-4 inline-block">
-                  <p className="text-sm text-slate-600 font-medium italic">"Your site is delivered through Cloudflare's global network, so it loads fast whether your customer is next door or on the other side of the world."</p>
-                </div>
-              </div>
-              <div className="md:col-span-4">
-                <ul className="space-y-3 text-sm text-black/70">
-                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#2b3d5b] mt-1.5"></div> Cloudflare Global CDN</li>
-                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#2b3d5b] mt-1.5"></div> Automated Backups</li>
-                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#2b3d5b] mt-1.5"></div> Site Monitoring</li>
-                  <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#2b3d5b] mt-1.5"></div> Security & SSL Management</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <ServiceCapabilityRail
+        headline="A digital platform built around how your business works."
+        items={[
+          {
+            icon: 'platform',
+            title: 'Web design & development',
+            description: 'Build a clear, responsive website around your brand and customer journey.',
+          },
+          {
+            icon: 'commerce',
+            title: 'E-commerce',
+            description: 'Create a secure storefront that makes browsing, buying, and managing orders straightforward.',
+          },
+          {
+            icon: 'performance',
+            title: 'Performance & SEO',
+            description: 'Improve speed, technical foundations, and visibility across search and mobile.',
+          },
+          {
+            icon: 'webSecurity',
+            title: 'Hosting & security',
+            description: 'Keep your website available, protected, backed up, and properly maintained.',
+          },
+          {
+            icon: 'automation',
+            title: 'Custom web applications',
+            description: 'Turn manual internal processes into focused tools built around your team.',
+          },
+        ]}
+      />
       
       {/* 3. New Section 1: Colored Mission Statement */}
-      <section className="py-24 md:py-32 bg-[#090e17] text-white relative overflow-hidden rounded-t-[3rem] md:rounded-[3rem] md:mx-6">
+      <section className="py-24 md:py-32 bg-black text-white relative overflow-hidden rounded-t-[3rem] md:rounded-[3rem] md:mx-6">
         {/* Background gradients for the blurred wave effect */}
         <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
           <div 
-            className="absolute w-[150vw] md:w-[120vw] h-[100px] md:h-[150px] bg-[#2b3d5b] rounded-[100%]"
+            className="absolute w-[150vw] md:w-[120vw] h-[100px] md:h-[150px] bg-[#1a1d21] rounded-[100%]"
             style={{
               top: '60%',
               left: '60%',
@@ -210,7 +168,7 @@ export function WebDevelopmentPage() {
             }}
           ></div>
           <div 
-            className="absolute w-[120vw] md:w-[90vw] h-[50px] md:h-[80px] bg-[#47638c] rounded-[100%]"
+            className="absolute w-[120vw] md:w-[90vw] h-[50px] md:h-[80px] bg-[#2a2e35] rounded-[100%]"
             style={{
               top: '65%',
               left: '55%',
@@ -220,7 +178,7 @@ export function WebDevelopmentPage() {
             }}
           ></div>
           <div 
-            className="absolute w-[150vw] md:w-[100vw] h-[100vw] bg-[#05080f] rounded-full"
+            className="absolute w-[150vw] md:w-[100vw] h-[100vw] bg-black rounded-full"
             style={{
               top: '80%',
               left: '40%',
@@ -229,7 +187,7 @@ export function WebDevelopmentPage() {
             }}
           ></div>
           <div 
-            className="absolute w-[100vw] md:w-[80vw] h-[80vw] bg-[#05080f] rounded-full"
+            className="absolute w-[100vw] md:w-[80vw] h-[80vw] bg-black rounded-full"
             style={{
               top: '-40%',
               left: '-10%',
@@ -375,11 +333,11 @@ export function WebDevelopmentPage() {
       </section>
       
       {/* 5. New Section 3: Text & Stats on Colored Full-Width */}
-      <section className="py-24 md:py-32 bg-[#090e17] text-white relative overflow-hidden rounded-t-[3rem] md:rounded-[3rem] md:mx-6">
+      <section className="py-24 md:py-32 bg-black text-white relative overflow-hidden rounded-t-[3rem] md:rounded-[3rem] md:mx-6">
         {/* Background gradients for the blurred wave effect */}
         <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
           <div 
-            className="absolute w-[150vw] md:w-[120vw] h-[100px] md:h-[150px] bg-[#2b3d5b] rounded-[100%]"
+            className="absolute w-[150vw] md:w-[120vw] h-[100px] md:h-[150px] bg-[#1a1d21] rounded-[100%]"
             style={{
               top: '80%',
               left: '90%',
@@ -389,7 +347,7 @@ export function WebDevelopmentPage() {
             }}
           ></div>
           <div 
-            className="absolute w-[120vw] md:w-[90vw] h-[50px] md:h-[80px] bg-[#47638c] rounded-[100%]"
+            className="absolute w-[120vw] md:w-[90vw] h-[50px] md:h-[80px] bg-[#2a2e35] rounded-[100%]"
             style={{
               top: '85%',
               left: '85%',
@@ -399,7 +357,7 @@ export function WebDevelopmentPage() {
             }}
           ></div>
           <div 
-            className="absolute w-[150vw] md:w-[100vw] h-[100vw] bg-[#05080f] rounded-full"
+            className="absolute w-[150vw] md:w-[100vw] h-[100vw] bg-black rounded-full"
             style={{
               top: '80%',
               left: '40%',
@@ -408,7 +366,7 @@ export function WebDevelopmentPage() {
             }}
           ></div>
           <div 
-            className="absolute w-[100vw] md:w-[80vw] h-[80vw] bg-[#05080f] rounded-full"
+            className="absolute w-[100vw] md:w-[80vw] h-[80vw] bg-black rounded-full"
             style={{
               top: '-40%',
               left: '-10%',
