@@ -7,6 +7,9 @@ interface PageSEOProps {
   jsonLd?: Record<string, unknown>;
 }
 
+const serializeJsonLd = (value: Record<string, unknown>) =>
+  JSON.stringify(value).replace(/</g, '\\u003c');
+
 export function PageSEO({ title, description, canonicalUrl, jsonLd }: PageSEOProps) {
   useEffect(() => {
     // 1. Page Title
@@ -66,7 +69,7 @@ export function PageSEO({ title, description, canonicalUrl, jsonLd }: PageSEOPro
       scriptJsonLd = document.createElement('script');
       scriptJsonLd.type = 'application/ld+json';
       scriptJsonLd.id = 'page-jsonld-schema';
-      scriptJsonLd.text = JSON.stringify(jsonLd);
+      scriptJsonLd.text = serializeJsonLd(jsonLd);
       
       const existingScript = document.getElementById('page-jsonld-schema');
       if (existingScript) {
@@ -116,7 +119,7 @@ export function SchemaOrg() {
   return (
     <script
       type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+      dangerouslySetInnerHTML={{ __html: serializeJsonLd(schemaData) }}
     />
   );
 }

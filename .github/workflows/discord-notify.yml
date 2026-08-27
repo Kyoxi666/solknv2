@@ -4,12 +4,16 @@ on:
   push:
     branches: [main, develop]
 
+permissions:
+  contents: read
+
 jobs:
   notify:
     runs-on: ubuntu-latest
+    timeout-minutes: 2
     steps:
       - name: Send Discord Notification
-        uses: rjstone/discord-webhook-notify@v1
+        uses: rjstone/discord-webhook-notify@1399c1b2d57cc05894d506d2cfdc33c5f012b993 # v1.1.1
         with:
           severity: info
           text: "**New commit on `${{ github.ref_name }}` by ${{ github.actor }}**"
