@@ -13,7 +13,7 @@ jobs:
     timeout-minutes: 2
     steps:
       - name: Send Discord Notification
-        uses: rjstone/discord-webhook-notify@1399c1b2d57cc05894d506d2cfdc33c5f012b993 # v1.1.1
+        uses: rjstone/discord-webhook-notify@132f73d6641aefdf9e0a1612c8a0ff237b9590d2 # v2.3.1
         with:
           severity: info
           text: "**New commit on `${{ github.ref_name }}` by ${{ github.actor }}**"
